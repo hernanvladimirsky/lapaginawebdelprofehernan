@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Visual Basic 6.0</title>
+</head>
+
+<body style="background-image: url(Imagenes/degradado\ gris.jpg);">
+    <header>
+        <a id="ancla"></a>
+        <h1 style="color: black;" id="titulovisualbasic"> Visual Basic 6.0 </h1>
+        <img src="Imagenes/Visual basic 6.0.jpeg" alt="logo" title="logoindex" id="logovisualbasic">
+    </header>
+    <nav>
+        <ul>
+            <li class="primerlink"> <a href="index.html">Ir al Inicio</a></li>
+            <li class="links"> <a href="Ejercicios Visual basic 6.0.html"> Ir a Ejercicios</a></li></a>
+            <li class="links"> <a href="manualVisualBasic6.0.html">Ir al Manual de Instalación</a></li>
+        </ul>
+
+    </nav>
+    <main>
+        <h1>Introducción a programación</h1>
+        <h3>¿Que es una variable?</h3>
+
+        <p>
+            Una variable es un nombre que se asocia con una porción de la memoria del ordenador, en donde se guarda el
+            valor asignado a dicha variable. Consiste en un elemento al cual le damos un nombre y le atribuimos
+            determinado tipo de información.
+            Las variables pueden ser consideradas como la base de la programación.
+            Los datos que se manejan en nuestro programa se almacenan en variables. El concepto de variable debe verse
+            como un contenedor de información.
+        </p>
+
+        <h3>Tipos de variables</h3>
+        <!--Creo tabla-->
+        <table>
+            <tr>
+                <th>TIPO DE DATOS</th>
+                <th>MEMORIA REQUERIDA</th>
+                <th>RANGO DE VALORES</th>
+                <th>EQUIVALENCIA CON USADAS EN PSEUDOCÓDIGO</th>
+                <th>OBSERVACIONES</th>
+            </tr>
+
+            <tr> <!--Enteros-->
+                <td>Integer(Entero)</td>
+                <td>2 bytes ó 4 bytes según versión</td>
+                <td>- 32768 a 32767 ó -2.147.483.648 a 2.147.483.647 según versión </td>
+                <td>Entero</td>
+                <td>Uso en contadores, control de bucles etc.</td>
+            </tr>
+
+            <tr>
+                <td>Long (Entero largo)</td>
+                <td>4 bytes ó 8 bytes según versión</td>
+                <td>- 2147483648 a 2147483647 ó -9,2E+18 a 9,2E+18 según versión</td>
+                <td>Entero</td>
+                <td>Igual que integer pero admite un rango más amplio</td>
+            </tr>
+
+            <tr> <!--Decimales-->
+                <td>Single (Decimal simple)</td>
+                <td>4 bytes</td>
+                <td>- 3,4·1038 a 3,4·1038</td>
+                <td>Real</td>
+                <td>Hasta 6 decimales o más según versión. También admite enteros</td>
+            </tr>
+
+            <tr>
+                <td>Double (Decimal doble)</td>
+                <td>8 bytes</td>
+                <td>- 1,79·10308 a 1,79·10308</td>
+                <td>Real</td>
+                <td>Hasta 14 decimales o más según versión. También admite enteros</td>
+            </tr>
+
+            <tr> <!--Boolean-->
+                <td>Boolean (Booleano)</td>
+                <td>2 bytes</td>
+                <td>True o False</td>
+                <td>Booleano</td>
+                <td>False es el valor predeterminado y va asociado a cero</td>
+            </tr>
+
+            <tr> <!--String-->
+                <td>String</td>
+                <td>10 bytes + 1 byte por cada carácter</td>
+                <td>0 a 2·109 caracteres</td>
+                <td>Alfanumérica</td>
+                <td>Texto de longitud variable</td>
+            </tr>
+        </table>
+
+        <h3>Declaración de variables</h3>
+        <p>
+            Hay varios tipos de variables que requieren distintas cantidades de memoria para guardar datos.
+            Todas las variables han de declararse antes de usarlas. La declaración consiste en una sentencia en la que
+            figura el tipo de dato y el nombre que asignamos a la variable.
+            Una vez declarada se le podrá asignar valores.
+        </p>
+
+        <h3>¿Como declarar una variable?</h3>
+
+        <p>Usaremos para ello la instrucción Dim. Su sintaxis será: <br>
+
+            Dim [Nombre de variable] As [Tipo de variable]
+        </p>
+
+        <h4>Ejemplo</h4>
+        <p>Dim Numerodeplantas As Integer</p>
+
+        <h3>¿Que son los datos de entrada?</h3>
+        <p>Son los datos que el usuario ingresa por teclado, los cuales la computadora va a procesar y a partir de los
+            cuales vamos a devolver un resultado.</p>
+
+        <h3>¿Que es un proceso o el proceso de la informacion?</h3>
+        <p>Son los calculos aritmeticos que hacemos a partir de los datos de entrada, para obtener un resultado.</p>
+
+        <h3>¿Que son los datos de salida?</h3>
+        <p>Son los resultados o datos obtenidos gracias a procesamiento de la informacion. </p>
+
+        <img src="Imagenes/Datos E y S, proceso.png" alt="Datos de Entrada y salida">
+
+        <h3>Comentarios</h3>
+        <p>Los comentarios sirven para documentar el codigo es decir para aclarar o tomar nota de la funcion de cada
+            linea codigo. <br> <br>
+            El motivo es que al pasar el tiempo el programador se puede llegar a olvidar de determinadas lineas
+            de codigo, aun mas si tenemos miles de lineas. <br> <br>
+            El motivo mas importante es que en una empresa existen
+            muchos programadores y nosotros debemos comentar el codigo para que nuestro colega lo comprenda aun cuando
+            nosotros ya no estemos mas en la empresa o en el puesto de trabajo.
+        </p>
+
+        <h3>¿Como ingresar un comentario?</h3>
+        <p>Los comentarios se ingresan generalmente al lado de cada linea de codigo, y se ingresan con el
+            simbolo <strong>' </strong>, o con alt + 39.
+
+        </p>
+
+        <!-- IF -->
+
+        <h2>Tema IF</h2>
+        <p>
+            Un if en programación se utiliza para evaluar una expresión condicional: si se cumple la condición <u>(es
+                verdadera)</u>, ejecutará un bloque de código. <u>Si es falsa</u>, es posible ejecutar otras sentencias.
+            <br> <br>
+
+            <strong style="color: blue;">If</strong> significa SI <br>
+            <strong style="color: blue;">Else</strong> significa SI NO <br>
+            <strong style="color: blue;">ElseIf</strong> significa SI NO SI <br>
+            <strong style="color: blue;">Then</strong> significa ENTONCES <br> <br>
+
+            <strong> Diagrama de flujo If - Else </strong> <br> <br>
+
+            <img src="Imagenes/If.png" alt="Imagen no encontrada" title="If" width="380px"> <br> <br>
+
+            <strong> Sintaxis If - Else </strong> <br> <br>
+
+            <strong style="color: blue;">If</strong> condición <strong style="color: blue;"> Then</strong> <br>
+            sentencias o instrucciones del If <br>
+
+            <strong style="color: blue;"> Else</strong> <br>
+            sentencias o instrucciones del Else <br>
+            <strong style="color: blue;"> End If</strong> <br> <br>
+
+
+            <strong> Sintaxis If - ElseIf - Else </strong> <br> <br>
+
+            <strong style="color: blue;">If</strong> condición <strong style="color: blue;"> Then</strong> <br>
+            sentencias o instrucciones del If <br>
+
+            <strong style="color: blue;">ElseIf</strong> condición <strong style="color: blue;"> Then</strong> <br>
+            sentencias o instrucciones del Elseif <br>
+
+            <strong style="color: blue;"> Else</strong> <br>
+            sentencias o instrucciones del Else <br>
+            <strong style="color: blue;"> End If</strong>
+
+        </p>
+
+        <!-- Do While -->
+        <h2>Do While</h2>
+        <p>
+            La instruccion <strong>Do While</strong> ejecuta una serie de instrucciones, luego consulta por la condicion, si la condicion es
+            verdadera <u>comienza a interar el bucle</u>, cuando la condición sea falsa <u>finaliza el bucle o la iteración</u>. <br> <br>
+            <strong style="color: blue;">Do</strong> significa HACER <br>
+            <strong style="color: blue;">WHILE</strong> significa MIENTRAS <br>
+            <strong style="color: blue;">LOOP</strong> significa BUCLE <br> <br>
+
+            <strong> Diagrama de Do While </strong> <br> <br>
+
+            <img src="Imagenes/Do While.png" alt="Imagen no encontrada" title="Do While" width="380px"> <br> <br>
+
+            <strong> Sintaxis Do While </strong> <br> <br>
+            contador = 1 <br>
+            <strong style="color: blue;">Do While</strong> condicion <br>
+            sentencias o instrucciones del Do While <br>
+            contador = contador + 1 <br>
+            <strong style="color: blue;">Loop</strong> <br>
+            sentencias o instrucciones al finalizar el Loop <br>
+        </p>
+
+
+    </main>
+    <footer>
+        <a href="#ancla" style="text-align: left;">Ir hacia arriba</a>
+        <p id="parrafofooter_index" style="color: black;"> Hernan Joel Vladimirsky <span>&copy;Copyright</span> </p>
+    </footer>
+</body>
+
+</html>
