@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilosglobal.css">
+    <title>Diseño Web</title>
+</head>
+
+<body
+    style="background-image: url(Imagenes/fondo-papel-color-azul.avif); background-repeat: no-repeat; background-size: cover;">
+
+    <header>
+        <a id="ancla"></a>
+        <h1 style="margin: auto;">HTML</h1>
+        <img src="Imagenes/HTML Logo.png" alt="logo" title="logohtml" id="logohtml">
+    </header>
+    <nav>
+        <ul>
+            <li class="links"> <a href="index.html">Ir al Inicio</a></li>
+            <li class="links"> <a href="#formularios">Ir a Formularios</a></li>
+            <li class="links"> <a href="Hoja de estilo en cascada.html">Ir a CSS</a></li>                        
+            <li class="links"> <a href="Ejercicios_Diseno_web.html">Ir a Ejercicios</a></li>
+            <li class="links"> <a href="manualVisualStudioCode.html">Ir al Manual de Instalación</a></li>
+        </ul>
+    </nav>
+    <main>
+
+        <img src="Imagenes/HTML-and-CSS.png" id="imagen_html" alt="imagen no encontrada" title="HTML y CSS">
+
+        <h2>Estructura basica HTML</h2>
+        <img src="Imagenes/Estructura Basica.png" alt="Estructura basica html" width="100%" style="max-width: 600px;"> 
+
+        <p>
+            <b> &lt;html&gt;</b>: Etiqueta principal (raiz) Indica el comienzo de la página web. <br> <br>
+            <b>&lt;/html&gt;</b>: Indica el fin de la pagina web. <br> <br>
+            <b>&lt;head&gt;</b> :Cabecera, en el se indican las etiquetas no visibles en la pagina web, como el idioma,
+            estilos de visualización (CCS). <br> <br>
+            <b>&lt;title&gt;</b>:Indica el nombre de la pestaña (importantísimo para los motores de búsqueda). <br> <br>
+            <b>&lt;body&gt;</b>:Cuerpo, contenido visible de la página web, por ejemplo algunas etiquetas que estan en
+            el
+            son &lt;h1&gt;, &lt;p&gt;, &lt;img src&gt; (imagen), &lt;a href&gt; (vínculos o links),
+            etc. <br>
+
+        </p>
+
+        <h2>Primeros elementos</h2>
+        <p>
+            <b>&lt;h1&gt;</b>: Titulo de primer o alta importancia (no significa el mas grande en tamaño). <br><br>
+            <b>&lt;h2&gt;</b>: Titulo de menor importancia que h1 (asi sucesivamente hasta &lt;h6&gt;). <br> <br>
+            <b>&lt;p&gt;</b>: Inserto un párrafo. <br> <br>
+            <b>&lt;br&gt;</b>: Salto de linea (esta etiqueta no tiene cierre). <br> <br>
+            <b>&lt;strong&gt;</b>: Texto negrita (con valor semantico). <br> <br>
+            <b>&lt;b&gt;</b>: Texto negrita (sin valor semantico). <br> <br>
+            <b>&lt;em&gt;</b>: Texto cursiva (con valor sematico). <br> <br>
+            <b>&lt;i&gt;</b>: Texto cursiva (sin valor semantico). <br> <br>
+            <b>&lt;u&gt;</b>: Texto subrayado (con valor sematico). <br> <br>
+            <b>&lt;a&gt;</b>: Texto subrayado (sin valor sematico). <br> <br>
+
+        </p>
+        <!--Listas-->
+        <h2>Listas</h2>
+
+        <h3>Lista Ordernada</h3>
+
+        <p>
+            &lt;ol&gt; <br>
+            <span class="parrafoSangria_li">&lt;li&gt; Item a &lt;/li&gt;</span> <br>
+            <span class="parrafoSangria_li">&lt;li&gt; Item b &lt;/li&gt;</span> <br>
+            <span class="parrafoSangria_li">&lt;li&gt; Item c &lt;/li&gt;</span> <br>
+            &lt;/ol&gt;
+
+        </p>
+
+        <h3>Lista Desordenada</h3>
+
+        <p>
+            &lt;ul&gt; <br>
+            <span class="parrafoSangria_li">&lt;li&gt; Item a &lt;/li&gt;</span> <br>
+            <span class="parrafoSangria_li">&lt;li&gt; Item b &lt;/li&gt;</span> <br>
+            <span class="parrafoSangria_li">&lt;li&gt; Item c &lt;/li&gt;</span> <br>
+            &lt;/ul&gt;
+
+        </p>
+
+        <h3>Lista Descriptiva</h3>
+
+        <p>
+            <span class="parrafoSangria_dl">&lt;dl&gt;</span>
+        <p class="parrafoSangria_dt">&lt;dt&gt; Continente americano &lt;/dt&gt; </p>
+        <p class="parrafoSangria_dd">&lt;dd&gt; América es un amplio continente que se extiende en el sentido de los
+            meridianos, y además... &lt;/dd&gt; </p>
+        <p class="parrafoSangria_dt">&lt;dt&gt; Argentina &lt;/dt&gt; </p>
+        <p class="parrafoSangria_dd">&lt;dd&gt; Oficialmente denominada República Argentina, es un país soberano de
+            América del Sur, ubicado en ... &lt;/dd&gt; </p>
+        <span class="parrafoSangria_dl">&lt;/dl&gt;</span>
+
+        </p>
+
+        <h2>Elementos Sematicos</h2>
+
+        <strong> &lt;header&gt; </strong> <br>
+        Etiqueta para un contenido introductorio, es para entender o comprender el resto del contenido. No se puede
+        anidar. <br> <br>
+
+
+        <strong> &lt;nav&gt; </strong> <br>
+        Se utiliza para contener los links importantes o una barras de navegacion, <br> Permite contener lineas
+        relevantes o muy importantes para la pagina web. Se puede encontrar dentro de un
+        section. <br> <br>
+
+
+        <strong> &lt;main&gt; </strong> <br>
+        Sirve para destacar la parte central del contenido del sitio web. <br> No deberia ser reutilzado, algunos
+        lectores reconocen la etiqueta main y proveen un atajo para que el usuario acceda directamente a esa informacion
+        salteando todo el resto del contenido, gracias a los robots de los motores de busqueta. <br> <br>
+
+        <strong> &lt;section&gt; </strong> <br>
+        Marca una seccion de la interfaz, se utiliza para dividir el contenido entre partes. <br> <br>
+
+        <strong> &lt;article&gt; </strong> <br>
+        Permite por ejemplo leer un articulo en una seccion. En un diario si quiero leer noticias no hace falta leer
+        todas las noticas si no vamos al articulo que nos interesa. <br> <br>
+
+        <strong> &lt;footer&gt; </strong> <br>
+        Es un pie de pagina puede contener informacion como informacion de contacto, direcciones, este puede repetirse y
+        colocarse en cualquier sitio de la interfaz pero suele colocarse al final del contenido. <br> <br>
+
+
+        <!--Vinculos-->
+        <h2>¿Como insertar un vinculo?</h2>
+        <p>
+            &lt;a href="contacto.html" title="Contacto" target="_blank"> Ir a contacto&gt; <br> <br>
+            El atributo <b>target="_blank"</b> permite abrir en enlace en una nueva pestaña.
+
+        </p>
+        <!--Imagenes-->
+        <h2>Introduccion a Imagenes</h2>
+        <p>
+            Insertamos una imagen con la etiqueta &lt;img src&gt; <br> <br>
+            &lt;img src="Imagenes/procesador.jpg" alt="imagen no encontrada" title="procesador" height="50%" width="50%"
+            &gt; <br> <br>
+
+            El mensaje del <b>alt</b> aparece cuando hay un error en la ruta o el servidor donde se aloja la imagen.
+            <br> <br>
+            El contenido del <b>title</b> aparece cuando posicionamos el cursor sobre la imagen, el contenido del title
+            siempre hace
+            referencia a la imagen, en este caso un procesador.
+        </p>
+
+        <!--Id-->
+        <h2>Id</h2>
+        <p>
+            El id permite trabajar con un selector que afecta <strong>sólo a un elemento</strong> en el HTML. <br>
+            El ejemplo puntual sería que un elemento necesita ciertas propiedades, por lo tanto debo implementar esa regla de estilo de 
+            forma única. <br> <br>
+            
+
+            <u><i>En Html:</i></u> <br><br>
+            &lt;p id="parrafoA"&gt;Soy el parrafo A&lt;/p&gt; <br><br> 
+
+            <u><i>En Css:</i></u><br><br>
+            #parrafoA {color: blue;}             
+            
+        </p>
+            <!--Clases-->
+            <h2>Clases</h2>
+            <p>
+               Se utiliza para afectar a <strong>varios elementos</strong> ni a todos ni uno solo, solo los que pertenecen a un grupo. <br><br>
+
+            <u><i>En Html:</i></u> <br><br>
+            &lt;p class="Misparrafos"&gt;Soy un grupo de parrafos&lt;/p&gt; <br><br> 
+
+            <u><i>En Css:</i></u><br><br>
+            .Misparrafos {color: blue;} 
+
+            </p>
+
+            <h3>Restricciones de Id y clases</h3>
+            <p>
+                <ul>
+                    <li><b>No</b> puedo dejar <b>espacios</b>.</li>
+                    <li><b>No puedo utilizar elementos extraños o palabras reservadas</b>. Por ejemplo un ; o un carácter extraño como <b>ñ</b> 
+                    , o una <b>tilde</b> no deberían formar parte del nombre de ID o clase.</li>
+                    <li><b>Tampoco puedo utilizar números al comienzo del nombre de id</b>. Puedo usarlos dentro del nombre (<b>al final o entre palabras 
+                        pero no al inicio</b>).</li>
+                    <li>La última recomendación, es siempre <b>utilizar nombres referenciales</b>, o que nos ayuden a identificar de <b>qué id o clase </b>se trata.</li>
+                </ul>
+            </p>   
+
+        <!--Anclas-->       
+
+        <h2>Anclas</h2>
+        <p>
+            Las anclas nos permiten crear una navegación entre distintas secciones de una misma página. <br>
+            Para armar una navegación entre secciones, hay que crear anclas (Elementos <strong>a</strong> con el
+            atributo Id) y
+            un link a esa ancla (elementos <strong>a</strong> con el atributo <strong>href</strong>) <br> <br>
+
+            <u>Creo ancla:</u> <br> <br>
+            &lt;a id="top"&gt;&lt;/a&gt; <br> <br>
+
+            <u>Creo un link que me dirige a esa ancla:</u> <br> <br>
+            &lt;a href="#top">Ir hacia arriba&lt;/a&gt;
+        </p>
+
+        <!--Tablas-->
+
+        <h2>Tablas</h2>
+        <p>Nos permite ingresar informacion a partir de una tabla.  <br> <br>
+
+        <strong>th</strong> &rarr; crea columnas <br>
+        <strong>tr</strong> &rarr; crea filas <br>
+        <strong>td</strong> &rarr; contienen datos <br> <br>
+
+        <strong>colspan</strong> &rarr; Me permite unir celdas de distintas columnas. <br>
+        <strong>rowspan</strong> &rarr; Me permite unir celdas de distintas filas. <br> <br>               
+
+            &lt;table&gt; <br> <br>
+
+            &lt;th colspan="3"&gt; Actores &lt;/th&gt; <br> <br>
+            &lt;tr&gt; <br> 
+            &lt;th>Nombre&lt;/th&gt; <br>
+            &lt;th>Apellido&lt;/th&gt; <br>
+            &lt;th>Edad&lt;/th&gt; <br>
+            &lt;/tr&gt; <br> <br>
+        
+            &lt;tr&gt; <br>
+            &lt;td>Cris&lt;/td&gt; <br>
+            &lt;td>Morena&lt;/td&gt; <br>
+            &lt;td>65&lt;/td&gt; <br>
+            &lt;/tr&gt; <br> <br>
+        
+            &lt;tr&gt; <br>
+            &lt;td rowspan="2"&gt;Chuck&lt;/td&gt; <br>
+            &lt;td>Norris&lt;/td&gt; <br>
+            &lt;td>82&lt;/td&gt; <br>
+            &lt;/tr&gt; <br> <br>
+        
+            &lt;tr&gt; <br>
+            &lt;td>Connors&lt;/td&gt; <br>
+            &lt;td>71&lt;/td&gt; <br>
+            &lt;/tr&gt; <br> <br>
+        
+            &lt;tr&gt; <br>
+            &lt;td>Oriana&lt;/td&gt; <br>
+            &lt;td>Sabatini&lt;/td&gt; <br>
+            &lt;td rowspan="2">19&lt;/td&gt; <br>
+            &lt;/tr&gt; <br> <br>
+        
+            &lt;tr&gt; <br>
+            &lt;td>Kylie&lt;/td&gt; <br>
+            &lt;td>Jenner&lt;/td&gt; <br>
+            &lt;/tr&gt; <br> <br>
+        
+            &lt;/table&gt; <br><br>
+
+            El resultado es: <br>
+            <img src="Imagenes/Tablas.png" alt="Imagen no encontrada" title="Tablas"> <br>
+            Aplique en CSS un borde de color azul. <br> <br> 
+            Es codigo es el siguente: <br> <br>
+            table ,th ,tr, td { <br>
+                border: 1px solid blue; <br>                
+            }           
+        
+        </p>
+
+
+
+        <!--Formularios-->
+
+        <h2 id="formularios">Formularios</h2>
+
+        <img style="max-width: 740px;" width="100%" src="Imagenes/Formulario de contacto.png" alt="Imagen no encontrada"
+            title="Formulario de contacto">
+
+        <p>
+            <strong>Formularios, ¿Qué es?</strong> <br> <br>
+            ¿Nunca nos registramos en una red social, nunca creamos un usuario, seleccionamos
+            nuestro género, una contraseña, ingresamos un teléfono, un email o adjuntamos un archivo? Bueno hoy veremos
+            el ¿como? Atentos. <br> <br>
+            Todos los elementos que contenga el formulario debe estar entre las etiquetas <br>
+            &lt;form&gt; y &lt;/form&gt;.
+
+        </p>
+
+        <h3>Input</h3>
+
+        <p>Es de la mas utilizadas para formularios con ella podemos definir gran parte de los controles típicos para
+            formularios, hay entradas de tipo:
+
+        <ol>
+            <li>Texto </li>
+            <li>Casillas de verificación</li>
+            <li>Casilla de opción (Radio)</li>
+            <li>Archivos </li>
+            <li>Textos enmascarados (Password)</li>
+            <li>Datos ocultos</li>
+            <li>Botones varios</li>
+        </ol>
+
+        </p>
+
+        <h4>Atributos de &lt;input/&gt;</h4>
+
+        <p>
+            <strong> Name </strong> &rarr; Indica el nombre que recibirá el campo al ser enviado. Contiene texto, es
+            para identificar lo que
+            estoy enviando al formulario. Ej: &lt;input name=”dni” /&gt; <br> <br>
+            <strong>Type</strong> &rarr; Define en que se convertirá el control, por defecto es text.
+            Ej: &lt;input name=”nombre” type=”text” /&gt;
+
+        <ul>
+            <li>Text &rarr; texto</li>
+            <li>Number &rarr; numeros</li>
+            <li>Email &rarr; correo electrónico</li>
+            <li>Checkbox &rarr; Casilla de verificación</li>
+            <li>Radio &rarr; Casilla de opción </li>
+            <li>File &rarr; Subir un archivo</li>
+            <li>Password &rarr; Texto enmascarado (contraseña)</li>
+            <li>Hidden &rarr; Campo Oculto (es el tiempo que tarda el usuario en llenar el form)</li>
+            <li>Button &rarr; Muestra boton (sin acción por defecto, luego le podemos dar una accion)</li>
+            <li>Submit &rarr; Boton enviar</li>
+            <li>Reset &rarr; Boton de limpiar </li>
+        </ul>
+
+        </p>
+
+        <h3>Label</h3>
+        <p>Es una etiqueta que mejora la usabilidad y accesibilidad de los usuarios, una etiqueta label asocia un texto
+            a un control, de forma que al pulsar sobre el texto se activa el control asociado, además se relaciona el
+            control con su propósito fundamental para los usuarios que necesiten ayuda para la navegación.</p>
+
+        <h4>Atributos del &lt;label&gt;</h4>
+
+        <p>
+            Para relacionar un label con su control de usuario se utiliza el atributo for, este atributo espera el
+            identificador del control del formulario con el que se va a asociar. <br> <br>
+            For&rarr;Es el identificador<br>
+            Ejemplo= &lt;label for="nombre"&gt; Ingrese su nombre &lt;/label&gt; <br> <br>
+
+            Value &rarr; Es un atributo del input que muestra el texto del botón en este caso va a mostrar la palabra
+            Enviar. <br><br>
+
+            <span>&lt;form&gt;</span> <br>
+            <span class="sangria_label"> &lt;label for="nombre_mascota"> Ingrese el nombre de su mascota &lt;/label&gt;
+            </span> <br>
+            <span class="sangria_input"> &lt;input type="text" id="nombre_mascota" /&gt; </span> <br>
+            <span class="sangria_input"> &lt;input type="submit" value="Enviar"/&gt; </span> <br>
+            <span> &lt;/form&gt; </span> <br> <br>
+            El resultado es: <br>
+
+            <img src="Imagenes/Label Input.png" alt="Imagen no encontrada" title="Form"> <br> <br>
+
+            Recordemos que el label asocia un texto a un control, lo que contenga el for tiene que ser igual a lo que
+            contenga el id. <br> <br>
+            For &rarr; Es un atributo propio de la etiqueta Label <br>
+            Id &rarr; Es un atributo propio de la etiqueta Input <br>
+
+        <h3> <u>Ejemplo de Sintaxis de distintos tipos de Input</u></h3>
+
+        <h4>Ejemplo de sintaxis de checkbox/radio</h4>
+        <span> &lt;form&gt;</span> <br>
+        <span class="sangria_input"> &lt;input type="radio" id="videojuego1" name="videojuegos" value="fifa2022" &gt;
+        </span> <br>
+        <span class="sangria_label">&lt;label for="videojuego1"> Fifa 2022 &lt;/label &gt; </span> <br>
+        <span class="sangria_input">&lt;input type="radio" id="videojuego2" name="videojuegos" value="pes2022"
+            checked&gt; </span> <br>
+        <span class="sangria_label">&lt;label for="videojuego2"> Pes 2022 &lt;/label &gt; </span> <br>
+        <span>&lt;/form&gt; </span> <br> <br>
+
+        <img src="Imagenes/Checkbox_Radio.png" alt="Imagen no encontrada" title="Checkbox y Radio">
+
+        <h4>Ejemplo de sintaxis de telefono</h4>
+        <span>&lt;form&gt; </span> <br>
+        <span class="sangria_label">&lt;label for="telefono"> Ingrese su teléfono: &lt;/label&gt; </span> <br>
+        <span class="sangria_input">&lt;input type="tel" id="telefono" name="telefono"
+            pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" required
+            placeholder="0800-333-2055"&gt; </span> <br>
+        <span>&lt;/form&gt; </span> <br> <br>
+
+        <img src="Imagenes/Telefono.png" alt="Imagen no encontrada" title="Telefono">
+
+        <h4>Ejemplo de sintaxis de select</h4>
+        &lt;form&gt; <br>
+        <span class="sangria_select"> &lt;select name="musica"&gt; </span> <br>
+        <span class="sangria_option">&lt;option value="Rock" name="musica"> Rock &lt;/option&gt;</span> <br>
+        <span class="sangria_option">&lt;option value="Pop" name="musica" selected> Pop &lt;/option&gt; </span> <br>
+        <span class="sangria_option">&lt;option value="Bachata" name="musica"> Bachata &lt;/option&gt; </span> <br>
+        <span class="sangria_select">&lt;/select&gt;</span><br>
+        &lt;/form&gt; <br> <br>
+
+        <img src="Imagenes/Select.png" alt="Imagen no encontrada" title="Select">
+
+        <h4>Ejemplo de Sintaxis de textarea</h4>
+        <span>&lt;form&gt;</span> <br>
+        <span class="sangria_label">&lt;label for="comentario">Ingrese un comentario &lt;/label&gt; </span> <br>
+        <span class="sangria_label">&lt;textarea name="comentario" cols="30" rows="10"> &lt;/textarea&gt; </span> <br>
+        <span>&lt;/form&gt; </span> <br> <br>
+
+        <img src="Imagenes/Textarea.png" alt="Imagen no encontrada" title="Textarea">
+
+        <h4>Ejemplo de sintaxis de boton enviar</h4>
+        <span>&lt;form&gt;</span> <br>
+        <span class="sangria_input">&lt;input type="submit" value="Enviar" /&gt;</span><br>
+        <span>&lt;/form&gt;</span> <br><br>
+
+        <img src="Imagenes/Submit.png" alt="Imagen no encontrada" title="Submit">
+
+        </p>
+
+
+    </main>
+
+    <footer>
+        <br>
+        <a href="#ancla" style="text-align: left;">Ir hacia arriba</a>
+        <p id="parrafofooter_index" style="color: black;"> Hernan Joel Vladimirsky <span>&copy;Copyright</span> </p>
+    </footer>
+</body>
+
+</html>

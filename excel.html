@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilosglobal.css">
+    <title>Excel</title>
+</head>
+
+<body background="Imagenes/degradado-color-verde.avif" style="background-size: cover;"
+    style="background-repeat: no-repeat;">
+    <header>
+        <a id="ancla"></a>
+        <h1 style="color: black;" id="tituloexcel"> Excel </h1>
+        <img src="Imagenes/Excel.jpg" alt="logo" title="logoexcel" id="logoexcel">
+    </header>
+    <nav>
+        <ul>
+            <li class="links"> <a href="index.html">Ir al Inicio</a></li>
+            <li class="links"> <a href="#anclaEjercicios">Ir a Ejercicios</a></li>
+            <li class="links"> <a href="#anclaTareas">Ir a Tareas</a></li>
+        </ul>
+    </nav>
+    <main>
+
+        <!--window.alert("Cens 473 Entregar Actividad 1 para el 15/05"); */-->
+        <h1>Introduccion a Excel</h1>
+        <h2>Formulas</h2>
+        <h3>SUMA</h3>
+        <p>
+            Dicha formula nos permite efectuar una suma.
+            Existen dos formas de sumar, seleccionando cada celda o determinando un rango: <br> <br>
+            =SUMA(A2+A3+A4+A5) <br>
+            =SUMA(A2:A5)
+        </p>
+
+        <h3>Restar</h3>
+        <p>En excel no hay ninguna formula que nos permita efectuar una resta, se hace de las siguentes maneras: <br>
+            <br>
+            =SUMA(A2-A1) <br>
+            =A2-A1 <br>
+            =10-5            
+        </p>
+
+        <h3>Multiplicar</h3>
+        <P>
+            Dicha formula nos permite efectuar una multiplicacion. <br> <br>
+            =PRODUCTO(15;15) <br>
+            =PRODUCTO(A1;A2)
+        </P>
+
+        <h3>Dividir</h3>
+        <p>En excel no hay ninguna formula que nos permita efectuar una division al igual que la resta, se hace de las
+            siguente manera: <br> <br>
+            =10/5
+
+        </p>
+
+        <h3>PROMEDIO</h3>
+        <p>Dicha formula nos calcular un promedio. <br> <br>
+            =PROMEDIO(A2:A5)
+        </p>
+
+        <!--Promedio.si-->
+
+        <h3>PROMEDIO.SI</h3>
+        <p>Promedia los valores a partir de un determinado criterio o condicion. <br> <br>
+            =PROMEDIO.SI(<span class="rango">RANGO DEL CRITERIO</span>;<span class="criterio">CRITERIO</span>;<span
+                class="rango_suma">[RANGO_del_PROMEDIO]</span>) <br> <br>
+            <span class="rango"><strong>Rango del criterio:</strong> </span> Es el rango donde se encuentran las celdas a comparar con el criterio.
+            <br>
+            <span class="criterio"> <strong>Criterio:</strong> </span>Es la condicion para que se ejecute el calculo del
+            promedio. <br>
+            <strong class="rango_suma">Rango a Promediar:</strong> Son los valores a calcular el promedio, <u>solo si la
+                condicion se
+                cumple</u>. <br> <br>
+        </p>
+
+
+
+
+        <h3>MAX (Maximo)</h3>
+        <p>Dicha formula nos va a devolver el valor maximo del rango seleccionado. <br> <br>
+            =MAX(A2:A5)
+        </p>
+
+        <h3>MIN (Minimo)</h3>
+        <p>Dicha formula nos va a devolver el valor minimo del rango seleccionado. <br> <br>
+            =MIN(A2:A5)
+        </p>
+
+        <!--Creo tabla-->
+        <table class="tablaexcel">
+            <tr>
+                <th></th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class="negritaColumna">Valor casa</td>
+                <td class="negritaColumna">Comision</td>
+                <td class="negritaColumna">Datos</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>100000</td>
+                <td>7000</td>
+                <td>250000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>200000</td>
+                <td>14000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>300000</td>
+                <td>21000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>400000</td>
+                <td>28000</td>
+                <td></td>
+            </tr>
+        </table> <br>
+
+        <!--Detengo flotado
+        <div style="clear: both;"> </div>
+        -->
+
+        <h3>CONTAR</h3>
+        <p>Cuenta la cantidad de celdas que contienen <strong>solo numeros</strong>.<br> <br>
+            =CONTAR(B1:B3) <br> <br>
+            <strong>El resultado es: 3</strong>
+        </p>
+
+        <br>
+
+        <h3>CONTARA</h3>
+        <p>Cuenta la cantidad de celdas que contienen letras o numeros. <br> <br>
+            =CONTARA(A1:A3) <br> <br>
+            <strong>El resultado es: 3</strong>
+        </p>
+
+
+        <!--creo tabla-->
+        <table class="tablaexcel">
+            <tr>
+                <th></th>
+                <th>A</th>
+                <th class="columnaB">B</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Jorge</td>
+                <td class="columnaB">18</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Matias</td>
+                <td class="columnaB">25</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Pablo</td>
+                <td class="columnaB">15</td>
+            </tr>
+        </table>
+
+        <br>
+
+        <h3>CONTAR.BLANCO</h3>
+        <p>Cuenta celdas en blanco o vacias <strong>(Sin contenido)</strong>. <br> <br>
+            =CONTAR.BLANCO(Rango de celdas)</p>
+
+        <br>
+
+        <!--Contar.si-->
+
+        <h3>CONTAR.SI</h3>
+        <p>Cuenta la cantidad de celdas a partir de una condicion.
+            <br> <br>
+
+            =CONTAR.SI(<span class="rango">RANGO DEL CRITERIO</span>;<span class="criterio">CRITERIO</span>)
+            <br> <br>
+
+            <span class="rango"><strong>Rango del criterio:</strong> </span> Es el rango donde se encuentran las celdas a comparar con el <strong>criterio</strong>.
+            <br>
+            <span class="criterio"> <strong>Criterio:</strong> </span>Es la condición para que se cuenten los
+            registros. Si la condicion se cumple cuenta el registro, y si no se cumple <strong>NO</strong> lo contara. <br>
+        </p>
+        <p>=CONTAR.SI(A1:A4;"Manzanas") <strong>El resultado es 2</strong> <br>
+            =CONTAR.SI(A1:A4;A3) Cuenta la cantidad de celdas que tienen el valor de la celda A3 que es Melocotones y
+            <strong>Su resultado es 1</strong> <br>
+            =CONTAR.SI(A1:A4;">55") Cuenta el nro de celdas mayor a 55<strong> El resultado es 2</strong>
+        </p>
+
+        <!--Creo tabla-->
+        <table class="tablaexcel">
+            <tr>
+                <th></th>
+                <th>A</th>
+                <th>B</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Manzanas</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Naranjas</td>
+                <td>54</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Melocotones</td>
+                <td>75</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Manzanas</td>
+                <td>86</td>
+            </tr>
+
+        </table>
+
+        <br>
+
+        
+
+        <iframe width="100%" height="315" style="max-width: 640px;" 
+        src="https://www.youtube-nocookie.com/embed/Ze0UFzkq0BY?si=VJR5dDAkF0s1hD_O" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+        gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <!--CONTAR.SI.CONJUNTO-->
+
+        <h3>CONTAR.SI.CONJUNTO</h3>
+        <p> Cuenta la cantidad de celdas a partir de mas de una condicion. Se deben cumplir ambas condiciones para que se cuente el registro. <br>
+            La sintaxis es la siguiente: <br> <br>
+
+            =CONTAR.SI.CONJUNTO(<span class="rango">RANGO DEL CRITERIO1</span>;<span class="criterio">CRITERIO1</span>;
+            <span class="rango">RANGO DEL CRITERIO2</span>;<span class="criterio">CRITERIO2</span>; <span
+                class="rango">RANGO DEL CRITERIO3</span>;<span class="criterio">CRITERIO3</span>; <span
+                class="rango">RANGO DEL CRITERIO4</span>;<span class="criterio">CRITERIO4</span>)
+        </p>
+
+        <br>
+
+        <!--Sumar.si-->
+
+        <h3>SUMAR.SI</h3>
+        <p>Suma valores a partir de un determinado criterio o condicion. <br> <br>
+            =SUMAR.SI(<span class="rango">RANGO DEL CRITERIO</span>;<span class="criterio">CRITERIO</span>;<span
+                class="rango_suma">[RANGO_SUMA]</span>) <br> <br>
+            <span class="rango"><strong>Rango del criterio:</strong> </span> Es el rango donde se encuentran las celdas a comparar con el <strong>criterio</strong>.
+            <br>
+            <span class="criterio"> <strong>Criterio:</strong> </span>Es la condicion para que se ejecute la suma. Si la condicion se cumple suma el registro, y si no se cumple <strong>NO</strong> lo sumara. <br>
+            <strong class="rango_suma">Rango a Sumar:</strong> Son los valores a sumar <u>solo si la condicion se
+                cumple</u>. <br> <br>
+            =SUMAR.SI(A2:A5;">160000";B2:B5) Suma las comisiones de los valores de casas superiores a 160.000 <strong>El
+                resultado es: 63.000</strong><br> <br>
+            =SUMAR.SI(A2:A5;">160000") Suma los valores de casas superiores a 160.000 <strong>El resultado es:
+                900.000</strong><br> <br>
+            =SUMAR.SI(A2:A5;.300000;B2:B5) Suma las comisiones de los valores de propiedad igual a 300.000 <strong>El
+                resultado es: 21.000 </strong><br> <br>
+            =SUMAR.SI(A2:A5;">C2";B2:B5) Suma las comisiones de los valores de propiedad superiores al valor C2
+            <strong>El resultado es: 49.000</strong><br> <br>
+        </p>
+
+        <!--Creo tabla-->
+        <table class="tablaexcel">
+            <tr>
+                <th></th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class="negritaColumna">Valor casa</td>
+                <td class="negritaColumna">Comision</td>
+                <td class="negritaColumna">Datos</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>100000</td>
+                <td>7000</td>
+                <td>250000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>200000</td>
+                <td>14000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>300000</td>
+                <td>21000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>400000</td>
+                <td>28000</td>
+                <td></td>
+            </tr>
+        </table> <br>
+
+        <iframe width="100%" height="315" style="max-width: 640px;" src="https://www.youtube.com/embed/EyEzPdNFW9Q?si=_jziRmGh-QC5STmz" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <h3>SUMAR.SI.CONJUNTO</h3>
+        <p>
+            Suma valores a partir de mas de un criterio o condicion. Se deben cumplir ambas condiciones para que se sume el registro. <br> <br>
+
+
+        =SUMAR.SI.CONJUNTO(<span
+        class="rango_suma">[RANGO_SUMA]</span>;<span class="rango">RANGO DEL CRITERIO1</span>;<span class="criterio">CRITERIO1</span>;<span class="rango">RANGO DEL CRITERIO2</span>;<span class="criterio">CRITERIO2</span>;<span class="rango">RANGO DEL CRITERIO3</span>;<span class="criterio">CRITERIO3</span>)
+        </p>
+
+        <div style="display: none;">
+
+            <!--Formula SI condicional-->
+
+            <h2>Formula SI condicional</h2>
+            <h3>Simple</h3>
+            <p>=Si(condición; verdadero; falso) <strong>Siempre debo respetar los 3 Argumentos de su
+                    estructura.</strong></p>
+            <h3>Compleja</h3>
+            <p>=Si(condición; verdadero; Si(condición; verdadero; falso))</p>
+            <h3>Anidada</h3>
+            <p>=Si(condición; Si(condición; verdadero; falso);Si(condición; verdadero; falso))</p>
+
+            <!--Otras Formulas-->
+
+            <h2>Otras formulas</h2>
+
+            <h3>Contar.blanco</h3>
+            <p>Cuenta celdas en blanco o vacias (Sin contenido). <br>
+                =CONTAR.BLANCO(Rango de celdas)</p>
+
+            <h3>Columnas</h3>
+            <p>Cuenta la cantidad de columnas en un rango. <br>
+                =COLUMNAS(A1:G1)
+            </p>
+
+            <h3>Filas</h3>
+            <p>Cuenta la cantidad de filas en un rango. <br>
+                =FILAS(A1:15)
+            </p>
+
+            <h3>Extrae</h3>
+            <p> Extrae una parte de un texto de una celda. <br>
+                =EXTRAE(<span class="rango"><strong>Celda del texto</strong></span>;
+                <span class="criterio"> <strong>Posicion Inicial</strong></span>;
+                <strong class="rango_suma">Cantidad de caracteres</strong>) <br> <br>
+                Ejemplo: <br> Si la celda A1=Instituto y la formula es =EXTRAE(A1;1;3) <strong> El resultado sera Ins
+                </strong>
+            </P>
+
+            <h3>Raiz</h3>
+            <p>Nos permite obtener la raiz cuadrada. <br>
+                =RAIZ(celda)
+            </p>
+
+            <h3>Largo</h3>
+            <p>Nos permite contar la cantidad de caracteres de una celda. <br>
+                =LARGO(Celda o texto)
+            </p>
+
+            <h3>Valor absoluto</h3>
+            <p>Nos permite obtener el valor absoluto. (Numero sin signo). <br>
+                =ABS(Celda o numero)
+            </p>
+
+            <h3>Concatenar</h3>
+            <p>Nos permite unir texto de varias celdas. <br>
+                =CONCATENAR(Celda1;Celda2;etc)
+            </p>
+
+            <h3>Dias 360</h3>
+            <p>Nos permite obtener la diferencia de dias entre dos fechas. <br>
+                =DIAS360(Fecha1;Fecha2)
+            </p>
+
+            <h3>Entero</h3>
+            <p>Nos permite redondear un numero. <br>
+                =ENTERO(Celda o Numero)
+            </p>
+
+            <h3>Convertir texto a Mayuscula o Miniscula</h3>
+            <p> =MAYUSC(Celda o "Texto") <br>
+                =MINUSC(Celda o "Texto")
+            </p>
+
+            <h3>Nompropio</h3>
+            <p>Cambiar a mayuscula la 1ra letra de cada palabra de la celda. <br>
+                =NUMPROPIO(Celda o "Texto")
+            </p>
+
+            <h3>Potencia</h3>
+            <p>Nos permite elevar a una potencia. <br>
+                =POTENCIA(Celda o numero; N° de potencia)
+            </p>
+
+            <h3>Estexto / Esnumero</h3>
+            <p>Se utilza para saber se el contenido de celda es texto o numero. <br>
+                El resultado sera Verdadero o Falso. <br> <br>
+                =ESTEXTO(Celda) <br>
+                =ESNUMERO(Celda)
+            </p>
+
+        </div>
+
+        <!-- <h2>Matrices</h2>
+        <p>
+
+            Ejemplos: <br> <br>
+            = MAX ( SI ( condición ; verdadero ) ) <br> <br>
+            = MAX ( SI ( A2:A8 = “ventas” ; “G2:G8” ) ) calcula el máximo de las operaciones que fueran Ventas. <br>
+            <br>
+            = CONTAR ( SI ( B2:B10 = “ Córdoba”; si (C2:C10 >100 ; H2: H10) ) ) contará las cantidades vendida a Córdoba
+            mayores de 100 unidades. <br>
+
+
+        </p> -->
+
+
+<hr>
+
+        <!--Ejercicios-->
+
+        <div id="anclaEjercicios"></div>
+
+        <h1>Ejercicio Introductorio</h1> <!--Ejercicio Introductorio-->
+        <a href="Documentos/Ejercicio Introductorio.xlsx" download="Ejercicio Introductorio">
+            Haz click aqui para descargar el Ejercicio Introductorio</a>    
+
+        <h1>Actividad 1 - Estadisticas de la Selección Argentina</h1> <!--Actividad 1-->
+
+        <a href="Documentos/Estadisticas Seleccion Argentina.xlsx" download="Estadisticas Seleccion Argentina">
+            Haz click aqui para descargar la actividad Estadisticas Seleccion Argentina</a>
+        <p style="display: inline;"> <strong> <u> (Seleccionar Estadisticas Jugadores Hoja 1)</u> </strong></p>
+        <br> <br>
+
+        <h1>Actividad 2 - Restaurante</h1> <!--Actividad 2-->
+        <a href="Documentos/Restaurante.xlsx" download="Restaurante">
+            Haz click aqui para descargar la actividad Restaurante</a>
+
+        <br> <br>
+
+        <h1>Actividad 3 - Administración de mis ingresos</h1> <!--Actividad 3-->
+
+        <a href="Documentos/Administracion de mis ingresos.xlsx" download="Administracion de mis ingresos">
+        Haz click aqui para descargar la actividad Administración de mis ingresos</a>
+
+        <br>
+
+        <p>Ver video antes de comenzar la actividad:</p>
+
+        <iframe style="max-width: 640px;" width="100%" height="315" src="https://www.youtube.com/embed/OxjX4iRlmF0"
+            title="Administración de mis ingresos" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe> <br> <br>
+        
+            <h1>Actividad 4 - Restaurante Vis</h1> <!--Actividad 4-->
+            <a href="Documentos/Restaurante Vis.xlsx" download="Restaurante Vis">
+                    Haz click aqui para descargar la actividad Restaurante Vis</a> 
+            <br> <br>
+
+            <h1>Actividad 5 - Perfumeria</h1> <!--Actividad 5-->
+
+        <a href="Documentos/Perfumeria.xlsx" download="Perfumeria">
+            Haz click aqui para descargar la actividad Perfumeria</a>      
+
+        
+        <!--Tarea-->
+
+        <div id="anclaTareas"></div>
+
+        <hr>
+
+        <h1>Tarea 1 - Diferentes maneras de contar</h1> <!--Tarea 1-->
+
+        <a href="Documentos/Diferentes maneras de contar.xlsx" download="Diferentes maneras de contar">
+            Haz click aqui para descargar la tarea</a>
+
+        <p>Realizar esta tarea cuyas correcciones seran expuestas en la siguiente clase. <br>
+            <strong>Hay 3 hojas en el documento excel.</strong>
+        </p>
+
+        <h1>Tarea 2 - Diferentes manera de sumar</h1> <!--Tarea 2-->
+
+        <a href="Documentos/Diferentes manera de sumar.xlsx" download="Diferentes manera de sumar">
+            Haz click aqui para descargar la tarea</a>
+
+        <p>Realizar esta tarea cuyas correcciones seran expuestas en la siguiente clase. <br>
+            <strong>Hay 4 hojas en el documento excel.</strong>
+        </p>
+        
+        <h1>Tarea 3 - Diferentes manera de promediar</h1> <!--Tarea 3-->
+
+        <a href="Documentos/Diferentes maneras de promediar.xlsx" download="Diferentes manera de promediar">
+            Haz click aqui para descargar la tarea</a>
+
+        <p>Realizar esta tarea cuyas correcciones seran expuestas en la siguiente clase. <br>
+            <strong>Hay 2 hojas en el documento excel.</strong>
+        </p>  
+
+        <br>
+        <hr>
+
+        <h1>Modelo de examen</h1> <!--Modelo de examen-->
+
+        <a href="Documentos/Modelo de examen.xlsx" download="Modelo de examen">
+                Haz click aqui para descargar el Modelo de examen</a>
+                <br> <br>          
+        
+
+        <div style="display: none;">    
+    
+        
+    <hr>
+            
+            <h1>Trabajo Práctico Alimentación Saludable</h1> <!--Trabajo practico-->
+
+        <a href="Documentos/TP Alimentacion Saludable.xlsx" download="Alimentación Saludable">
+            Haz click aqui para descargar el Trabajo Práctico Alimentación Saludable</a>
+            <br> <br>         
+
+        
+            <h1>Examen</h1>
+
+        <a href="Documentos/Examen.xlsx" download="Examen"> <!--Examen-->
+            Haz click aqui para descargar el Examen</a>
+            <br> <br>
+        </div>
+    
+    <hr>        
+
+        <p> <strong>Solo</strong> si se solicita la actividad, <strong> Enviar actividad a: </strong>
+            hernanvladimirsky.prof@gmail.com <strong>con asunto:</strong>
+            Apellido_Nombre Actividad N° Cens N°</p>            
+
+    </main>
+
+    <footer style="color: black;">
+        <a href="#ancla" style="text-align: left;">Ir hacia arriba</a>
+        <p id="parrafofooter_index" style="color: black;"> Hernan Joel Vladimirsky <span>&copy;Copyright</span> </p>
+    </footer>
+
+    <!--Ventana emergente con javascript
+    
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"> </script>
+        <script src="sweetalert.js"></script>
+        -->
+    
+
+
+
+</body>
+
+</html>
