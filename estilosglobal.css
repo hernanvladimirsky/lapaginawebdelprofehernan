@@ -230,6 +230,20 @@ td {
     
 }
 
+/* .linksExcel:hover {
+    color: aqua;
+    
+} */
+
+.linksExcel  {
+    list-style: none;
+    display: inline;
+    margin-left: 1%;
+      
+}
+
+
+
 #tituloexcel {
     margin: auto;
     font-size: 70px;
