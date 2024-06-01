@@ -8,15 +8,13 @@ header {
 
 /* Index */
 
-#logoindex {
-    height: 10%;
-    width: 10%;
-    /* estaba en 133px */
+#logoindex {     
+    display: none;    
 }
 
+
 #tituloindex {
-    /*margin: auto auto auto 33.3%; */
-    text-shadow:
+        text-shadow:
         3px 3px 0 #000,
         -1px -1px 0 #000,
         1px -1px 0 #000,
