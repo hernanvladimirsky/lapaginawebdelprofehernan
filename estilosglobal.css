@@ -9,8 +9,8 @@ header {
 /* Index */
 
 #logoindex {
-    height: 111px;
-    width: 111px;
+    height: 10%;
+    width: 10%;
     /* estaba en 133px */
 }
 
@@ -31,7 +31,7 @@ header {
     font-size: 45px;
     -webkit-text-stroke: 1px black;
     color: white;
-
+    
     width: 65%;
     background: #6778e4;
     opacity: .9;
