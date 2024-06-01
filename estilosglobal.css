@@ -17,7 +17,25 @@ header {
 #tituloindex {     
     /*margin: auto auto auto 33.3%; */
     margin: auto;
-    color: white;    
+    color: white;
+    text-align: center;   
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;  */
+
+    font-size: 45px;
+    -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+
+       
+       width: 65%;
+       background: #6778e4;
+       opacity: .9; /* transparencia */
     
 }
 
@@ -33,7 +51,12 @@ header {
 #contenidos {
     color: white;
     text-align: center;
-    font-size: 50px;
+    font-size: 45px;
+    /* background: #6778e4;
+    opacity: .9;     */
+    margin: auto;
+    margin-left: -10%;
+    
 }
 
 .imagenes_index {
