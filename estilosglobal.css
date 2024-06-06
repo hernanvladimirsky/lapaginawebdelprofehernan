@@ -260,10 +260,7 @@ td {
     list-style: none;
     display: inline;
     margin-left: 1%;
-
 }
-
-
 
 #tituloexcel {
     margin: auto;
@@ -287,7 +284,6 @@ td {
 
 .tablaexcel {
     width: 300px;
-
 }
 
 .negritaColumna {
@@ -295,10 +291,18 @@ td {
 }
 
 .colomnaB {
-
     width: 100px;
-
 }
+
+.verdadero {
+    color: blue;
+}
+
+.falso {
+    color: red;
+}
+
+
 
 /* Redes sociales */
 
