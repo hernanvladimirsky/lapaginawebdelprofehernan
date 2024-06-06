@@ -330,28 +330,39 @@
             Suma valores a partir de mas de un criterio o condicion. Se deben cumplir ambas condiciones para que se sume el registro. <br> <br>
 
 
-        =SUMAR.SI.CONJUNTO(<span
-        class="rango_suma">[RANGO_SUMA]</span>;<span class="rango">RANGO DEL CRITERIO1</span>;<span class="criterio">CRITERIO1</span>;<span class="rango">RANGO DEL CRITERIO2</span>;<span class="criterio">CRITERIO2</span>;<span class="rango">RANGO DEL CRITERIO3</span>;<span class="criterio">CRITERIO3</span>)
+        =SUMAR.SI.CONJUNTO(<span class="rango_suma">[RANGO_SUMA]</span>;<span class="rango">RANGO DEL CRITERIO1</span>;<span class="criterio">CRITERIO1</span>;<span class="rango">RANGO DEL CRITERIO2</span>;<span class="criterio">CRITERIO2</span>;<span class="rango">RANGO DEL CRITERIO3</span>;<span class="criterio">CRITERIO3</span>)
         </p>
 
+        <br>
+        <!--Formula SI condicional-->
+
+        <h2>Formula SI condicional</h2>
+        <strong>Siempre debo respetar los 3 Argumentos de su  estructura.</strong>
+        <br> <br>
+        <h3>Simple</h3>
+        <p>=SI(<span><strong>CONDICION</strong></span>; <span class="verdadero">VERDADERO</span>; <span class="falso">FALSO</span>)</p>
+        
+        <h3>Compleja</h3>
+        <p>=SI(<span><strong>CONDICION</strong></span>; <span class="verdadero">VERDADERO</span>;SI(<span><strong>CONDICION</strong></span>;<span class="verdadero">VERDADERO</span>; <span class="falso">FALSO</span>))</p>
+        <h3>Anidada</h3>
+        <p>=SI(<span><strong>CONDICION</strong></span>;<span class="verdadero">VERDADERO</span>;SI(<span><strong>CONDICION</strong></span>; <span class="verdadero">VERDADERO</span>);SI(<span><strong>CONDICION</strong></span>; <span class="verdadero">VERDADERO</span>; <span class="falso">FALSO</span>))</p>
+
+        <hr>
+        <h1>¿Contar o sumar?</h1>
+        <h2>Para determinar si hay que contar o sumar ¿Como hacemos?</h2>
+        <p><strong>Solo se suman las cantidades</strong>, lo restante se cuenta por ejemplo una ganancia es una cantidad, los goles de un equipo son cantidades por lo tanto <strong>se suman</strong>. <br>
+            Los nombres de los jugadores <strong>NO son cantidades</strong>, <strong>son texto</strong> por lo tanto <strong>se cuentan</strong>.
+        </p>
+
+        <hr>
+
         <h2>Planillas de diseño</h2>
-        <p style="font-weight: bold;">¿Como cambiar el alto de un fila y una columna?</p>
+        <p style="font-weight: bold;">¿Como cambiar el alto de un fila y una columna?</p> <!--font-weight: bold negrita para textos de muchos caracteres-->
         <iframe width="100%" height="315" style="max-width: 640px;" src="https://www.youtube.com/embed/hS0xWLn4TLY?si=sBs5GXbNUi0jDQT7" title="YouTube video player" 
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-        <div style="display: none;">
-
-            <!--Formula SI condicional-->
-
-            <h2>Formula SI condicional</h2>
-            <h3>Simple</h3>
-            <p>=Si(condición; verdadero; falso) <strong>Siempre debo respetar los 3 Argumentos de su
-                    estructura.</strong></p>
-            <h3>Compleja</h3>
-            <p>=Si(condición; verdadero; Si(condición; verdadero; falso))</p>
-            <h3>Anidada</h3>
-            <p>=Si(condición; Si(condición; verdadero; falso);Si(condición; verdadero; falso))</p>
+        <div style="display: none;">            
 
             <!--Otras Formulas-->
 
