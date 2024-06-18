@@ -1,0 +1,55 @@
+COMPUTADORA
+Una computadora está formada
+por varios componentes físicos a
+los cuales podemos separarlos en
+dos grupos bien diferenciados.
+
+CPU o Unidad Central de Procesamiento
+Periféricos
+
+
+CPU
+(Unidad Central de
+Es el núcleo básico de la
+computadora ya que dentro él
+encontramos varios componentes
+fundamentales para que la PC
+fncione a saber:
+
+Placa Madre
+Micro procesador
+Memoria RAM
+Disco Rígido/Solido
+
+PERIFÉRICOS
+Un periférico es un dispositivo electrónico que se conecta o acopla
+a una computadora, pero no forma parte del núcleo básico.
+Los periféricos suelen conectarse a los distintos puertos que posee
+el CPU.
+Existen tres tipos de Periféricos:
+De entrada
+De salida
+De entrada y salida
+
+PERIFÉRICOS
+De Entrada
+Son aquellos componentes que
+nos permiten ingresar
+información a la PC.
+P or ejemplo el teclado, mouse,
+escáner, etc.
+
+PERIFÉRICOS
+De Salida
+Son aquellos componentes que
+nos permiten extraer
+información del a PC.
+Por ejemplo el monitor,
+impresora, parlantes, etc
+
+PERIFÉRICOS
+De Entrada y Salida
+Son aquellos que cumplen con
+ambas funciones (ingresar/
+extraer información).
+P or ejemplo el Modem.
