@@ -66,6 +66,19 @@ header {
 
 }
 
+.imagen_index_Drive {
+    width: auto; 
+    height: auto;      
+    float: left;
+    margin: 1em;
+    margin-left: 9%;   
+}
+
+
+
+
+
+
 #parrafofooter_index {
     text-align: center;
     color: white;
@@ -334,7 +347,7 @@ td {
     height: 100%;
     width: 20%;
     max-width: 700px;
-    min-width: 150px;
+    min-width: 100px;
 }
 
 #tituloword {
@@ -368,3 +381,5 @@ td {
     height: 100%;
     width: 100%;
 }
+
+
