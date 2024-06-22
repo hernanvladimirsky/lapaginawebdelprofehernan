@@ -1,0 +1,69 @@
+Partes del Teclado
+Ahora veamos el teclado y sus partes.
+
+Como ya dijimos está dividido en 4 bloques que puedes ver en la imagen de más abajo.
+
+1.Bloque de funciones: Va desde la tecla F1 a F12, en tres bloques de cuatro: de F1 a F4, de F5 a F8 y de F9 a F12.
+
+Funcionan de acuerdo al programa que este abierto.
+
+Por ejemplo al presionar la tecla F1 permite en los programas de Microsoft acceder a la ayuda.
+
+La tecla Escape o Esc: se utiliza generalmente para cancelar operaciones a nivel de usuario y para abandonar programas o secciones de éstos.
+
+Por ejemplo, puede usarse para cerrar los menús de una aplicación, para invalidar una entrada de datos incorrecta que se ha efectuado, para no autorizar la impresión previamente solicitada de un documento, etc.
+
+La tecla Imprimir Pantalla, Print Screen o PrtScrn: en sistemas operativos DOS una pulsación de esta tecla envía una copia exacta de lo que aparece en pantalla a la impresora conectada al equipo.
+
+Bajo Windows ocurre que la copia de la imagen se guarda en la memoria de la computadora para que el usuario pueda manipularla y después imprimirla si lo desea.
+
+Imprimir Pantalla pulsada en unión de la tecla comodín Alt genera la función denominada System Requested Key o SysReq, usada en algunos sistemas especiales.
+
+La tecla Bloqueo Desplazamiento o Scroll Lock: es la única de todo el teclado que no sirve prácticamente para nada; en programas muy antiguos se le llegó a dar un uso, pero hoy día sólo se conserva por razones de compatibilidad y tal vez para que algunos programas modernos simulen el funcionamiento de sus predecesores.
+
+Como curiosidad cabe citar que se trata de una tecla de bloqueo, es decir, que su pulsación sucesiva activa o desactiva sus hipotéticas funciones.
+
+La tecla Pausa, Pause o Break: en sistemas DOS se puede usar, pulsada una vez, para congelar la actividad del ordenador y poder, por ejemplo, ver lo que aparece en pantalla en envíos masivos de datos, retomando el proceso mediante la pulsación de cualquier tecla excepto Imprimir Pantalla, Pausa, las teclas de bloqueo y las comodín.
+
+Pausa, pulsada con la tecla comodín Control, permite cancelar a bajo nivel un gran número de operaciones (esta opción únicamente deben emplearla los usuarios expertos en casos de emergencia).
+
+En Windows la tecla Pausa no tiene ningún uso como interruptora de procesos.
+
+2. Bloque alfanumérico: Está ubicado en la parte inferior del bloque de funciones, contiene los números arábigos del 1 al 0 y el alfabeto organizado como en una máquina de escribir, además de algunas teclas especiales.
+
+3. Bloque especial: Está ubicado a la derecha del bloque alfanumérico, contiene algunas teclas especiales como Imp Pant, Bloq de desplazamiento, pausa, inicio, fin, insertar, suprimir, Repag, Avpag y las flechas direccionales que permiten mover el punto de inserción en las cuatro direcciones.
+
+4. Bloque numérico: Está ubicado a la derecha del bloque especial, se activa cuando al presionar la tecla Bloq Num, contiene los números arábigos organizados como en una calculadora con el fin de facilitar la digitacion de cifras, además contiene los signos de las cuatro operaciones básicas como suma +, resta -, multiplicación * y división /
+
+También contiene una tecla de Intro o enter para ingresar las cifras.
+
+Atajos del Teclado
+A continuación se presentan los 7 principales atajos de teclado que recomendamos a todos memorizar y usar.
+
+Ctrl + C Para copiar texto.
+
+Ctrl + V Para pegar el texto copiado.
+
+Ctrl + Z Deshacer último cambio.
+
+Ctrl + F Abre la Búsqueda en cualquier programa. Por ejemplo podemos buscar palabras en una página web al pulsar ctrol + f en el navegador.
+
+Ctrl + S Guarda el archivo con el que estamos trabajando.
+
+Ctrl + Inicio o Ctrl + Fin Mueve el cursor al principio o al final de documento.
+
+Ctrl + P Nos abre una vista previa de la impresión del documento.
+Insertar Caracteres Especiales
+Pulsa la tecla winbdows + R y en la ventana que aparece escribe charmap.
+
+Te aparerá eel mapa de caracteres  que podrás copiar y pegar.
+Insertar Símbolos ASCII
+Tendràs que pulsar la tecla Alt + mas un número del teclado numérico, ojo del numérico no de los número dee la barra de arriba del teclado.
+
+Por ejemplos:
+
+tecla Alt + 31 te saldrá ▼
+tecla Alt + 32 te saldrá ☻
+tecla Alt + 131 te saldrá â
+tecla Alt + 126 te saldrá ~
+tecla Alt + 27 te saldrá ←
