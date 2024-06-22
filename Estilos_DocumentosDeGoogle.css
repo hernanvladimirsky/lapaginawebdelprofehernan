@@ -1,0 +1,45 @@
+/*Documentos de Google */
+
+header {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.LogoDocumentosDeGoogle {
+    height: 100%;
+    width: 20%;
+    max-width: 700px;
+    min-width: 100px; 
+    margin-top: 5%;
+
+}
+
+
+.TituloDocumentosDeGoogle {    
+    font-size: 70px;
+    margin: auto;
+    text-align: center;
+    
+}
+
+
+
+#pensandoenDocumentosdeGoogle {
+    width:100%;
+    max-width: 640px;
+}
+
+.links {
+    list-style: none;
+    display: inline;
+    margin-left: 1%;
+}
+
+#parrafofooter_index {
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    margin-bottom: 0;
+
+}
