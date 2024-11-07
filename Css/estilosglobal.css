@@ -357,8 +357,11 @@ td {
 /* Power Point */
 
 #logopowerpoint {
-    height: 20%;
+    height: 100%;
     width: 20%;
+    max-width: 700px;
+    min-width: 100px; 
+    margin-top: 2.5%;
 }
 
 #titulopowerpoint {
@@ -369,6 +372,7 @@ td {
 #foto-exposicion {
     height: 100%;
     width: 100%;
+    max-width: 640px;
 }
 
 
