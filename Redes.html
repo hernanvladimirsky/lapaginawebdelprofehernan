@@ -86,6 +86,62 @@
         </p>
 
         <h2>Tipos de redes</h2>
+
+        Las redes según sea la <strong>utilización</strong> por parte de los usuarios puede ser: compartida o exclusiva.
+
+        <h3>Redes dedicadas o exclusivas.</h3>
+        Son aquellas que por motivo de seguridad, velocidad o ausencia de otro tipo de red, conectan dos o más puntos de
+        forma exclusiva. Este tipo de red puede estructurarse en redes punto a punto o redes multipunto.
+
+        <h3>Redes punto a punto</h3>
+
+        Permiten la conexión en línea directa entre terminales y computadoras.
+        La ventaja de este tipo de conexión se encuentra en la alta velocidad de transmisión y la seguridad que presenta
+        al no existir conexión con otros usuarios. Su desventaja sería el precio muy elevado de este tipo de red.
+
+        <h3>Redes multipunto</h3>
+
+        Permite la unión de varios terminales a su correspondiente computadora compartiendo una única línea de
+        transmisión. La ventaja consiste en el abaratamiento de su costo, aunque pierde velocidad y seguridad.
+        Este tipo de redes requiere amplificadores y difusores de señal o de multiplexores que permiten compartir líneas
+        dedicadas.
+
+        <h3>Redes compartidas</h3>
+
+        Son aquellas a las que se une un gran número de usuarios, compartiendo todas las necesidades de transmisión e
+        incluso con transmisiones de otras naturalezas. Las redes más usuales son las de conmutación de paquetes y las
+        de conmutación de circuitos.
+
+
+        <h3>Redes de conmutación de paquetes</h3>
+
+        Son redes en las que existen nodos de concentración con procesadores que regulan el tráfico de paquetes. <br>
+        (Paquete: es una pequeña parte de la información que cada usuario desea transmitir. Cada paquete se compone de
+        la información, el identificador del destino y algunos caracteres de control). <br> <br>
+
+        Redes de conmutación de circuitos.- Son redes en las que los centros de conmutación establecen un circuito
+        dedicado entre dos estaciones que se comunican. <br><br>
+
+        Redes digitales de servicios integrados(RDSI).- Se basan en desarrollos tecnológicos de conmutación y
+        transmisión digital. La RDSI es una red totalmente digital de uso general capaz de integrar una gran gama de
+        servicios como son la voz, datos, imagen y texto. La RDSI requiere de la instalación de centrales digitales. <br><br>
+
+
+        Las redes según los <strong>servicios</strong> que satisfacen a los usuarios se clasifican en:
+
+       <h3>Redes para servicios básicos de transmisión</h3> 
+
+        Se caracterizan por dar servicio sin alterar la información que transmiten. De este tipo son las redes
+        dedicadas, la red telefónica y las redes de conmutación de circuitos.
+
+        <h3>Redes para servicios de valor añadido</h3>
+
+        Son aquellas que además de realizar la transmisión de información, actúan sobre ella de algún modo. Pertenecen a
+        este tipo de red: las redes que gestionan mensajería, transferencia electrónica de fondos, acceso a grandes
+        bases de datos, videotex, teletex, etc.
+
+
+
         <p>Las redes según la <strong>propiedad</strong> a la que pertenezcan pueden ser: <br>
         <h3>Redes privadas</h3>
         Son redes gestionadas por personas particulares, empresas u organizaciones de
@@ -298,7 +354,7 @@
 
         <h2>LA PLACA O TARJETA DE RED</h2>
         <img src="Imagenes/Redes/placa de red.jpg" alt=""> <br>
-        Su función 
+        Su función
         Las tarjetas de red, también denominadas NIC (Network Interface Cards, tarjetas de interfaz de red), actúan como
         la interfaz o conexión física entre el equipo y el cable de red. Las tarjetas están instaladas en una ranura de
         expansión en cada uno de los equipos y en el servidor de la red. Trabajan en la capa de enlace de datos del
@@ -416,7 +472,7 @@
         Cuando la tarjeta de red envía una petición al equipo, utiliza una interrupción (envía una señal electrónica a
         la CPU del equipo). Cada dispositivo del equipo debe utilizar una línea de petición de interrupción diferente.
         La línea de interrupción se especifica cuando se configura el dispositivo. Algunos ejemplos son: <br>
-         
+
         <img src="Imagenes/Redes/Líneas de petición de interrupción (IRQ).png" alt="" style="max-width: 470px;">
 
         Para la tarjeta de red se pueden utilizar IRQ3 o IRQ5, en la mayoría de los casos. Si se encuentra disponible,
@@ -434,7 +490,7 @@
         están siendo utilizadas. <br>
         <h3>Configuración del puerto base de E/S</h3>
         <img src="Imagenes/Redes/Configuración del puerto base de E y S.png" alt="" style="max-width: 470px;">
-   
+
         <h3>Dirección de memoria base</h3>
         La dirección de memoria base identifica una posición en la memoria (RAM) de un equipo. La tarjeta de red utiliza
         esta posición como un área de búfer para guardar los datos que llegan y que salen. A este parámetro, a veces se
@@ -685,7 +741,7 @@
         tierra en ambos extremos. Este tipo de cable STP requiere una cantidad mayor de aislamiento y de blindaje. Estos
         factores se combinan para aumentar de manera considerable el tamaño, peso y costo del cable. También requiere la
         instalación de grandes armarios y conductos para el cableado, lujos que en muchos edificios antiguos no pueden
-        permitirse. <br> 
+        permitirse. <br>
         Para la conexión de los cables STP a los diferentes dispositivos de red se usan unos conectores específicos,
         denominados conectores STP, similares a los RJ-45 descritos más abajo. <br> <br>
         3. Par trenzado no blindado (UTP): compuesto por cuatro pares de hilos, trenzados para a par, y revestidos de un
@@ -1763,7 +1819,8 @@
             <li>Normaliza los componentes de red para permitir el desarrollo y el soporte de los productos de diferentes
                 fabricantes.</li>
             <li>Permite a los distintos tipos de hardware y software de red comunicarse entre sí.</li>
-            <li>Impide que los cambios en una capa puedan afectar las demás capas, de manera que se puedan desarrollar con
+            <li>Impide que los cambios en una capa puedan afectar las demás capas, de manera que se puedan desarrollar
+                con
                 más rapidez.</li>
             <li>Divide la comunicación de red en partes más pequeñas para simplificar el aprendizaje.</li>
         </ol>
@@ -1820,7 +1877,7 @@
         dos hosts es responsabilidad de la capa de transporte. Al proporcionar un servicio de comunicaciones, la capa de
         transporte establece, mantiene y termina adecuadamente los circuitos virtuales. Al proporcionar un servicio
         confiable, se utilizan dispositivos de detección y recuperación de errores de transporte. Si desea recordar la
-        Capa 4 en la menor cantidad de palabras posible, piense en calidad de servicio y confiabilidad. 
+        Capa 4 en la menor cantidad de palabras posible, piense en calidad de servicio y confiabilidad.
 
         <h3>Capa 3: La capa de red:</h3>
         La capa de red es una capa compleja que proporciona conectividad y selección de ruta entre dos sistemas de hosts
@@ -1853,34 +1910,49 @@
         El párrafo anterior resume las operaciones generales que van a producirse en la Capa Física, y que detallamos a
         continuación:
         <ol>
-            <li>Las tramas formadas en la Capa de Enlace de Datos se unen una tras otra en lo que se conoce como "trenes de
-                bits", sucesiones de ceros y unos lógicos que contienen toda la información necesaria para la comunicación de
-                datos entre dos host. Estos trenes de bits deben ser convertidos en señales estándares capaces de viajar de
-                forma correcta por los sucesivos cables (y atmósfera, en el caso de redes inalámbricas) que van a unir los host
+            <li>Las tramas formadas en la Capa de Enlace de Datos se unen una tras otra en lo que se conoce como "trenes
+                de
+                bits", sucesiones de ceros y unos lógicos que contienen toda la información necesaria para la
+                comunicación de
+                datos entre dos host. Estos trenes de bits deben ser convertidos en señales estándares capaces de viajar
+                de
+                forma correcta por los sucesivos cables (y atmósfera, en el caso de redes inalámbricas) que van a unir
+                los host
                 emisor y receptor, es decir, en impulsos eléctricos adecuados para la transmisión de datos.
-                Generalmente, esta conversión bits-señales se lleva a cabo en ciertos chips constituyentes de la tarjeta de red
-                del host emisor o en dispositivos especiales para tal fin, como los módems. Es por esto que en realidad debemos
-                considerar las tarjetas de red como dispositivos pertenecientes tanto a la Capa de Enlace de Datos como a la
+                Generalmente, esta conversión bits-señales se lleva a cabo en ciertos chips constituyentes de la tarjeta
+                de red
+                del host emisor o en dispositivos especiales para tal fin, como los módems. Es por esto que en realidad
+                debemos
+                considerar las tarjetas de red como dispositivos pertenecientes tanto a la Capa de Enlace de Datos como
+                a la
                 Capa Física.</li>
             <li>Una vez creadas las señales, estas deben ser encaminadas a través del cableado que une los host emisor y
-                destinatario. Para ello se precisan unos elementos de unión entre las placas madre de los host, las tarjetas de
-                red o los módems y los cables en sí, elementos que pueden variar de una implementación de red a otra. Ejemplo de
-                estos elementos de unión son los famosos conectores RJ-45 y los Jacks RJ-45 del cableado de par trenzado y los
+                destinatario. Para ello se precisan unos elementos de unión entre las placas madre de los host, las
+                tarjetas de
+                red o los módems y los cables en sí, elementos que pueden variar de una implementación de red a otra.
+                Ejemplo de
+                estos elementos de unión son los famosos conectores RJ-45 y los Jacks RJ-45 del cableado de par trenzado
+                y los
                 conectores en T de los cables coaxiales.</li>
             <li>Las señales viajan por los diferentes cables que forman la red o redes intermedias entre los host que se
                 comunican. Pero puede suceder que las diferentes redes sean de topología diferente, por lo que habrá que
                 disponer de elementos capaces de transformar un tipo de señales en otro. Estos elementos se denominan
                 transceptores, y forman también parte de la Capa Física.</li>
             <li>Si la longitud de cableado que deben recorrer las señales es superior a unos determinados límites (que
-                generalmente son de no muchos metros - 90 o 100 en el caso de cableado de par trenzado, por ejemplo-) será
-                necesario amplificar y retemporizar las mismas, ya que perderán intensidad y claridad en el recorrido, llegando
-                a hacerse ininteligibles. Para esta tarea se utilizan dispositivos especiales de red que actúan sobre las
+                generalmente son de no muchos metros - 90 o 100 en el caso de cableado de par trenzado, por ejemplo-)
+                será
+                necesario amplificar y retemporizar las mismas, ya que perderán intensidad y claridad en el recorrido,
+                llegando
+                a hacerse ininteligibles. Para esta tarea se utilizan dispositivos especiales de red que actúan sobre
+                las
                 señales, denominados repetidores y hubs.</li>
-            <li>Una vez las señales llegan al host destino, el proceso de codificación se invierte, transformando las señales
-                recibidas en trenes de bits, capaces de ser interpretados por la pila de protocolos superiores, de tal forma que
+            <li>Una vez las señales llegan al host destino, el proceso de codificación se invierte, transformando las
+                señales
+                recibidas en trenes de bits, capaces de ser interpretados por la pila de protocolos superiores, de tal
+                forma que
                 se recupere el mensaje original.</li>
         </ol>
-   
+
         Vamos pues a estudiar a continuación todo este proceso de forma más detallada (salvo los dispositivos de red, a
         los que dedicaremos un capítulo aparte), procurando no entrar en demasiadas consideraciones científicas, aunque
         será necesaria la explicación de algún factor técnico necesario. <br>
@@ -1905,24 +1977,35 @@
         Las redes deben realizar los siguientes cinco pasos de conversión a fin de encapsular los datos:
         <ol>
             <li>Crear los datos.
-                Cuando un usuario envía un mensaje de correo electrónico, sus caracteres alfanuméricos se convierten en datos
+                Cuando un usuario envía un mensaje de correo electrónico, sus caracteres alfanuméricos se convierten en
+                datos
                 que pueden recorrer la internetwork.</li>
             <li>Empaquetar los datos para ser transportados de extremo a extremo. Los datos se empaquetan para ser
-                transportados por la internetwork. Al utilizar segmentos, la función de transporte asegura que los hosts del
+                transportados por la internetwork. Al utilizar segmentos, la función de transporte asegura que los hosts
+                del
                 mensaje en ambos extremos del sistema de correo electrónico se puedan comunicar de forma confiable.</li>
             <li>Anexar (agregar) la dirección de red al encabezado.
-                Los datos se colocan en un paquete o datagrama que contiene el encabezado de red con las direcciones lógicas
-                origen y destino. Estas direcciones ayudan a los dispositivos de red a enviar los paquetes a través de la red
+                Los datos se colocan en un paquete o datagrama que contiene el encabezado de red con las direcciones
+                lógicas
+                origen y destino. Estas direcciones ayudan a los dispositivos de red a enviar los paquetes a través de
+                la red
                 por una ruta seleccionada.</li>
-            <li>Anexar (agregar) la dirección local al encabezado de enlace de datos. Cada dispositivo de la red debe poner
+            <li>Anexar (agregar) la dirección local al encabezado de enlace de datos. Cada dispositivo de la red debe
+                poner
                 el paquete dentro de una trama. La trama le permite conectarse al próximo dispositivo de red conectado
-                directamente en el enlace. Cada dispositivo en la ruta de red seleccionada requiere el entramado para poder
+                directamente en el enlace. Cada dispositivo en la ruta de red seleccionada requiere el entramado para
+                poder
                 conectarse al siguiente dispositivo.</li>
-            <li>Realizar la conversión a bits para su transmisión. La trama debe convertirse en un patrón de unos y ceros
-                (bits) para su transmisión a través del medio (por lo general un cable). Una función de temporización permite
-                que los dispositivos distingan estos bits a medida que se trasladan por el medio. El medio en la internetwork
-                física de redes puede variar a lo largo de la ruta utilizada. Por ejemplo, el mensaje de correo electrónico
-                puede originarse en una LAN, cruzar el backbone de un campus y salir por un enlace de WAN hasta llegar a su
+            <li>Realizar la conversión a bits para su transmisión. La trama debe convertirse en un patrón de unos y
+                ceros
+                (bits) para su transmisión a través del medio (por lo general un cable). Una función de temporización
+                permite
+                que los dispositivos distingan estos bits a medida que se trasladan por el medio. El medio en la
+                internetwork
+                física de redes puede variar a lo largo de la ruta utilizada. Por ejemplo, el mensaje de correo
+                electrónico
+                puede originarse en una LAN, cruzar el backbone de un campus y salir por un enlace de WAN hasta llegar a
+                su
                 destino en otra LAN remota. Los encabezados y la información final se agregan a medida que los datos se
                 desplazan a través de las capas del modelo OSI.</li>
         </ol>
@@ -1977,29 +2060,34 @@
 
         <h3>Capa de Aplicación para TCP/IP.</h3>
         Los servicios de aplicación de TCP/IP son idénticos a los de OSI pero incorporan características que en el
-        protocolo de OSI corresponden a las capas de presentación y de sesión. Entre ellos se encuentran los siguientes: <br>
+        protocolo de OSI corresponden a las capas de presentación y de sesión. Entre ellos se encuentran los siguientes:
+        <br>
 
         <ol>
-            <li>Telnet: servicio de terminal remota para permitir a un usuario remoto acceder a los servicios de un servidor
+            <li>Telnet: servicio de terminal remota para permitir a un usuario remoto acceder a los servicios de un
+                servidor
                 como si tuviera conexión directa.</li>
             <li>FTP: protocolo para transferencia de archivos y servicios de directorio entre terminales remotas.</li>
             <li>SMTP: protocolo para correo electrónico.</li>
-            <li>Kerberos: protocolo que ofrece servicios de encriptación y codificación de información y otros esquemas de
+            <li>Kerberos: protocolo que ofrece servicios de encriptación y codificación de información y otros esquemas
+                de
                 seguridad para aplicaciones de usuario.</li>
             <li>TNS: este protocolo permite mapear las direcciones lógicas de una terminal a un nombre simbólico más
-                fácilmente identificable por los usuarios de la red. Ese servicio a su vez es utilizado por otros servicios como
+                fácilmente identificable por los usuarios de la red. Ese servicio a su vez es utilizado por otros
+                servicios como
                 el de correo electrónico y FTP.
-        </li>
+            </li>
         </ol>
         Todos estos servicios están basados en TCP a nivel capa de transporte y aunque son más simples de usar no son
         tan seguros, entre ellos están:
 
-        <ol type= "a">
-            <li>RCP: éste protocolo se utiliza para que los programas de usuario estén accesibles a otros usuarios en la red
+        <ol type="a">
+            <li>RCP: éste protocolo se utiliza para que los programas de usuario estén accesibles a otros usuarios en la
+                red
                 ofreciendo a estos últimos una interfaz con el primero.</li>
             <li>TFTP: idéntico a ftp pero sin verificación de errores.</li>
         </ol>
-  
+
         Existe además un servicio orientado a los administradores de red, conocido como SNMP que permite monitorear a
         las terminales en red, a los usuarios, a los servicios y finalmente a los recursos existentes en la red. <br>
 
@@ -2016,19 +2104,25 @@
         destino. <br>
         En resumen, el repetidor: <br>
         <ol>
-            <li>Conecta a nivel físico dos redes, o dos segmentos de red. Cuando la distancia entre dos hosts es grande, la
+            <li>Conecta a nivel físico dos redes, o dos segmentos de red. Cuando la distancia entre dos hosts es grande,
+                la
                 señal que viaja por la línea se atenúa y el repetidor la regenera.</li>
             <li>Resuelve problemas de limitación de distancia en un segmento de una red.</li>
-            <li>Repite la señal transmitida, evitando su atenuación. Así, se puede ampliar la longitud del cable que soporta
+            <li>Repite la señal transmitida, evitando su atenuación. Así, se puede ampliar la longitud del cable que
+                soporta
                 la red.</li>
-            <li>Al trabajar en nivel físico, nos obliga a que los dos segmentos que conecta tengan el mismo método de acceso
-                al medio, y trabajen con los mismos protocolos, y que los dos segmentos tengan la misma dirección de red.</li>
+            <li>Al trabajar en nivel físico, nos obliga a que los dos segmentos que conecta tengan el mismo método de
+                acceso
+                al medio, y trabajen con los mismos protocolos, y que los dos segmentos tengan la misma dirección de
+                red.</li>
             <li>Se utilizan para ampliar la longitud del bus de una red con topología bus (Ethernet o 802.3).</li>
-            <li>Los repetidores funcionan como hubs activos aunque no son como un hub activo, solo tienen un punto de entrada
-                y un punto de salida. Hub Activo: dispositivo que realiza funciones de ampliación y repetición de la señal.
+            <li>Los repetidores funcionan como hubs activos aunque no son como un hub activo, solo tienen un punto de
+                entrada
+                y un punto de salida. Hub Activo: dispositivo que realiza funciones de ampliación y repetición de la
+                señal.
                 Además, los más complejos realizan estadísticas.</li>
         </ol>
-    
+
         <h3>Hub</h3>
         Los repetidores multipuerto se denominan comúnmente hubs. Los hubs son dispositivos de internetworking muy
         comunes. En términos generales, el término hub se utiliza en lugar de repetidor para referirse al dispositivo
@@ -2040,7 +2134,7 @@
         necesiten llegar allí o no. <br>
         <h3>Problema de trafico intenso en la red</h3>
         Si hay un solo cable que interconecte todos los dispositivos de una red o si los segmentos de una red sólo están
-        conectados por medio de dispositivos que no 
+        conectados por medio de dispositivos que no
         filtran, por ejemplo repetidores, esto puede dar origen a que más de un usuario intente enviar datos a través de
         la red al mismo tiempo. <br>
 
@@ -2051,7 +2145,8 @@
 
         Cuando un dispositivo de la red determina que se ha producido una colisión, la tarjeta NIC del dispositivo emite
         una postergación. Como esta se basa en un algoritmo, la extensión de este retraso en la retransmisión es
-        diferente para cada dispositivo de la red, lo cual minimiza la probabilidad de que se produzca otra colisión. <br>
+        diferente para cada dispositivo de la red, lo cual minimiza la probabilidad de que se produzca otra colisión.
+        <br>
         Sin embargo, si el tráfico de una red es muy pesado, la reiteración de colisiones dará origen a reiteradas
         postergaciones y a una considerable demora en el tráfico. Como resultado, el uso de repetidores para extender y
         aumentar el tráfico de una red puede significar que la red no llegue a tener un desempeño óptimo. <br>
@@ -2113,24 +2208,30 @@
             <li>Ampliar la extensión de la red, o el número de nodos que la constituyen</li>
             <li>Reducir la carga en una red con mucho tráfico, uniendo segmentos diferentes de una misma red.</li>
             <li>Unir redes con la misma topología y método de acceso al medio, o diferentes.</li>
-            <li>Cuando un puente une dos redes exactamente iguales, su función se reduce a direccionar el paquete hacia la
+            <li>Cuando un puente une dos redes exactamente iguales, su función se reduce a direccionar el paquete hacia
+                la
                 subred destino.</li>
-            <li>Cuando un puente une redes diferentes, debe realizar funciones de traducción de entre las tramas de nivel MAC
+            <li>Cuando un puente une redes diferentes, debe realizar funciones de traducción de entre las tramas de
+                nivel MAC
                 de una topología y otra.</li>
             <li>Cada segmento de red, o red conectada con un puente tiene una dirección de red diferente.</li>
             <li>Los puentes trabajan con direcciones MAC, y NO entienden de direcciones IP.</li>
         </ol>
-      
+
         Un bridge realiza las siguientes funciones:
         <ol>
-            <li>Reenvío de tramas: Es una forma de filtrado. Un bridge solo reenvía a un segmento a aquellos paquetes cuya
-                dirección de red lo requiera, y no deja pasar a los paquetes que van dirigidos a nodos locales de su segmento.
-                Cuando un paquete llega a un bridge, éste examina la dirección MAC destino que hay en él, determinando así si el
+            <li>Reenvío de tramas: Es una forma de filtrado. Un bridge solo reenvía a un segmento a aquellos paquetes
+                cuya
+                dirección de red lo requiera, y no deja pasar a los paquetes que van dirigidos a nodos locales de su
+                segmento.
+                Cuando un paquete llega a un bridge, éste examina la dirección MAC destino que hay en él, determinando
+                así si el
                 paquete debe atravesar el puente o no.</li>
             <li>Técnicas de aprendizaje: Los puentes construyen tablas de dirección que describen las rutas, mediante el
-                examen del flujo de los paquetes (puenteado transparente) o con la obtención de la información de los “paquetes
+                examen del flujo de los paquetes (puenteado transparente) o con la obtención de la información de los
+                “paquetes
                 exploradores” (encaminamiento fuente) que han aprendido durante sus viajes por la topología de la red.
-        </li>
+            </li>
         </ol>
 
         Los primeros puentes requerían que los administradores de red introdujeran a mano las tablas de dirección. Los
@@ -2156,7 +2257,7 @@
         direccionamiento que se utilizan en networking.
 
 
-       <h3>Switch</h3> 
+        <h3>Switch</h3>
         El switch es un dispositivo que se utiliza actualmente en reemplazo del Hub. Es una mezcla entre un hub y un
         bridge. Es decir, un bridge que tiene una mayor cantidad de puertos. Basa su funcionamiento en el
         direccionamiento MAC introducido por la capa 2 del modelo OSI para reenviar la información, logrando una mayor
@@ -2172,10 +2273,12 @@
         eficiente que debe seguir un paquete en el momento de recibirlo. <br>
         Así funcionan:
         <ol>
-            <li>Cuando llega un paquete a un Router, éste examina la dirección destino y lo envía hacia su destino a través
+            <li>Cuando llega un paquete a un Router, éste examina la dirección destino y lo envía hacia su destino a
+                través
                 de una ruta predeterminada.</li>
             <li>Si la dirección destino pertenece a una de las redes que el router conecta, entonces envía el paquete
-                directamente a ella; en otro caso, enviará el paquete hacia otro router más próximo a la dirección destino.</li>
+                directamente a ella; en otro caso, enviará el paquete hacia otro router más próximo a la dirección
+                destino.</li>
             <li>Para saber el camino por el que el router debe enviar un paquete recibido, examina sus propias tablas de
                 encaminamiento localizadas en los hosts con un bridge.</li>
         </ol>
