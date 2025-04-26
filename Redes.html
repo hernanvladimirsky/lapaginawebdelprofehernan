@@ -5,10 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
+
+
     <link rel="stylesheet" href="Css/estilosglobal.css">
     <title>Redes Informaticas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 
 <body>
@@ -226,31 +259,32 @@
         <h3>¿Que es un gateway?</h3>
         <p>
             Un gateway o puerta de enlace es un dispositivo que permite la comunicación entre redes, ya sean
-            informáticas o  de internet.  <br><br>
+            informáticas o de internet. <br><br>
             <strong>¿Qué hace?</strong>
-            <ul>
-                <li>Conecta dos redes informáticas de distinto tipo </li>
-                <li>Permite compartir recursos entre computadoras </li>
-                <li>Modifica el empaquetamiento de la información de la red de origen para que se adapte a la red de destino</li>
-                <li>Enruta el tráfico desde la red local hacia los dispositivos en las redes remotas </li>
-            </ul>
-            
-            <strong>¿Cómo funciona?</strong>
-            <ul>
-                <li>Actúa como un punto de parada para los datos en su camino hacia otras redes </li>
-                <li>Traduce los datos de un protocolo empleado en una red al protocolo utilizado en la red de destino </li>
-                <li> Ejemplos de gateway Un router, Un servidor, Un firewall. </li>
-            </ul> 
+        <ul>
+            <li>Conecta dos redes informáticas de distinto tipo </li>
+            <li>Permite compartir recursos entre computadoras </li>
+            <li>Modifica el empaquetamiento de la información de la red de origen para que se adapte a la red de destino
+            </li>
+            <li>Enruta el tráfico desde la red local hacia los dispositivos en las redes remotas </li>
+        </ul>
 
-            <strong>Usos</strong> 
-            <ul>
-                <li>Conectar una red local a Internet </li>
-                <li>Simplificar la conectividad a Internet en un solo dispositivo </li>
-                <li>Permitir que los dispositivos de una red puedan comunicarse con los dispositivos de la otra red </li>
-            </ul>
-            
-            
-            
+        <strong>¿Cómo funciona?</strong>
+        <ul>
+            <li>Actúa como un punto de parada para los datos en su camino hacia otras redes </li>
+            <li>Traduce los datos de un protocolo empleado en una red al protocolo utilizado en la red de destino </li>
+            <li> Ejemplos de gateway Un router, Un servidor, Un firewall. </li>
+        </ul>
+
+        <strong>Usos</strong>
+        <ul>
+            <li>Conectar una red local a Internet </li>
+            <li>Simplificar la conectividad a Internet en un solo dispositivo </li>
+            <li>Permitir que los dispositivos de una red puedan comunicarse con los dispositivos de la otra red </li>
+        </ul>
+
+
+
         </p>
         <img src="Imagenes/Redes/gateway.jpg" alt="" style="max-width: 350px;"> <br>
 
@@ -682,659 +716,848 @@
             a recibir datos. <br>
         </p>
 
-        <img src="Imagenes/Redes/" alt="">
+        <div style="display: none;"> <!--Display none-->
+            <h3>Opciones y parámetros de configuración</h3>
+            <p>
+                Las tarjetas de red a menudo tienen una serie de opciones que se deben configurar para que la tarjeta
+                funcione
+                apropiadamente. Algunos de los diseños más antiguos utilizan interruptores DIP externos. Algunos
+                ejemplos de
+                opciones que se pueden configurar:
+            </p>
 
-        <h3>Opciones y parámetros de configuración</h3>
-        <p>
-            Las tarjetas de red a menudo tienen una serie de opciones que se deben configurar para que la tarjeta
-            funcione
-            apropiadamente. Algunos de los diseños más antiguos utilizan interruptores DIP externos. Algunos ejemplos de
-            opciones que se pueden configurar:
-        </p>
 
+            <ol>
+                <li>Interrupción (IRQ).</li>
+                <li>Las tarjetas de red más antiguas se configuran por medio de software, jumpers, o una combinación de
+                    los
+                    dos;
+                    consulte la documentación de la tarjeta para ver la configuración software o jumpers apropiados. Las
+                    tarjetas
+                    más modernas utilizan la tecnología Plug and Play (PnP); como consecuencia, las tarjetas más
+                    antiguas
+                    que
+                    necesitan una configuración manual, han quedado obsoletas.
+                </li>
+                <li>Dirección del puerto base de Entrada/Salida (E/S).</li>
+                <li>Dirección base de memoria.</li>
+                <li>Transceptor.</li>
+            </ol>
 
-        <ol>
-            <li>Interrupción (IRQ).</li>
-            <li>Las tarjetas de red más antiguas se configuran por medio de software, jumpers, o una combinación de los
-                dos;
-                consulte la documentación de la tarjeta para ver la configuración software o jumpers apropiados. Las
-                tarjetas
-                más modernas utilizan la tecnología Plug and Play (PnP); como consecuencia, las tarjetas más antiguas
+            <h3>Líneas de petición de interrupción (IRQ)</h3>
+            <p>
+                Las líneas de petición de interrupción (IRQ) son líneas hardware por las que dispositivos como puertos
+                de
+                E/S,
+                teclado, unidades de disco y tarjetas de red, pueden enviar interrupciones o peticiones al
+                microprocesador
+                del
+                equipo. <br>
+                Las líneas de petición de interrupción se incorporan en el hardware interno del equipo, y se les asignan
+                diferentes niveles de prioridad, de forma que el microprocesador pueda determinar la importancia de las
+                peticiones de servicios recibidas. <br>
+                Cuando la tarjeta de red envía una petición al equipo, utiliza una interrupción (envía una señal
+                electrónica
+                a
+                la CPU del equipo). Cada dispositivo del equipo debe utilizar una línea de petición de interrupción
+                diferente.
+                La línea de interrupción se especifica cuando se configura el dispositivo. Algunos ejemplos son: <br>
+            </p>
+
+            <img src="Imagenes/Redes/Líneas de petición de interrupción (IRQ).png" alt="" style="max-width: 350px;">
+            <br>
+
+            <p>
+                Para la tarjeta de red se pueden utilizar IRQ3 o IRQ5, en la mayoría de los casos. Si se encuentra
+                disponible,
+                se recomienda IRQ5, y es la que se utiliza por omisión para la mayoría de los sistemas. Para conocer qué
+                IRQ
+                están siendo utilizadas, utilice una herramienta de diagnóstico del sistema. <br>
+            </p>
+
+            <h3>Puerto base de E/S</h3>
+            <p>
+                El puerto base de E/S especifica un canal por donde fluye la información entre el hardware del equipo
+                (como
+                la
+                tarjeta de red) y su CPU. El puerto es para la CPU como una dirección. <br>
+
+                Cada dispositivo hardware en un sistema debe tener un número de puerto base de E/S diferente. Los
+                números de
+                puerto, en formato hexadecimal (sistema que utiliza base 16 en lugar de base 10 para su numeración) de
+                la
+                tabla
+                que se muestra a continuación, normalmente están disponibles para asignar a una tarjeta de red, a menos
                 que
-                necesitan una configuración manual, han quedado obsoletas.
-            </li>
-            <li>Dirección del puerto base de Entrada/Salida (E/S).</li>
-            <li>Dirección base de memoria.</li>
-            <li>Transceptor.</li>
-        </ol>
+                ya
+                se estén usando. Aquellas que se muestran con un dispositivo al lado, son direcciones que normalmente se
+                utilizan para los dispositivos. Compruebe la documentación del equipo para determinar las direcciones
+                que ya
+                están siendo utilizadas. <br>
+            </p>
 
-        <h3>Líneas de petición de interrupción (IRQ)</h3>
-        <p>
-            Las líneas de petición de interrupción (IRQ) son líneas hardware por las que dispositivos como puertos de
-            E/S,
-            teclado, unidades de disco y tarjetas de red, pueden enviar interrupciones o peticiones al microprocesador
-            del
-            equipo. <br>
-            Las líneas de petición de interrupción se incorporan en el hardware interno del equipo, y se les asignan
-            diferentes niveles de prioridad, de forma que el microprocesador pueda determinar la importancia de las
-            peticiones de servicios recibidas. <br>
-            Cuando la tarjeta de red envía una petición al equipo, utiliza una interrupción (envía una señal electrónica
-            a
-            la CPU del equipo). Cada dispositivo del equipo debe utilizar una línea de petición de interrupción
-            diferente.
-            La línea de interrupción se especifica cuando se configura el dispositivo. Algunos ejemplos son: <br>
-        </p>
+            <h3>Configuración del puerto base de E/S</h3>
+            <img src="Imagenes/Redes/Configuración del puerto base de E y S.png" alt="" style="max-width: 350px;">
 
-        <img src="Imagenes/Redes/Líneas de petición de interrupción (IRQ).png" alt="" style="max-width: 350px;"> <br>
-
-        <p>
-            Para la tarjeta de red se pueden utilizar IRQ3 o IRQ5, en la mayoría de los casos. Si se encuentra
-            disponible,
-            se recomienda IRQ5, y es la que se utiliza por omisión para la mayoría de los sistemas. Para conocer qué IRQ
-            están siendo utilizadas, utilice una herramienta de diagnóstico del sistema. <br>
-        </p>
-
-        <h3>Puerto base de E/S</h3>
-        <p>
-            El puerto base de E/S especifica un canal por donde fluye la información entre el hardware del equipo (como
-            la
-            tarjeta de red) y su CPU. El puerto es para la CPU como una dirección. <br>
-
-            Cada dispositivo hardware en un sistema debe tener un número de puerto base de E/S diferente. Los números de
-            puerto, en formato hexadecimal (sistema que utiliza base 16 en lugar de base 10 para su numeración) de la
-            tabla
-            que se muestra a continuación, normalmente están disponibles para asignar a una tarjeta de red, a menos que
-            ya
-            se estén usando. Aquellas que se muestran con un dispositivo al lado, son direcciones que normalmente se
-            utilizan para los dispositivos. Compruebe la documentación del equipo para determinar las direcciones que ya
-            están siendo utilizadas. <br>
-        </p>
-
-        <h3>Configuración del puerto base de E/S</h3>
-        <img src="Imagenes/Redes/Configuración del puerto base de E y S.png" alt="" style="max-width: 350px;">
-
-        <h3>Dirección de memoria base</h3>
-        <p>
-            La dirección de memoria base identifica una posición en la memoria (RAM) de un equipo. La tarjeta de red
-            utiliza
-            esta posición como un área de búfer para guardar los datos que llegan y que salen. A este parámetro, a veces
-            se
-            le denomina dirección de inicio RAM. <br>
-            Una trama de datos es un paquete de información transmitido como una unidad en una red. A menudo, la
-            dirección
-            base de memoria para una tarjeta de red es D8000. (Para algunas tarjetas de red, el cero final se elimina de
-            la
-            dirección base de memoria, por ejemplo, D8000 sería D800.) Cuando una tarjeta de red se configura, se debe
-            seleccionar una dirección de memoria base que no esté siendo utilizada por otro dispositivo. <br>
-            Las tarjetas de red que no utilizan la RAM del sistema no tienen un parámetro para la dirección de memoria
-            base.
-            Algunas tarjetas de red contienen un parámetro que permite especificar la cantidad de memoria que hay que
-            anular
-            para guardar las tramas de datos. Por ejemplo, para algunas tarjetas se pueden especificar 16 KB o 32 KB de
-            memoria. Cuanta más memoria se especifique, mayor será el rendimiento en la red, pero quedará menos memoria
-            disponible para otros usos. <br>
-        </p>
-
-
-        <h3>Selección del transceptor</h3>
-        <p>
-            La tarjeta de red puede tener otros parámetros que deben ser definidos durante la configuración. Por
-            ejemplo,
-            algunas tarjetas vienen con un transceptor externo y otro incluido en la tarjeta. <br>
-            Normalmente la elección de la tarjeta se realiza con jumpers. Los jumpers son pequeños conectores que se
-            conectan a dos pines para determinar los circuitos que utilizará la tarjeta. <br>
-        </p>
-        <!---------------------------------------------------->
-        <h3>Compatibilidad de tarjetas, buses y cables</h3>
-        Para asegurar la compatibilidad entre el equipo y la red, la tarjeta debe tener las siguientes características:
-        <br>
-        1. Coincidir con la estructura interna del equipo (arquitectura del bus de datos). <br>
-        2. Tener el tipo de conector de cable apropiado para el cableado.
-        Por ejemplo, una tarjeta que funciona en la comunicación de un equipo Apple en una red en bus, no funcionará en
-        un equipo de IBM en un entorno de anillo: el anillo de IBM necesita tarjetas que son físicamente diferentes de
-        las utilizadas en un bus; y Apple utiliza un método de comunicación de red diferente.
-
-        <h2>Arquitectura del bus de datos</h2>
-        En un entorno de equipos personales, existen cuatro tipos de arquitecturas de bus: ISA, EISA, Micro Channel y
-        PCI. Cada uno de los tipos es físicamente diferente a los demás. Es imprescindible que la tarjeta de red y el
-        bus coincidan.
-        <h3>Arquitectura estándar de la industria (ISA)</h3>
-        ISA es la arquitectura utilizada en equipos IBM PC, XT y AT, así como en sus clones. Permite incorporar al
-        sistema varios adaptadores por medio de conectores de placas que se encuentran en las ranuras o slots de
-        expansión. En 1984 ISA se amplió de 8 bits a 16 bits cuando IBM introdujo el equipo IBM PC/AT. ISA hace
-        referencia a la propia ranura de expansión (una ranura de 8 bits o de 16 bits). Las ranuras de 8 bits son más
-        pequeñas que las de 16 bits, que realmente constan de dos ranuras o conectores, una junto a la otra. Una tarjeta
-        de 8 bits podría estar en un slot de 16 bits, pero una de 16 bits no podría estar en una de 8 bits. <br>
-        ISA fue la arquitectura estándar de equipos personales hasta que Compaq y otras compañías desarrollaron el bus
-        EISA.
-        <h3>Arquitectura estándar ampliada de la industria (EISA)</h3>
-        Es el estándar de bus introducido en 1988 por una asociación de nueve compañías de la industria de los equipos:
-        AST Research, Compaq, Epson, Hewlett-Packard, NEC, Olivetti, Tandy, Wyse Technology y Zenith. <br>
-        EISA ofrece un camino de datos de 32 bits y mantiene la compatibilidad con ISA, además de ofrecer una serie de
-        características adicionales introducidas por IBM en su Bus de Arquitectura Micro Channel. <br>
-
-        <h3>Arquitectura Micro Channel</h3>
-
-        En 1988, IBM introdujo este estándar al tiempo que se anunció su equipo PS/2. La arquitectura Micro Channel es
-        física y eléctricamente incompatible con el bus ISA. A diferencia del bus ISA, las funciones Micro Channel son
-        buses de 16 o 32 bits y se pueden controlar de forma independiente por varios procesadores de control (master)
-        del bus. <br>
-
-        <h3>Interconexión de componentes periféricos (PCI)</h3>
-        Es un bus local de 32 bits utilizado en la mayoría de los equipos Pentium y en las Apple Power Macintosh. La
-        arquitectura de bus PCI actual posee la mayoría de los requerimientos para ofrecer la funcionalidad Plug and
-        Play. Plug and Play es una filosofía de diseño y un conjunto de especificaciones de la arquitectura de un equipo
-        personal. El objetivo de Plug and Play es permitir los cambios realizados en la configuración de un equipo
-        personal, sin intervención del usuario. <br>
-        <h3>Conectores y cableado de red</h3>
-        La tarjeta de red realiza tres funciones importantes coordinando las actividades entre el equipo y el cableado:
-        <br>
-        <ol>
-            <li>Realiza la conexión física con el cable.</li>
-            <li>Genera las señales eléctricas que circulan por el cable.</li>
-            <li>Controla el acceso al cable siguiendo unas reglas específicas.</li>
-        </ol>
-
-        Para seleccionar la tarjeta de red apropiada para la red, primero es necesario determinar el tipo de cable y los
-        conectores que tendrá. <br>
-        Cada tipo de cable tiene características físicas diferentes, a las que la tarjeta de red debe adaptarse. Cada
-        tarjeta se ha construido para aceptar al menos un tipo de cable. Actualmente el cable de par trenzado y el de
-        fibra óptica son los tipos de cables más comunes. <br>
-        Algunas tarjetas de red tienen más de un conector de interfaz. Por ejemplo, es común que una tarjeta de red
-        tenga un conector Thinnet, uno Thicknet y uno para par trenzado. <br>
-        Si una tarjeta tiene más de un conector de interfaz y no tiene detección de interfaz predeterminada, debe
-        realizar una selección configurando jumpers en la propia tarjeta o usando una opción seleccionable por software.
-        La documentación de la tarjeta de red debe contener información sobre cómo se puede configurar la tarjeta de
-        forma apropiada. <br>
-        Una conexión de red Thicknet utiliza un cable de interfaz de conexión de unidad (AUI) 15-pin para conectar el
-        conector 15-pin (DB-15) de la parte posterior de la tarjeta de red a un transceiver externo. El transceiver
-        externo utiliza un conector del tipo «vampiro» para conectar el cable thicknet. <br>
-        El puerto del joystick y el puerto del transceiver externo AUI son parecidos, pero algunos pines del joystick
-        tienen una tensión de 5 voltios, lo que podría ser perjudicial tanto para el hardware de la red como para el
-        equipo. Es necesario familiarizarse con la configuración hardware específica para determinar si el conector es
-        para un
-        joystick o para una tarjeta de red. De manera similar, tenga cuidado de no confundir los puertos SCSI de 25
-        pines con los puertos de impresora paralelos. Algunos dispositivos SCSI más antiguos se comunicaban a través del
-        mismo tipo de conector DB-25 que estos puertos paralelos, pero ningún dispositivo funcionará cuando se enchufe
-        en un conector erróneo. <br>
-        Una conexión de par trenzado utiliza un conector RJ-45.El conector RJ-45 es similar al conector telefónico
-        RJ-11, pero tiene un tamaño mayor y tiene ocho conductores; un RJ-11 sólo tiene cuatro conductores. <br>
-
-        <h3>Rendimiento de la red</h3>
-        Debido al efecto que causa en la transmisión de datos, la tarjeta de red produce un efecto bastante
-        significativo en el rendimiento de toda la red. Si la tarjeta es lenta, los datos no se moverán por la red con
-        rapidez. En una red en bus, donde no se puede utilizar la red hasta que el cable esté libre, una tarjeta lenta
-        puede incrementar el tiempo de espera para todos los usuarios. <br>
-        Después de identificar los requerimientos físicos de la tarjeta de red (el bus del equipo, el tipo de conector
-        que necesita la tarjeta, el tipo de red donde operará), es necesario considerar otros factores que afectarán a
-        las posibilidades de la tarjeta. <br>
-        Aunque todas las tarjetas de red se ajustan a ciertos estándares y especificaciones mínimas, algunas
-        características de las tarjetas mejoran de forma importante el servidor, el cliente y todo el rendimiento de la
-        red. <br>
-        Se puede incrementar la velocidad de los datos a través de la tarjeta incorporando las siguientes mejoras:
-        <ul>
-            <li>Acceso directo a memoria (DMA). Con este método, el equipo pasa los datos directamente desde el búfer de
-                la
-                tarjeta de red a la memoria del equipo, sin utilizar el microprocesador del equipo.</li>
-            <li>Memoria de tarjeta compartida. En este método, la tarjeta de red contiene RAM que comparte con el
-                equipo. El
-                equipo identifica esta RAM como si realmente estuviera instalada en el equipo.</li>
-            <li>Memoria del sistema compartida. En este sistema, el procesador de la tarjeta de red selecciona una parte
-                de la
-                memoria del equipo y la utiliza para procesar datos.</li>
-            <li>Bus mastering (Control de bus). Con el bus mastering, la tarjeta de red toma temporalmente el control
-                del bus
-                del equipo, evitando la CPU del equipo y llevando los datos directamente a la memoria del sistema del
-                equipo.
-                Esto incrementa la velocidad de las operaciones del equipo, liberando al procesador del equipo para
-                realizar
-                otras tareas. Las tarjetas con bus mastering pueden ser caras, pero pueden mejorar el rendimiento de la
-                red de
-                un 20 a un 70 por 100. Las tarjetas de red EISA, Micro Channel y PCI ofrecen bus mastering.</li>
-            <li>RAM buffering. A menudo el tráfico en la red va demasiado deprisa para que la mayoría de las tarjetas de
-                red puedan controlarlo. Los chips de RAM en la tarjeta de red sirven de búfer.
-                Cuando la tarjeta recibe más datos de los que puede procesar inmediatamente, el buffer de la RAM guarda
-                algunos de los datos hasta que la tarjeta de red pueda procesarlos. Esto acelera el
-                rendimiento de la tarjeta y ayuda a evitar que haya un cuello de botella en la tarjeta. </li>
-            <li>Microprocesador de la tarjeta. Con un microprocesador, la tarjeta de red no necesita que el equipo le
-                ayude a
-                procesar los datos. La mayoría de las tarjetas incorporan sus propios procesadores que aceleran las
-                operaciones
-                de la red.</li>
-        </ul>
-
-        <h3>Placas para servidores</h3>
-
-        Debido al alto volumen de tráfico en la red, los servidores deberían estar equipados con tarjetas del mayor
-        rendimiento posible.
-        <h3>Placas para estaciones de trabajo</h3>
-
-        Las estaciones de trabajo pueden utilizar las tarjetas de red más baratas, si las actividades principales en la
-        red están limitadas a aplicaciones, como procesamiento de texto, que no generan altos volúmenes de tráfico en la
-        red. Aunque recuerde que en una red en bus, una tarjeta de red lenta puede incrementar el tiempo de espera para
-        todos los usuarios. Otras aplicaciones, como las de bases de datos o ingeniería, se vendrán abajo rápidamente
-        con tarjetas de red inadecuadas. <br>
-        <h3>Tarjetas de red especializadas</h3>
-
-        En la mayoría de las situaciones, bastará con utilizar tarjetas estándar para conectar el equipo con la red
-        física, pero existen algunas situaciones que requieren el uso de conexiones de red especializadas y, por tanto,
-        necesitarán tarjetas de red especializadas.
-        <h3>Placas de red Inalámbricas</h3>
-        Algunos entornos requieren una alternativa a las redes de equipo cableadas. Existen tarjetas de red sin hilos
-        que soportan los principales sistemas operativos de red. <br>
-        Las tarjetas de red sin hilos suelen incorporar una serie de características. Éstas incluyen:
-        Antena omnidireccional interior y cable de antena. <br>
-        Software de red para hacer que la tarjeta de red funcione en una red en particular. <br>
-        Software de diagnóstico para localización de errores. Software de instalación. <br>
-        Estas tarjetas de red se pueden utilizar para crear una LAN totalmente sin hilos, o para incorporar estaciones
-        sin hilos a una LAN cableada. <br>
-        Normalmente, estas tarjetas de red se utilizan para comunicarse con un componente llamada concentrador sin hilos
-        que actúa como un transceptor para enviar y recibir señales. <br>
-        <h3>Tarjetas de red de fibra óptica</h3>
-        Conforme la velocidad de transmisión aumenta para acomodarse a las aplicaciones con un gran ancho de banda y los
-        flujos de datos multimedia son comunes en las intranets actuales, las tarjetas de red de fibra óptica permiten
-        conexiones directas a redes de fibra óptica de alta velocidad. Recientemente, estas tarjetas han llegado a tener
-        un precio
-        competitivo, y su uso es cada vez más corriente.
-        <h3>PROM de inicialización remota</h3>
-        En algunos entornos, la seguridad es tan importante que las estaciones de trabajo no tienen unidades de disquete
-        individuales. Sin éstas, los usuarios no pueden copiar la información en un disquete o disco duro y, por tanto,
-        no pueden sacar los datos de su lugar de trabajo. <br>
-        Sin embargo, como los equipos normalmente se arrancan desde una unidad de disquete o desde un disco duro, tiene
-        que existir otra fuente para que el software inicie (arranque) el equipo y lo conecte a la red. En estos
-        entornos, la tarjeta de red puede ser equipada con un chip especial llamado PROM (memoria programable de sólo
-        lectura) de inicialización remota que contenga el código que inicie el equipo y conecte al usuario a la red.
-        Con las PROM de inicialización remota, las estaciones de trabajo sin disco se pueden unir a la red cuando se
-        inician.
-
-        <h2>MEDIOS FISICOS DE TRANSMISION DE INFORMACION EN LAS REDES (TIPOS DE CABLES)</h2>
-
-        Una vez creadas las señales que nos van a permitir la transmisión de la información, es necesario un puente, un
-        medio físico por el que dichas señales se desplacen desde el host emisor al host destino. Este medio físico
-        puede ser de diferente naturaleza, y la red resultante se clasificará de acuerdo con él. <br>
-        Los tipos principales de medios físicos son el cableado de cobre, el cableado de fibra óptica y la propia
-        atmósfera, usada en transmisiones sin cable, mediante radiofrecuencias, satélites, etc. Generalmente, en redes
-        LAN, que son las que nos ocupan ahora, se usa cableado de cobre, en sus diferentes modalidades, para la unión de
-        host generales, reservándose el uso de cableado de fibra óptica para la unión de nodos principales (backbone).
-
-        <h3>Cableado de cobre</h3>
-        El cableado de cobre es, como hemos dicho, el medio más común de unión entre host y dispositivos en redes
-        locales. Los principales tipos de cables de cobre usados son: <br>
-        Conductor cilíndrico externo hueco que rodea os elementos conductores. Uno de estos
-        es un conductor de cobre. Está rodeado re este material aislador hay una malla de úa como segundo alambre del
-        circuito, y segunda capa de blindaje ayuda a reducir se encuentra recubierto por la envoltura <br>
-
-        Para las LAN, el cable coaxial ofrece varias ventajas. Se pueden realizar tendidos entre nodos de red a mayores
-        distancias que con los cables STP o UTP (unos 500 metros), sin que sea necesario utilizar tantos repetidores. El
-        cable coaxial es más económico que el cable de fibra óptica y la tecnología es sumamente conocida. Se ha usado
-        durante muchos años para todo tipo de comunicaciones de datos. <br>
-        El cable coaxial viene en distintos tamaños. El cable de mayor diámetro se especificó para su uso como cable de
-        backbone de Ethernet porque históricamente siempre poseyó mejores características de longitud de transmisión y
-        limitación
-        del ruido. Este tipo de cable coaxial frecuentemente se denomina thicknet o red gruesa. Como su apodo lo indica,
-        debido a su diámetro este tipo de cable puede ser demasiado rígido como para poder instalarse con facilidad en
-        algunas situaciones. La regla práctica es: cuanto más difícil es instalar los medios de red, más cara resulta la
-        instalación. El cable coaxial resulta más costoso de instalar que el cable de par trenzado. Hoy en día el cable
-        thicknet no se usa casi nunca, salvo en instalaciones especiales. <br>
-        En el pasado, el cable coaxial con un diámetro externo de solamente 0,35 cm (a veces denominado thinnet o red
-        fina) se usaba para las redes Ethernet. Era particularmente útil para instalaciones de cable en las que era
-        necesario que el cableado tuviera que hacer muchas vueltas. Como la instalación era más sencilla, también
-        resultaba más económica. Por este motivo algunas personas lo llamaban cheapernet o red barata. Sin embargo, como
-        el cobre exterior o trenzado metálico del cable coaxial comprende la mitad del circuito eléctrico, se debe tener
-        especial cuidado para garantizar su correcta conexión a tierra. Esto se hace asegurándose de que haya una sólida
-        conexión eléctrica en ambos extremos del cable. Sin embargo, a menudo, los instaladores omiten hacer esto. Como
-        resultado, la mala conexión del blindaje resulta ser una de las fuentes principales de problemas de conexión en
-        la instalación del cable coaxial. Estos problemas producen ruido eléctrico que interfiere
-        con la transmisión de la señal a través de los medios de networking. Es por este motivo que, a pesar de su
-        diámetro pequeño, thinnet ya no se utiliza con tanta frecuencia en las redes Ethernet. <br>
-        Para conectar cables coaxiales se utilizan los conectores BNC, simples y en T, y al final del cable principal de
-        red hay que
-        situar unas resistencias especiales, conocidas como resistores, para evitar la reflexión de las ondas de señal.
-        <br> <br>
-
-        2. Par trenzado blindado (STP): formado por una capa exterior plástica aislante y una capa interior de papel
-        metálico, dentro de la cual se sitúan normalmente cuatro pares de cables, trenzados para a par, con
-        revestimientos plásticos de diferentes colores para su identificación. Combina las técnicas de blindaje,
-        cancelación y trenzado de cables. Según las especificaciones de uso de las instalaciones de red Ethernet, STP
-        proporciona resistencia contra la interferencia electromagnética y de la radiofrecuencia sin aumentar
-        significativamente el peso o tamaño del cable. El cable de par trenzado blindado tiene las mismas ventajas y
-        desventajas que el cable de par trenzado no blindado. STP brinda mayor protección contra todos los tipos de
-        interferencia externa, pero es más caro que el cable de par trenzado no blindado. <br>
-        A diferencia del cable coaxial, el blindaje en el STP no forma parte del circuito de datos y, por lo tanto, el
-        cable debe estar conectado a tierra en ambos extremos. Normalmente, los instaladores conectan STP a tierra en el
-        armario para el cableado y el hub, aunque esto no siempre es fácil de hacer, especialmente si los instaladores
-        intentan usar paneles de conexión antiguos que no fueron diseñados para cable STP. Si la conexión a tierra no
-        está bien realizada, el STP puede transformarse en una fuente de problemas, ya que permite que el blindaje actúe
-        como si fuera una antena, absorbiendo las señales eléctricas de los demás hilos del cable y de las fuentes de
-        ruido eléctrico que provienen del exterior del cable. <br>
-        No es posible realizar tendidos de cable STP tan largos como con otros medios de networking (como, por
-        ejemplo, cable coaxial) sin repetir la señal, siendo la longitud máxima de cable recomendada de unos 100 metros,
-        y su rendimiento suele ser de 10-100 Mbps. <br>
-        Se especifica otro tipo de STP para instalaciones Token Ring. En este tipo de
-        cable, conocido como STP de 150 ohmios, el cable no sólo está totalmente blindado para reducir la interferencia
-        electromagnética y de radiofrecuencia, sino que a su vez cada par de hilos trenzados se encuentra blindado con
-        respecto a los demás para reducir la diafonía. Si bien el blindaje empleado en el cable de par trenzado blindado
-        de 150 ohmios no forma parte del circuito, como sucede con el cable coaxial, aún así debe estar conectado a
-        tierra en ambos extremos. Este tipo de cable STP requiere una cantidad mayor de aislamiento y de blindaje. Estos
-        factores se combinan para aumentar de manera considerable el tamaño, peso y costo del cable. También requiere la
-        instalación de grandes armarios y conductos para el cableado, lujos que en muchos edificios antiguos no pueden
-        permitirse. <br>
-        Para la conexión de los cables STP a los diferentes dispositivos de red se usan unos conectores específicos,
-        denominados conectores STP, similares a los RJ-45 descritos más abajo. <br> <br>
-        3. Par trenzado no blindado (UTP): compuesto por cuatro pares de hilos, trenzados para a par, y revestidos de un
-        aislante plástico de colores para la identificación de los pares. Cada par de hilos se encuentra aislado de los
-        demás. Este tipo de cable se basa sólo en el efecto de cancelación que producen los pares trenzados de hilos
-        para limitar la degradación de la señal que causan la EMI y la RFI. Para reducir aún
-        más la diafonía entre los pares en el cable UTP, la cantidad de trenzados en los pares de hilos varía. Al igual
-        que el cable STP, el cable UTP debe seguir especificaciones precisas con respecto a cuanto trenzado se permite
-        por unidad de longitud del cable. <br>
-        Cuando se usa como medio de networking, el cable UTP tiene cuatro pares de hilos de cobre de calibre 22 ó 24. El
-        UTP que se usa como medio de networking tiene una impedancia de 100 ohmios. Esto lo diferencia de los otros
-        tipos de cables de par trenzado, como, por ejemplo, los que se utilizan para los teléfonos. Como el UTP tiene un
-        diámetro externo de aproximadamente 0,43 cm, el hecho de que su tamaño sea pequeño puede ser ventajoso durante
-        la instalación. Como el UTP se puede usar con la mayoría de las arquitecturas de networking principales, su
-        popularidad va en aumento. <br>
-        El cable de par trenzado no blindado presenta muchas ventajas. Es de fácil instalación y es más económico que
-        los demás tipos de medios de networking. De hecho, el cable UTP cuesta menos por metro que cualquier otro tipo
-        de cableado de LAN, sin embargo, la ventaja real es su tamaño. Como su diámetro externo es tan pequeño, el cable
-        UTP no llena los conductos para el cableado tan rápidamente como sucede con otros tipos de cables. Este puede
-        ser un factor sumamente importante para tener en cuenta, en especial si se está instalando una red en un
-        edificio antiguo. Además, si se está instalando el cable UTP con un conector RJ, las fuentes potenciales de
-        ruido de la red se reducen enormemente y prácticamente se garantiza una conexión sólida y de buena calidad. <br>
-        Sin embargo, el cableado de par trenzado también tiene una serie de desventajas. El cable UTP es más sensible al
-        ruido eléctrico y la interferencia que otros tipos de medios de networking. Además, en una época el cable UTP
-        era considerado más lento para transmitir datos que otros tipos de cables. Sin embargo, hoy en día ya no es así.
-        <br>
-        De hecho, en la actualidad, se considera que el cable UTP es el más rápido entre los medios basados en cobre.
-        <br>
-        La distancia máxima recomendada entre repetidores es de 100 metros, y su rendimiento es de 10-100 Mbps. <br>
-        Para conectar el cable UTP a los distintos dispositivos de red se usan unos conectores especiales, denominados
-        RJ-45 (Registered Jack-45), muy parecidos a los típicos conectores del cableado telefónico casero. <br>
-
-        Este conector reduce el ruido, la reflexión y los problemas de estabilidad mecánica y se asemeja al enchufe
-        telefónico, con la diferencia de que tiene ocho conductores en lugar de cuatro. Se considera como un componente
-        de networking pasivo ya que sólo sirve como un camino conductor entre los cuatro pares del cable trenzado de
-        Categoría 5 y las patas de la toma RJ-45. Se considera como un componente de la Capa 1, más que un dispositivo,
-        dado que sirve sólo como camino conductor para bits. <br>
-        Los enchufes o conectores RJ-45 se insertan en jacks o receptáculos RJ-45. Los jacks RJ-45 tienen 8
-        conductores, que se ajustan a los del conector RJ-45. En el otro lado del jack RJ-45 hay un bloque de inserción
-        donde
-        los hilos individuales se separan y se introducen en ranuras mediante una herramienta similar a un tenedor
-        denominada herramienta de punción. <br>
-        Para centralizar los diferentes conectores RJ-45 se utilizan unos dispositivos especiales, denominados paneles
-        de conexión. Vienen provistos de 12, 24 ó 48 puertos y normalmente están montados en un bastidor. Las partes
-        delanteras son jacks RJ-45, las partes traseras son bloques de punción que proporcionan conectividad o caminos
-        conductores. <br>
-        <h3>Conexiones RJ-45</h3>
-        En el entorno de trabajo de redes LAN Ethernet 10BaseT (y superiores), que va a ser el más común en la práctica,
-        todos los cableados horizontales se realizan mediante cable UTP y conectores RJ-45. <br>
-        Ahora bien, dependiendo del uso concreto que se le vaya a dar al cable de unión, este puede adoptar varias
-        configuraciones, que van a definir las conexiones entre los diferentes pines de los conectores RJ-45 inicial y
-        final del cable. En las explicaciones que siguen trabajaremos siempre con la parte correspondiente al clip del
-        RJ-45 situada en la parte inferior de las imágenes, es decir, consideramos el RJ- 45 cogido en la mano con la
-        parte correspondiente a la conexión con el Jack hacia afuera, y la pestaña de enganche hacia abajo. <br>
-        <h3>Conexión Straight Trough</h3>
-        Este tipo de conexión se usa en cables que van a conectar un host a una red Ethernet 10BaseT. Generalmente, un
-        extremo del cable (terminal A) se conecta al Jack de la tarjeta de red del host, mientras que el otro extremo
-        (terminal B) se conecta a un hub central. El esquema de conexiones es el que sigue: <br>
-        Observamos que las conexiones se realizan entre iguales, por lo que el cable de un color determinado se conecta
-        en ambas terminales al mismo pin del RJ-45. Es una conexión directa. <br>
-
-
-        <h3>Conexión Cross-Over</h3>
-
-        Se utilizan en el aso de cables que deben unir dos host directamente, a través de sus correspondientes tarjetas
-        de red. En este caso, es necesario realizar una inversión de cables en los pines terminales, para que cada cable
-        activo cambie de funcionalidad (emisor o receptor) en cada uno de los Jacks. El esquema de este tipo de cables
-        es el siguiente:
-
-        <table>
-            <th>Conector 1</th>
-            <th>Conector 2</th>
-            <tr>
-                <td>Naranja/Blanco</td>
-                <td>Verde/Blanco</td>
-            </tr>
-            <tr>
-                <td>Naranja</td>
-                <td>Verde</td>
-            </tr>
-            <tr>
-                <td>Verde/Blanco</td>
-                <td>Naranja/Blanco</td>
-            </tr>
-            <tr>
-                <td>Azul</td>
-                <td>Azul</td>
-            </tr>
-            <tr>
-                <td>Azul/Blanco</td>
-                <td>Azul/Blanco</td>
-            </tr>
-            <tr>
-                <td>Verde</td>
-                <td>Naranja</td>
-            </tr>
-            <tr>
-                <td>Marrón/Blanco</td>
-                <td>Marrón/Blanco</td>
-            </tr>
-            <tr>
-                <td>Marrón</td>
-                <td>Marrón</td>
-            </tr>
-        </table>
-
-        <h3>Conexión Roll-Over</h3>
-        También denominada conexión de cable de consola, es la usada en cables de conexión a una terminal de consola de
-        un router, por ejemplo. En ella, todos los cables van invertidos de posición, como si se reflejaran en un
-        espejo, siendo su esquema el siguiente:
-
-
-        <table>
-            <th>Conector 1</th>
-            <th>Conector 2</th>
-            <tr>
-                <td>Naranja/Blanco</td>
-                <td>Marron</td>
-            </tr>
-            <tr>
-                <td>Naranja</td>
-                <td>Blanco/Marron</td>
-            </tr>
-            <tr>
-                <td>Verde/Blanco</td>
-                <td>Verde</td>
-            </tr>
-            <tr>
-                <td>Azul</td>
-                <td>Blanco/Azul</td>
-            </tr>
-            <tr>
-                <td>Azul/Blanco</td>
-                <td>Azul</td>
-            </tr>
-            <tr>
-                <td>Verde</td>
-                <td>Blanco/Verde</td>
-            </tr>
-            <tr>
-                <td>Marrón/Blanco</td>
-                <td>Naranja</td>
-            </tr>
-            <tr>
-                <td>Marrón</td>
-                <td>Blanco/Naranja</td>
-            </tr>
-
-        </table>
-
-        <h3>Preparación de un cable</h3>
-        Vamos a explicar a continuación de forma detallada el modo correcto de preparar un cable UTP con conectores
-        RJ-45. <br>
-        Las herramientas necesarias serán: <br>
-        * Un trozo de cable UTP, de longitud adecuada. Generalmente, los cables vienen en bobinas de diferentes
-        longitudes, contenidas en una caja de cartón. Para cortar el trozo de cable necesario
-        usaremos una herramienta cortante adecuada, bien afilada, como un cortacables o la parte cortadora de una
-        grimpeadora. <br>
-        * Dos conectores RJ-45, nuevos y de calidad. <br>
-
-
-        * Un pelacables, para retirar correctamente los aislantes
-
-        plásticos de las terminaciones del cable y de los hilos. <br>
-        * Una grimpeadora, aparato especialmente concebido para fijar los cables a los conectores RJ-45 mediante
-        presión. <br>
-        * Un gráfico del esquema de cableado. Esto es muy
-        importante, ya que si nos equivocamos en las conexiones, el cable no valdrá, quedando inutilizados
-        los conectores. <br>
-        * Un analizador de cables, para comprobar la correcta finalización del cable construido. Hay en el mercado
-        diferentes marcas y modelos, siendo casi todos aptos para esta tarea. <br>
-
-        Una vez preparados todos los materiales necesarios, los pasos a seguir son los siguientes:
-        <ol>
-            <li>Cortamos el trozo de cable necesario. Los estándares 568-B recomiendan que la longitud máxima para un
-                cable
-                de conexión host-red no supere los 3 metros.</li>
-            <li>Pelamos los extremos del cable, quitando el revestimiento exterior de plástico en una longitud adecuada.
-                La
-                idea es que el cable, al ser insertado posteriormente en el Jack, tenga protección externa justo hasta
-                la
-                entrada a los pines. Si queda más porción sin revestimiento el cable queda suelto y se incrementan las
-                pérdidas
-                de señal, y si queda menos las conexiones no se harán de forma correcta. </li>
-            <li>Separamos los cables, los destrenzamos y los disponemos según el esquema adecuado. </li>
-            <li>Los aplanamos y los recortamos de tal forma que la longitud de los hilos no trenzados sea de unos 12
-                milímetros, distancia idónea para la perfecta conexión. No hay que preocuparse de "pelar" los extremos
-                de los
-                hilos, ya que al ser presionados luego con la grimpeadora se realiza este proceso de forma natural.</li>
-            <li>Insertamos los cables en el conector RJ-45 y los empujamos hasta el fondo, asegurándonos de que llegan
-                hasta
-                el final, de tal forma
-                que se puedan ver los hilos cuando se mira el conector desde el extremo.</li>
-            <li>Inspeccionamos que la distribución de hilos por colores esté de acuerdo con el esquema.</li>
-            <li>Engarzamos los hilos al conector con la grimpeadora, ejerciendo una buena presión en ésta, para que la
-                conexión se realice correctamente.</li>
-            <li>Hacemos lo mismo con el otro extremo del cable.</li>
-            <li>Comprobamos la correcta conexión del cable mediante un analizador de cables. El método de comprobación
-                puede
-                variar según el analizador usado, por lo que debemos consultar las instrucciones del mismo. Generalmente
+            <h3>Dirección de memoria base</h3>
+            <p>
+                La dirección de memoria base identifica una posición en la memoria (RAM) de un equipo. La tarjeta de red
+                utiliza
+                esta posición como un área de búfer para guardar los datos que llegan y que salen. A este parámetro, a
+                veces
                 se
-                conecta un extremo del cable al analizador, y el otro extremo a una pieza
-                especial, de tal forma que, al conectar el analizador, nos dirá en pantalla si el cable está
-                correctamente
-                conectado o, en caso contrario, qué pares de hilos no lo están.
-                Si seguimos correctamente estos pasos, dispondremos de un cable útil, construido de acuerdo con los
-                estándares.
-                Una vez tenemos el cable, éste se conectará por un extremo en el conector de la tarjeta de red del host,
-                y por
-                el otro generalmente en la toma Jack RJ-45 situada en la pared, que será la que nos dé acceso a la red.
-                Si tenemos que instalar dicha toma, el proceso es análogo al visto de construcción de un cable, con la
-                diferencia que ahora el propio Jack lleva unos códigos de colores que indican dónde debe ir cada hilo.
-                Para
-                insertar los hilos en los pines internos se usa una herramienta de punción especial, que ajusta el cable
-                y lo
-                pela de forma automática. Una vez conectados los hilos, tan sólo queda acoplar en Jack en la cajeta
-                atornillada
-                a la pared.</li>
-        </ol>
+                le denomina dirección de inicio RAM. <br>
+                Una trama de datos es un paquete de información transmitido como una unidad en una red. A menudo, la
+                dirección
+                base de memoria para una tarjeta de red es D8000. (Para algunas tarjetas de red, el cero final se
+                elimina de
+                la
+                dirección base de memoria, por ejemplo, D8000 sería D800.) Cuando una tarjeta de red se configura, se
+                debe
+                seleccionar una dirección de memoria base que no esté siendo utilizada por otro dispositivo. <br>
+                Las tarjetas de red que no utilizan la RAM del sistema no tienen un parámetro para la dirección de
+                memoria
+                base.
+                Algunas tarjetas de red contienen un parámetro que permite especificar la cantidad de memoria que hay
+                que
+                anular
+                para guardar las tramas de datos. Por ejemplo, para algunas tarjetas se pueden especificar 16 KB o 32 KB
+                de
+                memoria. Cuanta más memoria se especifique, mayor será el rendimiento en la red, pero quedará menos
+                memoria
+                disponible para otros usos. <br>
+            </p>
 
-        <h3>Categorías de cable UTP</h3>
-        El estándar TIA/EIA 568 especifica el cable le Categoría 5 como un medio para la transmisión de datos a
-        frecuencias de hasta 100 MHz. El Modo de Transmisión Asíncrona (Asynchronous Transfer Mode ATM), trabaja a 155
-        MHz. La Gigabit Ethernet a 1 GHz. <br>
-        La necesidad de incrementar el ancho de banda nunca cesa, cuanto más se tenga, más se necesita. Las aplicaciones
-        cada vez se vuelven más complejas, y los ficheros cada vez son más grandes. A medida que su red se vaya
-        congestionando con más datos, la velocidad se va ralentizando y no volverá a ser rápida nunca más. Las buenas
-        noticias son que la próxima generación de cableado está en marcha. Sin embargo, tendrá que tener cuidado con el
-        cableado que esté instalado hoy, y asegurarse que cumplirá con sus necesidades futuras. <br>
-        <ul>
-            <li>Categoría 1. Hace referencia al cable telefónico UTP tradicional que resulta adecuado para transmitir
-                voz, pero
-                no datos. La mayoría de los cables telefónicos instalados antes de 1983 eran cables de Categoría 1.</li>
-            <li>Categoría 2. Esta categoría certifica el cable UTP para transmisión de datos de hasta 4 megabits por
-                segundo
-                (mbps), Este cable consta de cuatro pares trenzados de hilo de cobre.</li>
-            <li>Categoría 3. Esta categoría certifica el cable UTP para transmisión de datos de hasta 16 mbps. Este
-                cable
-                consta de cuatro pares trenzados de hilo de cobre con tres entrelazados por pie.</li>
-            <li>Categoría 4. Esta categoría certifica el cable UTP para transmisión de datos de hasta 20 mbps. Este
-                cable
-                consta de cuatro pares trenzados de hilo de cobre.</li>
-            <li>Categoría 5. Esta categoría certifica el cable UTP para transmisión de datos de hasta 100 mbps. Este
-                cable
-                consta de cuatro pares trenzados de hilo de cobre.</li>
-            <li>Categoría 5a. También conocida como Categoría 5+ ó Cat5e. Ofrece mejores prestaciones que el estándar de
-                Categoría 5. Para ello se deben cumplir especificaciones tales como una atenuación al ratio crosstalk
-                (ARC) de
-                10 dB a 155 Mhz y 4 pares para la comprobación del Power Sum NEXT. Este estándar todavía no está
-                aprobado</li>
-            <li>Nivel 7. Proporciona al menos el doble de ancho de banda que la Categoría 5 y la capacidad de soportar
-                Gigabit
-                Ethernet a 100 m. El ARC mínimo de 10 dB debe alcanzarse a 200 Mhz y el cableado debe soportar pruebas
-                de Power
-                Sum NEXT, más estrictas que las de los cables de Categoría 5 Avanzada.</li>
-        </ul>
 
-        La mayoría de los sistemas telefónicos utilizan uno de los tipos de UTP. De hecho, una razón por la que UTP es
-        tan conocido es debido a que muchas construcciones están preparadas para sistemas telefónicos de par trenzado.
-        Como parte del proceso previo al cableado, se instala UTP extra para cumplir las necesidades de cableado futuro.
-        Si el cable de par trenzado preinstalado es de un nivel suficiente para soportar la transmisión de datos, se
-        puede utilizar para una red de equipos. Sin embargo, hay que tener mucho cuidado, porque el hilo telefónico
-        común podría no tener entrelazados y otras características eléctricas necesarias para garantizar la seguridad y
-        nítida transmisión de los datos del equipo.
-        <h3>Cables de Fibra Óptica</h3>
-        En el cable de fibra óptica las señales que se transportan son señales digitales de datos en forma de pulsos
-        modulados de luz. Esta es una forma relativamente segura de enviar datos debido a que, a diferencia de los
-        cables de cobre que llevan los datos en forma de señales electrónicas, los cables de fibra óptica transportan
-        impulsos no eléctricos. <br>
-        Esto significa que el cable de fibra óptica no se puede pinchar y sus datos no se pueden robar.
-        El cable de fibra óptica es apropiado para transmitir datos a
-        velocidades muy altas y con grandes capacidades debido a la carencia de atenuación de la señal y a su pureza.
-        Pueden conducir transmisiones de luz moduladas. Si se compara con otros medios de networking, es más caro, sin
-        embargo, no es susceptible a la interferencia electromagnética y ofrece velocidades de datos más altas que
-        cualquiera de los demás tipos de medios de networking descritos aquí. El cable de fibra óptica no transporta
-        impulsos eléctricos, como lo hacen otros tipos de medios de networking que usan cables de cobre. En cambio, las
-        señales que representan a los bits se convierten en haces de luz. <br>
-        Está compuesto por dos fibras envueltas en revestimientos separados. Si se observa una sección transversal de
-        este cable, veremos que cada fibra óptica se encuentra
+            <h3>Selección del transceptor</h3>
+            <p>
+                La tarjeta de red puede tener otros parámetros que deben ser definidos durante la configuración. Por
+                ejemplo,
+                algunas tarjetas vienen con un transceptor externo y otro incluido en la tarjeta. <br>
+                Normalmente la elección de la tarjeta se realiza con jumpers. Los jumpers son pequeños conectores que se
+                conectan a dos pines para determinar los circuitos que utilizará la tarjeta. <br>
+            </p>
+            <!---------------------------------------------------->
+            <h3>Compatibilidad de tarjetas, buses y cables</h3>
+            Para asegurar la compatibilidad entre el equipo y la red, la tarjeta debe tener las siguientes
+            características:
+            <br>
+            1. Coincidir con la estructura interna del equipo (arquitectura del bus de datos). <br>
+            2. Tener el tipo de conector de cable apropiado para el cableado.
+            Por ejemplo, una tarjeta que funciona en la comunicación de un equipo Apple en una red en bus, no funcionará
+            en
+            un equipo de IBM en un entorno de anillo: el anillo de IBM necesita tarjetas que son físicamente diferentes
+            de
+            las utilizadas en un bus; y Apple utiliza un método de comunicación de red diferente.
 
-        rodeada por capas de material amortiguador protector, normalmente un material plástico como Kevlar, y un
-        revestimiento externo. El revestimiento exterior protege a todo el cable. Generalmente es de plástico y cumple
-        con los códigos aplicables de incendio y construcción. El propósito del Kevlar es brindar una mayor
-        amortiguación y protección para las frágiles fibras de vidrio que tienen el diámetro de un cabello. Siempre que
-        los códigos requieran que los cables de fibra óptica deban estar bajo tierra, a veces se incluye un alambre de
-        acero inoxidable como refuerzo. <br>
-        Las partes que guían la luz en una fibra óptica se denominan núcleo y revestimiento. El núcleo es generalmente
-        un vidrio de alta pureza con un alto índice de refracción Cuando el vidrio del núcleo está recubierto por una
-        capa de revestimiento de vidrio o de plástico con un índice de refracción bajo, la luz se captura en el núcleo
-        de la fibra. Este proceso se denomina reflexión interna total y permite que la fibra óptica actúe como un "tubo
-        de luz", guiando la luz a través de enormes distancias, incluso dando vuelta en codos. <br>
-        La longitud máxima de cable recomendada entre nodos en de 2.000 metros, y su rendimiento es alto, de 100 0 más
-        Mbps. <br>
-        <h3>Composición del cable de fibra óptica</h3>
-        Una fibra óptica consta de un cilindro de vidrio extremadamente delgado, denominado núcleo, recubierto por una
-        capa de vidrio concéntrica, conocida como revestimiento. <br>
-        Las fibras a veces son de plástico. El plástico es más fácil de instalar, pero no puede llevar los pulsos de luz
-        a distancias tan grandes como el vidrio. <br>
-        Debido a que los hilos de vidrio pasan las señales en una sola dirección, un cable consta de dos hilos en
-        envolturas separadas. Un hilo transmite y el otro recibe. Una capa de plástico de refuerzo alrededor de cada
-        hilo de vidrio y las fibras Kevlar ofrecen solidez. En el conector de fibra óptica, las fibras de Kevlar se
-        colocan entre los dos cables. Al igual que
-        sus homólogos (par trenzado y coaxial), los cables de fibra óptica se encierran en un revestimiento de plástico
-        para su protección. <br>
-        Las transmisiones del cable de fibra óptica no están sujetas a inter-modulaciones eléctricas y son
-        extremadamente rápidas, comúnmente transmiten a unos 100 Mbps, con velocidades demostradas de hasta 1 gigabit
-        por segundo (Gbps). Pueden transportar una señal (el pulso de luz) varios kilómetros.
-        Consideraciones sobre el cable de fibra óptica
-        El cable de fibra óptica se utiliza si necesita transmitir datos a velocidades muy altas y a grandes distancias
-        en un medio muy seguro. <br>
+            <h2>Arquitectura del bus de datos</h2>
+            En un entorno de equipos personales, existen cuatro tipos de arquitecturas de bus: ISA, EISA, Micro Channel
+            y
+            PCI. Cada uno de los tipos es físicamente diferente a los demás. Es imprescindible que la tarjeta de red y
+            el
+            bus coincidan.
+            <h3>Arquitectura estándar de la industria (ISA)</h3>
+            ISA es la arquitectura utilizada en equipos IBM PC, XT y AT, así como en sus clones. Permite incorporar al
+            sistema varios adaptadores por medio de conectores de placas que se encuentran en las ranuras o slots de
+            expansión. En 1984 ISA se amplió de 8 bits a 16 bits cuando IBM introdujo el equipo IBM PC/AT. ISA hace
+            referencia a la propia ranura de expansión (una ranura de 8 bits o de 16 bits). Las ranuras de 8 bits son
+            más
+            pequeñas que las de 16 bits, que realmente constan de dos ranuras o conectores, una junto a la otra. Una
+            tarjeta
+            de 8 bits podría estar en un slot de 16 bits, pero una de 16 bits no podría estar en una de 8 bits. <br>
+            ISA fue la arquitectura estándar de equipos personales hasta que Compaq y otras compañías desarrollaron el
+            bus
+            EISA.
+            <h3>Arquitectura estándar ampliada de la industria (EISA)</h3>
+            Es el estándar de bus introducido en 1988 por una asociación de nueve compañías de la industria de los
+            equipos:
+            AST Research, Compaq, Epson, Hewlett-Packard, NEC, Olivetti, Tandy, Wyse Technology y Zenith. <br>
+            EISA ofrece un camino de datos de 32 bits y mantiene la compatibilidad con ISA, además de ofrecer una serie
+            de
+            características adicionales introducidas por IBM en su Bus de Arquitectura Micro Channel. <br>
 
-        El cable de fibra óptica no se utiliza si tiene un presupuesto limitado ni tampoco si no tiene el suficiente
-        conocimiento para instalar y conectar los dispositivos de forma apropiada. <br>
-        El precio del cable de fibra óptica es competitivo con el precio del cable de cobre alto de gama. Cada vez se
-        hace más sencilla la utilización del cable de fibra óptica, y las técnicas de pulido y terminación requieren
-        menos conocimientos que hace unos años. <br>
+            <h3>Arquitectura Micro Channel</h3>
+
+            En 1988, IBM introdujo este estándar al tiempo que se anunció su equipo PS/2. La arquitectura Micro Channel
+            es
+            física y eléctricamente incompatible con el bus ISA. A diferencia del bus ISA, las funciones Micro Channel
+            son
+            buses de 16 o 32 bits y se pueden controlar de forma independiente por varios procesadores de control
+            (master)
+            del bus. <br>
+
+            <h3>Interconexión de componentes periféricos (PCI)</h3>
+            Es un bus local de 32 bits utilizado en la mayoría de los equipos Pentium y en las Apple Power Macintosh. La
+            arquitectura de bus PCI actual posee la mayoría de los requerimientos para ofrecer la funcionalidad Plug and
+            Play. Plug and Play es una filosofía de diseño y un conjunto de especificaciones de la arquitectura de un
+            equipo
+            personal. El objetivo de Plug and Play es permitir los cambios realizados en la configuración de un equipo
+            personal, sin intervención del usuario. <br>
+            <h3>Conectores y cableado de red</h3>
+            La tarjeta de red realiza tres funciones importantes coordinando las actividades entre el equipo y el
+            cableado:
+            <br>
+            <ol>
+                <li>Realiza la conexión física con el cable.</li>
+                <li>Genera las señales eléctricas que circulan por el cable.</li>
+                <li>Controla el acceso al cable siguiendo unas reglas específicas.</li>
+            </ol>
+
+            Para seleccionar la tarjeta de red apropiada para la red, primero es necesario determinar el tipo de cable y
+            los
+            conectores que tendrá. <br>
+            Cada tipo de cable tiene características físicas diferentes, a las que la tarjeta de red debe adaptarse.
+            Cada
+            tarjeta se ha construido para aceptar al menos un tipo de cable. Actualmente el cable de par trenzado y el
+            de
+            fibra óptica son los tipos de cables más comunes. <br>
+            Algunas tarjetas de red tienen más de un conector de interfaz. Por ejemplo, es común que una tarjeta de red
+            tenga un conector Thinnet, uno Thicknet y uno para par trenzado. <br>
+            Si una tarjeta tiene más de un conector de interfaz y no tiene detección de interfaz predeterminada, debe
+            realizar una selección configurando jumpers en la propia tarjeta o usando una opción seleccionable por
+            software.
+            La documentación de la tarjeta de red debe contener información sobre cómo se puede configurar la tarjeta de
+            forma apropiada. <br>
+            Una conexión de red Thicknet utiliza un cable de interfaz de conexión de unidad (AUI) 15-pin para conectar
+            el
+            conector 15-pin (DB-15) de la parte posterior de la tarjeta de red a un transceiver externo. El transceiver
+            externo utiliza un conector del tipo «vampiro» para conectar el cable thicknet. <br>
+            El puerto del joystick y el puerto del transceiver externo AUI son parecidos, pero algunos pines del
+            joystick
+            tienen una tensión de 5 voltios, lo que podría ser perjudicial tanto para el hardware de la red como para el
+            equipo. Es necesario familiarizarse con la configuración hardware específica para determinar si el conector
+            es
+            para un
+            joystick o para una tarjeta de red. De manera similar, tenga cuidado de no confundir los puertos SCSI de 25
+            pines con los puertos de impresora paralelos. Algunos dispositivos SCSI más antiguos se comunicaban a través
+            del
+            mismo tipo de conector DB-25 que estos puertos paralelos, pero ningún dispositivo funcionará cuando se
+            enchufe
+            en un conector erróneo. <br>
+            Una conexión de par trenzado utiliza un conector RJ-45.El conector RJ-45 es similar al conector telefónico
+            RJ-11, pero tiene un tamaño mayor y tiene ocho conductores; un RJ-11 sólo tiene cuatro conductores. <br>
+
+            <h3>Rendimiento de la red</h3>
+            Debido al efecto que causa en la transmisión de datos, la tarjeta de red produce un efecto bastante
+            significativo en el rendimiento de toda la red. Si la tarjeta es lenta, los datos no se moverán por la red
+            con
+            rapidez. En una red en bus, donde no se puede utilizar la red hasta que el cable esté libre, una tarjeta
+            lenta
+            puede incrementar el tiempo de espera para todos los usuarios. <br>
+            Después de identificar los requerimientos físicos de la tarjeta de red (el bus del equipo, el tipo de
+            conector
+            que necesita la tarjeta, el tipo de red donde operará), es necesario considerar otros factores que afectarán
+            a
+            las posibilidades de la tarjeta. <br>
+            Aunque todas las tarjetas de red se ajustan a ciertos estándares y especificaciones mínimas, algunas
+            características de las tarjetas mejoran de forma importante el servidor, el cliente y todo el rendimiento de
+            la
+            red. <br>
+            Se puede incrementar la velocidad de los datos a través de la tarjeta incorporando las siguientes mejoras:
+            <ul>
+                <li>Acceso directo a memoria (DMA). Con este método, el equipo pasa los datos directamente desde el
+                    búfer de
+                    la
+                    tarjeta de red a la memoria del equipo, sin utilizar el microprocesador del equipo.</li>
+                <li>Memoria de tarjeta compartida. En este método, la tarjeta de red contiene RAM que comparte con el
+                    equipo. El
+                    equipo identifica esta RAM como si realmente estuviera instalada en el equipo.</li>
+                <li>Memoria del sistema compartida. En este sistema, el procesador de la tarjeta de red selecciona una
+                    parte
+                    de la
+                    memoria del equipo y la utiliza para procesar datos.</li>
+                <li>Bus mastering (Control de bus). Con el bus mastering, la tarjeta de red toma temporalmente el
+                    control
+                    del bus
+                    del equipo, evitando la CPU del equipo y llevando los datos directamente a la memoria del sistema
+                    del
+                    equipo.
+                    Esto incrementa la velocidad de las operaciones del equipo, liberando al procesador del equipo para
+                    realizar
+                    otras tareas. Las tarjetas con bus mastering pueden ser caras, pero pueden mejorar el rendimiento de
+                    la
+                    red de
+                    un 20 a un 70 por 100. Las tarjetas de red EISA, Micro Channel y PCI ofrecen bus mastering.</li>
+                <li>RAM buffering. A menudo el tráfico en la red va demasiado deprisa para que la mayoría de las
+                    tarjetas de
+                    red puedan controlarlo. Los chips de RAM en la tarjeta de red sirven de búfer.
+                    Cuando la tarjeta recibe más datos de los que puede procesar inmediatamente, el buffer de la RAM
+                    guarda
+                    algunos de los datos hasta que la tarjeta de red pueda procesarlos. Esto acelera el
+                    rendimiento de la tarjeta y ayuda a evitar que haya un cuello de botella en la tarjeta. </li>
+                <li>Microprocesador de la tarjeta. Con un microprocesador, la tarjeta de red no necesita que el equipo
+                    le
+                    ayude a
+                    procesar los datos. La mayoría de las tarjetas incorporan sus propios procesadores que aceleran las
+                    operaciones
+                    de la red.</li>
+            </ul>
+
+            <h3>Placas para servidores</h3>
+
+            Debido al alto volumen de tráfico en la red, los servidores deberían estar equipados con tarjetas del mayor
+            rendimiento posible.
+            <h3>Placas para estaciones de trabajo</h3>
+
+            Las estaciones de trabajo pueden utilizar las tarjetas de red más baratas, si las actividades principales en
+            la
+            red están limitadas a aplicaciones, como procesamiento de texto, que no generan altos volúmenes de tráfico
+            en la
+            red. Aunque recuerde que en una red en bus, una tarjeta de red lenta puede incrementar el tiempo de espera
+            para
+            todos los usuarios. Otras aplicaciones, como las de bases de datos o ingeniería, se vendrán abajo
+            rápidamente
+            con tarjetas de red inadecuadas. <br>
+            <h3>Tarjetas de red especializadas</h3>
+
+            En la mayoría de las situaciones, bastará con utilizar tarjetas estándar para conectar el equipo con la red
+            física, pero existen algunas situaciones que requieren el uso de conexiones de red especializadas y, por
+            tanto,
+            necesitarán tarjetas de red especializadas.
+            <h3>Placas de red Inalámbricas</h3>
+            Algunos entornos requieren una alternativa a las redes de equipo cableadas. Existen tarjetas de red sin
+            hilos
+            que soportan los principales sistemas operativos de red. <br>
+            Las tarjetas de red sin hilos suelen incorporar una serie de características. Éstas incluyen:
+            Antena omnidireccional interior y cable de antena. <br>
+            Software de red para hacer que la tarjeta de red funcione en una red en particular. <br>
+            Software de diagnóstico para localización de errores. Software de instalación. <br>
+            Estas tarjetas de red se pueden utilizar para crear una LAN totalmente sin hilos, o para incorporar
+            estaciones
+            sin hilos a una LAN cableada. <br>
+            Normalmente, estas tarjetas de red se utilizan para comunicarse con un componente llamada concentrador sin
+            hilos
+            que actúa como un transceptor para enviar y recibir señales. <br>
+            <h3>Tarjetas de red de fibra óptica</h3>
+            Conforme la velocidad de transmisión aumenta para acomodarse a las aplicaciones con un gran ancho de banda y
+            los
+            flujos de datos multimedia son comunes en las intranets actuales, las tarjetas de red de fibra óptica
+            permiten
+            conexiones directas a redes de fibra óptica de alta velocidad. Recientemente, estas tarjetas han llegado a
+            tener
+            un precio
+            competitivo, y su uso es cada vez más corriente.
+            <h3>PROM de inicialización remota</h3>
+            En algunos entornos, la seguridad es tan importante que las estaciones de trabajo no tienen unidades de
+            disquete
+            individuales. Sin éstas, los usuarios no pueden copiar la información en un disquete o disco duro y, por
+            tanto,
+            no pueden sacar los datos de su lugar de trabajo. <br>
+            Sin embargo, como los equipos normalmente se arrancan desde una unidad de disquete o desde un disco duro,
+            tiene
+            que existir otra fuente para que el software inicie (arranque) el equipo y lo conecte a la red. En estos
+            entornos, la tarjeta de red puede ser equipada con un chip especial llamado PROM (memoria programable de
+            sólo
+            lectura) de inicialización remota que contenga el código que inicie el equipo y conecte al usuario a la red.
+            Con las PROM de inicialización remota, las estaciones de trabajo sin disco se pueden unir a la red cuando se
+            inician.
+
+            <h2>MEDIOS FISICOS DE TRANSMISION DE INFORMACION EN LAS REDES (TIPOS DE CABLES)</h2>
+
+            Una vez creadas las señales que nos van a permitir la transmisión de la información, es necesario un puente,
+            un
+            medio físico por el que dichas señales se desplacen desde el host emisor al host destino. Este medio físico
+            puede ser de diferente naturaleza, y la red resultante se clasificará de acuerdo con él. <br>
+            Los tipos principales de medios físicos son el cableado de cobre, el cableado de fibra óptica y la propia
+            atmósfera, usada en transmisiones sin cable, mediante radiofrecuencias, satélites, etc. Generalmente, en
+            redes
+            LAN, que son las que nos ocupan ahora, se usa cableado de cobre, en sus diferentes modalidades, para la
+            unión de
+            host generales, reservándose el uso de cableado de fibra óptica para la unión de nodos principales
+            (backbone).
+
+            <h3>Cableado de cobre</h3>
+            El cableado de cobre es, como hemos dicho, el medio más común de unión entre host y dispositivos en redes
+            locales. Los principales tipos de cables de cobre usados son: <br>
+            Conductor cilíndrico externo hueco que rodea os elementos conductores. Uno de estos
+            es un conductor de cobre. Está rodeado re este material aislador hay una malla de úa como segundo alambre
+            del
+            circuito, y segunda capa de blindaje ayuda a reducir se encuentra recubierto por la envoltura <br>
+
+            Para las LAN, el cable coaxial ofrece varias ventajas. Se pueden realizar tendidos entre nodos de red a
+            mayores
+            distancias que con los cables STP o UTP (unos 500 metros), sin que sea necesario utilizar tantos
+            repetidores. El
+            cable coaxial es más económico que el cable de fibra óptica y la tecnología es sumamente conocida. Se ha
+            usado
+            durante muchos años para todo tipo de comunicaciones de datos. <br>
+            El cable coaxial viene en distintos tamaños. El cable de mayor diámetro se especificó para su uso como cable
+            de
+            backbone de Ethernet porque históricamente siempre poseyó mejores características de longitud de transmisión
+            y
+            limitación
+            del ruido. Este tipo de cable coaxial frecuentemente se denomina thicknet o red gruesa. Como su apodo lo
+            indica,
+            debido a su diámetro este tipo de cable puede ser demasiado rígido como para poder instalarse con facilidad
+            en
+            algunas situaciones. La regla práctica es: cuanto más difícil es instalar los medios de red, más cara
+            resulta la
+            instalación. El cable coaxial resulta más costoso de instalar que el cable de par trenzado. Hoy en día el
+            cable
+            thicknet no se usa casi nunca, salvo en instalaciones especiales. <br>
+            En el pasado, el cable coaxial con un diámetro externo de solamente 0,35 cm (a veces denominado thinnet o
+            red
+            fina) se usaba para las redes Ethernet. Era particularmente útil para instalaciones de cable en las que era
+            necesario que el cableado tuviera que hacer muchas vueltas. Como la instalación era más sencilla, también
+            resultaba más económica. Por este motivo algunas personas lo llamaban cheapernet o red barata. Sin embargo,
+            como
+            el cobre exterior o trenzado metálico del cable coaxial comprende la mitad del circuito eléctrico, se debe
+            tener
+            especial cuidado para garantizar su correcta conexión a tierra. Esto se hace asegurándose de que haya una
+            sólida
+            conexión eléctrica en ambos extremos del cable. Sin embargo, a menudo, los instaladores omiten hacer esto.
+            Como
+            resultado, la mala conexión del blindaje resulta ser una de las fuentes principales de problemas de conexión
+            en
+            la instalación del cable coaxial. Estos problemas producen ruido eléctrico que interfiere
+            con la transmisión de la señal a través de los medios de networking. Es por este motivo que, a pesar de su
+            diámetro pequeño, thinnet ya no se utiliza con tanta frecuencia en las redes Ethernet. <br>
+            Para conectar cables coaxiales se utilizan los conectores BNC, simples y en T, y al final del cable
+            principal de
+            red hay que
+            situar unas resistencias especiales, conocidas como resistores, para evitar la reflexión de las ondas de
+            señal.
+            <br> <br>
+
+            2. Par trenzado blindado (STP): formado por una capa exterior plástica aislante y una capa interior de papel
+            metálico, dentro de la cual se sitúan normalmente cuatro pares de cables, trenzados para a par, con
+            revestimientos plásticos de diferentes colores para su identificación. Combina las técnicas de blindaje,
+            cancelación y trenzado de cables. Según las especificaciones de uso de las instalaciones de red Ethernet,
+            STP
+            proporciona resistencia contra la interferencia electromagnética y de la radiofrecuencia sin aumentar
+            significativamente el peso o tamaño del cable. El cable de par trenzado blindado tiene las mismas ventajas y
+            desventajas que el cable de par trenzado no blindado. STP brinda mayor protección contra todos los tipos de
+            interferencia externa, pero es más caro que el cable de par trenzado no blindado. <br>
+            A diferencia del cable coaxial, el blindaje en el STP no forma parte del circuito de datos y, por lo tanto,
+            el
+            cable debe estar conectado a tierra en ambos extremos. Normalmente, los instaladores conectan STP a tierra
+            en el
+            armario para el cableado y el hub, aunque esto no siempre es fácil de hacer, especialmente si los
+            instaladores
+            intentan usar paneles de conexión antiguos que no fueron diseñados para cable STP. Si la conexión a tierra
+            no
+            está bien realizada, el STP puede transformarse en una fuente de problemas, ya que permite que el blindaje
+            actúe
+            como si fuera una antena, absorbiendo las señales eléctricas de los demás hilos del cable y de las fuentes
+            de
+            ruido eléctrico que provienen del exterior del cable. <br>
+            No es posible realizar tendidos de cable STP tan largos como con otros medios de networking (como, por
+            ejemplo, cable coaxial) sin repetir la señal, siendo la longitud máxima de cable recomendada de unos 100
+            metros,
+            y su rendimiento suele ser de 10-100 Mbps. <br>
+            Se especifica otro tipo de STP para instalaciones Token Ring. En este tipo de
+            cable, conocido como STP de 150 ohmios, el cable no sólo está totalmente blindado para reducir la
+            interferencia
+            electromagnética y de radiofrecuencia, sino que a su vez cada par de hilos trenzados se encuentra blindado
+            con
+            respecto a los demás para reducir la diafonía. Si bien el blindaje empleado en el cable de par trenzado
+            blindado
+            de 150 ohmios no forma parte del circuito, como sucede con el cable coaxial, aún así debe estar conectado a
+            tierra en ambos extremos. Este tipo de cable STP requiere una cantidad mayor de aislamiento y de blindaje.
+            Estos
+            factores se combinan para aumentar de manera considerable el tamaño, peso y costo del cable. También
+            requiere la
+            instalación de grandes armarios y conductos para el cableado, lujos que en muchos edificios antiguos no
+            pueden
+            permitirse. <br>
+            Para la conexión de los cables STP a los diferentes dispositivos de red se usan unos conectores específicos,
+            denominados conectores STP, similares a los RJ-45 descritos más abajo. <br> <br>
+            3. Par trenzado no blindado (UTP): compuesto por cuatro pares de hilos, trenzados para a par, y revestidos
+            de un
+            aislante plástico de colores para la identificación de los pares. Cada par de hilos se encuentra aislado de
+            los
+            demás. Este tipo de cable se basa sólo en el efecto de cancelación que producen los pares trenzados de hilos
+            para limitar la degradación de la señal que causan la EMI y la RFI. Para reducir aún
+            más la diafonía entre los pares en el cable UTP, la cantidad de trenzados en los pares de hilos varía. Al
+            igual
+            que el cable STP, el cable UTP debe seguir especificaciones precisas con respecto a cuanto trenzado se
+            permite
+            por unidad de longitud del cable. <br>
+            Cuando se usa como medio de networking, el cable UTP tiene cuatro pares de hilos de cobre de calibre 22 ó
+            24. El
+            UTP que se usa como medio de networking tiene una impedancia de 100 ohmios. Esto lo diferencia de los otros
+            tipos de cables de par trenzado, como, por ejemplo, los que se utilizan para los teléfonos. Como el UTP
+            tiene un
+            diámetro externo de aproximadamente 0,43 cm, el hecho de que su tamaño sea pequeño puede ser ventajoso
+            durante
+            la instalación. Como el UTP se puede usar con la mayoría de las arquitecturas de networking principales, su
+            popularidad va en aumento. <br>
+            El cable de par trenzado no blindado presenta muchas ventajas. Es de fácil instalación y es más económico
+            que
+            los demás tipos de medios de networking. De hecho, el cable UTP cuesta menos por metro que cualquier otro
+            tipo
+            de cableado de LAN, sin embargo, la ventaja real es su tamaño. Como su diámetro externo es tan pequeño, el
+            cable
+            UTP no llena los conductos para el cableado tan rápidamente como sucede con otros tipos de cables. Este
+            puede
+            ser un factor sumamente importante para tener en cuenta, en especial si se está instalando una red en un
+            edificio antiguo. Además, si se está instalando el cable UTP con un conector RJ, las fuentes potenciales de
+            ruido de la red se reducen enormemente y prácticamente se garantiza una conexión sólida y de buena calidad.
+            <br>
+            Sin embargo, el cableado de par trenzado también tiene una serie de desventajas. El cable UTP es más
+            sensible al
+            ruido eléctrico y la interferencia que otros tipos de medios de networking. Además, en una época el cable
+            UTP
+            era considerado más lento para transmitir datos que otros tipos de cables. Sin embargo, hoy en día ya no es
+            así.
+            <br>
+            De hecho, en la actualidad, se considera que el cable UTP es el más rápido entre los medios basados en
+            cobre.
+            <br>
+            La distancia máxima recomendada entre repetidores es de 100 metros, y su rendimiento es de 10-100 Mbps. <br>
+            Para conectar el cable UTP a los distintos dispositivos de red se usan unos conectores especiales,
+            denominados
+            RJ-45 (Registered Jack-45), muy parecidos a los típicos conectores del cableado telefónico casero. <br>
+
+            Este conector reduce el ruido, la reflexión y los problemas de estabilidad mecánica y se asemeja al enchufe
+            telefónico, con la diferencia de que tiene ocho conductores en lugar de cuatro. Se considera como un
+            componente
+            de networking pasivo ya que sólo sirve como un camino conductor entre los cuatro pares del cable trenzado de
+            Categoría 5 y las patas de la toma RJ-45. Se considera como un componente de la Capa 1, más que un
+            dispositivo,
+            dado que sirve sólo como camino conductor para bits. <br>
+            Los enchufes o conectores RJ-45 se insertan en jacks o receptáculos RJ-45. Los jacks RJ-45 tienen 8
+            conductores, que se ajustan a los del conector RJ-45. En el otro lado del jack RJ-45 hay un bloque de
+            inserción
+            donde
+            los hilos individuales se separan y se introducen en ranuras mediante una herramienta similar a un tenedor
+            denominada herramienta de punción. <br>
+            Para centralizar los diferentes conectores RJ-45 se utilizan unos dispositivos especiales, denominados
+            paneles
+            de conexión. Vienen provistos de 12, 24 ó 48 puertos y normalmente están montados en un bastidor. Las partes
+            delanteras son jacks RJ-45, las partes traseras son bloques de punción que proporcionan conectividad o
+            caminos
+            conductores. <br>
+            <h3>Conexiones RJ-45</h3>
+            En el entorno de trabajo de redes LAN Ethernet 10BaseT (y superiores), que va a ser el más común en la
+            práctica,
+            todos los cableados horizontales se realizan mediante cable UTP y conectores RJ-45. <br>
+            Ahora bien, dependiendo del uso concreto que se le vaya a dar al cable de unión, este puede adoptar varias
+            configuraciones, que van a definir las conexiones entre los diferentes pines de los conectores RJ-45 inicial
+            y
+            final del cable. En las explicaciones que siguen trabajaremos siempre con la parte correspondiente al clip
+            del
+            RJ-45 situada en la parte inferior de las imágenes, es decir, consideramos el RJ- 45 cogido en la mano con
+            la
+            parte correspondiente a la conexión con el Jack hacia afuera, y la pestaña de enganche hacia abajo. <br>
+            <h3>Conexión Straight Trough</h3>
+            Este tipo de conexión se usa en cables que van a conectar un host a una red Ethernet 10BaseT. Generalmente,
+            un
+            extremo del cable (terminal A) se conecta al Jack de la tarjeta de red del host, mientras que el otro
+            extremo
+            (terminal B) se conecta a un hub central. El esquema de conexiones es el que sigue: <br>
+            Observamos que las conexiones se realizan entre iguales, por lo que el cable de un color determinado se
+            conecta
+            en ambas terminales al mismo pin del RJ-45. Es una conexión directa. <br>
+
+
+            <h3>Conexión Cross-Over</h3>
+
+            Se utilizan en el aso de cables que deben unir dos host directamente, a través de sus correspondientes
+            tarjetas
+            de red. En este caso, es necesario realizar una inversión de cables en los pines terminales, para que cada
+            cable
+            activo cambie de funcionalidad (emisor o receptor) en cada uno de los Jacks. El esquema de este tipo de
+            cables
+            es el siguiente:
+
+            <table>
+                <th>Conector 1</th>
+                <th>Conector 2</th>
+                <tr>
+                    <td>Naranja/Blanco</td>
+                    <td>Verde/Blanco</td>
+                </tr>
+                <tr>
+                    <td>Naranja</td>
+                    <td>Verde</td>
+                </tr>
+                <tr>
+                    <td>Verde/Blanco</td>
+                    <td>Naranja/Blanco</td>
+                </tr>
+                <tr>
+                    <td>Azul</td>
+                    <td>Azul</td>
+                </tr>
+                <tr>
+                    <td>Azul/Blanco</td>
+                    <td>Azul/Blanco</td>
+                </tr>
+                <tr>
+                    <td>Verde</td>
+                    <td>Naranja</td>
+                </tr>
+                <tr>
+                    <td>Marrón/Blanco</td>
+                    <td>Marrón/Blanco</td>
+                </tr>
+                <tr>
+                    <td>Marrón</td>
+                    <td>Marrón</td>
+                </tr>
+            </table>
+
+            <h3>Conexión Roll-Over</h3>
+            También denominada conexión de cable de consola, es la usada en cables de conexión a una terminal de consola
+            de
+            un router, por ejemplo. En ella, todos los cables van invertidos de posición, como si se reflejaran en un
+            espejo, siendo su esquema el siguiente:
+
+
+            <table>
+                <th>Conector 1</th>
+                <th>Conector 2</th>
+                <tr>
+                    <td>Naranja/Blanco</td>
+                    <td>Marron</td>
+                </tr>
+                <tr>
+                    <td>Naranja</td>
+                    <td>Blanco/Marron</td>
+                </tr>
+                <tr>
+                    <td>Verde/Blanco</td>
+                    <td>Verde</td>
+                </tr>
+                <tr>
+                    <td>Azul</td>
+                    <td>Blanco/Azul</td>
+                </tr>
+                <tr>
+                    <td>Azul/Blanco</td>
+                    <td>Azul</td>
+                </tr>
+                <tr>
+                    <td>Verde</td>
+                    <td>Blanco/Verde</td>
+                </tr>
+                <tr>
+                    <td>Marrón/Blanco</td>
+                    <td>Naranja</td>
+                </tr>
+                <tr>
+                    <td>Marrón</td>
+                    <td>Blanco/Naranja</td>
+                </tr>
+
+            </table>
+
+            <h3>Preparación de un cable</h3>
+            Vamos a explicar a continuación de forma detallada el modo correcto de preparar un cable UTP con conectores
+            RJ-45. <br>
+            Las herramientas necesarias serán: <br>
+            * Un trozo de cable UTP, de longitud adecuada. Generalmente, los cables vienen en bobinas de diferentes
+            longitudes, contenidas en una caja de cartón. Para cortar el trozo de cable necesario
+            usaremos una herramienta cortante adecuada, bien afilada, como un cortacables o la parte cortadora de una
+            grimpeadora. <br>
+            * Dos conectores RJ-45, nuevos y de calidad. <br>
+
+
+            * Un pelacables, para retirar correctamente los aislantes
+
+            plásticos de las terminaciones del cable y de los hilos. <br>
+            * Una grimpeadora, aparato especialmente concebido para fijar los cables a los conectores RJ-45 mediante
+            presión. <br>
+            * Un gráfico del esquema de cableado. Esto es muy
+            importante, ya que si nos equivocamos en las conexiones, el cable no valdrá, quedando inutilizados
+            los conectores. <br>
+            * Un analizador de cables, para comprobar la correcta finalización del cable construido. Hay en el mercado
+            diferentes marcas y modelos, siendo casi todos aptos para esta tarea. <br>
+
+            Una vez preparados todos los materiales necesarios, los pasos a seguir son los siguientes:
+            <ol>
+                <li>Cortamos el trozo de cable necesario. Los estándares 568-B recomiendan que la longitud máxima para
+                    un
+                    cable
+                    de conexión host-red no supere los 3 metros.</li>
+                <li>Pelamos los extremos del cable, quitando el revestimiento exterior de plástico en una longitud
+                    adecuada.
+                    La
+                    idea es que el cable, al ser insertado posteriormente en el Jack, tenga protección externa justo
+                    hasta
+                    la
+                    entrada a los pines. Si queda más porción sin revestimiento el cable queda suelto y se incrementan
+                    las
+                    pérdidas
+                    de señal, y si queda menos las conexiones no se harán de forma correcta. </li>
+                <li>Separamos los cables, los destrenzamos y los disponemos según el esquema adecuado. </li>
+                <li>Los aplanamos y los recortamos de tal forma que la longitud de los hilos no trenzados sea de unos 12
+                    milímetros, distancia idónea para la perfecta conexión. No hay que preocuparse de "pelar" los
+                    extremos
+                    de los
+                    hilos, ya que al ser presionados luego con la grimpeadora se realiza este proceso de forma natural.
+                </li>
+                <li>Insertamos los cables en el conector RJ-45 y los empujamos hasta el fondo, asegurándonos de que
+                    llegan
+                    hasta
+                    el final, de tal forma
+                    que se puedan ver los hilos cuando se mira el conector desde el extremo.</li>
+                <li>Inspeccionamos que la distribución de hilos por colores esté de acuerdo con el esquema.</li>
+                <li>Engarzamos los hilos al conector con la grimpeadora, ejerciendo una buena presión en ésta, para que
+                    la
+                    conexión se realice correctamente.</li>
+                <li>Hacemos lo mismo con el otro extremo del cable.</li>
+                <li>Comprobamos la correcta conexión del cable mediante un analizador de cables. El método de
+                    comprobación
+                    puede
+                    variar según el analizador usado, por lo que debemos consultar las instrucciones del mismo.
+                    Generalmente
+                    se
+                    conecta un extremo del cable al analizador, y el otro extremo a una pieza
+                    especial, de tal forma que, al conectar el analizador, nos dirá en pantalla si el cable está
+                    correctamente
+                    conectado o, en caso contrario, qué pares de hilos no lo están.
+                    Si seguimos correctamente estos pasos, dispondremos de un cable útil, construido de acuerdo con los
+                    estándares.
+                    Una vez tenemos el cable, éste se conectará por un extremo en el conector de la tarjeta de red del
+                    host,
+                    y por
+                    el otro generalmente en la toma Jack RJ-45 situada en la pared, que será la que nos dé acceso a la
+                    red.
+                    Si tenemos que instalar dicha toma, el proceso es análogo al visto de construcción de un cable, con
+                    la
+                    diferencia que ahora el propio Jack lleva unos códigos de colores que indican dónde debe ir cada
+                    hilo.
+                    Para
+                    insertar los hilos en los pines internos se usa una herramienta de punción especial, que ajusta el
+                    cable
+                    y lo
+                    pela de forma automática. Una vez conectados los hilos, tan sólo queda acoplar en Jack en la cajeta
+                    atornillada
+                    a la pared.</li>
+            </ol>
+
+            <h3>Categorías de cable UTP</h3>
+            El estándar TIA/EIA 568 especifica el cable le Categoría 5 como un medio para la transmisión de datos a
+            frecuencias de hasta 100 MHz. El Modo de Transmisión Asíncrona (Asynchronous Transfer Mode ATM), trabaja a
+            155
+            MHz. La Gigabit Ethernet a 1 GHz. <br>
+            La necesidad de incrementar el ancho de banda nunca cesa, cuanto más se tenga, más se necesita. Las
+            aplicaciones
+            cada vez se vuelven más complejas, y los ficheros cada vez son más grandes. A medida que su red se vaya
+            congestionando con más datos, la velocidad se va ralentizando y no volverá a ser rápida nunca más. Las
+            buenas
+            noticias son que la próxima generación de cableado está en marcha. Sin embargo, tendrá que tener cuidado con
+            el
+            cableado que esté instalado hoy, y asegurarse que cumplirá con sus necesidades futuras. <br>
+            <ul>
+                <li>Categoría 1. Hace referencia al cable telefónico UTP tradicional que resulta adecuado para
+                    transmitir
+                    voz, pero
+                    no datos. La mayoría de los cables telefónicos instalados antes de 1983 eran cables de Categoría 1.
+                </li>
+                <li>Categoría 2. Esta categoría certifica el cable UTP para transmisión de datos de hasta 4 megabits por
+                    segundo
+                    (mbps), Este cable consta de cuatro pares trenzados de hilo de cobre.</li>
+                <li>Categoría 3. Esta categoría certifica el cable UTP para transmisión de datos de hasta 16 mbps. Este
+                    cable
+                    consta de cuatro pares trenzados de hilo de cobre con tres entrelazados por pie.</li>
+                <li>Categoría 4. Esta categoría certifica el cable UTP para transmisión de datos de hasta 20 mbps. Este
+                    cable
+                    consta de cuatro pares trenzados de hilo de cobre.</li>
+                <li>Categoría 5. Esta categoría certifica el cable UTP para transmisión de datos de hasta 100 mbps. Este
+                    cable
+                    consta de cuatro pares trenzados de hilo de cobre.</li>
+                <li>Categoría 5a. También conocida como Categoría 5+ ó Cat5e. Ofrece mejores prestaciones que el
+                    estándar de
+                    Categoría 5. Para ello se deben cumplir especificaciones tales como una atenuación al ratio
+                    crosstalk
+                    (ARC) de
+                    10 dB a 155 Mhz y 4 pares para la comprobación del Power Sum NEXT. Este estándar todavía no está
+                    aprobado</li>
+                <li>Nivel 7. Proporciona al menos el doble de ancho de banda que la Categoría 5 y la capacidad de
+                    soportar
+                    Gigabit
+                    Ethernet a 100 m. El ARC mínimo de 10 dB debe alcanzarse a 200 Mhz y el cableado debe soportar
+                    pruebas
+                    de Power
+                    Sum NEXT, más estrictas que las de los cables de Categoría 5 Avanzada.</li>
+            </ul>
+
+            La mayoría de los sistemas telefónicos utilizan uno de los tipos de UTP. De hecho, una razón por la que UTP
+            es
+            tan conocido es debido a que muchas construcciones están preparadas para sistemas telefónicos de par
+            trenzado.
+            Como parte del proceso previo al cableado, se instala UTP extra para cumplir las necesidades de cableado
+            futuro.
+            Si el cable de par trenzado preinstalado es de un nivel suficiente para soportar la transmisión de datos, se
+            puede utilizar para una red de equipos. Sin embargo, hay que tener mucho cuidado, porque el hilo telefónico
+            común podría no tener entrelazados y otras características eléctricas necesarias para garantizar la
+            seguridad y
+            nítida transmisión de los datos del equipo.
+            <h3>Cables de Fibra Óptica</h3>
+            En el cable de fibra óptica las señales que se transportan son señales digitales de datos en forma de pulsos
+            modulados de luz. Esta es una forma relativamente segura de enviar datos debido a que, a diferencia de los
+            cables de cobre que llevan los datos en forma de señales electrónicas, los cables de fibra óptica
+            transportan
+            impulsos no eléctricos. <br>
+            Esto significa que el cable de fibra óptica no se puede pinchar y sus datos no se pueden robar.
+            El cable de fibra óptica es apropiado para transmitir datos a
+            velocidades muy altas y con grandes capacidades debido a la carencia de atenuación de la señal y a su
+            pureza.
+            Pueden conducir transmisiones de luz moduladas. Si se compara con otros medios de networking, es más caro,
+            sin
+            embargo, no es susceptible a la interferencia electromagnética y ofrece velocidades de datos más altas que
+            cualquiera de los demás tipos de medios de networking descritos aquí. El cable de fibra óptica no transporta
+            impulsos eléctricos, como lo hacen otros tipos de medios de networking que usan cables de cobre. En cambio,
+            las
+            señales que representan a los bits se convierten en haces de luz. <br>
+            Está compuesto por dos fibras envueltas en revestimientos separados. Si se observa una sección transversal
+            de
+            este cable, veremos que cada fibra óptica se encuentra
+
+            rodeada por capas de material amortiguador protector, normalmente un material plástico como Kevlar, y un
+            revestimiento externo. El revestimiento exterior protege a todo el cable. Generalmente es de plástico y
+            cumple
+            con los códigos aplicables de incendio y construcción. El propósito del Kevlar es brindar una mayor
+            amortiguación y protección para las frágiles fibras de vidrio que tienen el diámetro de un cabello. Siempre
+            que
+            los códigos requieran que los cables de fibra óptica deban estar bajo tierra, a veces se incluye un alambre
+            de
+            acero inoxidable como refuerzo. <br>
+            Las partes que guían la luz en una fibra óptica se denominan núcleo y revestimiento. El núcleo es
+            generalmente
+            un vidrio de alta pureza con un alto índice de refracción Cuando el vidrio del núcleo está recubierto por
+            una
+            capa de revestimiento de vidrio o de plástico con un índice de refracción bajo, la luz se captura en el
+            núcleo
+            de la fibra. Este proceso se denomina reflexión interna total y permite que la fibra óptica actúe como un
+            "tubo
+            de luz", guiando la luz a través de enormes distancias, incluso dando vuelta en codos. <br>
+            La longitud máxima de cable recomendada entre nodos en de 2.000 metros, y su rendimiento es alto, de 100 0
+            más
+            Mbps. <br>
+            <h3>Composición del cable de fibra óptica</h3>
+            Una fibra óptica consta de un cilindro de vidrio extremadamente delgado, denominado núcleo, recubierto por
+            una
+            capa de vidrio concéntrica, conocida como revestimiento. <br>
+            Las fibras a veces son de plástico. El plástico es más fácil de instalar, pero no puede llevar los pulsos de
+            luz
+            a distancias tan grandes como el vidrio. <br>
+            Debido a que los hilos de vidrio pasan las señales en una sola dirección, un cable consta de dos hilos en
+            envolturas separadas. Un hilo transmite y el otro recibe. Una capa de plástico de refuerzo alrededor de cada
+            hilo de vidrio y las fibras Kevlar ofrecen solidez. En el conector de fibra óptica, las fibras de Kevlar se
+            colocan entre los dos cables. Al igual que
+            sus homólogos (par trenzado y coaxial), los cables de fibra óptica se encierran en un revestimiento de
+            plástico
+            para su protección. <br>
+            Las transmisiones del cable de fibra óptica no están sujetas a inter-modulaciones eléctricas y son
+            extremadamente rápidas, comúnmente transmiten a unos 100 Mbps, con velocidades demostradas de hasta 1
+            gigabit
+            por segundo (Gbps). Pueden transportar una señal (el pulso de luz) varios kilómetros.
+            Consideraciones sobre el cable de fibra óptica
+            El cable de fibra óptica se utiliza si necesita transmitir datos a velocidades muy altas y a grandes
+            distancias
+            en un medio muy seguro. <br>
+
+            El cable de fibra óptica no se utiliza si tiene un presupuesto limitado ni tampoco si no tiene el suficiente
+            conocimiento para instalar y conectar los dispositivos de forma apropiada. <br>
+            El precio del cable de fibra óptica es competitivo con el precio del cable de cobre alto de gama. Cada vez
+            se
+            hace más sencilla la utilización del cable de fibra óptica, y las técnicas de pulido y terminación requieren
+            menos conocimientos que hace unos años. <br>
+        </div> <!--Termina el display none-->
 
         <h2>REDES INALAMBRICAS</h2>
 
@@ -1985,7 +2208,7 @@
 
 
 
-        <h3>MODELO OSI</h3>
+        <h2>MODELO OSI</h2>
         Durante las últimas dos décadas ha habido un enorme crecimiento en la cantidad y tamaño de las redes. Muchas de
         ellas sin embargo, se desarrollaron utilizando implementaciones de hardware y software diferentes. Como
         resultado, muchas de las redes eran incompatibles y se volvió muy difícil para las redes que utilizaban
@@ -2118,24 +2341,23 @@
         datos puedan viajar en la red desde el origen hasta el destino. A continuación, presentamos una breve
         descripción de cada capa del modelo de referencia OSI:
 
-        <h3>Capa 7: La capa de aplicación</h3>
+        <h4>Capa 7: La capa de aplicación</h4>
         La capa de aplicación es la capa del modelo OSI más cercana al usuario; suministra servicios de red a las
         aplicaciones del usuario. Difiere de las demás capas debido a que no proporciona servicios a ninguna otra capa
         OSI, sino solamente a aplicaciones que se encuentran fuera del modelo OSI. Algunos ejemplos de dichos procesos
         de aplicación son los programas de hojas de cálculo, de procesamiento de texto y los de las terminales
         bancarias. La capa de aplicación establece la
-
         disponibilidad de los potenciales socios de comunicación, sincroniza y establece acuerdos sobre los
         procedimientos de recuperación de errores y control de la integridad de los datos. Si desea recordar la Capa 7
         en la menor cantidad de palabras posible, piense en los navegadores de Web.
 
-        <h3>Capa 6: La capa de presentación</h3>
+        <h4>Capa 6: La capa de presentación</h4>
         La capa de presentación garantiza que la información que envía la capa de aplicación de un sistema pueda ser
         leída por la capa de aplicación de otro. De ser necesario, la capa de presentación traduce entre varios formatos
         de datos utilizando un formato común. Si desea recordar la Capa 6 en la menor cantidad de palabras posible,
         piense en un formato de datos común.
 
-        <h3>Capa 5: La capa de sesión:</h3>
+        <h4>Capa 5: La capa de sesión:</h4>
         Como su nombre lo implica, la capa de sesión establece, administra y finaliza las sesiones entre dos hosts que
         se están comunicando. La capa de sesión proporciona sus servicios a la capa de presentación. También sincroniza
         el diálogo entre las capas de presentación de los dos hosts y administra su intercambio de datos. Además de
@@ -2143,7 +2365,7 @@
         servicio y un registro de excepciones acerca de los problemas de la capa de sesión, presentación y aplicación.
         Si desea recordar la Capa 5 en la menor cantidad de palabras posible, piense en diálogos y conversaciones.
 
-        <h3>Capa 4: La capa de transporte</h3>
+        <h4>Capa 4: La capa de transporte</h4>
         La capa de transporte segmenta los datos originados en el host emisor y los reensambla en una corriente de datos
         dentro del sistema del host receptor. El límite entre la capa de sesión y la capa de transporte puede imaginarse
         como el límite entre los protocolos de capa de medios y los protocolos de capa de host. Mientras que las capas
@@ -2156,20 +2378,20 @@
         confiable, se utilizan dispositivos de detección y recuperación de errores de transporte. Si desea recordar la
         Capa 4 en la menor cantidad de palabras posible, piense en calidad de servicio y confiabilidad.
 
-        <h3>Capa 3: La capa de red:</h3>
+        <h4>Capa 3: La capa de red:</h4>
         La capa de red es una capa compleja que proporciona conectividad y selección de ruta entre dos sistemas de hosts
         que pueden estar ubicados en redes geográficamente distintas. Si desea recordar la Capa 3 en la menor cantidad
         de palabras posible, piense en selección de ruta, conmutación, direccionamiento y enrutamiento.
 
-        <h3>Capa 2: La capa de enlace de datos</h3>
+        <h4>Capa 2: La capa de enlace de datos</h4>
         La capa de enlace de datos proporciona un tránsito de datos confiable a través de un enlace físico. Al hacerlo,
         la capa de enlace de datos se ocupa del direccionamiento físico (comparado con el lógico), la topología de red,
         el acceso a la red, la notificación de errores, entrega ordenada de tramas y control de flujo. Si desea recordar
         la Capa 2 en la menor cantidad de palabras posible, piense en tramas y control de acceso al medio.
 
-        <h3>Capa 1: La capa física</h3>
+        <h4>Capa 1: La capa física</h4>
         La capa física define las especificaciones eléctricas, mecánicas, de procedimiento y funcionales para activar,
-        mantener y desactivar el enlace físico entre sistemas finales.
+        mantener y desactivar el enlace físico entre sistemas finales. <br>
         Las funciones principales de la Capa Física son:
         <ol>
             <li>Permitir la compatibilidad entre los diferentes tipos de conectores existentes.</li>
@@ -2299,14 +2521,14 @@
         red, transporte y aplicación.
 
 
-        <h3>OSI</h3>
+        <h2>OSI</h2>
 
-        <h3>TCP/IP</h3>
+        <h2>TCP/IP</h2>
 
 
-        6 : Aplicación <br>
+        6 :Aplicación <br>
         5: Presentación <br>
-        4:Sesión <br>
+        4: Sesión <br>
         3: Transporte <br>
         2: Red <br>
         1: Enlace de Datos <br>
@@ -2574,19 +2796,55 @@
         En networking, hay dos esquemas de direccionamiento. Uno de ellos, el físico, utiliza la dirección MAC y el
         segundo, el lógico, utiliza lo que se denomina dirección IP.
 
-        <h3>Dirección IP</h3>
-        <p>
-            Como su nombre lo indica, una dirección IP se basa en un protocolo de internet. Toda LAN debe tener su
-            propia y
-            única dirección IP. Una dirección IP es esencial para que se realice el internetworking a través de una WAN.
+
+        <h3>¿Qué es una dirección IP?</h3>
+        <p><strong>IP –Internet Protocol– es un protocolo de Internet que cumple la tarea de construir las
+                comunicaciones en casi todas las redes</strong>. Para lograrlo,<strong> establece una dirección
+                única e irrepetible a cada uno de los dispositivos</strong> –como por ejemplo routers, celulares,
+            computadoras y televisiones– que quieren comunicarse mediante el uso de Internet.&nbsp; <br>
+
+            Una dirección IP es esencial para que se realice el internetworking a través de una
+            WAN.
         </p>
+
+        <p>Estas direcciones son los nombres numéricos que se dan a cualquier dispositivo como si se tratara de una
+            matrícula que le permite comunicarse con otros.&nbsp;</p>
+
+        <p><strong>Hay dos tipos de direcciones IP, las públicas y las privadas</strong>.</p>
+
+
+        <p>Ambas tienen en común que están constituidas en cuatro bloques numéricos. Cada uno de ellos es un número
+            del 0 al 255 y está separado por el signo de puntuación. Un ejemplo de IP pública puede ser 63.45.12.34
+            y el de una privada 192.168.0.11.</p>
+
+
+        <h2>Existencia de direcciones
+            IP públicas o privadas iguales</h2>
+
+
+        <p>En el caso de la <strong>pública</strong>, no se pueden duplicar porque cada conexión a Internet es
+            exclusiva. Lo mismo sucede con las direcciones IP <strong>privadas</strong>. Aunque, en el caso de estas
+            últimas, dos direcciones de dos dispositivos distintos pueden coincidir.</p>
+
+
+
+        <p>Esto sucede porque un hogar puede tener una red con direcciones IP privadas para todos sus dispositivos,
+            sin que esto quiera decir que en otro las direcciones deban ser distintas.</p>
+
+
+
+        <p>En otras palabras, en cada hogar existe un router que confiere direcciones IP privadas a cada dispositivo
+            y es posible que coincida con el de otro.</p>
+
 
 
         <h3>¿Qué es una dirección IP pública?</h3>
         <p>
-            Se define IP pública como la identificación que asigna un proveedor de internet para ser reconocido en la
+            Se define IP pública como la identificación que asigna un proveedor de internet para ser reconocido en
+            la
             red.
-            Así como es necesario que un vehículo lleve una patente que lo identifique para andar por la calle, también
+            Así como es necesario que un vehículo lleve una patente que lo identifique para andar por la calle,
+            también
             lo
             es tener una IP para navegar en Internet.
 
@@ -2596,13 +2854,16 @@
 
         <h3>Relación entre una dirección IP pública y un dominio web</h3>
         <p>
-            En sus inicios, Internet solía tener algunos servidores, siendo necesario saber su dirección IP pública para
+            En sus inicios, Internet solía tener algunos servidores, siendo necesario saber su dirección IP pública
+            para
             acceder a ellos. <br>
 
-            Al ser esto impráctico –sobre todo porque los centros de datos continúan creciendo y cada vez reciben más
+            Al ser esto impráctico –sobre todo porque los centros de datos continúan creciendo y cada vez reciben
+            más
             servidores con diversa información– se crean los nombres de dominios que se conocen actualmente. <br>
 
-            Para navegar por la web, entonces, se utilizan los DNS –Domain Name Servers– para reemplazar con un nombre
+            Para navegar por la web, entonces, se utilizan los DNS –Domain Name Servers– para reemplazar con un
+            nombre
             de
             dominio a una dirección IP. Estos ofrecen algunas ventajas:
         </p>
@@ -2618,11 +2879,13 @@
 
         <h3>La dirección IP privada</h3>
         <p>
-            La dirección IP privada es completamente igual que una pública. Pero, se diferencia de estas últimas, por
+            La dirección IP privada es completamente igual que una pública. Pero, se diferencia de estas últimas,
+            por
             ser
             fija para cada dispositivo y por no ser posible acceder a ellas a través de Internet.
 
-            Por ejemplo, una computadora, celular o televisor que se encuentre en una misma casa está conectado a una
+            Por ejemplo, una computadora, celular o televisor que se encuentre en una misma casa está conectado a
+            una
             misma
             red WiFi o cable. Esta red asigna una dirección IP –que no cambia y no se repite– a cada uno de estos
             dispositivos para que se reconozcan entre sí.
@@ -2638,493 +2901,607 @@
             Rango clase C: 192.168.0.0 a 192.168.255.255. <br> <br>
             Clase A. Es utilizado para las redes enormes, como por ejemplo las de las empresas internacionales. El
             primer
-            bloque identifica la red y, los tres siguientes, identifican a los dispositivos. Esto da la posibilidad de
+            bloque identifica la red y, los tres siguientes, identifican a los dispositivos. Esto da la posibilidad
+            de
             crear
-            hasta 126 redes diferentes y poseer un máximo de 16.777.214 equipos conectados por red. <br>
+            hasta 126 redes diferentes y poseer un máximo de 16.777.214 equipos conectados por red. <br> <br>
 
-            Clase B. Es utilizado por redes de tamaño medio. Tal es el caso de universidades o instituciones. Los dos
+            Clase B. Es utilizado por redes de tamaño medio. Tal es el caso de universidades o instituciones. Los
+            dos
             primeros bloques identifican la red y, los dos siguientes, identifican los dispositivos conectados. Esto
-            confiere la creación de más redes, aunque va a haber menos equipos conectados por red – 6.384 redes y 65.534
-            equipos–. <br>
+            confiere la creación de más redes, aunque va a haber menos equipos conectados por red – 6.384 redes y
+            65.534
+            equipos–. <br> <br>
 
-            Clase C. Son utilizados para pequeñas redes domésticas. Los primeros tres bloques identifican la red y, el
+            Clase C. Son utilizados para pequeñas redes domésticas. Los primeros tres bloques identifican la red y,
+            el
             último, identifica el equipo. Esto da la posibilidad de tener diversas cantidades de redes, pero menos
             equipos
             por red – 2.097.152 redes y 254 equipos por red–. <br>
         </p>
-        <img src="Imagenes/Redes/direcciones ip.jpg" alt="">
-
-        <h3>Qué es la máscara de red</h3>
-        <p>
-            La máscara de red cumple la función de permitir que una misma dirección IP sea útil para dos dispositivos.
-            <br>
-
-            Asimismo, da la posibilidad de dividir las redes en las categorías ya explicadas. <br>
-
-            Otra característica para destacar es que decide la cantidad de redes que pueden ser creadas y cuántos hosts
-            pueden haber de acuerdo con la clase de IP privada que se tenga. <br>
-
-            La máscara más común es la 255.255.255.0, que es la que se asigna a redes de tipo C. <br>
-
-            El primer bloque representa el número de redes que puede existir y, el 0, cuántos host puede <haber
-                class="br"></haber>
-
-            Para saber la cantidad de dispositivos que se pueden conectar a una misma red –y al mismo tiempo–, traducir
-            el
-            mencionado número a código binario. La traducción, en este caso, es 111111111111111111111100000000. <br>
-
-            Después, contar la cantidad de ceros –en el ejemplo son ocho–. <br>
-
-            Entonces elevar dos a ocho da como resultado 256. Este número representa la cantidad de dispositivos que se
-            pueden vincular ella. <br>
-        </p>
-
-        <h3>Las direcciones IP IPv4 e IPv6</h3>
-        <p>
-            Las direcciones IP IPv4 son las ya vistas. En cambio, las IPv6 son un nuevo protocolo que viene a reemplazar
-            a
-            las anteriores. <br><br>
-
-            Esto sucede porque, de las primeras, quedan pocas direcciones disponibles. Además, las segundas contienen
-            caracteres alfanuméricos. Por lo tanto, las combinaciones son ilimitadas.
-        </p>
-        <p>
-            Algunos ejemplos de direcciones IPv6 son: <br>
-            2001:db8:3333:4444:5555:6666:7777:8888 <br>
-            2001:db8:85a3:0000:0000:8a2e:0370:7334 <br>
-            3002:0bd6:0000:0000:0000:ee00:0033:6778 <br> <br>
-            Las direcciones IPv6 se representan en notación hexadecimal y están compuestas por 128 bits. Se dividen en
-            ocho grupos de cuatro dígitos hexadecimales separados por dos puntos (:). <br>
-        </p>
-        <h4>Formatos alternativos</h4>
-        <p>
-            Se pueden usar dos signos de dos puntos (::) en lugar de ceros. Por ejemplo, ff06:0:0:0:0:0:0:c3 se puede
-            escribir como ff06::c3. <br>
-            Se puede combinar la notación de dos puntos y puntos para incrustar la dirección IPv4 en la dirección IPv6.
-        </p>
-
-        <h4>Capacidad de direcciones IPv6</h4>
-        <p>
-            El protocolo IPv6 tiene un espacio de 128 bits, lo que le hace capaz de albergar 340 sextillones de
-            direcciones.
-        </p>
-        <h3>¿Cómo saber la dirección IP privada?</h3>
-        <p>
-            Para saber la dirección IP privada sólo es necesario seguir los siguientes pasos.
-        </p>
-        <ol>
-            <li>Introducir en el buscador “Ejecutar” o presionar al mismo tiempo el símbolo de Windows y la tecla “R”.
-                Hacer clic en el resultado para que se abra la pestaña. <br>
-                <img src="Imagenes/Redes/ejecutar.png" alt="">
-            </li>
-            <li>Escribir en el espacio <b>cmd</b>. <br>
-                <img src="Imagenes/Redes/cmd.png" alt="">
-            </li>
-            <li>Pulsar “Enter” o hacer clic en “Aceptar”. Se va a abrir una pestaña negra. Aquí escribir ipconfig y
-                pulsar “Enter”. <br>
-                <img src="Imagenes/Redes/ipconfig.png" alt="">
-            </li>
-            <li>Observar resultado y buscar la línea donde se ve la dirección IPv4 y la IPv6. <br>
-                <img src="Imagenes/Redes/resultado.png" alt="">
-            </li>
-        </ol>
-
-        <h3>Diferencias entre las direcciones IP y las direcciones MAC</h3>
-
-        Al igual que las direcciones MAC, cada dirección IP es única. No existe la posibilidad de que dos direcciones IP
-        sean iguales. Sin embargo, mientras las direcciones MAC son direcciones físicas que tienen una codificación
-
-        rígida en la tarjeta NIC y pueden ocurrir en la capa de enlace de datos, las direcciones IP se implementan en el
-        software y ocurren en la capa de red del modelo OSI. En general es el administrador de la red el responsable de
-        asignar las direcciones IP a todos los dispositivos de la red que controla. <br>
-        Como sabemos, las direcciones MAC son tres números hexadecimales de cuatro dígitos. Un ejemplo de dirección MAC
-        es el número 0000.0c12.3456. Al igual que el número de seguro social de los Estados Unidos, las direcciones MAC
-        son ejemplos de esquema de direccionamiento plano. Son únicos. Se emiten en forma secuencial. Para organizarlos
-        no se utiliza ninguna jerarquía. <br>
-        Los esquemas de direccionamiento IP son más complejos que los esquemas de direccionamiento MAC. Las direcciones
-        IP utilizan un esquema de direccionamiento jerárquico. Este esquema es como el que utiliza el sistema telefónico
-        de Estados Unidos, con códigos de país, de área e intercambios locales. <br>
-        Como sabemos, las direcciones MAC identifican dispositivos específicos y son utilizadas por los bridges para
-        emitir direcciones simples de bajo nivel para los datos que viajan por la red. Por el contrario, las direcciones
-        IP, brindan un esquema de direccionamiento que no sólo contiene la dirección del dispositivo en sí sino también
-        la red en la cual está ubicado el dispositivo. Como este es el caso, si un dispositivo pasa de una red a una red
-        diferente, la dirección IP del dispositivo deberá ser modificada en función del cambio realizado.
-
-
-        <h3>Diferencias entre los routers y los bridges</h3>
-
-        Los routers se diferencian de los bridges en diversos aspectos. En primer término, el bridging se produce en la
-        capa de enlace de datos o capa 2 mientras que el enrutamiento se produce en la capa de red o capa 3 del modelo
-        OSI. <br>
-        En segundo lugar, los bridges utilizan direcciones físicas o MAC para tomar decisiones sobre el envío de datos.
-        Los routers utilizan un esquema de direccionamiento diferente que se produce en la capa tres para adoptar las
-        medidas relativas al envío. Utilizan direcciones IP direcciones lógicas en lugar de direcciones MAC. Como las
-        direcciones IP se implementan en el software y se refieren a la red en la cual está ubicado un dispositivo, a
-        menudo estas direcciones de capa 3 se denominan direcciones de protocolo o direcciones de red. Las direcciones
-        físicas o MAC normalmente son asignadas por el fabricante de la tarjeta NIC y tienen una codificación rígida
-        dentro de la tarjeta NIC. Por el contrario, las direcciones IP normalmente son asignadas por el administrador de
-        la red. Al asignar las direcciones IP, no es inusual que el administrador de una red agrupe dispositivos en el
-        esquema de direccionamiento IP en función de su ubicación geográfica, el departamento o el piso que ocupan
-        dentro de un edificio. Como están implementadas en el software, las direcciones IP son relativamente fáciles de
-        cambiar. <br>
-        Por último, los bridges se utilizan principalmente para conectar segmentos de una red. Los routers se utilizan
-        para conectar diferentes redes y para acceder a la Internet mundial. Lo hacen brindando
-        enrutamiento extremo a extremo.
-
-
-        <h3>Funcionamiento de los Routers</h3>
-        Los routers se utilizan para conectar
-
-        dos o más redes. Para que el enrutamiento sea exitoso, cada red debe tener un número de red único. Recuerde que
-        este número de red único está incorporado en la dirección IP asignada a cada dispositivo conectado a la red.
-        Así, si una red tuviera un número de red único A con cuatro dispositivos conectados a dicha red, la dirección IP
-        de cada dispositivo sería A1, A2, A3, y A4. <br>
-
-        Como la interfaz donde el router se conecta con una red se considera parte de dicha red, la dirección IP del
-        puerto donde el router se conecta con la red A debería ser A5. <br>
-        Si otra red con un número de red único B y con cuatro dispositivos conectados también se
-        conectara al mismo router en otra de sus
-        interfaces, la dirección IP de cada dispositivo de esta red sería B1, B2, B3, y B4, y la dirección IP de la
-        segunda interfaz del router sería B5. <br>
-
-
-        Imagine que los datos se envían de una red a otra. La red de origen es la red A y la red de destino es la red B,
-        y el router está conectado a las redes A, B, C, y D. <br>
-
-
-        Cuando los datos, denominados frame, que provienen de la red A llegan al router, el router realiza las
-        siguientes funciones. Primero el router separa el encabezado de enlace de datos que lleva el frame. El
-        encabezado de enlace de datos contiene las direcciones IP del origen y del destino de los datos. Esto permite
-        que el router examine
-        la capa de red para determinar la red de destino. Luego, el router consulta sus tablas de enrutamiento para
-        determinar cuál de sus puertos necesitará para enviar los datos para que lleguen a su red de destino. De este
-        modo, en el siguiente ejemplo, el router determinaría enviar los datos de la red A a la red B a través de su
-        puerto que tiene la dirección IP B5. <br>
-
-        Sin embargo, antes de enviar
-        efectivamente los datos a través del puerto B5, el router encapsula los datos en el
-        correspondiente frame de enlace de datos.
-
-        Esquema complejo de red
-
-        <h3>¿Qué es el enrutamiento?</h3>
-        <p>
-            El enrutamiento es el proceso de selección de rutas en cualquier red. Una red de computación está formada
-            por
-            muchas máquinas, llamadas nodos, y rutas o enlaces que conectan dichos nodos. La comunicación entre dos
-            nodos en
-            una red interconectada se puede producir a través de muchas rutas diferentes. El enrutamiento es el proceso
-            de
-            seleccionar la mejor ruta mediante algunas reglas predeterminadas.
-        </p>
-
-
-        <h3>¿Cómo funciona el ruteo de la información?</h3>
-        Los dispositivos de red, como los enrutadores y los switches, usan protocolos y algoritmos para seleccionar la
-        ruta.
-        <ul>
-            <li>Los paquetes de datos tienen un encabezado que indica su destino.</li>
-            <li>Los enrutadores buscan la dirección del paquete en una tabla de enrutamiento.</li>
-            <li>Los enrutadores reenvían el paquete al siguiente punto de la red.</li>
-        </ul>
-
-        <h3>¿Qué es enrutamiento estático?</h3>
-        <p>
-            El enrutamiento estático es aquel en el que el administrador de la red debe encargarse de configurar
-            manualmente cada uno de los routers que forman la misma. Cuando se lleva a cabo este tipo de enrutamiento
-            hay que acceder a cada router, configurarlo individualmente y enseñarle cada una de las rutas existentes.
-            <br> <br>
-
-            Este tipo de enrutamiento hace más fácil el mantenimiento de las tablas de enrutamiento en redes muy
-            pequeñas, en las que se sabe previamente que no va a haber un aumento significativo de la misma. <br>
-            Normalmente, utiliza una única ruta por defecto o predeterminada que es la que dirige el tráfico hacia
-            cualquier red que no tenga coincidencia con otra ruta de la tabla de routing. <br><br>
-
-            Por lo indicado anteriormente, el enrutamiento estático se utiliza principalmente en redes con una cantidad
-            pequeña de routers, las cuales tienen un solo gateway. Cuando se lleva a cabo este tipo de configuración,
-            hay que especificar en cada router la IP de destino, la IP del router por la que se envían los paquetes, la
-            distancia y la máscara de red.
-        </p>
-
-        <h3>Ruta Default</h3>
-        <p>
-            La ruta por defecto, también conocida como ruta predeterminada o pasarela de último recurso, es la ruta que
-            se
-            utiliza cuando no hay otra ruta disponible para una dirección IP de destino.
-        </p>
-
-        <h4>Características</h4>
-        <ul>
-            <li>Se utiliza cuando se desconoce la dirección de destino IP de un paquete </li>
-            <li>Se configura como una ruta estática que apunta hacia la puerta de enlace externa </li>
-            <li>Para IPv4, la ruta predeterminada es 0.0.0.0/0, y para IPv6 es ::/0</li>
-            <li>Se utiliza para enviar cualquier paquete del que no se conozca por cuál interfaz enviarlo </li>
-        </ul>
-        </p>
-
-        <h4>Usos</h4>
-        <ul>
-            <li>Se utiliza cuando ninguna otra ruta de la tabla de routing coincide con la dirección IP destino del
-                paquete</li>
-            <li>Se utiliza comúnmente cuando se conecta un router periférico de una compañía a la red ISP</li>
-        </ul>
-
-        <h4>Configuración</h4>
-        <ul>
-            <li>Se configura de forma manual</li>
-            <li>Se deben reconfigurar de forma manual si se modifica la topología de la red</li>
-            <li>Se utilizan en situaciones en las que se espera que el diseño o los parámetros de la red permanezcan
-                constantes</li>
-        </ul>
-
-        <h3>Protocolos de ruteo dinámico</h3>
-        <p>
-            Asimismo, existen diversos protocolos de enrutamiento dinámico, entre los que merecen tu atención los
-            siguientes:
-        <ul>
-            <li>RIP.</li>
-            <li>IGRP.</li>
-            <li>EIGRP.</li>
-            <li>OSPF.</li>
-            <li>ISIS.</li>
-            <li>BGP.</li>
-        </ul>
-        </p>
-
-        <h3>¿Cómo funcionan los protocolos de enrutamiento?</h3>
-        <p>Los principales protocolos de enrutamiento funcionan de la siguiente manera:</p>
-
-
-        <h4>Protocolos de vector de distancia</h4>
-        <ul>
-            <li>RIP (Routing Information Protocol). Utilizan el conteo de saltos para determinar la mejor ruta.</li>
-            <li>IGRP (Interior Gateway Routing Protocol). Mejoran algunas limitaciones de RIP.</li>
-        </ul>
-
-        <h4>Protocolos de estado de enlace</h4>
-        <ul>
-            <li>OSPF (Open Shortest Path First). Determinan la ruta más corta y eficiente.</li>
-            <li>IS-IS (Intermediate System to Intermediate System). Son usuales en grandes redes corporativas.</li>
-        </ul>
-
-        <h4>Protocolos híbridos</h4>
-        <ul>
-            <li> EIGRP (Enhanced Interior Gateway Routing Protocol). Combinan ventajas de los protocolos de vector de
-                distancia y
-                de estado de enlace.</li>
-        </ul>
-
-        <h3>Enrutamiento con RIP</h3>
-        <p>
-            El enrutamiento con RIP (Protocolo de Información de Enrutamiento) es un método que permite a los
-            enrutadores configurar rutas óptimas entre redes. Se basa en el conteo de saltos para determinar la mejor
-            ruta a un destino.
-        </p>
-
-
-
-        <h3>¿Qué es enrutamiento dinámico?</h3>
-        <p>
-            El enrutamiento dinámico se basa en la utilización o empleo de protocolos de enrutamiento con el fin de
-            automatizar el intercambio y la actualización de las tablas de enrutamiento de cada uno de los routers.
-            Estos protocolos comparten las tablas de enrutamiento de forma automática con los routers cercanos, lo que
-            hace que su utilización sea recomendada para redes grandes. <br> <br>
-
-            Si tenemos una red en la que utilizamos este tipo de enrutamiento, no importará la cantidad de routers que
-            contenga, ya que podremos ir agregando en ella nuevos equipos y automáticamente todos los routers los
-            conocerán sin necesidad de configurar cada uno de ellos de forma individualizada. Todo es automático, por
-            ejemplo, si elimino una red WAN o LAN todos los equipos sabrán que no existe y no enviarán paquetes a la
-            misma. O si por el contrario, la agrego, todos la conocerán y podrán comunicarse con ella. <br><br>
-
-            Es fundamental comprender que, en este caso, los routers se comunican unos a otros las redes a las que están
-            conectados, lo que lo hace mucho más rápido y eficiente.
-        </p>
-
-        <h3>Enrutamiento estático vs dinámico</h3>
-        <p>
-            En resumen, por un lado, hay que indicar que en el enrutamiento estático la configuración puede contener
-            errores, especialmente si las redes son muy extensas, requiere la intervención del administrador en todo
-            momento para mantener la información cambiante de cada una de las rutas, no se adapta fácilmente ni de forma
-            automática a las redes en crecimiento y su mantenimiento se vuelve tan complicado que puede acabar siendo
-            imposible. <br> <br>
-
-            Y, por otro lado, en el enrutamiento dinámico la función principal es la de conseguir información de las
-            redes remotas para así, poder adaptarse de forma rápida cuando ocurra cualquier cambio en la topología de la
-            red. El router se encargará de enviar y recibir mensajes de enrutamiento en cada una de sus interfaces,
-            compartirá esta información con otros routers que usen el mismo protocolo y cuando detecten un cambio en la
-            topología anunciará el cambio a cada uno de los routers existentes. Aunque al principio la red que tengamos
-            sea pequeña, podemos empezar utilizando enrutamiento dinámico porque con el tiempo lo agradeceremos (el
-            administrador tendrá menos trabajo en estas).
-        </p>
-
-        <h2>Comandos</h2>
-        <h3>Ping</h3>
-        <p>El comando ping es una herramienta de diagnóstico de red que permite verificar la conectividad entre dos
-            dispositivos, enviando un paquete ICMP (Internet Control Message Protocol) a un host y esperando una
-            respuesta. La respuesta indica si el host está activo y accesible.
-            Sintaxis básica: <br>
-
-            ping [opciones] &lt;host&gt;
-        <h4>Donde:</h4>
-
-        <ul>
-            <li>ping: es el comando en sí.</li>
-            <li> [opciones]: Son opciones que modifican el comportamiento del comando, como especificar el número de
-                pings, el tamaño del paquete, etc. </li>
-            <li>&lt;host&gt;: Es el nombre de dominio o la dirección IP del dispositivo al que se le realizará el ping.
-            </li>
-        </ul>
-
-        <h4>Ejemplos: </h4>
-        <ul>
-            <li>ping www.google.com: Realiza un ping a la dirección IP de Google. </li>
-            <li>ping 192.168.1.1: Realiza un ping a la dirección IP del router local. </li>
-        </ul>
-
-        Opciones comunes: <br>
-        <ul>
-            <li>-c <número>: Envia un número especificado de paquetes ICMP.</li>
-            <li>-i <segundos>: Establece el intervalo entre los paquetes ICMP.</li>
-            <li>-f: Inunda el host de destino con paquetes.</li>
-            <li>-l <número>: Especifica el tamaño del paquete ICMP en bytes.</li>
-            <li> -t: Hace ping al host hasta que se detiene (Control-C).</li>
-            <li>-w <milisegundos>: Tiempo de espera en milisegundos para cada respuesta.</li>
-            <li>-v: Activa la salida detallada.</li>
-            <li>-V: Comprueba la versión ping.</li>
-            <li>-q: Resume los resultados del ping en una salida. </li>
-        </ul>
-
-        <h3>Cómo usar el comando ping:</h3>
-        <ul>
-            <li>Abrir el símbolo del sistema o terminal: En Windows, buscar "cmd" en el menú de inicio. En macOS o
-                Linux, abrir una terminal.</li>
-            <li>Escribir el comando ping: Por ejemplo, ping www.google.com o ping 192.168.1.1.</li>
-            <li>Presionar Enter: Se mostrarán los resultados del ping, incluyendo el tiempo de respuesta (latencia) y la
-                pérdida de paquetes. </li>
-        </ul>
-
-
-        <h3>Interpretación de los resultados:</h3>
-        <h4>Repeticiones de ping:</h4>
-        <p>Si se muestra una serie de respuestas (por ejemplo, "Respuesta de 192.168.1.1"), la conexión funciona. </p>
-        <h4>Tiempo de respuesta (latencia):</h4>
-        <p>El tiempo de respuesta en milisegundos (ms) indica la rapidez de la conexión. </p>
-        <h4>Pérdida de paquetes:</h4>
-        <p>Si hay pérdida de paquetes (porcentaje), indica que la conexión no es estable. </p>
-        <h4>Tiempo de espera:</h4>
-        <p>Si no se recibe respuesta, indica que el host no está activo o hay problemas de red.</p>
-        <img src="Imagenes/Redes/comando-ping.webp" alt="" style="max-width: 700px;">
-        </p>
-
-        <h3>Tranceroute</h3>
-        <p>
-            Los comandos de red Traceroute se utilizan para identificar la ruta que siguen los paquetes a través de una
-            red IP. Esto es útil para diagnosticar problemas de red. <br>
-        <h4>Puedes usar el comando Traceroute para:</h4>
-        <ul>
-            <li>Detectar las rutas que los paquetes utilizan al viajar a su destino</li>
-            <li>Identificar dónde se están produciendo los problemas</li>
-            <li>Resolver problemas y diagnosticar la red</li>
-        </ul>
-
-        <h4>Comandos de Traceroute en Linux</h4>
-        <ul>
-            <li>-d Activa la depuración a nivel de socket</li>
-            <li>-m max_ttl Especifica el número máximo de saltos para el proceso de rastreo</li>
-            <li>-w wait_time Define el tiempo máximo de espera para cada respuesta</li>
-            <li>-r Evita las tablas de enrutamiento normales y envía los paquetes IP directamente al host</li>
-        </ul>
-
-        <h4>Comandos de Traceroute en Microsoft Windows</h4>
-        <ul>
-            <li>-w timeout Especifica el tiempo máximo de respuesta para cada salto</li>
-            <li>-n Configura tracert para que no resuelva las direcciones IP a sus nombres de dominio</li>
-            <li>-4 Fuerza el comando tracert a utilizar IPv4</li>
-            <li>-6 Fuerza el comando tracert a utilizar IPv6</li>
-        </ul>
-
-        <h4>Para ejecutar el comando Traceroute en Windows, puedes:</h4>
-        <ol>
-            <li>Ir al menú Inicio</li>
-            <li>Seleccionar Ejecutar</li>
-            <li>Escribir “cmd” y luego presionar “OK”</li>
-            <li>Escribir “tracert [hostname]” y presionar Enter</li>
-        </ol>
-
-        <img src="Imagenes/Redes/traceroute1.png" alt=""> <br>
-        <img src="Imagenes/Redes/traceroute2.png" alt="">
-
-        <h3>Netstat</h3>
-        <p>
-            El comando netstat permite supervisar el estado de la red y los protocolos de red. Se puede usar para: <br>
-        <ul>
-            <li>Visualizar el estado de los protocolos TCP, SCTP y UDP</li>
-            <li>Ver la tabla de enrutamiento</li>
-            <li>Ver información sobre las interfaces</li>
-            <li>Ver el contenido de estructuras de datos relacionadas con redes</li>
-            <li>Ver estadísticas de memoria caché</li>
-            <li>Ver estadísticas de paquetes</li>
-            <li>Ver estadísticas de protocolos</li>
-            <li>Ver la tabla de routing</li>
-            <li>Ver los puertos abiertos y las conexiones activas</li>
-            <li>Ver el nombre de dominio completo (FQDN) del host remoto</li>
-        </ul>
-
-        Para obtener más información sobre el comando netstat, puedes consultar la página de comando man netstat. <br>
-        El procedimiento y la aplicación de algunos comandos netstat pueden variar dependiendo del sistema operativo.
-        <br>
-        Algunos ejemplos de uso del comando netstat son: <br>
-        <ul>
-            <li>netstat -r -f inet Muestra información de tabla de direccionamiento para una interfaz de Internet</li>
-            <li>netstat -s -p gre Muestra estadísticas para el protocolo GRE</li>
-            <li>netstat -s -p gif Muestra estadísticas para el túnel IPv4 sobre IPv6 (túnel GIF)</li>
-            <li>netstat -f Rastrea algún problema y sabe el FQDN del host remoto</li>
-        </ul>
-
-        <img src="Imagenes/Redes/netstat.JPG" alt="">
-
-
-        </p>
-        <h3>Arp</h3>
-        <p>
-            El comando arp es una herramienta que permite ver y modificar las tablas de traducción de direcciones IP a
-            direcciones MAC. ARP son las siglas de Address Resolution Protocol (Protocolo de resolución de direcciones).
-        </p>
-        <h4>¿Qué hace?</h4>
-        <p>
-            Convierte direcciones IP a direcciones MAC
-        </p>
-        <h4>¿Para qué sirve?</h4>
-        <p>
-            Diagnosticar problemas de conectividad, detectar conflictos de red, verificar la resolución de direcciones
-        </p>
-
-        <h4>¿Cómo se usa?</h4>
-        <p>
-            En Windows, se ejecuta en el símbolo del sistema (cmd)
-            Para ejecutar el comando arp en Windows, puedes:
-        <ol>
-            <li>Escribir "cmd" en el cuadro de texto "Abrir"</li>
-            <li>Seleccionar "Ejecutar como administrador"</li>
-            <li>Seleccionar "Sí" si se muestra el mensaje de Control de cuentas de usuario (UAC)</li>
-            <li>Escribir el comando “arp -a” para ver la tabla arp y presionar Enter</li>
-        </ol>
-
-        Puedes también usar el comando arp con los siguientes parámetros:
-        <ul>
-            <li>arp -d: Borra la caché ARP</li>
-            <li>arp /a: Muestra la entrada de caché arp para una dirección IP específica</li>
-            <li>arp /n: Distingue mayúsculas de minúsculas</li>
-        </ul>
-        El protocolo ARP es fundamental para la transmisión de datos en redes Ethernet.
-        </p>
-        <img src="Imagenes/Redes/arp.png" alt="">
-        </p>
-
-    </main>
-    <footer> <a href="#ancla">Ir hacia arriba</a>
-        <p id="parrafofooter_index" style="color: black;"> Hernan Joel Vladimirsky <span>&copy;Copyright</span> </p>
-    </footer>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Clase</th>
+                    <th>Rango</th>
+                    <th>Máscara por Defecto</th>
+                    <th>N° de Hosts</th>
+                    <th>Uso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A</td>
+                    <td>1.0.0.0 – 126.255.255.255</td>
+                    <td>255.0.0.0 (/8)</td>
+                    <td>~16 millones</td>
+                    <td>Grandes redes</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>128.0.0.0 – 191.255.255.255</td>
+                    <td>255.255.0.0 (/16)</td>
+                    <td>~65 mil</td>
+                    <td>Redes medianas</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>192.0.0.0 – 223.255.255.255</td>
+                    <td>255.255.255.0 (/24)</td>
+                    <td>254</td>
+                    <td>Pequeñas redes</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>224.0.0.0 – 239.255.255.255</td>
+                    <td>No aplica</td>
+                    <td>Multicast</td>
+                    <td>Envío múltiple</td>
+                </tr>
+                <tr>
+                    <td>E</td>
+                    <td>240.0.0.0 – 255.255.255.255</td>
+                    <td>No aplica</td>
+                    <td>Reservado</td>
+                    <td>Experimental</td>
+                </tr>
+            </tbody>
+        </table>
+</body>
+
+<h3>¿Qué significa /24 en una dirección IP?</h3>
+
+<p><strong>/24</strong> indica que <strong>24 bits</strong> están reservados para identificar la <strong>red</strong> en
+    una dirección IP.</p>
+
+<ul>
+    <li>Una IP tiene 32 bits en total.</li>
+    <li>Con /24, 24 bits son para la red y 8 bits para los hosts.</li>
+    <li>La máscara de subred equivalente es <strong>255.255.255.0</strong>.</li>
+    <li>Se pueden asignar hasta <strong>254 hosts</strong> (direcciones útiles).</li>
+</ul>
+
+<h4>Visualización:</h4>
+<p><code>192.168.1.0/24</code></p>
+<p>Binario: <br>
+    <code>11111111.11111111.11111111.00000000</code>
+</p>
+
+<h4>Datos Importantes:</h4>
+<table>
+    <thead>
+        <tr>
+            <th>Concepto</th>
+            <th>Valor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Dirección de Red</td>
+            <td>192.168.1.0</td>
+        </tr>
+        <tr>
+            <td>Primer Host</td>
+            <td>192.168.1.1</td>
+        </tr>
+        <tr>
+            <td>Último Host</td>
+            <td>192.168.1.254</td>
+        </tr>
+        <tr>
+            <td>Dirección Broadcast</td>
+            <td>192.168.1.255</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h3>¿Qué es la máscara de red?</h3>
+<p>
+    La máscara de red cumple la función de permitir que una misma dirección IP sea útil para dos dispositivos.
+    <br>
+
+    Asimismo, da la posibilidad de dividir las redes en las categorías ya explicadas. <br>
+
+    Otra característica para destacar es que decide la cantidad de redes que pueden ser creadas y cuántos hosts
+    pueden haber de acuerdo con la clase de IP privada que se tenga. <br>
+
+    La máscara más común es la 255.255.255.0, que es la que se asigna a redes de tipo C. <br>
+
+    El primer bloque representa el número de redes que puede existir y, el 0, cuántos host puede haber <br>
+
+
+    Para saber la cantidad de dispositivos que se pueden conectar a una misma red –y al mismo tiempo–, traducir
+    el
+    mencionado número a código binario. La traducción, en este caso, es 111111111111111111111100000000. <br>
+
+    Después, contar la cantidad de ceros –en el ejemplo son ocho–. <br>
+
+    Entonces elevar dos a ocho da como resultado 256. Este número representa la cantidad de dispositivos que se
+    pueden vincular ella. <br>
+</p>
+
+<h3>Las direcciones IP IPv4 e IPv6</h3>
+<p>
+    Las direcciones IP IPv4 son las ya vistas. En cambio, las IPv6 son un nuevo protocolo que viene a reemplazar
+    a
+    las anteriores. <br><br>
+
+    Esto sucede porque, de las primeras, quedan pocas direcciones disponibles. Además, las segundas contienen
+    caracteres alfanuméricos. Por lo tanto, las combinaciones son ilimitadas.
+</p>
+<p>
+    Algunos ejemplos de direcciones IPv6 son: <br>
+    2001:db8:3333:4444:5555:6666:7777:8888 <br>
+    2001:db8:85a3:0000:0000:8a2e:0370:7334 <br>
+    3002:0bd6:0000:0000:0000:ee00:0033:6778 <br> <br>
+    Las direcciones IPv6 se representan en notación hexadecimal y están compuestas por 128 bits. Se dividen en
+    ocho grupos de cuatro dígitos hexadecimales separados por dos puntos (:). <br>
+</p>
+<h4>Formatos alternativos</h4>
+<p>
+    Se pueden usar dos signos de dos puntos (::) en lugar de ceros. Por ejemplo, ff06:0:0:0:0:0:0:c3 se puede
+    escribir como ff06::c3. <br>
+    Se puede combinar la notación de dos puntos y puntos para incrustar la dirección IPv4 en la dirección IPv6.
+</p>
+
+<h4>Capacidad de direcciones IPv6</h4>
+<p>
+    El protocolo IPv6 tiene un espacio de 128 bits, lo que le hace capaz de albergar 340 sextillones de
+    direcciones.
+</p>
+<h3>¿Cómo saber la dirección IP privada?</h3>
+<p>
+    Para saber la dirección IP privada sólo es necesario seguir los siguientes pasos.
+</p>
+<ol>
+    <li>Introducir en el buscador “Ejecutar” o presionar al mismo tiempo el símbolo de Windows y la tecla “R”.
+        Hacer clic en el resultado para que se abra la pestaña. <br>
+        <img src="Imagenes/Redes/ejecutar.png" alt="">
+    </li>
+    <li>Escribir en el espacio <b>cmd</b>. <br>
+        <img src="Imagenes/Redes/cmd.png" alt="">
+    </li>
+    <li>Pulsar “Enter” o hacer clic en “Aceptar”. Se va a abrir una pestaña negra. Aquí escribir ipconfig y
+        pulsar “Enter”. <br>
+        <img src="Imagenes/Redes/ipconfig.png" alt="">
+    </li>
+    <li>Observar resultado y buscar la línea donde se ve la dirección IPv4 y la IPv6. <br>
+        <img src="Imagenes/Redes/resultado.png" alt="">
+    </li>
+</ol>
+
+<h3>Diferencias entre las direcciones IP y las direcciones MAC</h3>
+<p>
+Al igual que las direcciones MAC, cada dirección IP es única. No existe la posibilidad de que dos direcciones IP
+sean iguales. Sin embargo, mientras las direcciones MAC son <strong>direcciones físicas</strong> que tienen una codificación
+
+rígida en la tarjeta NIC y pueden ocurrir en la capa de enlace de datos, las direcciones IP se implementan en el
+software y ocurren en la capa de red del modelo OSI. En general es el administrador de la red el responsable de
+asignar las direcciones IP a todos los dispositivos de la red que controla. <br>
+Como sabemos, las direcciones MAC son tres números hexadecimales de cuatro dígitos. Un ejemplo de dirección MAC
+es el número 0000.0c12.3456. Al igual que el número de seguro social de los Estados Unidos, las direcciones MAC
+son ejemplos de esquema de direccionamiento plano. Son únicos. Se emiten en forma secuencial. Para organizarlos
+no se utiliza ninguna jerarquía. <br>
+Los esquemas de direccionamiento IP son más complejos que los esquemas de direccionamiento MAC. Las direcciones
+IP utilizan un esquema de direccionamiento jerárquico. Este esquema es como el que utiliza el sistema telefónico
+de Estados Unidos, con códigos de país, de área e intercambios locales. <br>
+Como sabemos, las direcciones MAC identifican dispositivos específicos y son utilizadas por los bridges para
+emitir direcciones simples de bajo nivel para los datos que viajan por la red. Por el contrario, las direcciones
+IP, brindan un esquema de direccionamiento que no sólo contiene la dirección del dispositivo en sí sino también
+la red en la cual está ubicado el dispositivo. Como este es el caso, si un dispositivo pasa de una red a una red
+diferente, la dirección IP del dispositivo deberá ser modificada en función del cambio realizado.
+</p>
+
+<h3>Diferencias entre los routers y los bridges</h3>
+<p>
+Los routers se diferencian de los bridges en diversos aspectos. En primer término, el bridging se produce en la
+capa de enlace de datos o capa 2 mientras que el enrutamiento se produce en la capa de red o capa 3 del modelo
+OSI. <br>
+En segundo lugar, los bridges utilizan direcciones físicas o MAC para tomar decisiones sobre el envío de datos.
+Los routers utilizan un esquema de direccionamiento diferente que se produce en la capa tres para adoptar las
+medidas relativas al envío. Utilizan direcciones IP direcciones lógicas en lugar de direcciones MAC. Como las
+direcciones IP se implementan en el software y se refieren a la red en la cual está ubicado un dispositivo, a
+menudo estas direcciones de capa 3 se denominan direcciones de protocolo o direcciones de red. Las direcciones
+físicas o MAC normalmente son asignadas por el fabricante de la tarjeta NIC y tienen una codificación rígida
+dentro de la tarjeta NIC. Por el contrario, las direcciones IP normalmente son asignadas por el administrador de
+la red. Al asignar las direcciones IP, no es inusual que el administrador de una red agrupe dispositivos en el
+esquema de direccionamiento IP en función de su ubicación geográfica, el departamento o el piso que ocupan
+dentro de un edificio. Como están implementadas en el software, las direcciones IP son relativamente fáciles de
+cambiar. <br>
+Por último, los bridges se utilizan principalmente para conectar segmentos de una red. Los routers se utilizan
+para conectar diferentes redes y para acceder a la Internet mundial. Lo hacen brindando
+enrutamiento extremo a extremo.
+</p>
+
+<h3>Funcionamiento de los Routers</h3>
+<p>
+    Los routers se utilizan para conectar
+
+dos o más redes. Para que el enrutamiento sea exitoso, cada red debe tener un número de red único. Recuerde que
+este número de red único está incorporado en la dirección IP asignada a cada dispositivo conectado a la red.
+Así, si una red tuviera un número de red único A con cuatro dispositivos conectados a dicha red, la dirección IP
+de cada dispositivo sería A1, A2, A3, y A4. <br>
+
+Como la interfaz donde el router se conecta con una red se considera parte de dicha red, la dirección IP del
+puerto donde el router se conecta con la red A debería ser A5. <br>
+Si otra red con un número de red único B y con cuatro dispositivos conectados también se
+conectara al mismo router en otra de sus
+interfaces, la dirección IP de cada dispositivo de esta red sería B1, B2, B3, y B4, y la dirección IP de la
+segunda interfaz del router sería B5. <br>
+</p>
+
+<img src="Imagenes/Redes/funcionamiento del router 1.png" alt=""> <br>
+<p>
+Imagine que los datos se envían de una red a otra. La red de origen es la red A y la red de destino es la red B,
+y el router está conectado a las redes A, B, C, y D. <br>
+
+
+Cuando los datos, denominados frame, que provienen de la red A llegan al router, el router realiza las
+siguientes funciones. Primero el router separa el encabezado de enlace de datos que lleva el frame. El
+encabezado de enlace de datos contiene las direcciones IP del origen y del destino de los datos. Esto permite
+que el router examine
+la capa de red para determinar la red de destino. Luego, el router consulta sus tablas de enrutamiento para
+determinar cuál de sus puertos necesitará para enviar los datos para que lleguen a su red de destino. De este
+modo, en el siguiente ejemplo, el router determinaría enviar los datos de la red A a la red B a través de su
+puerto que tiene la dirección IP B5. 
+</p>
+
+<img src="Imagenes/Redes/funcionamiento del router 2.png" alt=""> <br>
+
+<p>
+    Sin embargo, antes de enviar
+efectivamente los datos a través del puerto B5, el router encapsula los datos en el
+correspondiente frame de enlace de datos.
+</p>
+
+
+<img src="Imagenes/Redes/funcionamiento del router 3.png" alt=""> <br> 
+
+<h3>Esquema complejo de red</h3> 
+
+<img src="Imagenes/Redes/esquema complejo de red.png" alt=""> <br>
+
+<h3>¿Qué es el enrutamiento?</h3>
+<p>
+    El enrutamiento es el proceso de selección de rutas en cualquier red. Una red de computación está formada
+    por
+    muchas máquinas, llamadas nodos, y rutas o enlaces que conectan dichos nodos. La comunicación entre dos
+    nodos en
+    una red interconectada se puede producir a través de muchas rutas diferentes. El enrutamiento es el proceso
+    de
+    seleccionar la mejor ruta mediante algunas reglas predeterminadas.
+</p>
+
+
+<h3>¿Cómo funciona el ruteo de la información?</h3>
+Los dispositivos de red, como los enrutadores y los switches, usan protocolos y algoritmos para seleccionar la
+ruta.
+<ul>
+    <li>Los paquetes de datos tienen un encabezado que indica su destino.</li>
+    <li>Los enrutadores buscan la dirección del paquete en una tabla de enrutamiento.</li>
+    <li>Los enrutadores reenvían el paquete al siguiente punto de la red.</li>
+</ul>
+
+<h3>¿Qué es enrutamiento estático?</h3>
+<p>
+    El enrutamiento estático es aquel en el que el administrador de la red debe encargarse de configurar
+    manualmente cada uno de los routers que forman la misma. Cuando se lleva a cabo este tipo de enrutamiento
+    hay que acceder a cada router, configurarlo individualmente y enseñarle cada una de las rutas existentes.
+    <br> <br>
+
+    Este tipo de enrutamiento hace más fácil el mantenimiento de las tablas de enrutamiento en redes muy
+    pequeñas, en las que se sabe previamente que no va a haber un aumento significativo de la misma. <br>
+    Normalmente, utiliza una única ruta por defecto o predeterminada que es la que dirige el tráfico hacia
+    cualquier red que no tenga coincidencia con otra ruta de la tabla de routing. <br><br>
+
+    Por lo indicado anteriormente, el enrutamiento estático se utiliza principalmente en redes con una cantidad
+    pequeña de routers, las cuales tienen un solo gateway. Cuando se lleva a cabo este tipo de configuración,
+    hay que especificar en cada router la IP de destino, la IP del router por la que se envían los paquetes, la
+    distancia y la máscara de red.
+</p>
+
+<h3>Ruta Default</h3>
+<p>
+    La ruta por defecto, también conocida como ruta predeterminada o pasarela de último recurso, es la ruta que
+    se
+    utiliza cuando no hay otra ruta disponible para una dirección IP de destino.
+</p>
+
+<h4>Características</h4>
+<ul>
+    <li>Se utiliza cuando se desconoce la dirección de destino IP de un paquete </li>
+    <li>Se configura como una ruta estática que apunta hacia la puerta de enlace externa </li>
+    <li>Para IPv4, la ruta predeterminada es 0.0.0.0/0, y para IPv6 es ::/0</li>
+    <li>Se utiliza para enviar cualquier paquete del que no se conozca por cuál interfaz enviarlo </li>
+</ul>
+</p>
+
+<h4>Usos</h4>
+<ul>
+    <li>Se utiliza cuando ninguna otra ruta de la tabla de routing coincide con la dirección IP destino del
+        paquete</li>
+    <li>Se utiliza comúnmente cuando se conecta un router periférico de una compañía a la red ISP</li>
+</ul>
+
+<h4>Configuración</h4>
+<ul>
+    <li>Se configura de forma manual</li>
+    <li>Se deben reconfigurar de forma manual si se modifica la topología de la red</li>
+    <li>Se utilizan en situaciones en las que se espera que el diseño o los parámetros de la red permanezcan
+        constantes</li>
+</ul>
+
+<h3>Protocolos de ruteo dinámico</h3>
+<p>
+    Asimismo, existen diversos protocolos de enrutamiento dinámico, entre los que merecen tu atención los
+    siguientes:
+<ul>
+    <li>RIP.</li>
+    <li>IGRP.</li>
+    <li>EIGRP.</li>
+    <li>OSPF.</li>
+    <li>ISIS.</li>
+    <li>BGP.</li>
+</ul>
+</p>
+
+<h3>¿Cómo funcionan los protocolos de enrutamiento?</h3>
+<p>Los principales protocolos de enrutamiento funcionan de la siguiente manera:</p>
+
+
+<h4>Protocolos de vector de distancia</h4>
+<ul>
+    <li>RIP (Routing Information Protocol). Utilizan el conteo de saltos para determinar la mejor ruta.</li>
+    <li>IGRP (Interior Gateway Routing Protocol). Mejoran algunas limitaciones de RIP.</li>
+</ul>
+
+<h4>Protocolos de estado de enlace</h4>
+<ul>
+    <li>OSPF (Open Shortest Path First). Determinan la ruta más corta y eficiente.</li>
+    <li>IS-IS (Intermediate System to Intermediate System). Son usuales en grandes redes corporativas.</li>
+</ul>
+
+<h4>Protocolos híbridos</h4>
+<ul>
+    <li> EIGRP (Enhanced Interior Gateway Routing Protocol). Combinan ventajas de los protocolos de vector de
+        distancia y
+        de estado de enlace.</li>
+</ul>
+
+<h3>Enrutamiento con RIP</h3>
+<p>
+    El enrutamiento con RIP (Protocolo de Información de Enrutamiento) es un método que permite a los
+    enrutadores configurar rutas óptimas entre redes. Se basa en el conteo de saltos para determinar la mejor
+    ruta a un destino.
+</p>
+
+
+
+<h3>¿Qué es enrutamiento dinámico?</h3>
+<p>
+    El enrutamiento dinámico se basa en la utilización o empleo de protocolos de enrutamiento con el fin de
+    automatizar el intercambio y la actualización de las tablas de enrutamiento de cada uno de los routers.
+    Estos protocolos comparten las tablas de enrutamiento de forma automática con los routers cercanos, lo que
+    hace que su utilización sea recomendada para redes grandes. <br> <br>
+
+    Si tenemos una red en la que utilizamos este tipo de enrutamiento, no importará la cantidad de routers que
+    contenga, ya que podremos ir agregando en ella nuevos equipos y automáticamente todos los routers los
+    conocerán sin necesidad de configurar cada uno de ellos de forma individualizada. Todo es automático, por
+    ejemplo, si elimino una red WAN o LAN todos los equipos sabrán que no existe y no enviarán paquetes a la
+    misma. O si por el contrario, la agrego, todos la conocerán y podrán comunicarse con ella. <br><br>
+
+    Es fundamental comprender que, en este caso, los routers se comunican unos a otros las redes a las que están
+    conectados, lo que lo hace mucho más rápido y eficiente.
+</p>
+
+<h3>Enrutamiento estático vs dinámico</h3>
+<p>
+    En resumen, por un lado, hay que indicar que en el enrutamiento estático la configuración puede contener
+    errores, especialmente si las redes son muy extensas, requiere la intervención del administrador en todo
+    momento para mantener la información cambiante de cada una de las rutas, no se adapta fácilmente ni de forma
+    automática a las redes en crecimiento y su mantenimiento se vuelve tan complicado que puede acabar siendo
+    imposible. <br> <br>
+
+    Y, por otro lado, en el enrutamiento dinámico la función principal es la de conseguir información de las
+    redes remotas para así, poder adaptarse de forma rápida cuando ocurra cualquier cambio en la topología de la
+    red. El router se encargará de enviar y recibir mensajes de enrutamiento en cada una de sus interfaces,
+    compartirá esta información con otros routers que usen el mismo protocolo y cuando detecten un cambio en la
+    topología anunciará el cambio a cada uno de los routers existentes. Aunque al principio la red que tengamos
+    sea pequeña, podemos empezar utilizando enrutamiento dinámico porque con el tiempo lo agradeceremos (el
+    administrador tendrá menos trabajo en estas).
+</p>
+
+<h2>Comandos</h2>
+<h3>Ping</h3>
+<p>El comando ping es una herramienta de diagnóstico de red que permite verificar la conectividad entre dos
+    dispositivos, enviando un paquete ICMP (Internet Control Message Protocol) a un host y esperando una
+    respuesta. La respuesta indica si el host está activo y accesible.
+    Sintaxis básica: <br>
+
+    ping [opciones] &lt;host&gt;
+<h4>Donde:</h4>
+
+<ul>
+    <li>ping: es el comando en sí.</li>
+    <li> [opciones]: Son opciones que modifican el comportamiento del comando, como especificar el número de
+        pings, el tamaño del paquete, etc. </li>
+    <li>&lt;host&gt;: Es el nombre de dominio o la dirección IP del dispositivo al que se le realizará el ping.
+    </li>
+</ul>
+
+<h4>Ejemplos: </h4>
+<ul>
+    <li>ping www.google.com: Realiza un ping a la dirección IP de Google. </li>
+    <li>ping 192.168.1.1: Realiza un ping a la dirección IP del router local. </li>
+</ul>
+
+Opciones comunes: <br>
+<ul>
+    <li>-c <número>: Envia un número especificado de paquetes ICMP.</li>
+    <li>-i <segundos>: Establece el intervalo entre los paquetes ICMP.</li>
+    <li>-f: Inunda el host de destino con paquetes.</li>
+    <li>-l <número>: Especifica el tamaño del paquete ICMP en bytes.</li>
+    <li> -t: Hace ping al host hasta que se detiene (Control-C).</li>
+    <li>-w <milisegundos>: Tiempo de espera en milisegundos para cada respuesta.</li>
+    <li>-v: Activa la salida detallada.</li>
+    <li>-V: Comprueba la versión ping.</li>
+    <li>-q: Resume los resultados del ping en una salida. </li>
+</ul>
+
+<h3>Cómo usar el comando ping:</h3>
+<ul>
+    <li>Abrir el símbolo del sistema o terminal: En Windows, buscar "cmd" en el menú de inicio. En macOS o
+        Linux, abrir una terminal.</li>
+    <li>Escribir el comando ping: Por ejemplo, ping www.google.com o ping 192.168.1.1.</li>
+    <li>Presionar Enter: Se mostrarán los resultados del ping, incluyendo el tiempo de respuesta (latencia) y la
+        pérdida de paquetes. </li>
+</ul>
+
+
+<h3>Interpretación de los resultados:</h3>
+<h4>Repeticiones de ping:</h4>
+<p>Si se muestra una serie de respuestas (por ejemplo, "Respuesta de 192.168.1.1"), la conexión funciona. </p>
+<h4>Tiempo de respuesta (latencia):</h4>
+<p>El tiempo de respuesta en milisegundos (ms) indica la rapidez de la conexión. </p>
+<h4>Pérdida de paquetes:</h4>
+<p>Si hay pérdida de paquetes (porcentaje), indica que la conexión no es estable. </p>
+<h4>Tiempo de espera:</h4>
+<p>Si no se recibe respuesta, indica que el host no está activo o hay problemas de red.</p>
+<img src="Imagenes/Redes/comando-ping.webp" alt="" style="max-width: 700px;">
+</p>
+
+<h3>Tranceroute</h3>
+<p>
+    Los comandos de red Traceroute se utilizan para identificar la ruta que siguen los paquetes a través de una
+    red IP. Esto es útil para diagnosticar problemas de red. <br>
+<h4>Puedes usar el comando Traceroute para:</h4>
+<ul>
+    <li>Detectar las rutas que los paquetes utilizan al viajar a su destino</li>
+    <li>Identificar dónde se están produciendo los problemas</li>
+    <li>Resolver problemas y diagnosticar la red</li>
+</ul>
+
+<h4>Comandos de Traceroute en Linux</h4>
+<ul>
+    <li>-d Activa la depuración a nivel de socket</li>
+    <li>-m max_ttl Especifica el número máximo de saltos para el proceso de rastreo</li>
+    <li>-w wait_time Define el tiempo máximo de espera para cada respuesta</li>
+    <li>-r Evita las tablas de enrutamiento normales y envía los paquetes IP directamente al host</li>
+</ul>
+
+<h4>Comandos de Traceroute en Microsoft Windows</h4>
+<ul>
+    <li>-w timeout Especifica el tiempo máximo de respuesta para cada salto</li>
+    <li>-n Configura tracert para que no resuelva las direcciones IP a sus nombres de dominio</li>
+    <li>-4 Fuerza el comando tracert a utilizar IPv4</li>
+    <li>-6 Fuerza el comando tracert a utilizar IPv6</li>
+</ul>
+
+<h4>Para ejecutar el comando Traceroute en Windows, puedes:</h4>
+<ol>
+    <li>Ir al menú Inicio</li>
+    <li>Seleccionar Ejecutar</li>
+    <li>Escribir “cmd” y luego presionar “OK”</li>
+    <li>Escribir “tracert [hostname]” y presionar Enter</li>
+</ol>
+
+<img src="Imagenes/Redes/traceroute1.png" alt=""> <br>
+<img src="Imagenes/Redes/traceroute2.png" alt="">
+
+<h3>Netstat</h3>
+<p>
+    El comando netstat permite supervisar el estado de la red y los protocolos de red. Se puede usar para: <br>
+<ul>
+    <li>Visualizar el estado de los protocolos TCP, SCTP y UDP</li>
+    <li>Ver la tabla de enrutamiento</li>
+    <li>Ver información sobre las interfaces</li>
+    <li>Ver el contenido de estructuras de datos relacionadas con redes</li>
+    <li>Ver estadísticas de memoria caché</li>
+    <li>Ver estadísticas de paquetes</li>
+    <li>Ver estadísticas de protocolos</li>
+    <li>Ver la tabla de routing</li>
+    <li>Ver los puertos abiertos y las conexiones activas</li>
+    <li>Ver el nombre de dominio completo (FQDN) del host remoto</li>
+</ul>
+
+Para obtener más información sobre el comando netstat, puedes consultar la página de comando man netstat. <br>
+El procedimiento y la aplicación de algunos comandos netstat pueden variar dependiendo del sistema operativo.
+<br>
+Algunos ejemplos de uso del comando netstat son: <br>
+<ul>
+    <li>netstat -r -f inet Muestra información de tabla de direccionamiento para una interfaz de Internet</li>
+    <li>netstat -s -p gre Muestra estadísticas para el protocolo GRE</li>
+    <li>netstat -s -p gif Muestra estadísticas para el túnel IPv4 sobre IPv6 (túnel GIF)</li>
+    <li>netstat -f Rastrea algún problema y sabe el FQDN del host remoto</li>
+</ul>
+
+<img src="Imagenes/Redes/netstat.JPG" alt="">
+
+
+</p>
+<h3>Arp</h3>
+<p>
+    El comando arp es una herramienta que permite ver y modificar las tablas de traducción de direcciones IP a
+    direcciones MAC. ARP son las siglas de Address Resolution Protocol (Protocolo de resolución de direcciones).
+</p>
+<h4>¿Qué hace?</h4>
+<p>
+    Convierte direcciones IP a direcciones MAC
+</p>
+<h4>¿Para qué sirve?</h4>
+<p>
+    Diagnosticar problemas de conectividad, detectar conflictos de red, verificar la resolución de direcciones
+</p>
+
+<h4>¿Cómo se usa?</h4>
+<p>
+    En Windows, se ejecuta en el símbolo del sistema (cmd)
+    Para ejecutar el comando arp en Windows, puedes:
+<ol>
+    <li>Escribir "cmd" en el cuadro de texto "Abrir"</li>
+    <li>Seleccionar "Ejecutar como administrador"</li>
+    <li>Seleccionar "Sí" si se muestra el mensaje de Control de cuentas de usuario (UAC)</li>
+    <li>Escribir el comando “arp -a” para ver la tabla arp y presionar Enter</li>
+</ol>
+
+Puedes también usar el comando arp con los siguientes parámetros:
+<ul>
+    <li>arp -d: Borra la caché ARP</li>
+    <li>arp /a: Muestra la entrada de caché arp para una dirección IP específica</li>
+    <li>arp /n: Distingue mayúsculas de minúsculas</li>
+</ul>
+El protocolo ARP es fundamental para la transmisión de datos en redes Ethernet.
+</p>
+<img src="Imagenes/Redes/arp.png" alt="">
+</p>
+
+</main>
+<footer> <a href="#ancla">Ir hacia arriba</a>
+    <p id="parrafofooter_index" style="color: black;"> Hernan Joel Vladimirsky <span>&copy;Copyright</span> </p>
+</footer>
 
 
 
