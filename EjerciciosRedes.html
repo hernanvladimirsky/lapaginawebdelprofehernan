@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Armado de Pc</title>
+    <title>Ejercicios redes</title>
     <link rel="stylesheet" href="Css/estilosglobal.css">
     <style>
         body {
@@ -42,6 +42,16 @@
             margin-bottom: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
+        a {
+      color: blue;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: red;
+      text-decoration: underline;
+    }
     </style>
 </head>
 
@@ -56,12 +66,13 @@
     <nav>
         <ul>
             <li class="links"> <a href="index.html">Ir al Inicio</a></li>
+            <li class="links"> <a href="CiscoPacketTracer.html">Ir a Cisco Packet Tracer </a></li>
             <li class="links"> <a href="Redes.html">Ir a hacia atras</a></li>
         </ul>
     </nav>
 
     <main>
-        <h2>Trabajo practico 1</h2>
+        <h2>Trabajo practico 1 - Fundamentos de redes</h2>
         <p>
             Crear un documento Word, insertar portada para el TP y responder las siguientes preguntas insertando
             imagenes. <br>
@@ -84,294 +95,74 @@
         </ol>
 
         El archivo de guardarse es la carpeta <strong>Laboratorio de Hardware 6to</strong> con el nombre de Redes
-        <strong>Trabajo práctico 1 Apellido y Nombre</strong> por ejemplo: Redes Trabajo práctico 1 Perez Juan
+        <strong>Trabajo práctico 1 Apellido y Nombre</strong> por ejemplo: Redes Trabajo práctico 1 Perez Juan <br> <br>
+
+        Luego de finalizar la actividad hacer el siguiente cuestionario en la carpeta: <br> <br>
+
+        <a href="Documentos/Documentos redes/TP 1 - cuestionario_redes.pdf"
+            download="Trabajo practico 1 - Fundamentos de redes" target="_blank">Haz Click aqui para descargar el cuestionario</a>
         </p>
 
-        <h2>Trabajo practico 2</h2>
+        <h2>Trabajo practico 2 - IP ,Redes</h2>
         <p>
             Crear un documento Word, insertar portada para el TP y responder las siguientes preguntas:
-            <ol>
-                <li>¿Qué es una dirección IP?</li>
-                <li>¿Qué es una dirección IP privada y para que puede servir?</li>
-                <li>¿Qué es una dirección IP pública y para que puede servir?</li>
-                <li>Realiza una tabla de la Clase A, Clase B y Clase C (con su rango, mascara de red, host y uso) y nombrar para que sirve cada una.</li>
-                <li>¿Qué significa /24 ,/16 y /8 en una dirección IP?</li>
-                <li>¿Qué es la máscara de red? ¿Para que sirve?</li>
-                <li>¿En que se diferencian las direcciones IP IPv4 e IPv6? ¿Con que objetivo se hizo IPv6?</li>
-                <li>¿Que diferencias hay entre una dirección IP y una dirreccion MAC?</li>
-                <li>¿Como funcionan los routers?</li>
-            </ol>
+        <ol>
+            <li>¿Qué es una dirección IP?</li>
+            <li>¿Qué es una dirección IP privada y para que puede servir?</li>
+            <li>¿Qué es una dirección IP pública y para que puede servir?</li>
+            <li>Realiza una tabla de la Clase A, Clase B y Clase C (con su rango, mascara de red, host y uso) y nombrar
+                para que sirve cada una.</li>
+            <li>¿Qué significa /24 ,/16 y /8 en una dirección IP?</li>
+            <li>¿Qué es la máscara de red? ¿Para que sirve?</li>
+            <li>¿En que se diferencian las direcciones IP IPv4 e IPv6? ¿Con que objetivo se hizo IPv6?</li>
+            <li>¿Que diferencias hay entre una dirección IP y una dirreccion MAC?</li>
+            <li>¿Como funcionan los routers?</li>
+        </ol>
 
-            El archivo de guardarse es la carpeta <strong>Laboratorio de Hardware 6to</strong> con el nombre de Redes
-            <strong>Trabajo práctico 2 Apellido y Nombre</strong> por ejemplo: Redes Trabajo práctico 2 Perez Juan
+        Luego de finalizar la actividad hacer el siguiente cuestionario en la carpeta: <br> <br>
 
-        <br>
-        <hr>
-        <br>
+        <a href="Documentos/Documentos redes/TP 2 - Cuestionario_IP_y_Redes.pdf"
+            download="Trabajo practico 2 - IP ,Redes" target="_blank">Haz Click aqui para descargar el cuestionario</a> <br><br>
 
-        <h1>Ejercicio Básico en Cisco Packet Tracer - Clase C</h1>
+        El archivo de guardarse es la carpeta <strong>Laboratorio de Hardware 6to</strong> con el nombre de Redes
+        <strong>Trabajo práctico 2 Apellido y Nombre</strong> por ejemplo: Redes Trabajo práctico 2 Perez Juan
 
-        <div class="section">
-            <h2>🎯 Objetivo</h2>
-            <p>Configurar una red simple con dos computadoras conectadas a un switch, asignar direcciones IP y comprobar
-                la conectividad usando el comando <code>ping</code>.</p>
-        </div>
-
-        <div class="section">
-            <h2>🧰 Materiales necesarios</h2>
-            <ul>
-                <li>2 Computadoras (PC)</li>
-                <li>1 Switch (por ejemplo, Cisco 2960)</li>
-                <li>2 Cables de red directos (Copper Straight-Through)</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>🌐 Dirección IP</h2>
-            <table>
-                <tr>
-                    <th>Dispositivo</th>
-                    <th>IP Address</th>
-                    <th>Subnet Mask</th>
-                </tr>
-                <tr>
-                    <td>PC1</td>
-                    <td>192.168.1.10</td>
-                    <td>255.255.255.0</td>
-                </tr>
-                <tr>
-                    <td>PC2</td>
-                    <td>192.168.1.11</td>
-                    <td>255.255.255.0</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="section">
-            <h2>🔧 Pasos de configuración</h2>
-            <ol>
-                <li>Agregar 2 PCs y un switch al área de trabajo.</li>
-                <li>Conectar cada PC a un puerto del switch usando cables directos.</li>
-                <li>En cada PC, ir a <strong>Desktop &gt; IP Configuration</strong> y asignar las direcciones IP
-                    correspondientes.</li>
-            </ol>
-        </div>
-
-        <div class="section">
-            <h2>🧪 Prueba de conectividad</h2>
-            <p>Desde la consola de PC1 (Desktop > Command Prompt), ejecutar:</p>
-            <pre>ping 192.168.1.11</pre>
-            <p>Se deben recibir respuestas exitosas ("Reply from...").</p>
-        </div>
-
-        <div class="section">
-            <h2>✅ Resultado esperado</h2>
-            <p>Las dos PCs deben comunicarse correctamente, demostrando una conexión funcional en una red local básica.
-            </p>
-        </div>
-
-        <br>
-        <hr>
-        <br>
-
-        <h1>Ejercicio Básico en Cisco Packet Tracer - Clase B</h1>
-
-        <div class="section">
-            <h2>🎯 Objetivo</h2>
-            <p>Conectar dos computadoras usando un switch, asignando direcciones IP de <strong>Clase B</strong>, y
-                verificar la conectividad mediante el comando <code>ping</code>.</p>
-        </div>
-
-        <div class="section">
-            <h2>🧰 Materiales necesarios</h2>
-            <ul>
-                <li>2 computadoras (PC)</li>
-                <li>1 switch (modelo 2960)</li>
-                <li>2 cables de red directos (copper straight-through)</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>🌐 Direccionamiento IP</h2>
-            <table>
-                <tr>
-                    <th>Dispositivo</th>
-                    <th>IP Address</th>
-                    <th>Subnet Mask</th>
-                </tr>
-                <tr>
-                    <td>PC1</td>
-                    <td>172.16.1.10</td>
-                    <td>255.255.0.0</td>
-                </tr>
-                <tr>
-                    <td>PC2</td>
-                    <td>172.16.1.11</td>
-                    <td>255.255.0.0</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="section">
-            <h2>🔧 Pasos de configuración</h2>
-            <ol>
-                <li>Arrastra las dos PCs y el switch al área de trabajo.</li>
-                <li>Conecta PC1 al puerto FastEthernet0/1 del switch.</li>
-                <li>Conecta PC2 al puerto FastEthernet0/2 del switch.</li>
-                <li>En cada PC, accede a <strong>Desktop &gt; IP Configuration</strong> y asigna la IP correspondiente.
-                </li>
-                <li>No es necesario configurar un gateway ya que están en la misma red.</li>
-            </ol>
-        </div>
-
-        <div class="section">
-            <h2>🧪 Prueba de conectividad</h2>
-            <p>Desde la consola de PC1 (Desktop > Command Prompt), ejecuta:</p>
-            <pre>ping 172.16.1.11</pre>
-            <p>Deberías obtener respuestas exitosas.</p>
-        </div>
-
-        <div class="section">
-            <h2>✅ Resultado esperado</h2>
-            <p>Las dos PCs deben comunicarse correctamente. El ejercicio demuestra cómo trabajar con direcciones IP de
-                <strong>Clase B</strong> en una red simple.
-            </p>
-        </div>
-
-        <br>
-        <hr>
-        <br>
-        
-        <h1>Ejercicio Básico en Cisco Packet Tracer - Clase A</h1>
-
-        <div class="section">
-            <h2>🎯 Objetivo</h2>
-            <p>Configurar una red simple con dos computadoras conectadas a un switch, asignar direcciones IP de
-                <strong>Clase A</strong> y comprobar la conectividad usando el comando <code>ping</code>.</p>
-        </div>
-
-        <div class="section">
-            <h2>🧰 Materiales necesarios</h2>
-            <ul>
-                <li>2 Computadoras (PC)</li>
-                <li>1 Switch (por ejemplo, Cisco 2960)</li>
-                <li>2 Cables de red directos (Copper Straight-Through)</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>🌐 Dirección IP</h2>
-            <table>
-                <tr>
-                    <th>Dispositivo</th>
-                    <th>IP Address</th>
-                    <th>Subnet Mask</th>
-                </tr>
-                <tr>
-                    <td>PC1</td>
-                    <td>10.0.0.10</td>
-                    <td>255.0.0.0</td>
-                </tr>
-                <tr>
-                    <td>PC2</td>
-                    <td>10.0.0.11</td>
-                    <td>255.0.0.0</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="section">
-            <h2>🔧 Pasos de configuración</h2>
-            <ol>
-                <li>Agregar 2 PCs y un switch al área de trabajo.</li>
-                <li>Conectar cada PC a un puerto del switch usando cables directos.</li>
-                <li>En cada PC, ir a <strong>Desktop &gt; IP Configuration</strong> y asignar las direcciones IP
-                    correspondientes.</li>
-            </ol>
-        </div>
-
-        <div class="section">
-            <h2>🧪 Prueba de conectividad</h2>
-            <p>Desde la consola de PC1 (Desktop > Command Prompt), ejecutar:</p>
-            <pre>ping 10.0.0.11</pre>
-            <p>Se deben recibir respuestas exitosas ("Reply from...").</p>
-        </div>
-
-        <div class="section">
-            <h2>✅ Resultado esperado</h2>
-            <p>Las dos PCs deben comunicarse correctamente, demostrando una conexión funcional en una red local con
-                direcciones IP de <strong>Clase A</strong>.</p>
-        </div>
-
-        <br>
-        <hr>
-        <br>
-
-        <h1>Ejercicio: DHCP Clase C en Cisco Packet Tracer (Sin CLI)</h1>
-
-        <div class="section">
-          <h2>🎯 Objetivo</h2>
-          <p>Configurar una red local donde un router asigne direcciones IP automáticamente (DHCP) a dos PCs mediante interfaz gráfica.</p>
-        </div>
-      
-        <div class="section">
-          <h2>🧰 Materiales necesarios</h2>
-          <ul>
-            <li>2 Computadoras (PC)</li>
-            <li>1 Switch (por ejemplo, Cisco 2960)</li>
-            <li>1 Router (por ejemplo, Cisco 1941)</li>
-            <li>3 Cables de red directos (Copper Straight-Through)</li>
-          </ul>
-        </div>
-      
-        <div class="section">
-          <h2>🔧 Pasos de configuración (modo gráfico)</h2>
-          <ol>
-            <li>Arrastrar las 2 PCs, el switch y el router al área de trabajo.</li>
-            <li>Conectar:
-              <ul>
-                <li>PC1 a Switch (Fa0/1)</li>
-                <li>PC2 a Switch (Fa0/2)</li>
-                <li>Router al Switch (GigabitEthernet0/0 a Fa0/24, por ejemplo)</li>
-              </ul>
+        <h2>Trabajo practico 3 - Enrutamiento</h2>
+        <p>
+            Crear un documento Word, insertar portada para el TP y responder las siguientes preguntas:
+        <ol>
+            <li>¿Qué es el enrutamiento?</li>
+            <li>¿Cómo funciona el ruteo de la información?</li>
+            <li>¿Qué es enrutamiento estático?</li>
+            <li>¿Que es y para que se utiliza la ruta default?</li>
+            <li>¿Que protocolos de ruteo dinámico conoces?</li>
+            <li>Que es el Enrutamiento con RIP</li>
+            <li>¿Qué es enrutamiento dinámico? ¿Para que sirve? Nombrar ventajas.</li>
+            <li>¿En que se diferencian el enrutamiento estatico y dinamico? ¿En una empresa cual utilizarias y porque?
             </li>
-            <li>Haz clic en el Router > pestaña <strong>Config</strong> > <strong>GigabitEthernet0/0</strong>:
-              <ul>
-                <li>Encender el puerto: marcar <strong>On</strong></li>
-                <li>IP Address: <code>192.168.1.1</code></li>
-                <li>Subnet Mask: <code>255.255.255.0</code></li>
-              </ul>
-            </li>
-            <li>En el Router > ir a la pestaña <strong>DHCP</strong>:
-              <ul>
-                <li>Pool Name: <code>RED_LOCAL</code></li>
-                <li>Default Gateway: <code>192.168.1.1</code></li>
-                <li>Start IP Address: <code>192.168.1.100</code></li>
-                <li>Subnet Mask: <code>255.255.255.0</code></li>
-                <li>Maximum Number of Users: <code>50</code></li>
-                <li>Haz clic en <strong>Add</strong></li>
-              </ul>
-            </li>
-            <li>En cada PC:
-              <ul>
-                <li>Desktop > IP Configuration > seleccionar <strong>DHCP</strong></li>
-                <li>Verifica que reciba IP automática (ej: <code>192.168.1.100</code>)</li>
-              </ul>
-            </li>
-          </ol>
-        </div>
-      
-        <div class="section">
-          <h2>🧪 Prueba de conectividad</h2>
-          <p>Desde PC1 (Command Prompt), ejecutar:</p>
-          <pre>ping 192.168.1.101</pre>
-          <p>(o la IP que reciba PC2 por DHCP)</p>
-        </div>
-      
-        <div class="section">
-          <h2>✅ Resultado esperado</h2>
-          <p>Ambas PCs deben recibir direcciones IP automáticamente y comunicarse exitosamente a través del switch y el router usando DHCP.</p>
-        </div>
+        </ol>
+
+        El archivo de guardarse es la carpeta <strong>Laboratorio de Hardware 6to</strong> con el nombre de Redes
+        <strong>Trabajo práctico 3 Apellido y Nombre</strong> por ejemplo: Redes Trabajo práctico 3 Perez Juan
+        </p>
+
+
+        <h2>Trabajo practico 4 - Comandos</h2>
+        <p>
+            Crear un documento Power Point, insertar captura de pantalla de cada comando y responder las siguientes
+            preguntas:
+        <ol>
+            <li>¿Que es el comando ping y para que sirve?</li>
+            <li>Detallar y analizar los resultados del comando ping.</li>
+            <li>Necesito entrar www.google.com mediante su direccion ip ¿Como harian?</li>
+            <li>¿Que es Tranceroute y para que se utiliza?</li>
+            <li>Utilizando Tranceroute con www.google.com ¿Cual es mi IP de salida y mi IP de destino? </li>
+            <li>¿Que es Netstat y para que sirve?</li>
+            <li>¿Que es Arp y para que sirve? ¿Qué pasa si no hay ARP?</li>
+        </ol>
+        El archivo de guardarse es la carpeta <strong>Laboratorio de Hardware 6to</strong> con el nombre de Redes
+        <strong>Trabajo práctico 4 Apellido y Nombre</strong> por ejemplo: Redes Trabajo práctico 4 - Perez Juan
+        </p>
 
 
     </main>

@@ -41,6 +41,16 @@
         tr:nth-child(even) {
             background-color: #f9f9f9;
         }
+
+        a {
+      color: blue;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: red;
+      text-decoration: underline;
+    }
     </style>
 </head>
 
@@ -56,6 +66,7 @@
         <ul>
             <li class="links"> <a href="index.html">Ir al Inicio</a></li>
             <li class="links"> <a href="EjerciciosRedes.html">Ir a trabajos prácticos </a></li>
+            <li class="links"> <a href="CiscoPacketTracer.html">Ir a Cisco Packet Tracer </a></li>
         </ul>
     </nav>
     <main>
@@ -2895,10 +2906,12 @@
         <p>
             Las direcciones IP privadas cuentan con un rango de acuerdo con el tipo de red que se ve a continuación.
             <br>
-
+            <div style="display: none;">
             Rango clase A: 10.0.0.0 a 10.255.255.255. <br>
             Rango clase B: 172.16.0.0 a 172.31.255.255. <br>
             Rango clase C: 192.168.0.0 a 192.168.255.255. <br> <br>
+            </div>
+            
             Clase A. Es utilizado para las redes enormes, como por ejemplo las de las empresas internacionales. El
             primer
             bloque identifica la red y, los tres siguientes, identifican a los dispositivos. Esto da la posibilidad
@@ -3464,13 +3477,54 @@ Algunos ejemplos de uso del comando netstat son: <br>
 </p>
 <h3>Arp</h3>
 <p>
-    El comando arp es una herramienta que permite ver y modificar las tablas de traducción de direcciones IP a
-    direcciones MAC. ARP son las siglas de Address Resolution Protocol (Protocolo de resolución de direcciones).
+    El Protocolo de Resolución de Direcciones (ARP) se utiliza para traducir las direcciones IP lógicas a direcciones MAC físicas 
+    en redes de área local (LAN). Esto es crucial para que los dispositivos puedan comunicarse entre sí, ya que las direcciones MAC 
+    son necesarias para la transmisión de datos a nivel de enlace de datos. <br><br>
+
+
+En detalle:
 </p>
-<h4>¿Qué hace?</h4>
+<h4>¿Por qué se necesita ARP?</h4>
 <p>
-    Convierte direcciones IP a direcciones MAC
+    Las direcciones IP son utilizadas por el protocolo de Internet (IP) para identificar dispositivos en una red. <br>
+    Sin embargo, la información de la capa de enlace de datos (capa 2) necesita direcciones MAC para enviar la información directamente 
+    a los dispositivos conectados físicamente. ARP resuelve esta diferencia al mapear las direcciones IP a las direcciones MAC. 
 </p>
+
+
+<h4>¿Cómo funciona ARP?</h4>
+<p>
+    <ul>
+        <li>Un dispositivo que necesita comunicarse con otro dispositivo en la misma red pero que no tiene la dirección MAC, envía una solicitud ARP.</li>
+        <li>El dispositivo con la dirección IP solicitada responde con su dirección MAC.</li>
+        <li>Esta información se almacena en una tabla ARP en el dispositivo que hizo la solicitud para futuras comunicaciones. </li>
+    </ul>  
+</p>
+ 
+
+<h4>¿Por qué es importante ARP?</h4>
+<p>
+    Facilita la comunicación entre dispositivos en una red al proporcionar la información necesaria para la transmisión de datos a 
+    nivel físico. 
+</p>
+
+<h4>¿Cómo se usa en la práctica?</h4>
+<p>
+    Cuando un dispositivo envía datos a otro en la red, utiliza la dirección IP del destino. 
+    ARP es necesario para averiguar la dirección MAC correspondiente a esa dirección IP. 
+</p>
+
+<h4>¿Dónde se usa?</h4>
+<p>ARP se utiliza principalmente en redes LAN que utilizan el protocolo de Internet.</p>
+  
+<h4>¿Qué pasa si no hay ARP?</h4>
+<p>
+Sin ARP, la comunicación en una red sería extremadamente compleja y difícil, ya que los dispositivos tendrían que conocer manualmente 
+las direcciones MAC de todos los dispositivos a los que se quieran comunicar.  <br>
+En resumen, ARP es un protocolo esencial para la comunicación en redes de área local, permitiendo a los dispositivos "encontrar" 
+la dirección física del destino utilizando la dirección lógica (IP). 
+</p>
+
 <h4>¿Para qué sirve?</h4>
 <p>
     Diagnosticar problemas de conectividad, detectar conflictos de red, verificar la resolución de direcciones

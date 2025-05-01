@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cisco Packet Tracer</title>
+    <link rel="stylesheet" href="Css/estilosglobal.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+            -webkit-user-select: none;
+            /* Chrome/Safari */
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+            /* IE10+/Edge */
+            user-select: none;
+            /* Estándar */
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin-bottom: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #999;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .section {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .TituloMargen {
+            margin-top: 3%;
+        }
+
+        pre {
+            background-color: #2d2d2d;
+            color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .comando {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #eef;
+            border-left: 4px solid #3366cc;
+        }
+
+        code {
+            background-color: #ddd;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #ddd;
+        }
+
+        a {
+      color: blue;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+    </style>
+
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault()); // Bloquea clic derecho
+
+        document.addEventListener('keydown', function (e) {
+            if ((e.ctrlKey && e.key === 'c') ||
+                (e.ctrlKey && e.key === 'v') ||
+                (e.ctrlKey && e.key === 'x') ||
+                (e.ctrlKey && e.key === 'u') ||
+                (e.key === 'F12')) {
+                e.preventDefault(); // Bloquea Ctrl+C, Ctrl+V, Ctrl+X, Ctrl+U, F12
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <a id="ancla"></a>
+        <h1 id="titulologo"> Ejercicios redes </h1>
+        <img src="Imagenes/Hardware y Software/Blue and Green Modern Technology Logo.png" alt="logo" title="logo"
+            id="logo">
+
+    </header>
+    <nav>
+        <ul>
+            <li class="links"> <a href="index.html">Ir al Inicio</a></li>
+            <li class="links"> <a href="Redes.html">Ir a hacia atras</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+
+        <h1 class="TituloMargen">Ejercicio Básico en Cisco Packet Tracer - Clase C</h1> <!--Clase C con interfaz-->
+
+        <div class="section">
+            <h2>🎯 Objetivo</h2>
+            <p>Configurar una red simple con dos computadoras conectadas a un switch, asignar direcciones IP y comprobar
+                la conectividad usando el comando <code>ping</code>.</p>
+        </div>
+
+        <div class="section">
+            <h2>🧰 Materiales necesarios</h2>
+            <ul>
+                <li>2 Computadoras (PC)</li>
+                <li>1 Switch (por ejemplo, Cisco 2960)</li>
+                <li>2 Cables de red directos (Copper Straight-Through)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🌐 Dirección IP</h2>
+            <table>
+                <tr>
+                    <th>Dispositivo</th>
+                    <th>IP Address</th>
+                    <th>Subnet Mask</th>
+                </tr>
+                <tr>
+                    <td>PC1</td>
+                    <td>192.168.1.10</td>
+                    <td>255.255.255.0</td>
+                </tr>
+                <tr>
+                    <td>PC2</td>
+                    <td>192.168.1.11</td>
+                    <td>255.255.255.0</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>🔧 Pasos de configuración</h2>
+            <ol>
+                <li>Agregar 2 PCs y un switch al área de trabajo.</li>
+                <li>Conectar cada PC a un puerto del switch usando cables directos.</li>
+                <li>En cada PC, ir a <strong>Desktop &gt; IP Configuration</strong> y asignar las direcciones IP
+                    correspondientes.</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>🧪 Prueba de conectividad</h2>
+            <p>Desde la consola de PC1 (Desktop > Command Prompt), ejecutar:</p>
+            <pre>ping 192.168.1.11</pre>
+            <p>Se deben recibir respuestas exitosas ("Reply from...").</p>
+        </div>
+
+        <div class="section">
+            <h2>✅ Resultado esperado</h2>
+            <p>Las dos PCs deben comunicarse correctamente, demostrando una conexión funcional en una red local básica.
+            </p>
+        </div>
+
+        <h1 class="TituloMargen">Ejercicio Básico en Cisco Packet Tracer - Clase B</h1> <!--Clase B con interfaz-->
+
+        <div class="section">
+            <h2>🎯 Objetivo</h2>
+            <p>Conectar dos computadoras usando un switch, asignando direcciones IP de <strong>Clase B</strong>, y
+                verificar la conectividad mediante el comando <code>ping</code>.</p>
+        </div>
+
+        <div class="section">
+            <h2>🧰 Materiales necesarios</h2>
+            <ul>
+                <li>2 computadoras (PC)</li>
+                <li>1 switch (modelo 2960)</li>
+                <li>2 cables de red directos (copper straight-through)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🌐 Direccionamiento IP</h2>
+            <table>
+                <tr>
+                    <th>Dispositivo</th>
+                    <th>IP Address</th>
+                    <th>Subnet Mask</th>
+                </tr>
+                <tr>
+                    <td>PC1</td>
+                    <td>172.16.1.10</td>
+                    <td>255.255.0.0</td>
+                </tr>
+                <tr>
+                    <td>PC2</td>
+                    <td>172.16.1.11</td>
+                    <td>255.255.0.0</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>🔧 Pasos de configuración</h2>
+            <ol>
+                <li>Arrastra las dos PCs y el switch al área de trabajo.</li>
+                <li>Conecta PC1 al puerto FastEthernet0/1 del switch.</li>
+                <li>Conecta PC2 al puerto FastEthernet0/2 del switch.</li>
+                <li>En cada PC, accede a <strong>Desktop &gt; IP Configuration</strong> y asigna la IP correspondiente.
+                </li>
+                <li>No es necesario configurar un gateway ya que están en la misma red.</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>🧪 Prueba de conectividad</h2>
+            <p>Desde la consola de PC1 (Desktop > Command Prompt), ejecuta:</p>
+            <pre>ping 172.16.1.11</pre>
+            <p>Deberías obtener respuestas exitosas.</p>
+        </div>
+
+        <div class="section">
+            <h2>✅ Resultado esperado</h2>
+            <p>Las dos PCs deben comunicarse correctamente. El ejercicio demuestra cómo trabajar con direcciones IP de
+                <strong>Clase B</strong> en una red simple.
+            </p>
+        </div>
+
+
+
+        <h1 class="TituloMargen">Ejercicio Básico en Cisco Packet Tracer - Clase A</h1> <!--Clase A con interfaz-->
+
+        <div class="section">
+            <h2>🎯 Objetivo</h2>
+            <p>Configurar una red simple con dos computadoras conectadas a un switch, asignar direcciones IP de
+                <strong>Clase A</strong> y comprobar la conectividad usando el comando <code>ping</code>.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>🧰 Materiales necesarios</h2>
+            <ul>
+                <li>2 Computadoras (PC)</li>
+                <li>1 Switch (por ejemplo, Cisco 2960)</li>
+                <li>2 Cables de red directos (Copper Straight-Through)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🌐 Dirección IP</h2>
+            <table>
+                <tr>
+                    <th>Dispositivo</th>
+                    <th>IP Address</th>
+                    <th>Subnet Mask</th>
+                </tr>
+                <tr>
+                    <td>PC1</td>
+                    <td>10.0.0.10</td>
+                    <td>255.0.0.0</td>
+                </tr>
+                <tr>
+                    <td>PC2</td>
+                    <td>10.0.0.11</td>
+                    <td>255.0.0.0</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>🔧 Pasos de configuración</h2>
+            <ol>
+                <li>Agregar 2 PCs y un switch al área de trabajo.</li>
+                <li>Conectar cada PC a un puerto del switch usando cables directos.</li>
+                <li>En cada PC, ir a <strong>Desktop &gt; IP Configuration</strong> y asignar las direcciones IP
+                    correspondientes.</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>🧪 Prueba de conectividad</h2>
+            <p>Desde la consola de PC1 (Desktop > Command Prompt), ejecutar:</p>
+            <pre>ping 10.0.0.11</pre>
+            <p>Se deben recibir respuestas exitosas ("Reply from...").</p>
+        </div>
+
+        <div class="section">
+            <h2>✅ Resultado esperado</h2>
+            <p>Las dos PCs deben comunicarse correctamente, demostrando una conexión funcional en una red local con
+                direcciones IP de <strong>Clase A</strong>.</p>
+        </div>
+
+
+
+        <h1 class="TituloMargen">Ejercicio: DHCP Clase C en Cisco Packet Tracer (Sin CLI)</h1>
+        <!--Clase C con DHCP y con interfaz-->
+
+        <div class="section">
+            <h2>🎯 Objetivo</h2>
+            <p>Configurar una red local donde un router asigne direcciones IP automáticamente (DHCP) a dos PCs mediante
+                interfaz gráfica.</p>
+        </div>
+
+        <div class="section">
+            <h2>🧰 Materiales necesarios</h2>
+            <ul>
+                <li>2 Computadoras (PC)</li>
+                <li>1 Switch (por ejemplo, Cisco 2960)</li>
+                <li>1 Router (por ejemplo, Cisco 1941)</li>
+                <li>3 Cables de red directos (Copper Straight-Through)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🔧 Pasos de configuración (modo gráfico)</h2>
+            <ol>
+                <li>Arrastrar las 2 PCs, el switch y el router al área de trabajo.</li>
+                <li>Conectar:
+                    <ul>
+                        <li>PC1 a Switch (Fa0/1)</li>
+                        <li>PC2 a Switch (Fa0/2)</li>
+                        <li>Router al Switch (GigabitEthernet0/0 a Fa0/24, por ejemplo)</li>
+                    </ul>
+                </li>
+                <li>Haz clic en el Router > pestaña <strong>Config</strong> > <strong>GigabitEthernet0/0</strong>:
+                    <ul>
+                        <li>Encender el puerto: marcar <strong>On</strong></li>
+                        <li>IP Address: <code>192.168.1.1</code></li>
+                        <li>Subnet Mask: <code>255.255.255.0</code></li>
+                    </ul>
+                </li>
+                <li>En el Router > ir a la pestaña <strong>DHCP</strong>:
+                    <ul>
+                        <li>Pool Name: <code>RED_LOCAL</code></li>
+                        <li>Default Gateway: <code>192.168.1.1</code></li>
+                        <li>Start IP Address: <code>192.168.1.100</code></li>
+                        <li>Subnet Mask: <code>255.255.255.0</code></li>
+                        <li>Maximum Number of Users: <code>50</code></li>
+                        <li>Haz clic en <strong>Add</strong></li>
+                    </ul>
+                </li>
+                <li>En cada PC:
+                    <ul>
+                        <li>Desktop > IP Configuration > seleccionar <strong>DHCP</strong></li>
+                        <li>Verifica que reciba IP automática (ej: <code>192.168.1.100</code>)</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>🧪 Prueba de conectividad</h2>
+            <p>Desde PC1 (Command Prompt), ejecutar:</p>
+            <pre>ping 192.168.1.101</pre>
+            <p>(o la IP que reciba PC2 por DHCP)</p>
+        </div>
+
+        <div class="section">
+            <h2>✅ Resultado esperado</h2>
+            <p>Ambas PCs deben recibir direcciones IP automáticamente y comunicarse exitosamente a través del switch y
+                el router usando DHCP.</p>
+        </div>
+
+        <h1 class="TituloMargen">Red de Clase C con 3 PCs Usando CLI - Cisco Packet Tracer</h1>
+
+        <h2>Especificaciones</h2>
+        <ul>
+            <li>Red: 192.168.1.0/24</li>
+            <li>Gateway: 192.168.1.1</li>
+            <li>PC1: 192.168.1.2</li>
+            <li>PC2: 192.168.1.3</li>
+            <li>PC3: 192.168.1.4</li>
+            <li>Máscara: 255.255.255.0</li>
+        </ul>
+
+        <h2>Paso 1: Topología</h2>
+        <p>Conecta:</p>
+        <ul>
+            <li>3 PCs a un switch usando cables directos.</li>
+            <li>El switch al router en <strong>GigabitEthernet0/0</strong>.</li>
+        </ul>
+
+        <h2>Paso 2: Configuración del Router (CLI)</h2>
+
+        <pre>
+enable
+configure terminal
+interface gigabitEthernet 0/0
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit
+exit
+</pre>
+
+        <h3>Explicación de Comandos para Configurar un Router Cisco</h3>
+
+        <pre>
+enable
+configure terminal
+interface gigabitEthernet 0/0
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit
+exit
+</pre>
+
+        <div class="comando">
+            <code>enable</code><br>
+            Cambia al <strong>modo privilegiado</strong> del router, que permite acceder a comandos de configuración
+            avanzados.
+        </div>
+
+        <div class="comando">
+            <code>configure terminal</code><br>
+            Entra al <strong>modo de configuración global</strong> desde el cual se puede configurar interfaces, rutas,
+            etc.
+        </div>
+
+        <div class="comando">
+            <code>interface gigabitEthernet 0/0</code><br>
+            Accede a la <strong>configuración de la interfaz de red GigabitEthernet 0/0</strong>, la que usaremos para
+            conectar el router a la LAN.
+        </div>
+
+        <div class="comando">
+            <code>ip address 192.168.1.1 255.255.255.0</code><br>
+            Asigna una dirección IP y máscara a la interfaz seleccionada. Esta IP será la <strong>puerta de
+                enlace</strong> para los dispositivos de la red.
+        </div>
+
+        <div class="comando">
+            <code>no shutdown</code><br>
+            Activa la interfaz. Por defecto, las interfaces están deshabilitadas (apagadas). Este comando la
+            <strong>enciende</strong>.
+        </div>
+
+        <div class="comando">
+            <code>exit</code><br>
+            Sale de la configuración de la interfaz y vuelve al modo de configuración global.
+        </div>
+
+        <div class="comando">
+            <code>exit</code><br>
+            Sale del modo de configuración global y vuelve al modo privilegiado.
+        </div>
+
+        <h2>Paso 3: Configuración de las PCs</h2>
+        <p>Desde la terminal (Command Prompt) de cada PC:</p>
+
+        <h3>PC1:</h3>
+        <pre>ip 192.168.1.2 255.255.255.0 192.168.1.1</pre>
+
+        <h3>PC2:</h3>
+        <pre>ip 192.168.1.3 255.255.255.0 192.168.1.1</pre>
+
+        <h3>PC3:</h3>
+        <pre>ip 192.168.1.4 255.255.255.0 192.168.1.1</pre>
+
+        <h3>Explicación del comando <code>ip</code>:</h3>
+        <ul>
+            <li>Primer campo: dirección IP del host.</li>
+            <li>Segundo campo: máscara de subred.</li>
+            <li>Tercer campo: puerta de enlace (IP del router).</li>
+        </ul>
+
+        <h2>Paso 4: Verificar conectividad</h2>
+        <p>Desde cualquier PC, escribe:</p>
+        <pre>ping 192.168.1.1</pre>
+        <p>O prueba entre PCs, por ejemplo:</p>
+        <pre>ping 192.168.1.3</pre>
+
+        <h1 class="TituloMargen">Red Clase C con DHCP - Cisco Packet Tracer (CLI)</h1> <!-- Clase C con dhcp y cli-->
+
+        <h2>Topología</h2>
+        <ul>
+            <li>1 Router (Router0)</li>
+            <li>1 Switch (Switch0)</li>
+            <li>3 PCs (PC0, PC1, PC2)</li>
+        </ul>
+
+        <h2>Esquema de Red</h2>
+        <ul>
+            <li>Red: 192.168.10.0/24</li>
+            <li>Gateway: 192.168.10.1</li>
+            <li>Rango DHCP: 192.168.10.100 - 192.168.10.150</li>
+            <li>Máscara: 255.255.255.0</li>
+            <li>DNS: 8.8.8.8</li>
+        </ul>
+
+        <h2>Configuración CLI del Router</h2>
+        <pre>
+enable
+configure terminal
+
+! Configura la interfaz del router
+interface gigabitEthernet 0/0
+ip address 192.168.10.1 255.255.255.0
+no shutdown
+exit
+
+! Configura el servicio DHCP
+ip dhcp excluded-address 192.168.10.1 192.168.10.99
+ip dhcp pool RED_LOCAL
+network 192.168.10.0 255.255.255.0
+default-router 192.168.10.1
+dns-server 8.8.8.8
+exit
+
+end
+</pre>
+
+        <h2>Configuración de las PCs</h2>
+        <p>En cada PC:</p>
+        <ul>
+            <li>Ir a <strong>Desktop &gt; IP Configuration</strong></li>
+            <li>Seleccionar la opción <strong>DHCP</strong></li>
+        </ul>
+
+        <h2>Explicación de Comandos</h2>
+        <table>
+            <tr>
+                <th>Comando</th>
+                <th>Explicación</th>
+            </tr>
+            <tr>
+                <td><code>enable</code></td>
+                <td>Entra al modo privilegiado del router</td>
+            </tr>
+            <tr>
+                <td><code>configure terminal</code></td>
+                <td>Modo de configuración global</td>
+            </tr>
+            <tr>
+                <td><code>interface gigabitEthernet 0/0</code></td>
+                <td>Configura la interfaz LAN del router</td>
+            </tr>
+            <tr>
+                <td><code>ip address 192.168.10.1 255.255.255.0</code></td>
+                <td>Asigna IP a la interfaz</td>
+            </tr>
+            <tr>
+                <td><code>no shutdown</code></td>
+                <td>Activa la interfaz</td>
+            </tr>
+            <tr>
+                <td><code>ip dhcp excluded-address 192.168.10.1 192.168.10.99</code></td>
+                <td>Evita que esas IPs se asignen por DHCP</td>
+            </tr>
+            <tr>
+                <td><code>ip dhcp pool RED_LOCAL</code></td>
+                <td>Crea un pool DHCP llamado RED_LOCAL</td>
+            </tr>
+            <tr>
+                <td><code>network 192.168.10.0 255.255.255.0</code></td>
+                <td>Especifica la red para el pool</td>
+            </tr>
+            <tr>
+                <td><code>default-router 192.168.10.1</code></td>
+                <td>Indica la puerta de enlace para los clientes DHCP</td>
+            </tr>
+            <tr>
+                <td><code>dns-server 8.8.8.8</code></td>
+                <td>Indica el servidor DNS para los clientes</td>
+            </tr>
+            <tr>
+                <td><code>exit / end</code></td>
+                <td>Sale de los modos de configuración</td>
+            </tr>
+        </table>
+
+        <h1 class="TituloMargen">Red Clase B con DHCP - Cisco Packet Tracer (CLI)</h1> <!--Clase B con dhcp y cli -->
+
+        <h2>Topología</h2>
+        <ul>
+            <li>1 Router (Router0)</li>
+            <li>1 Switch (Switch0)</li>
+            <li>3 PCs (PC0, PC1, PC2)</li>
+        </ul>
+
+        <h2>Datos de la Red (Clase B)</h2>
+        <ul>
+            <li><strong>Red:</strong> 172.16.0.0/16</li>
+            <li><strong>Gateway:</strong> 172.16.0.1</li>
+            <li><strong>Rango DHCP:</strong> 172.16.0.100 - 172.16.0.150</li>
+            <li><strong>Máscara:</strong> 255.255.0.0</li>
+            <li><strong>DNS:</strong> 8.8.8.8</li>
+        </ul>
+
+        <h1 class="TituloMargen">Red Clase A con DHCP - Cisco Packet Tracer (CLI)</h1> <!--Clase A con dhcp y cli -->
+
+        <h2>Topología</h2>
+        <ul>
+            <li>1 Router (Router0)</li>
+            <li>1 Switch (Switch0)</li>
+            <li>3 PCs (PC0, PC1, PC2)</li>
+        </ul>
+
+        <h2>Datos de la Red (Clase A)</h2>
+        <ul>
+            <li><strong>Red:</strong> 10.0.0.0/8</li>
+            <li><strong>Gateway:</strong> 10.0.0.1</li>
+            <li><strong>Rango DHCP:</strong> 10.0.0.100 - 10.0.0.150</li>
+            <li><strong>Máscara:</strong> 255.0.0.0</li>
+            <li><strong>DNS:</strong> 8.8.8.8</li>
+        </ul>
+
+
+</body>
+
+</html>
+
+
+</main>
+
+<footer> <a href="#ancla">Ir hacia arriba</a>
+    <p id="parrafofooter_index" style="color: black;"> Hernan Joel Vladimirsky <span>&copy;Copyright</span> </p>
+</footer>
+
+</body>
+
+</html>
