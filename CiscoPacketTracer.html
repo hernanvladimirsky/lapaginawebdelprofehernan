@@ -542,8 +542,12 @@ network 192.168.10.0 255.255.255.0
 default-router 192.168.10.1
 dns-server 8.8.8.8
 exit
-
 end
+
+! Verificación
+show ip dhcp binding
+show running-config
+
 </pre>
 
         <h2>Configuración de las PCs</h2>
@@ -603,6 +607,14 @@ end
                 <td><code>exit / end</code></td>
                 <td>Sale de los modos de configuración</td>
             </tr>
+            <tr>
+                <td><code>show ip dhcp binding</code></td>
+                <td>Muestra qué dispositivos han recibido direcciones IP y cuál es su IP asignada.</td>
+            </tr>
+            <tr>
+                <td><code>show running-config</code></td>
+                <td>Muestra la configuración activa del router, incluyendo el DHCP.</td>
+            </tr>
         </table>
 
         <h1 class="TituloMargen">Red Clase B con DHCP - Cisco Packet Tracer (CLI)</h1> <!--Clase B con dhcp y cli -->
@@ -646,7 +658,124 @@ end
         <a href="Documentos/Documentos redes/Actividad 1 - DHCP_CLI_Cisco_Packet_Tracer.pdf"
             download="" target="_blank">Haz Click aqui para descargar la actividad</a> <br><br>
 
+            
 
+            <h2>🌐 Ejercicio WAN con RIP (GUI) - Cisco Packet Tracer</h2>
+
+            <h2>🎯 Objetivo</h2>
+            <p>Conectar dos redes LAN mediante una red WAN usando <strong>RIP</strong> como protocolo de enrutamiento dinámico, sin usar comandos CLI.</p>
+          
+            <h2>🖥️ Topología sugerida</h2>
+            <pre>
+            [PC0] -- [Switch0] -- [Router0] === [Router1] -- [Switch1] -- [PC1]
+            </pre>
+          
+            <h2>🧰 Dispositivos</h2>
+            <ul>
+              <li>2 PCs (PC0, PC1)</li>
+              <li>2 Switches</li>
+              <li>2 Routers</li>
+              <li>Cables: cobre directo (LAN) y serial (WAN)</li>
+            </ul>
+          
+            <h2>📄 Direcciones IP</h2>
+            <table>
+              <tr>
+                <th>Dispositivo</th>
+                <th>Interfaz</th>
+                <th>IP</th>
+                <th>Máscara</th>
+              </tr>
+              <tr><td>PC0</td><td>FastEthernet</td><td>192.168.1.10</td><td>255.255.255.0</td></tr>
+              <tr><td>Router0</td><td>G0/0</td><td>192.168.1.1</td><td>255.255.255.0</td></tr>
+              <tr><td>Router0</td><td>S0/0/0</td><td>10.10.10.1</td><td>255.255.255.252</td></tr>
+              <tr><td>Router1</td><td>S0/0/0</td><td>10.10.10.2</td><td>255.255.255.252</td></tr>
+              <tr><td>Router1</td><td>G0/0</td><td>192.168.2.1</td><td>255.255.255.0</td></tr>
+              <tr><td>PC1</td><td>FastEthernet</td><td>192.168.2.10</td><td>255.255.255.0</td></tr>
+            </table>
+          
+            <h2>🛠️ Pasos</h2>
+          
+            <h3>1. Conectar los dispositivos</h3>
+            <ul>
+              <li>PC0 a Switch0, Switch0 a Router0 (G0/0)</li>
+              <li>PC1 a Switch1, Switch1 a Router1 (G0/0)</li>
+              <li>Router0 S0/0/0 a Router1 S0/0/0 con cable serial (marcar <strong>Clock Rate</strong> en extremo DCE)</li>
+            </ul>
+          
+            <h3>2. Configurar IP en PCs</h3>
+            <p><strong>PC0:</strong> IP: <code>192.168.1.10</code> - Gateway: <code>192.168.1.1</code></p>
+            <p><strong>PC1:</strong> IP: <code>192.168.2.10</code> - Gateway: <code>192.168.2.1</code></p>
+          
+            <h3>3. Configurar Router0 (Config Tab)</h3>
+            <ul>
+              <li><strong>G0/0:</strong> IP: <code>192.168.1.1</code> - Máscara: <code>255.255.255.0</code></li>
+              <li><strong>S0/0/0:</strong> IP: <code>10.10.10.1</code> - Máscara: <code>255.255.255.252</code> - Clock Rate si DCE</li>
+              <li><strong>RIP:</strong> Activar y agregar redes: <code>192.168.1.0</code>, <code>10.10.10.0</code></li>
+            </ul>
+          
+            <h3>4. Configurar Router1 (Config Tab)</h3>
+            <ul>
+              <li><strong>G0/0:</strong> IP: <code>192.168.2.1</code> - Máscara: <code>255.255.255.0</code></li>
+              <li><strong>S0/0/0:</strong> IP: <code>10.10.10.2</code> - Máscara: <code>255.255.255.252</code></li>
+              <li><strong>RIP:</strong> Activar y agregar redes: <code>192.168.2.0</code>, <code>10.10.10.0</code></li>
+            </ul>
+          
+            <h2>🧪 Verificación</h2>
+            <p>Desde PC0 → Command Prompt → <code>ping 192.168.2.10</code></p>
+            <p>Desde PC1 → Command Prompt → <code>ping 192.168.1.10</code></p>
+
+            <hr>
+
+            <h1>¿Para qué sirve <code>clock rate 64000</code> en Cisco?</h1>
+
+            <p>El comando <code>clock rate 64000</code> se usa para establecer la velocidad de transmisión en una interfaz serial de un router Cisco cuando éste actúa como <strong>DCE</strong> (Data Communication Equipment).</p>
+
+            <h2>¿Por qué es necesario?</h2>
+            <ul>
+                <li>Define la <strong>frecuencia del reloj</strong> para la sincronización de datos en una conexión serial.</li>
+                <li>Solo se configura en el extremo <strong>DCE</strong>.</li>
+                <li>Permite que el otro extremo (<strong>DTE</strong>) se sincronice correctamente para la transmisión.</li>
+            </ul>
+
+            <h2>Ejemplo de uso</h2>
+            <pre>Router(config-if)# clock rate 64000</pre>
+
+            <h2>¿Se pueden usar otras frecuencias?</h2>
+            <p>Sí, hay múltiples velocidades disponibles según la necesidad de la red o simulación.</p>
+
+            <h1>📊 ¿Para qué sirve cada velocidad del comando <code>clock rate</code>?</h1>
+
+  <p>Estas velocidades permiten simular distintos tipos de enlaces seriales en redes WAN o laboratorios de Cisco Packet Tracer. Se definen en bits por segundo (bps).</p>
+
+            <table>
+                <tr>
+                <th>Clock Rate</th>
+                <th>Velocidad</th>
+                <th>Usos comunes y simulación</th>
+                </tr>
+                <tr><td><code>1200</code></td><td>1.2 kbps</td><td>Simulación de enlaces muy lentos (históricos o de pruebas).</td></tr>
+                <tr><td><code>2400</code></td><td>2.4 kbps</td><td>Transmisiones antiguas o equipos legados.</td></tr>
+                <tr><td><code>4800</code></td><td>4.8 kbps</td><td>Poco frecuente, enlaces de baja capacidad.</td></tr>
+                <tr><td><code>9600</code></td><td>9.6 kbps</td><td>Enlaces seriales de equipos antiguos o telemetría básica.</td></tr>
+                <tr><td><code>19200</code></td><td>19.2 kbps</td><td>Velocidad típica en módems antiguos.</td></tr>
+                <tr><td><code>38400</code></td><td>38.4 kbps</td><td>Simulación de conexiones con restricciones medianas.</td></tr>
+                <tr><td><code>56000</code></td><td>56 kbps</td><td>Equivalente a un canal de voz digital (DS0).</td></tr>
+                <tr><td><code>64000</code></td><td>64 kbps</td><td>Estándar de enlaces WAN básicos, muy usado en simulaciones.</td></tr>
+                <tr><td><code>128000</code></td><td>128 kbps</td><td>Simula enlaces tipo ISDN de dos canales (BRI).</td></tr>
+                <tr><td><code>256000</code></td><td>256 kbps</td><td>Más ancho de banda para enlaces más rápidos.</td></tr>
+                <tr><td><code>512000</code></td><td>512 kbps</td><td>Enlaces corporativos o pruebas de mayor velocidad.</td></tr>
+                <tr><td><code>1544000</code></td><td>1.544 Mbps</td><td>Enlace T1 completo (velocidad estándar en EE. UU.).</td></tr>
+                <tr><td><code>2000000</code></td><td>2 Mbps</td><td>Velocidad cercana a E1 (usada en Europa y Latinoamérica).</td></tr>
+            </table>
+
+            <h2>¿Cómo saber si soy DCE?</h2>
+            <p>En Cisco Packet Tracer, el router que tiene un pequeño rótulo con “DCE” en el cable serial es el que debe tener el <code>clock rate</code>.</p>
+
+            <h2>Comando de ayuda (en router real)</h2>
+            <pre>Router(config-if)# clock rate ?</pre>
+
+            <p>Este comando te muestra todos los valores posibles que podés usar como velocidad.</p>
 </body>
 
 </html>
