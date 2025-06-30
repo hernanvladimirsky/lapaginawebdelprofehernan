@@ -3552,6 +3552,526 @@ El protocolo ARP es fundamental para la transmisión de datos en redes Ethernet.
 <img src="Imagenes/Redes/arp.png" alt="">
 </p>
 
+<h1>IP versión 4.0 (IPv4)</h1>
+  <p>IPv4 es la cuarta versión del Protocolo de Internet y la más utilizada en redes de datos. Permite identificar de manera única a cada dispositivo conectado a una red mediante una dirección de 32 bits.</p>
+
+  <h2>Características principales</h2>
+  <table>
+    <tr><th>Característica</th><th>Descripción</th></tr>
+    <tr><td>Longitud de dirección</td><td>32 bits (4 bytes)</td></tr>
+    <tr><td>Formato</td><td>Decimal con puntos (ejemplo: 192.168.0.1)</td></tr>
+    <tr><td>Cantidad total de direcciones posibles</td><td>2³² = 4.294.967.296</td></tr>
+    <tr><td>Tipos de direcciones</td><td>Unicast, Broadcast, Multicast</td></tr>
+    <tr><td>Protocolo asociado</td><td>TCP/IP</td></tr>
+    <tr><td>Fragmentación</td><td>Permitida en origen y en routers</td></tr>
+  </table>
+
+  <h2>Ejemplo de dirección IPv4</h2>
+  <p><code>192.168.1.10</code></p>
+
+  <h2>¿Para qué sirve IPv4?</h2>
+  <ul>
+    <li>Identificar dispositivos en una red (computadoras, celulares, servidores, etc.).</li>
+    <li>Enrutar paquetes de datos desde un origen hasta un destino.</li>
+    <li>Establecer comunicación entre dispositivos en redes locales (LAN) o en Internet.</li>
+  </ul>
+
+  <h2>Limitaciones de IPv4</h2>
+  <ul>
+    <li><strong>Agotamiento de direcciones:</strong> se han asignado casi todas las direcciones posibles.</li>
+    <li><strong>Falta de seguridad nativa:</strong> no incluye cifrado o autenticación por defecto.</li>
+    <li><strong>Uso de NAT:</strong> es necesario el uso de traducción de direcciones para que múltiples dispositivos compartan una única IP pública.</li>
+  </ul>
+
+  <h2>IPv6: el reemplazo</h2>
+  <p>IPv6 es la evolución de IPv4. Usa direcciones de 128 bits y permite una cantidad prácticamente ilimitada de dispositivos conectados.</p>
+
+  <h1>Protocolos No Orientados a la Conexión</h1>
+
+  <p>Un <strong>protocolo no orientado a la conexión</strong> permite enviar datos sin necesidad de establecer una conexión previa entre el emisor y el receptor. Es más rápido, pero menos confiable que los protocolos orientados a la conexión.</p>
+
+  <h2>Ejemplo principal: UDP (User Datagram Protocol)</h2>
+
+  <h2>Características de los protocolos no orientados a la conexión</h2>
+  <table>
+    <tr><th>Característica</th><th>Descripción</th></tr>
+    <tr><td>Sin conexión previa</td><td>No se realiza un “handshake” o establecimiento de conexión antes de enviar los datos.</td></tr>
+    <tr><td>Velocidad</td><td>Alta, ya que se evita el proceso de establecimiento y cierre de conexión.</td></tr>
+    <tr><td>Fiabilidad</td><td>No garantiza la entrega, el orden, ni la integridad de los datos.</td></tr>
+    <tr><td>Confirmación</td><td>No hay confirmaciones de recepción ni reenvíos automáticos.</td></tr>
+    <tr><td>Aplicaciones típicas</td><td>Transmisión de video/audio en tiempo real, juegos en línea, VoIP.</td></tr>
+  </table>
+
+  <h2>Comparación: UDP vs TCP</h2>
+  <table>
+    <tr>
+      <th>Característica</th>
+      <th>UDP (No orientado)</th>
+      <th>TCP (Orientado)</th>
+    </tr>
+    <tr>
+      <td>Conexión previa</td>
+      <td>No</td>
+      <td>Sí</td>
+    </tr>
+    <tr>
+      <td>Velocidad</td>
+      <td>Alta</td>
+      <td>Media</td>
+    </tr>
+    <tr>
+      <td>Fiabilidad</td>
+      <td>Baja</td>
+      <td>Alta</td>
+    </tr>
+    <tr>
+      <td>Confirmación de entrega</td>
+      <td>No</td>
+      <td>Sí</td>
+    </tr>
+    <tr>
+      <td>Orden de los datos</td>
+      <td>No garantizado</td>
+      <td>Garantizado</td>
+    </tr>
+    <tr>
+      <td>Ejemplos de uso</td>
+      <td>Streaming, juegos, VoIP</td>
+      <td>Web, correo electrónico</td>
+    </tr>
+  </table>
+
+  <h2>Otros protocolos no orientados a la conexión</h2>
+  <ul>
+    <li><strong>ICMP</strong>: utilizado por herramientas como <code>ping</code> para enviar mensajes de diagnóstico.</li>
+    <li><strong>TFTP</strong>: Trivial File Transfer Protocol, usado para transferencias simples de archivos.</li>
+  </ul>
+
+  <h1>Protocolo No Fiable</h1>
+
+  <p>Un <strong>protocolo no fiable</strong> es aquel que <strong>no garantiza la entrega, el orden ni la integridad de los datos</strong>. Los mensajes pueden perderse, duplicarse o llegar fuera de orden sin que el emisor reciba confirmación alguna.</p>
+
+  <h2>Características principales</h2>
+  <table>
+    <tr><th>Característica</th><th>Descripción</th></tr>
+    <tr><td>Sin confirmación</td><td>El emisor no sabe si los datos llegaron al receptor.</td></tr>
+    <tr><td>Sin control de errores</td><td>No detecta ni corrige errores en la transmisión.</td></tr>
+    <tr><td>Sin reenvío automático</td><td>No vuelve a enviar datos si se pierden en el camino.</td></tr>
+    <tr><td>Sin control de flujo</td><td>No regula la velocidad del envío según la capacidad del receptor.</td></tr>
+    <tr><td>Alta velocidad</td><td>Mayor rapidez y eficiencia, menor sobrecarga.</td></tr>
+    <tr><td>Uso ideal</td><td>Aplicaciones en tiempo real donde la pérdida ocasional es tolerable.</td></tr>
+  </table>
+
+  <h2>Ejemplos de protocolos no fiables</h2>
+  <ul>
+    <li><strong>UDP (User Datagram Protocol)</strong>: el ejemplo más conocido.</li>
+    <li><strong>ICMP</strong>: utilizado para diagnóstico de red (como el comando <code>ping</code>).</li>
+    <li><strong>TFTP</strong>: protocolo simple de transferencia de archivos.</li>
+  </ul>
+
+  <h2>¿Cuándo se utiliza un protocolo no fiable?</h2>
+  <ul>
+    <li>Cuando la velocidad es más importante que la precisión.</li>
+    <li>Cuando se tolera la pérdida de algunos datos.</li>
+    <li>Cuando las aplicaciones implementan su propio control de errores.</li>
+  </ul>
+
+  <h2>Comparación con un protocolo fiable (TCP)</h2>
+  <table>
+    <tr><th>Característica</th><th>UDP (No fiable)</th><th>TCP (Fiable)</th></tr>
+    <tr><td>Confirmación de entrega</td><td>No</td><td>Sí</td></tr>
+    <tr><td>Control de errores</td><td>No</td><td>Sí</td></tr>
+    <tr><td>Orden de los datos</td><td>No garantizado</td><td>Garantizado</td></tr>
+    <tr><td>Velocidad</td><td>Alta</td><td>Media</td></tr>
+    <tr><td>Aplicaciones comunes</td><td>Streaming, VoIP, juegos</td><td>Navegación web, email, archivos</td></tr>
+  </table>
+
+  <h1>Tipos de Servicios en Redes</h1>
+
+  <h2>1. Tipo de Servicio (ToS) en IPv4</h2>
+  <p>En el encabezado del protocolo IPv4 existe un campo llamado <strong>Type of Service (ToS)</strong>, utilizado para indicar la prioridad y el tratamiento que debe tener un paquete IP.</p>
+
+  <h3>Funciones del campo ToS:</h3>
+  <ul>
+    <li>Especificar <strong>prioridad del paquete</strong>.</li>
+    <li>Indicar preferencia por <strong>bajo retardo</strong>, <strong>alto rendimiento</strong> o <strong>bajo costo</strong>.</li>
+    <li>Permitir a los routers tomar <strong>decisiones inteligentes de enrutamiento</strong>.</li>
+  </ul>
+
+  <h2>2. Tipo de Servicios en QoS (Calidad de Servicio)</h2>
+  <p>QoS (Quality of Service) clasifica el tráfico de red para brindar distintos niveles de prioridad según el tipo de servicio requerido.</p>
+
+  <table>
+    <tr>
+      <th>Tipo de tráfico</th>
+      <th>Servicio deseado</th>
+      <th>Ejemplo</th>
+    </tr>
+    <tr>
+      <td>Tiempo real</td>
+      <td>Baja latencia</td>
+      <td>Videollamadas, VoIP</td>
+    </tr>
+    <tr>
+      <td>Datos sensibles</td>
+      <td>Alta confiabilidad</td>
+      <td>Transferencia de archivos</td>
+    </tr>
+    <tr>
+      <td>Tráfico masivo</td>
+      <td>Alto rendimiento</td>
+      <td>Streaming de video/música</td>
+    </tr>
+    <tr>
+      <td>Servicios básicos</td>
+      <td>Bajo costo</td>
+      <td>Navegación web casual</td>
+    </tr>
+  </table>
+
+  <h2>3. Tipos de Servicios según el Protocolo</h2>
+  <p>Existen distintos servicios en la red que se basan en protocolos específicos para cumplir una función determinada.</p>
+
+  <table>
+    <tr>
+      <th>Servicio de red</th>
+      <th>Protocolo involucrado</th>
+      <th>Tipo de servicio</th>
+    </tr>
+    <tr>
+      <td>Web</td>
+      <td>HTTP / HTTPS</td>
+      <td>Acceso a páginas y aplicaciones web</td>
+    </tr>
+    <tr>
+      <td>Correo electrónico</td>
+      <td>SMTP, IMAP, POP3</td>
+      <td>Envío y recepción de correos</td>
+    </tr>
+    <tr>
+      <td>Transferencia de archivos</td>
+      <td>FTP, SMB, NFS</td>
+      <td>Descarga, carga y sincronización de archivos</td>
+    </tr>
+    <tr>
+      <td>Multimedia</td>
+      <td>UDP, RTP, RTSP</td>
+      <td>Streaming de audio y video</td>
+    </tr>
+    <tr>
+      <td>Control de red</td>
+      <td>ICMP, SNMP</td>
+      <td>Diagnóstico, monitoreo y administración</td>
+    </tr>
+  </table>
+
+  <p>La correcta gestión de los tipos de servicio permite optimizar el tráfico, priorizar aplicaciones críticas y mejorar la experiencia del usuario.</p>
+
+  <h1>Time To Live (TTL)</h1>
+
+  <p><strong>TTL</strong> (Tiempo de Vida) es un campo en el encabezado de un paquete IP que limita el tiempo o número de saltos que un paquete puede existir en una red.</p>
+
+  <h2>¿Cómo funciona?</h2>
+  <ul>
+    <li>El TTL se asigna con un valor inicial cuando se crea el paquete (por ejemplo, 64 o 128).</li>
+    <li>Cada vez que el paquete pasa por un router, el valor de TTL se reduce en 1.</li>
+    <li>Si el TTL llega a 0 antes de alcanzar su destino, el paquete es descartado y se envía un mensaje de error al emisor.</li>
+  </ul>
+
+  <h2>Ejemplo práctico</h2>
+  <p>Un paquete con TTL inicial 4 pasa por varios routers:</p>
+  <pre>
+TTL inicial: 4
+Router 1 → TTL: 3  
+Router 2 → TTL: 2  
+Router 3 → TTL: 1  
+Router 4 → TTL: 0 → ❌ El paquete se descarta
+  </pre>
+
+  <h2>¿Para qué sirve el TTL?</h2>
+  <ul>
+    <li>Evitar que paquetes queden circulando indefinidamente en la red (bucles de enrutamiento).</li>
+    <li>Controlar la vida útil de un paquete.</li>
+    <li>Utilizado en herramientas como <code>traceroute</code> para mapear rutas.</li>
+  </ul>
+
+  <h2>Valores comunes de TTL por sistema operativo</h2>
+  <table>
+    <tr>
+      <th>Sistema Operativo</th>
+      <th>Valor TTL por defecto</th>
+    </tr>
+    <tr><td>Windows</td><td>128</td></tr>
+    <tr><td>Linux</td><td>64</td></tr>
+    <tr><td>Cisco Router</td><td>255</td></tr>
+    <tr><td>Android / iOS</td><td>64 - 128</td></tr>
+  </table>
+
+  <h1>Fragmentación</h1>
+
+  <p>La <strong>fragmentación</strong> es el proceso mediante el cual un paquete de datos grande se divide en partes más pequeñas llamadas <em>fragmentos</em> para que puedan ser transmitidos a través de redes que tienen un límite en el tamaño máximo de los paquetes (<strong>MTU</strong>, Maximum Transmission Unit).</p>
+
+  <h2>¿Por qué es necesaria la fragmentación?</h2>
+  <ul>
+    <li>Cada medio de transmisión tiene un <strong>tamaño máximo de paquete permitido</strong> (MTU).</li>
+    <li>Si un paquete es mayor que el MTU de una red por donde debe pasar, se fragmenta para poder enviarlo.</li>
+    <li>Luego, el receptor debe <strong>reensamblar</strong> los fragmentos para reconstruir el paquete original.</li>
+  </ul>
+
+  <h2>¿Cómo funciona la fragmentación?</h2>
+  <ul>
+    <li>El emisor o un router que detecta un paquete más grande que el MTU fragmenta el paquete.</li>
+    <li>Cada fragmento contiene información en el encabezado IP para que el receptor pueda unirlos correctamente.</li>
+    <li>La fragmentación puede generar sobrecarga y afectar el rendimiento.</li>
+  </ul>
+
+  <h2>Consideraciones importantes</h2>
+  <ul>
+    <li>La fragmentación puede aumentar la latencia y la probabilidad de pérdida de datos.</li>
+    <li>Algunas redes y protocolos evitan la fragmentación usando técnicas como <strong>Path MTU Discovery</strong>.</li>
+    <li>La fragmentación no es común en redes modernas gracias a la optimización del tamaño de los paquetes.</li>
+  </ul>
+
+  <h1>Checksum</h1>
+
+  <p>El <strong>Checksum</strong> (suma de verificación) es un valor numérico que se calcula a partir de los datos que se quieren transmitir, para <strong>detectar errores</strong> durante la transmisión.</p>
+
+  <h2>¿Para qué sirve?</h2>
+  <ul>
+    <li>Permite verificar que los datos no se hayan corrompido o alterado durante la transferencia.</li>
+    <li>El emisor calcula el checksum y lo incluye en el paquete.</li>
+    <li>El receptor recalcula el checksum con los datos recibidos y lo compara con el valor recibido.</li>
+    <li>Si los valores no coinciden, se detecta un error en la transmisión.</li>
+  </ul>
+
+  <h2>¿Cómo funciona?</h2>
+  <ol>
+    <li>El emisor suma los bits o bytes de los datos según un algoritmo (por ejemplo, suma simple o CRC).</li>
+    <li>El resultado se coloca en un campo del encabezado (checksum).</li>
+    <li>El receptor realiza el mismo cálculo con los datos recibidos.</li>
+    <li>Si el resultado es diferente, el receptor sabe que hubo un error.</li>
+  </ol>
+
+  <h2>¿Dónde se usa?</h2>
+  <ul>
+    <li>En protocolos como <code>IP</code>, <code>TCP</code> y <code>UDP</code> para validar la integridad del paquete.</li>
+    <li>En almacenamiento y archivos para comprobar integridad.</li>
+  </ul>
+
+  <h2>¿Es infalible?</h2>
+  <p>No, el checksum puede no detectar todos los errores, pero es eficiente y rápido para detectar errores comunes.</p>
+
+  <h1>Protocolos de Control de Transmisión: TCP y UDP</h1>
+
+  <p>En las redes, <strong>TCP</strong> y <strong>UDP</strong> son dos protocolos fundamentales que permiten la transmisión de datos entre dispositivos, pero tienen características y usos distintos.</p>
+
+  <h2>¿Qué es TCP?</h2>
+  <p><strong>Transmission Control Protocol (TCP)</strong> es un protocolo <em>orientado a la conexión</em> que garantiza la entrega correcta y ordenada de los datos.</p>
+  <ul>
+    <li>Establece una conexión antes de transmitir datos (handshake de tres vías).</li>
+    <li>Controla el flujo y la congestión para evitar pérdida de paquetes.</li>
+    <li>Confirma la recepción de los datos y retransmite si es necesario.</li>
+    <li>Es utilizado por aplicaciones que requieren fiabilidad, como navegación web, correo electrónico y transferencia de archivos.</li>
+  </ul>
+
+  <h2>¿Qué es UDP?</h2>
+  <p><strong>User Datagram Protocol (UDP)</strong> es un protocolo <em>no orientado a la conexión</em>, rápido pero sin garantías de entrega ni orden.</p>
+  <ul>
+    <li>No establece conexión previa.</li>
+    <li>No confirma la recepción de datos ni retransmite paquetes perdidos.</li>
+    <li>Ideal para aplicaciones que requieren velocidad y toleran pérdida de datos, como streaming, videojuegos online y VoIP.</li>
+  </ul>
+
+  <h2>Comparación entre TCP y UDP</h2>
+  <table>
+    <tr>
+      <th>Característica</th>
+      <th>TCP</th>
+      <th>UDP</th>
+    </tr>
+    <tr>
+      <td>Orientación a la conexión</td>
+      <td>Sí</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Garantía de entrega</td>
+      <td>Sí</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Control de flujo y congestión</td>
+      <td>Sí</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Velocidad</td>
+      <td>Más lento</td>
+      <td>Más rápido</td>
+    </tr>
+    <tr>
+      <td>Ejemplos de uso</td>
+      <td>Web, email, FTP</td>
+      <td>Streaming, juegos, VoIP</td>
+    </tr>
+  </table>
+
+  <h1>Transferencia Básica de Datos</h1>
+
+  <p>La <strong>transferencia básica de datos</strong> es el proceso fundamental mediante el cual dos dispositivos se comunican y transmiten información a través de una red de computadoras. Este proceso es esencial para el funcionamiento de Internet, redes locales y cualquier sistema de comunicación digital.</p>
+
+  <h2>Etapas de la transferencia de datos</h2>
+  <ol>
+    <li><strong>Preparación de los datos:</strong> El dispositivo emisor organiza y convierte la información en un formato adecuado para la transmisión, asegurándose de que pueda ser segmentada y enviada correctamente.</li>
+    <li><strong>Segmentación:</strong> Si los datos son demasiado grandes para enviarse en un solo paquete, se dividen en segmentos o fragmentos más pequeños que pueden manejarse y transmitirse eficientemente.</li>
+    <li><strong>Transmisión:</strong> Los paquetes o segmentos de datos son enviados desde el dispositivo emisor a través de la red. Durante este proceso, los datos pueden pasar por múltiples routers y switches que dirigen la información hacia su destino.</li>
+    <li><strong>Recepción:</strong> El dispositivo receptor recibe los paquetes enviados y comienza el proceso para reconstruir los datos originales.</li>
+    <li><strong>Reensamblaje:</strong> Los paquetes fragmentados se vuelven a unir en el orden correcto para formar el mensaje o archivo original.</li>
+    <li><strong>Verificación de integridad:</strong> Se realizan comprobaciones, como el uso de <em>checksum</em> o códigos de corrección de errores, para asegurar que los datos recibidos no se hayan corrompido durante la transmisión.</li>
+    <li><strong>Confirmación (opcional):</strong> En protocolos confiables como TCP, el receptor envía una confirmación al emisor para indicar que los datos fueron recibidos correctamente. Si no se recibe esta confirmación, el emisor puede reenviar los datos.</li>
+  </ol>
+
+  <h2>Protocolos utilizados en la transferencia de datos</h2>
+  <p>Existen varios protocolos que definen cómo se realiza la transferencia, según las necesidades de confiabilidad, velocidad y tipo de datos:</p>
+  <ul>
+    <li><strong>TCP (Transmission Control Protocol):</strong> Protocolo orientado a la conexión que garantiza la entrega correcta y en orden de los datos, ideal para aplicaciones donde la precisión es vital, como navegación web y correo electrónico.</li>
+    <li><strong>UDP (User Datagram Protocol):</strong> Protocolo sin conexión que prioriza la velocidad sobre la confiabilidad, usado en aplicaciones en tiempo real como videollamadas, streaming y juegos en línea.</li>
+    <li><strong>FTP (File Transfer Protocol):</strong> Protocolo especializado para la transferencia segura y eficiente de archivos entre dispositivos.</li>
+    <li><strong>HTTP/HTTPS:</strong> Protocolos usados para la transferencia de páginas web y recursos en Internet.</li>
+    <li><strong>SMTP, IMAP, POP3:</strong> Protocolos para la transferencia y gestión de correo electrónico.</li>
+  </ul>
+
+  <h2>Importancia de la transferencia básica de datos</h2>
+  <p>Este proceso es la base para toda comunicación digital moderna. Desde enviar un simple mensaje de texto hasta realizar transacciones bancarias en línea, la transferencia correcta y eficiente de datos asegura que la información llegue a su destino de manera segura y en el menor tiempo posible.</p>
+
+  <p>La comprensión de este proceso es fundamental para estudiantes y profesionales en informática y telecomunicaciones, ya que permite diseñar, mantener y optimizar redes que soporten las necesidades actuales de conectividad.</p>
+
+  <h1>Formato del Segmento TCP</h1>
+
+  <p>El segmento TCP es la unidad básica de datos transmitida por el protocolo TCP (Transmission Control Protocol). Está compuesto por un encabezado y los datos útiles (payload).</p>
+
+  <h2>Campos del Encabezado TCP</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Campo</th>
+        <th>Tamaño (bits)</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Puerto Origen</td>
+        <td>16</td>
+        <td>Identifica el puerto del proceso emisor.</td>
+      </tr>
+      <tr>
+        <td>Puerto Destino</td>
+        <td>16</td>
+        <td>Identifica el puerto del proceso receptor.</td>
+      </tr>
+      <tr>
+        <td>Número de Secuencia</td>
+        <td>32</td>
+        <td>Indica el número del primer byte de datos en este segmento.</td>
+      </tr>
+      <tr>
+        <td>Número de Acknowledgment (Confirmación)</td>
+        <td>32</td>
+        <td>Si el bit ACK está activado, este campo contiene el número de secuencia que se espera recibir a continuación.</td>
+      </tr>
+      <tr>
+        <td>Offset de Datos (Longitud del encabezado)</td>
+        <td>4</td>
+        <td>Indica el tamaño del encabezado TCP en palabras de 32 bits (múltiplos de 4 bytes).</td>
+      </tr>
+      <tr>
+        <td>Reservado</td>
+        <td>3</td>
+        <td>Reservado para uso futuro, debe ser 0.</td>
+      </tr>
+      <tr>
+        <td>Bits de Control (Flags)</td>
+        <td>9</td>
+        <td>
+          Indicadores que controlan el flujo y estado de la conexión TCP:<br/>
+          <ul>
+            <li><strong>URG:</strong> Urgente</li>
+            <li><strong>ACK:</strong> Confirmación válida</li>
+            <li><strong>PSH:</strong> Push, pide entrega inmediata</li>
+            <li><strong>RST:</strong> Reiniciar conexión</li>
+            <li><strong>SYN:</strong> Sincronizar número de secuencia (inicio de conexión)</li>
+            <li><strong>FIN:</strong> Finalizar conexión</li>
+            <li>Otros bits opcionales</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Ventana (Window Size)</td>
+        <td>16</td>
+        <td>Indica la cantidad de bytes que el emisor está dispuesto a recibir (control de flujo).</td>
+      </tr>
+      <tr>
+        <td>Checksum</td>
+        <td>16</td>
+        <td>Verificación de integridad del segmento TCP y parte de la cabecera IP.</td>
+      </tr>
+      <tr>
+        <td>Puntero Urgente (Urgent Pointer)</td>
+        <td>16</td>
+        <td>Si el bit URG está activo, indica la posición del último byte urgente en los datos.</td>
+      </tr>
+      <tr>
+        <td>Opciones</td>
+        <td>Variable (0-320 bits)</td>
+        <td>Opciones adicionales para control y mejoras (por ejemplo, escalado de ventana).</td>
+      </tr>
+      <tr>
+        <td>Relleno (Padding)</td>
+        <td>Variable</td>
+        <td>Rellena el encabezado para que sea múltiplo de 32 bits.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Resumen gráfico</h2>
+  <p>El encabezado TCP tiene una longitud mínima de 20 bytes y puede extenderse hasta 60 bytes si se usan opciones.</p>
+
+  <h1>Fiabilidad en Redes</h1>
+
+  <p>La <strong>fiabilidad</strong> en redes se refiere a la capacidad de un sistema para garantizar la entrega correcta, completa y ordenada de los datos transmitidos, incluso ante condiciones adversas como interferencias, pérdidas o errores durante la comunicación.</p>
+
+  <h2>Aspectos clave de la fiabilidad</h2>
+  <ul>
+    <li><strong>Entrega garantizada:</strong> Los datos enviados desde el emisor llegan al receptor sin pérdidas ni duplicados.</li>
+    <li><strong>Orden correcto:</strong> Los datos llegan en la secuencia exacta en la que fueron enviados, importante para mantener la coherencia de la información.</li>
+    <li><strong>Detección y corrección de errores:</strong> Mecanismos para identificar errores producidos en la transmisión y corregirlos o solicitar reenvíos.</li>
+    <li><strong>Control de flujo:</strong> Gestión para evitar que el emisor envíe datos más rápido de lo que el receptor puede procesar, previniendo pérdidas.</li>
+    <li><strong>Confirmación y retransmisión:</strong> El receptor envía acuses de recibo (acknowledgements) para confirmar la recepción, y el emisor retransmite paquetes no confirmados.</li>
+  </ul>
+
+  <h2>Mecanismos y protocolos que aseguran la fiabilidad</h2>
+  <p>Protocolos como el <strong>Transmission Control Protocol (TCP)</strong> implementan todos estos mecanismos para ofrecer un servicio confiable sobre redes que pueden ser impredecibles.</p>
+  <ul>
+    <li><strong>Handshake de tres vías:</strong> Establece una conexión confiable antes de iniciar la transferencia de datos.</li>
+    <li><strong>Checksum:</strong> Verifica la integridad de los datos en cada segmento transmitido.</li>
+    <li><strong>Ventana deslizante:</strong> Controla el flujo de datos entre emisor y receptor, optimizando la transmisión.</li>
+    <li><strong>Retransmisión:</strong> Reenvía paquetes que se detecta no fueron recibidos correctamente.</li>
+  </ul>
+
+  <h2>Importancia de la fiabilidad</h2>
+  <p>La fiabilidad es fundamental para aplicaciones sensibles donde la pérdida o corrupción de datos puede causar fallos graves o pérdida de información crítica, tales como:</p>
+  <ul>
+    <li>Transacciones bancarias y financieras.</li>
+    <li>Comunicación por correo electrónico.</li>
+    <li>Transferencia de archivos importantes.</li>
+    <li>Aplicaciones empresariales y sistemas de control.</li>
+  </ul>
+
+  <p>En contraste, hay aplicaciones donde la velocidad es más importante que la fiabilidad absoluta, como en streaming o videojuegos en línea, donde se usa UDP, un protocolo menos fiable pero más rápido.</p>
+
+
 </main>
 <footer> <a href="#ancla">Ir hacia arriba</a>
     <p id="parrafofooter_index" style="color: black;"> Hernan Joel Vladimirsky <span>&copy;Copyright</span> </p>
