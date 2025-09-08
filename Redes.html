@@ -18,6 +18,7 @@
 
         h1 {
             color: #333;
+            margin-top: 2%;
         }
 
         table {
@@ -4071,6 +4072,795 @@ Router 4 → TTL: 0 → ❌ El paquete se descarta
 
   <p>En contraste, hay aplicaciones donde la velocidad es más importante que la fiabilidad absoluta, como en streaming o videojuegos en línea, donde se usa UDP, un protocolo menos fiable pero más rápido.</p>
 
+  <h1> Control de Flujo en Redes</h1>
+
+  <p>
+    El <strong>control de flujo</strong> es un mecanismo que regula la cantidad de datos que un emisor puede enviar a un receptor,
+    evitando que este último se sature y pierda información.
+  </p>
+
+  <h2> ¿Por qué es necesario?</h2>
+  <ul>
+    <li>El emisor puede transmitir más rápido de lo que el receptor procesa.</li>
+    <li>Se asegura una comunicación <strong>ordenada y eficiente</strong>.</li>
+    <li>Se utiliza en protocolos confiables como <code>TCP</code>.</li>
+  </ul>
+
+  <h2> Métodos de Control de Flujo</h2>
+  <table>
+    <tr>
+      <th>Método</th>
+      <th>Descripción</th>
+      <th>Uso</th>
+    </tr>
+    <tr>
+      <td><strong>Stop-and-Wait</strong></td>
+      <td>El emisor envía un paquete y espera el <code>ACK</code> antes de enviar otro.</td>
+      <td>Sencillo pero poco eficiente en redes rápidas.</td>
+    </tr>
+    <tr>
+      <td><strong>Ventana Deslizante</strong></td>
+      <td>Permite enviar varios paquetes antes de recibir confirmaciones.</td>
+      <td>Muy usado en <code>TCP</code>, mejora la eficiencia.</td>
+    </tr>
+    <tr>
+      <td><strong>Basado en Créditos</strong></td>
+      <td>El receptor asigna un número de créditos que indican cuántos paquetes puede recibir.</td>
+      <td>Se aplica en sistemas más complejos.</td>
+    </tr>
+  </table>
+
+  <h2>Ejemplo en TCP</h2>
+  <p>
+    En una conexión cliente-servidor, el receptor informa al emisor el tamaño de su <span class="highlight">ventana</span>.
+    Por ejemplo, si la ventana es de <code>65,535 bytes</code>, el emisor no puede superar esa cantidad antes de recibir confirmación.
+  </p>
+  <p>
+    Si el receptor está saturado, puede reducir la ventana a <code>0</code>, indicando que debe esperar antes de enviar más datos.
+  </p>
+
+  <h2>Diferencia con Control de Congestión</h2>
+  <table>
+    <tr>
+      <th>Control de Flujo</th>
+      <th>Control de Congestión</th>
+    </tr>
+    <tr>
+      <td>Regula la velocidad entre emisor y receptor.</td>
+      <td>Regula el tráfico en toda la red.</td>
+    </tr>
+    <tr>
+      <td>Evita que el <strong>receptor</strong> se sature.</td>
+      <td>Evita que los <strong>routers y enlaces</strong> se saturen.</td>
+    </tr>
+  </table>
+
+  <h1> Multiplexación en Redes y Telecomunicaciones</h1>
+
+  <p>
+    La <strong>multiplexación</strong> es una técnica de transmisión que permite que varias señales diferentes compartan un único canal físico,
+    optimizando el uso de recursos, reduciendo costos y aumentando la eficiencia de las redes.
+  </p>
+
+  <h2> Objetivos principales</h2>
+  <ul>
+    <li>Aprovechar al máximo el <strong>ancho de banda disponible</strong>.</li>
+    <li>Reducir costos de infraestructura.</li>
+    <li>Permitir múltiples comunicaciones simultáneas sin interferencias.</li>
+    <li>Escalar sistemas de telecomunicaciones a mayor capacidad.</li>
+  </ul>
+
+  <h2> Tipos de Multiplexación</h2>
+  <table>
+    <tr>
+      <th>Tipo</th>
+      <th>Descripción</th>
+      <th>Ejemplos</th>
+    </tr>
+    <tr>
+      <td><strong>TDM</strong><br>(Time Division Multiplexing)</td>
+      <td>Divide el canal en intervalos de tiempo. Cada usuario transmite en su turno.</td>
+      <td>Telefonía digital (E1/T1).</td>
+    </tr>
+    <tr>
+      <td><strong>FDM</strong><br>(Frequency Division Multiplexing)</td>
+      <td>Divide el canal en bandas de frecuencia distintas.</td>
+      <td>Radio FM, TV por cable.</td>
+    </tr>
+    <tr>
+      <td><strong>WDM</strong><br>(Wavelength Division Multiplexing)</td>
+      <td>Versión de FDM aplicada a fibra óptica, cada canal usa una longitud de onda distinta.</td>
+      <td>Redes ópticas de alta velocidad (DWDM).</td>
+    </tr>
+    <tr>
+      <td><strong>CDM</strong><br>(Code Division Multiplexing)</td>
+      <td>Todos transmiten en el mismo tiempo y frecuencia, distinguiéndose con códigos únicos.</td>
+      <td>Telefonía móvil 3G (CDMA).</td>
+    </tr>
+    <tr>
+      <td><strong>OFDM</strong><br>(Orthogonal FDM)</td>
+      <td>Divide en múltiples portadoras ortogonales para evitar interferencias.</td>
+      <td>Wi-Fi, LTE, 5G, TV digital.</td>
+    </tr>
+  </table>
+
+  <h2> Analogía con una autopista</h2>
+  <table>
+    <tr>
+      <th>Método</th>
+      <th>Analogía</th>
+    </tr>
+    <tr>
+      <td><strong>TDM</strong></td>
+      <td>Cada auto usa el mismo carril pero pasa en su turno.</td>
+    </tr>
+    <tr>
+      <td><strong>FDM</strong></td>
+      <td>Cada auto circula en un carril diferente al mismo tiempo.</td>
+    </tr>
+    <tr>
+      <td><strong>WDM</strong></td>
+      <td>Los autos usan el mismo carril pero con faros de distinto color.</td>
+    </tr>
+    <tr>
+      <td><strong>CDM</strong></td>
+      <td>Todos circulan en todos los carriles, pero cada auto tiene matrícula única.</td>
+    </tr>
+  </table>
+
+  <h2> Ventajas y Desventajas</h2>
+  <table>
+    <tr>
+      <th>Ventajas</th>
+      <th>Desventajas</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li>Mayor aprovechamiento del canal.</li>
+          <li>Permite más usuarios en un mismo enlace.</li>
+          <li>Reducción de costos.</li>
+          <li>Escalabilidad de la red.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Mayor complejidad de diseño.</li>
+          <li>Necesidad de sincronización precisa.</li>
+          <li>Posible interferencia si no se separan bien frecuencias/códigos.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <h1> Sincronización en el Nivel 4 (Transporte – N4)</h1>
+
+  <p>
+    El <strong>nivel de transporte</strong> (N4 en el modelo OSI) garantiza la 
+    <strong>entrega confiable y ordenada de los datos</strong> entre aplicaciones que se comunican a través de la red.
+    La <strong>sincronización</strong> en este nivel coordina la transmisión, controla la secuencia de datos y evita pérdidas o duplicaciones.
+  </p>
+
+  <h2> Funciones de la sincronización</h2>
+  <ul>
+    <li><strong>Establecimiento de la conexión:</strong> en protocolos orientados a conexión (ej: TCP) se realiza un <em>proceso de sincronización inicial</em> entre emisor y receptor antes de enviar datos.</li>
+    <li><strong>Control de secuencia:</strong> los segmentos llevan <em>números de secuencia</em> que permiten reordenar los datos en el receptor.</li>
+    <li><strong>Detección de pérdidas y duplicados:</strong> si un segmento se pierde, el receptor solicita retransmisión; también evita que un mismo dato se procese dos veces.</li>
+    <li><strong>Cierre ordenado de la conexión:</strong> el nivel de transporte asegura un <em>final controlado</em> de la comunicación.</li>
+  </ul>
+
+  <h2> Ejemplos</h2>
+  <ul>
+    <li><strong>TCP (Transmission Control Protocol):</strong> utiliza números de secuencia y <em>mensajes de confirmación</em>. Requiere un <em>proceso de sincronización inicial</em>.</li>
+    <li><strong>UDP (User Datagram Protocol):</strong> no establece sincronización; los datos se envían directamente sin confirmación.</li>
+  </ul>
+
+  <h2> Tabla comparativa</h2>
+  <table>
+    <tr>
+      <th>Protocolo</th>
+      <th>¿Hay sincronización?</th>
+      <th>Mecanismo</th>
+    </tr>
+    <tr>
+      <td><strong>TCP</strong></td>
+      <td>✔ Sí</td>
+      <td>Proceso de sincronización inicial, números de secuencia, mensajes de confirmación</td>
+    </tr>
+    <tr>
+      <td><strong>UDP</strong></td>
+      <td>❌ No</td>
+      <td>Envía datagramas sin coordinación</td>
+    </tr>
+    <tr>
+      <td><strong>SCTP</strong></td>
+      <td>✔ Sí</td>
+      <td>Proceso de sincronización inicial de 4 pasos, múltiples secuencias</td>
+    </tr>
+  </table>
+
+  <h2> Analogía</h2>
+  <p>
+    Dos personas usando radios:
+  </p>
+  <ul>
+    <li><strong>Con sincronización (TCP):</strong> primero acuerdan “¿me escuchás?” – “sí, adelante”. Luego hablan ordenadamente y confirman cada mensaje recibido.</li>
+    <li><strong>Sin sincronización (UDP):</strong> uno habla y espera que el otro lo escuche, pero sin comprobar si el mensaje llegó.</li>
+  </ul>
+
+  <h1> Establecimiento y Finalización de la Conexión (Nivel 4 – Transporte)</h1>
+
+  <p>
+    En redes, especialmente en protocolos orientados a conexión como <strong>TCP</strong>, antes de transmitir datos se deben realizar dos procesos fundamentales: 
+    <strong>establecimiento</strong> y <strong>finalización</strong> de la conexión.  
+    Estos aseguran que la comunicación sea confiable, ordenada y controlada.
+  </p>
+
+  <h2> 1. Establecimiento de la conexión</h2>
+  <ul>
+    <li>También llamado <em>proceso de sincronización inicial</em>.</li>
+    <li>Permite que emisor y receptor se pongan de acuerdo sobre parámetros importantes antes de transmitir datos:
+      <ul>
+        <li>Números de secuencia iniciales</li>
+        <li>Tamaño de la ventana para control de flujo</li>
+        <li>Capacidad del receptor para recibir datos</li>
+      </ul>
+    </li>
+    <li>Ejemplo en TCP:
+      <ul>
+        <li>Se realiza un intercambio inicial de mensajes (“saludo”) para confirmar que ambos están listos.</li>
+        <li>Solo después de esto se envían los datos reales.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2> 2. Finalización de la conexión</h2>
+  <ul>
+    <li>Asegura que la comunicación termine de manera <strong>ordenada</strong>.</li>
+    <li>Permite que todos los datos pendientes sean recibidos y confirmados.</li>
+    <li>Ejemplo en TCP:
+      <ul>
+        <li>Se envían mensajes finales de cierre (“nos despedimos”).</li>
+        <li>Se confirma la recepción antes de liberar el canal.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2> Comparación de los procesos</h2>
+  <table>
+    <tr>
+      <th>Proceso</th>
+      <th>Objetivo</th>
+      <th>Mensajes involucrados</th>
+      <th>Función</th>
+    </tr>
+    <tr>
+      <td>Establecimiento</td>
+      <td>Coordinar la comunicación antes de enviar datos</td>
+      <td>Proceso de sincronización inicial</td>
+      <td>Números de secuencia, ventana de flujo, confirmación de disponibilidad</td>
+    </tr>
+    <tr>
+      <td>Finalización</td>
+      <td>Cerrar la comunicación de manera ordenada</td>
+      <td>Mensajes de cierre</td>
+      <td>Garantizar que todos los datos hayan sido recibidos y confirmados</td>
+    </tr>
+  </table>
+
+  <h2> Analogía</h2>
+  <ul>
+    <li><strong>Establecimiento:</strong> “¿Me escuchás?” – “Sí, listo para hablar” ✅</li>
+    <li><strong>Comunicación:</strong> intercambian mensajes de manera controlada y ordenada</li>
+    <li><strong>Finalización:</strong> “Terminamos, nos despedimos” ✅</li>
+  </ul>
+
+  <h1>Números de Puerto TCP</h1>
+
+  <p>
+    En TCP, un número de puerto es un identificador que permite a un dispositivo saber a qué aplicación o servicio deben llegar los datos dentro del host.  
+    Cada conexión TCP se identifica por la combinación de dirección IP y número de puerto (IP + puerto = socket).
+  </p>
+
+  <h2>Clasificación de los números de puerto</h2>
+  <ul>
+    <li><strong>Puertos bien conocidos (0-1023):</strong> asignados por IANA para servicios estándar.  
+      Ejemplos: 80 HTTP, 443 HTTPS, 25 SMTP</li>
+    <li><strong>Puertos registrados (1024-49151):</strong> asignados para aplicaciones específicas no estándar.  
+      Ejemplos: 3306 MySQL, 1433 SQL Server</li>
+    <li><strong>Puertos dinámicos o privados (49152-65535):</strong> asignados automáticamente por el sistema operativo cuando un cliente inicia una conexión.</li>
+  </ul>
+
+  <h2>Función principal</h2>
+  <ul>
+    <li>Permite multiplexar varias aplicaciones dentro de un mismo dispositivo.</li>
+    <li>Garantiza que los datos lleguen a la aplicación correcta.</li>
+    <li>Trabaja junto con la dirección IP para identificar de manera única cada conexión.</li>
+  </ul>
+
+  <h2>Ejemplo de conexión TCP</h2>
+  <table>
+    <tr>
+      <th>Dispositivo</th>
+      <th>IP</th>
+      <th>Puerto</th>
+      <th>Aplicación</th>
+    </tr>
+    <tr>
+      <td>Servidor</td>
+      <td>192.168.1.10</td>
+      <td>80</td>
+      <td>HTTP</td>
+    </tr>
+    <tr>
+      <td>Cliente</td>
+      <td>192.168.1.20</td>
+      <td>50234</td>
+      <td>Navegador web (puerto dinámico)</td>
+    </tr>
+  </table>
+
+  <h2>Analogía</h2>
+  <p>
+    Imaginemos un edificio de oficinas: la dirección IP es la dirección del edificio, y el número de puerto es el número de oficina donde debe llegar la correspondencia.  
+    Cada aplicación tiene su oficina asignada, evitando confusión entre mensajes.
+  </p>
+
+  <h1>Puertos Bien Conocidos (Well-Known Ports)</h1>
+
+  <p>
+    Los puertos bien conocidos son números de puerto estandarizados que se asignan a servicios comunes en TCP y UDP.  
+    Permiten que las aplicaciones y servicios se comuniquen de manera predecible sin conflictos.
+  </p>
+
+  <h2>Características</h2>
+  <ul>
+    <li>Rango: 0 a 1023</li>
+    <li>Asignados por: IANA (Internet Assigned Numbers Authority)</li>
+    <li>Uso: Servicios estándar que requieren que los clientes sepan de antemano a qué puerto conectarse</li>
+  </ul>
+
+  <h2>Ejemplos de puertos bien conocidos</h2>
+  <table>
+    <tr>
+      <th>Puerto</th>
+      <th>Servicio</th>
+      <th>Protocolo</th>
+    </tr>
+    <tr>
+      <td>20 / 21</td>
+      <td>FTP (transferencia de archivos)</td>
+      <td>TCP</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>SSH (acceso seguro remoto)</td>
+      <td>TCP</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>Telnet (acceso remoto no seguro)</td>
+      <td>TCP</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>SMTP (envío de correo electrónico)</td>
+      <td>TCP</td>
+    </tr>
+    <tr>
+      <td>53</td>
+      <td>DNS (resolución de nombres)</td>
+      <td>TCP/UDP</td>
+    </tr>
+    <tr>
+      <td>80</td>
+      <td>HTTP (páginas web)</td>
+      <td>TCP</td>
+    </tr>
+    <tr>
+      <td>443</td>
+      <td>HTTPS (páginas web seguras)</td>
+      <td>TCP</td>
+    </tr>
+  </table>
+
+  <h2>Función principal</h2>
+  <ul>
+    <li>Garantizar que los clientes y servidores puedan localizar servicios estándar sin configuración adicional.</li>
+    <li>Facilita la interoperabilidad entre distintos sistemas y aplicaciones.</li>
+  </ul>
+
+  <h2>Analogía</h2>
+  <p>
+    Imaginemos que quieres enviar una carta a un servicio específico dentro de un edificio:  
+    La dirección del edificio sería la dirección IP, y el número de oficina sería el puerto bien conocido, siempre fijo para ese servicio.  
+    Por ejemplo, oficina 80 siempre es para la recepción de páginas web (HTTP).
+  </p>
+
+  
+  <h1>Ventana de Recepción (Receive Window)</h1>
+
+  <p>
+    En TCP, la ventana de recepción es un mecanismo que permite al receptor controlar la cantidad de datos que el emisor puede enviar antes de recibir una confirmación.  
+    Esto evita saturar al receptor y asegura una transmisión fluida y confiable.
+  </p>
+
+  <h2>Funcionamiento</h2>
+  <ul>
+    <li>El receptor anuncia un tamaño de ventana indicando cuántos bytes está listo para recibir.</li>
+    <li>El emisor envía solo la cantidad de datos permitida por la ventana.</li>
+    <li>Cuando el receptor procesa los datos, actualiza la ventana, permitiendo que el emisor envíe más información.</li>
+  </ul>
+
+  <h2>Beneficios</h2>
+  <ul>
+    <li>Evita sobrecargar al receptor.</li>
+    <li>Mejora la eficiencia de la transmisión.</li>
+    <li>Garantiza que la conexión sea estable y confiable, incluso en redes con alta latencia.</li>
+  </ul>
+
+  <h2>Ejemplo de ventana de recepción</h2>
+  <table>
+    <tr>
+      <th>Receptor</th>
+      <th>Tamaño ventana</th>
+      <th>Datos enviados</th>
+      <th>Comentario</th>
+    </tr>
+    <tr>
+      <td>192.168.1.10</td>
+      <td>5000 bytes</td>
+      <td>5000 bytes</td>
+      <td>El emisor puede enviar hasta 5000 bytes sin esperar confirmación</td>
+    </tr>
+    <tr>
+      <td>192.168.1.10</td>
+      <td>2000 bytes</td>
+      <td>2000 bytes</td>
+      <td>El receptor ha procesado datos y reduce la ventana a 2000 bytes</td>
+    </tr>
+  </table>
+
+  <h2>Analogía</h2>
+  <p>
+    Imaginemos un tubo por el que pasan canicas: la ventana de recepción sería la capacidad del tubo.  
+    Solo se pueden enviar tantas canicas como quepan en el tubo.  
+    Cuando el tubo se vacía parcialmente, se puede seguir enviando más canicas sin que se atasque.
+  </p>
+
+  <h1>Gestión de la Ventana TCP</h1>
+
+  <p>
+    La gestión de la ventana es el mecanismo que permite al receptor controlar y actualizar el tamaño de la ventana de recepción durante la transmisión de datos en TCP.  
+    Esto asegura que la cantidad de datos que el emisor envía nunca sobrepase la capacidad del receptor, manteniendo la comunicación eficiente y confiable.
+  </p>
+
+  <h2>Funcionamiento</h2>
+  <ul>
+    <li><strong>Inicialización:</strong> Al iniciar la conexión, el receptor define un tamaño de ventana inicial indicando cuántos bytes puede recibir.</li>
+    <li><strong>Actualización dinámica:</strong> A medida que el receptor procesa los datos, envía información al emisor para ajustar la ventana.  
+        Si el receptor está ocupado o su buffer se llena, la ventana se reduce temporalmente.</li>
+    <li><strong>Control de flujo:</strong> Forma parte del control de flujo de TCP, evitando saturación y pérdidas de datos.</li>
+  </ul>
+
+  <h2>Beneficios</h2>
+  <ul>
+    <li>Permite transmitir datos de manera continua y ordenada.</li>
+    <li>Evita la pérdida de información por saturación del receptor.</li>
+    <li>Mejora la eficiencia de la conexión, adaptándose a la capacidad del receptor.</li>
+  </ul>
+
+  <h2>Ejemplo de gestión de la ventana</h2>
+  <table>
+    <tr>
+      <th>Receptor</th>
+      <th>Tamaño ventana</th>
+      <th>Datos enviados</th>
+      <th>Comentario</th>
+    </tr>
+    <tr>
+      <td>192.168.1.10</td>
+      <td>4000 bytes</td>
+      <td>4000 bytes</td>
+      <td>El emisor puede enviar hasta 4000 bytes sin esperar confirmación</td>
+    </tr>
+    <tr>
+      <td>192.168.1.10</td>
+      <td>1000 bytes</td>
+      <td>1000 bytes</td>
+      <td>El receptor procesa datos y reduce temporalmente la ventana</td>
+    </tr>
+    <tr>
+      <td>192.168.1.10</td>
+      <td>3000 bytes</td>
+      <td>3000 bytes</td>
+      <td>El receptor actualiza la ventana y permite más datos</td>
+    </tr>
+  </table>
+
+  <h2>Analogía</h2>
+  <p>
+    Imaginemos un embudo por el que pasan bolas de canicas: la ventana es el tamaño del embudo.  
+    Si el embudo se llena, el flujo se reduce hasta que haya espacio disponible.  
+    La gestión de la ventana permite al emisor ajustar el flujo según la capacidad del receptor, evitando que se atasque.
+  </p>
+
+  <h1>Formato de UDP</h1>
+
+  <p>
+    El protocolo UDP transmite datos en bloques llamados <strong>datagramas</strong>.  
+    Cada datagrama tiene un formato simple, con información mínima para enviar los datos de manera rápida.
+  </p>
+
+  <h2>Campos del encabezado UDP</h2>
+  <table>
+    <tr>
+      <th>Campo</th>
+      <th>Tamaño</th>
+      <th>Función</th>
+    </tr>
+    <tr>
+      <td>Puerto de origen</td>
+      <td>16 bits</td>
+      <td>Indica el puerto del emisor que envía el datagrama</td>
+    </tr>
+    <tr>
+      <td>Puerto de destino</td>
+      <td>16 bits</td>
+      <td>Indica el puerto de la aplicación receptora</td>
+    </tr>
+    <tr>
+      <td>Longitud</td>
+      <td>16 bits</td>
+      <td>Indica el tamaño total del datagrama UDP (encabezado + datos)</td>
+    </tr>
+    <tr>
+      <td>Checksum</td>
+      <td>16 bits</td>
+      <td>Verifica la integridad del encabezado y los datos</td>
+    </tr>
+  </table>
+
+  <h2>Características del formato</h2>
+  <ul>
+    <li>El encabezado UDP es de solo 8 bytes, muy ligero en comparación con TCP.</li>
+    <li>No contiene números de secuencia ni confirmaciones, lo que lo hace rápido pero no confiable.</li>
+    <li>Permite la multiplexación por puertos, enviando datos directamente a la aplicación correspondiente.</li>
+  </ul>
+
+  <h2>Analogía</h2>
+  <p>
+    Es como enviar una postal con información mínima: solo remitente, destinatario, tamaño y un pequeño control de error.  
+    No hay confirmaciones ni seguimiento, lo que hace que llegue rápido pero sin garantía.
+  </p>
+
+  <h1>Aplicaciones de UDP</h1>
+
+  <h2>1. TFTP (Trivial File Transfer Protocol)</h2>
+  <p><strong>Protocolo:</strong> UDP</p>
+  <p><strong>Función:</strong> Transferencia de archivos simple y ligera</p>
+  <ul>
+    <li>No requiere autenticación ni conexión establecida</li>
+    <li>Ideal para cargar configuraciones o firmware en dispositivos de red</li>
+    <li>Rápido pero menos confiable que FTP (TCP)</li>
+  </ul>
+  <p><strong>Uso típico:</strong></p>
+  <ul>
+    <li>Routers y switches cargando imágenes de sistema operativo</li>
+    <li>Dispositivos embebidos que necesitan transferencia rápida de archivos pequeños</li>
+  </ul>
+
+  <h2>2. Aplicaciones en tiempo real</h2>
+  <p><strong>Protocolo:</strong> UDP</p>
+  <p><strong>Función:</strong> Transmisión de audio y video en tiempo real</p>
+  <ul>
+    <li>No garantiza la entrega ni el orden de los paquetes, pero minimiza la latencia</li>
+    <li>La velocidad y la continuidad son más importantes que la fiabilidad completa</li>
+  </ul>
+
+  <h2>Ejemplos de aplicaciones en tiempo real</h2>
+  <table>
+    <tr>
+      <th>Aplicación</th>
+      <th>Tipo</th>
+      <th>Descripción</th>
+    </tr>
+    <tr>
+      <td>Zoom / Microsoft Teams / Google Meet</td>
+      <td>Videoconferencia</td>
+      <td>Permiten reuniones en tiempo real con audio y video</td>
+    </tr>
+    <tr>
+      <td>Skype / WhatsApp / Cisco IP Phone</td>
+      <td>Telefonía IP (VoIP)</td>
+      <td>Permiten llamadas de voz en tiempo real a través de Internet</td>
+    </tr>
+    <tr>
+      <td>YouTube Live / Twitch</td>
+      <td>Streaming en vivo</td>
+      <td>Transmisión de video en tiempo real a múltiples usuarios</td>
+    </tr>
+  </table>
+
+  <p><strong>Nota:</strong> Aunque UDP es el protocolo principal, algunas aplicaciones usan mecanismos de corrección de errores en la capa de aplicación para mejorar la calidad.</p>
+
+  <h1>Protocolo Frame Relay</h1>
+
+  <p>
+    Frame Relay es un protocolo de transmisión de datos de capa 2 (enlace de datos) diseñado para redes WAN de alta velocidad.  
+    Se utiliza principalmente para conectar redes LAN entre diferentes ubicaciones geográficas de manera eficiente y económica.
+  </p>
+
+  <h2>Características principales</h2>
+  <ul>
+    <li>Orientado a trama: transmite los datos en unidades llamadas tramas.</li>
+    <li>Conmutación de paquetes: usa conmutación de paquetes virtuales para enviar datos.</li>
+    <li>No orientado a conexión lógica completa: utiliza PVC o SVC para conexiones virtuales.</li>
+    <li>Alta eficiencia: no realiza control de flujo ni retransmisión de errores; la confiabilidad depende de capas superiores.</li>
+    <li>Bajo retardo: ideal para aplicaciones sensibles a la latencia.</li>
+  </ul>
+
+  <h2>Componentes importantes</h2>
+  <table>
+    <tr>
+      <th>Componente</th>
+      <th>Función</th>
+    </tr>
+    <tr>
+      <td>DTE (Data Terminal Equipment)</td>
+      <td>Dispositivo del usuario, como un router</td>
+    </tr>
+    <tr>
+      <td>DCE (Data Circuit-terminating Equipment)</td>
+      <td>Equipo del proveedor que gestiona la transmisión</td>
+    </tr>
+    <tr>
+      <td>PVC (Permanent Virtual Circuit)</td>
+      <td>Circuito virtual permanente que conecta dos puntos fijos</td>
+    </tr>
+    <tr>
+      <td>SVC (Switched Virtual Circuit)</td>
+      <td>Circuito virtual dinámico que se establece según necesidad</td>
+    </tr>
+  </table>
+
+  <h2>Ventajas</h2>
+  <ul>
+    <li>Eficiente y rápido para tráfico intermitente</li>
+    <li>Reduce costos de interconexión WAN</li>
+    <li>Permite multiplexar varias conexiones lógicas sobre el mismo enlace físico</li>
+  </ul>
+
+  <h2>Aplicaciones típicas</h2>
+  <ul>
+    <li>Interconexión de sucursales de una empresa</li>
+    <li>Conexión de redes privadas a través de proveedores de servicios</li>
+    <li>Sistemas financieros o corporativos que requieren tráfico WAN de baja latencia</li>
+  </ul>
+
+  <h1>Líneas Digitales</h1>
+
+  <p>
+    Las líneas digitales son enlaces de comunicación que transmiten datos en forma binaria (0s y 1s), sin conversión a señales analógicas.  
+    Se utilizan principalmente en redes de área amplia (WAN) y permiten conexiones rápidas y confiables entre dispositivos y sedes geográficas.
+  </p>
+
+  <h2>Características principales</h2>
+  <ul>
+    <li>Transmisión digital directa: no requiere modulación de señales analógicas.</li>
+    <li>Alta velocidad: soporta grandes tasas de transmisión de datos.</li>
+    <li>Baja atenuación y ruido: la señal digital es más resistente a interferencias que la analógica.</li>
+    <li>Sincronización: requiere mecanismos para mantener la sincronización entre emisor y receptor.</li>
+  </ul>
+
+  <h2>Tipos de líneas digitales</h2>
+  <table>
+    <tr>
+      <th>Tipo</th>
+      <th>Descripción</th>
+      <th>Ejemplo</th>
+    </tr>
+    <tr>
+      <td>Líneas punto a punto</td>
+      <td>Conectan directamente dos dispositivos, como routers</td>
+      <td>E1, T1</td>
+    </tr>
+    <tr>
+      <td>Redes conmutadas de circuitos digitales</td>
+      <td>El enlace se establece dinámicamente según la necesidad</td>
+      <td>X.25, Frame Relay</td>
+    </tr>
+    <tr>
+      <td>Redes dedicadas de alta velocidad</td>
+      <td>Enlaces permanentes para transmisión continua de datos</td>
+      <td>Fibra óptica digital</td>
+    </tr>
+  </table>
+
+  <h2>Ventajas</h2>
+  <ul>
+    <li>Transmisión rápida y confiable de datos</li>
+    <li>Menor susceptibilidad a interferencias y ruido</li>
+    <li>Facilita la implementación de protocolos de control y detección de errores</li>
+  </ul>
+
+  <h2>Aplicaciones típicas</h2>
+  <ul>
+    <li>Conexión de sucursales corporativas a través de WAN</li>
+    <li>Enlaces de telecomunicaciones y operadores de Internet</li>
+    <li>Redes de datos críticas como banca y servicios financieros</li>
+  </ul>
+
+  <h1>Formato de Trama de Nivel 2</h1>
+
+  <p>
+    En la capa de enlace de datos (nivel 2), la información se transmite en unidades llamadas tramas.  
+    El formato de la trama define cómo se organiza la información para que la comunicación entre dispositivos sea correcta y confiable.
+  </p>
+
+  <h2>Campos principales de una trama de nivel 2</h2>
+  <ul>
+    <li><strong>Cabecera (Header):</strong> Contiene información de control y direccionamiento:
+      <ul>
+        <li>Dirección de origen: identifica el dispositivo que envía la trama</li>
+        <li>Dirección de destino: identifica el dispositivo receptor</li>
+        <li>Tipo de protocolo o longitud: indica qué protocolo transporta la trama o el tamaño de los datos</li>
+      </ul>
+    </li>
+    <li><strong>Datos (Payload):</strong> Contiene la información que se quiere transmitir (datos de nivel 3 o superior)</li>
+    <li><strong>Trailer (Cola):</strong> Contiene información para detectar errores, como CRC (Cyclic Redundancy Check)</li>
+  </ul>
+
+  <h2>Características</h2>
+  <ul>
+    <li>Define inicio y fin de los datos a transmitir</li>
+    <li>Permite control de errores y, en algunos protocolos, control de flujo</li>
+    <li>Cada tecnología de enlace tiene su propio formato de trama (Ethernet, PPP, Frame Relay, HDLC, etc.)</li>
+  </ul>
+
+  <h2>Ejemplo de formato de trama Ethernet</h2>
+  <table>
+    <tr>
+      <th>Campo</th>
+      <th>Tamaño aproximado</th>
+      <th>Función</th>
+    </tr>
+    <tr>
+      <td>Preambulo</td>
+      <td>7 bytes</td>
+      <td>Sincronización de los dispositivos</td>
+    </tr>
+    <tr>
+      <td>SFD (Start Frame Delimiter)</td>
+      <td>1 byte</td>
+      <td>Indica el inicio de la trama</td>
+    </tr>
+    <tr>
+      <td>Dirección destino</td>
+      <td>6 bytes</td>
+      <td>MAC del receptor</td>
+    </tr>
+    <tr>
+      <td>Dirección origen</td>
+      <td>6 bytes</td>
+      <td>MAC del emisor</td>
+    </tr>
+    <tr>
+      <td>Tipo/Longitud</td>
+      <td>2 bytes</td>
+      <td>Indica protocolo de nivel superior o tamaño de datos</td>
+    </tr>
+    <tr>
+      <td>Datos/Payload</td>
+      <td>46-1500 bytes</td>
+      <td>Información que se transmite</td>
+    </tr>
+    <tr>
+      <td>FCS (Frame Check Sequence)</td>
+      <td>4 bytes</td>
+      <td>Verificación de errores (CRC)</td>
+    </tr>
+  </table>
 
 </main>
 <footer> <a href="#ancla">Ir hacia arriba</a>
