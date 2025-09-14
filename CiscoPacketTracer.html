@@ -817,7 +817,7 @@ show running-config
               <li>Cables: cobre directo (LAN) y serial (WAN)</li>
             </ul>
 
- <h1>Configurar un servidor HTTP en Cisco Packet Tracer</h1>
+ <h1>Configurar un servidor HTTP</h1>
 
   <h2>1. Agregar los dispositivos</h2>
   <ol>
@@ -847,10 +847,77 @@ show running-config
     <li>Verificar que la página del servidor se cargue correctamente.</li>
   </ol>
 
+  <h1>📡 Configurar un servidor DHCP</h1>
+
+  <h2>1️⃣ Agregar los dispositivos</h2>
+  <ol>
+    <li>💻 Abrir Cisco Packet Tracer.</li>
+    <li>🖥️ Arrastrar un <strong>Server</strong>, varias <strong>PCs</strong> y un <strong>Switch</strong>.</li>
+    <li>🔗 Conectar todos con <em>cables de cobre directo</em>.</li>
+  </ol>
+
+  <h2>2️⃣ Configurar el servidor</h2>
+  <ol>
+    <li>⚙️ Seleccionar el <strong>Server</strong>.</li>
+    <li>🌐 En <em>Desktop &gt; IP Configuration</em>, asignar:
+      <ul>
+        <li>Dirección IP fija</li>
+        <li>Máscara de subred</li>
+        <li>Gateway</li>
+      </ul>
+    </li>
+    <li>📑 Ir a <em>Services &gt; DHCP</em>:
+      <ul>
+        <li>✔️ Activar el servicio DHCP (On)</li>
+        <li>➡️ Configurar el <strong>Default Gateway</strong></li>
+        <li>🟢 Definir la <strong>Start IP Address</strong></li>
+        <li>📐 Definir la <strong>Subnet Mask</strong></li>
+        <li>👥 Indicar <strong>Maximum Number of Users</strong></li>
+        <li>💾 Hacer clic en <strong>Save</strong></li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2>3️⃣ Configurar las PCs</h2>
+  <ol>
+    <li>🖱️ Seleccionar una PC.</li>
+    <li>🌍 En <em>Desktop &gt; IP Configuration</em>, elegir la opción <strong>DHCP</strong>.</li>
+    <li>📡 La PC debería recibir automáticamente una dirección IP dentro del rango configurado.</li>
+  </ol>
+
+  <h2>4️⃣ Verificar</h2>
+  <ol>
+    <li>⚡ Usar el comando <code>ping</code> para comprobar conectividad con el servidor.</li>
+    <li>👀 Revisar que cada PC reciba una dirección IP diferente.</li>
+  </ol>
+
+  <h2>📊 Parámetros básicos del DHCP</h2>
+  <table>
+    <tr>
+      <th>⚙️ Parámetro</th>
+      <th>📖 Descripción</th>
+    </tr>
+    <tr>
+      <td>Start IP Address</td>
+      <td>Primera dirección que se entregará a los clientes.</td>
+    </tr>
+    <tr>
+      <td>Subnet Mask</td>
+      <td>Máscara de subred usada en la red.</td>
+    </tr>
+    <tr>
+      <td>Default Gateway</td>
+      <td>Puerta de enlace predeterminada para salir de la red.</td>
+    </tr>
+    <tr>
+      <td>Maximum Number of Users</td>
+      <td>Cantidad de direcciones IP que el servidor puede asignar.</td>
+    </tr>
+  </table>
+
 </body>
 
 </html>
-
 
 </main>
 
