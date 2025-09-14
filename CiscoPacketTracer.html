@@ -784,7 +784,7 @@ show running-config
           
             <h2>🧰 Dispositivos</h2>
             <ul>
-              <li>2 PCs (PC0, PC1)</li>
+              <li>3 PCs (PC0, PC1, PC2)</li>
               <li>2 Switches</li>
               <li>3 Routers</li>
               <li>Cables: cobre directo (LAN) y serial (WAN)</li>
@@ -811,11 +811,42 @@ show running-config
           
             <h2>🧰 Dispositivos</h2>
             <ul>
-              <li>2 PCs (PC0, PC1)</li>
+              <li>3 PCs (PC0, PC1, PC2)</li>
               <li>2 Switches</li>
               <li>3 Routers</li>
               <li>Cables: cobre directo (LAN) y serial (WAN)</li>
             </ul>
+
+ <h1>Configurar un servidor HTTP en Cisco Packet Tracer</h1>
+
+  <h2>1. Agregar los dispositivos</h2>
+  <ol>
+    <li>Abrir Cisco Packet Tracer.</li>
+    <li>Desde <em>End Devices</em> arrastrar un <strong>Server</strong> y al menos una <strong>PC</strong> al área de trabajo.</li>
+    <li>Agregar un <strong>Switch</strong> y conectar los dispositivos con cable de cobre (cable directo).</li>
+  </ol>
+
+  <h2>2. Configurar direcciones IP</h2>
+  <ol>
+    <li>Seleccionar la PC → <em>Desktop &gt; IP Configuration</em> y asignar: dirección IP, máscara de subred y gateway (si corresponde).</li>
+    <li>Seleccionar el Server → <em>Desktop &gt; IP Configuration</em> y asignar: dirección IP, máscara de subred y gateway.</li>
+  </ol>
+
+  <h2>3. Activar el servicio HTTP</h2>
+  <ol>
+    <li>Seleccionar el Server → pestaña <em>Services</em>.</li>
+    <li>Elegir <strong>HTTP</strong> en la lista de servicios.</li>
+    <li>Activar el servicio (activar el interruptor <em>On</em>).</li>
+    <li>Opcional: editar la página web que servirá el servidor desde el área de edición del servicio.</li>
+  </ol>
+
+  <h2>4. Probar desde la PC</h2>
+  <ol>
+    <li>En la PC → <em>Desktop &gt; Web Browser</em>.</li>
+    <li>Ingresar la dirección IP del servidor en la barra de direcciones.</li>
+    <li>Verificar que la página del servidor se cargue correctamente.</li>
+  </ol>
+
 </body>
 
 </html>
