@@ -915,6 +915,216 @@ show running-config
     </tr>
   </table>
 
+  <h1>🌐 Configurar un Servidor DNS y Web</h1>
+
+  <div class="box">
+    <h2>📋 Resumen</h2>
+    <p>Con esta configuración, las PCs podrán acceder a páginas web usando nombres de dominio en lugar de direcciones IP.</p>
+  </div>
+
+  <h2>1️⃣ Agregar dispositivos</h2>
+  <ol>
+    <li>💻 Abrir Cisco Packet Tracer.</li>
+    <li>🖥️ Arrastrar un <strong>Server</strong> (funcionará como DNS + Web), una o más <strong>PCs</strong> y un <strong>Switch</strong>.</li>
+    <li>🔗 Conectar todos con cables de cobre directo.</li>
+  </ol>
+
+  <h2>2️⃣ Configurar el servidor</h2>
+  <ol>
+    <li>⚙️ Seleccionar el <strong>Server</strong>.</li>
+    <li>🌐 En <em>Desktop &gt; IP Configuration</em>, asignar:
+      <ul>
+        <li>Dirección IP fija</li>
+        <li>Máscara de subred</li>
+        <li>Gateway</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2>3️⃣ Activar el servicio Web (HTTP)</h2>
+  <ol>
+    <li>🌍 En el servidor → pestaña <em>Services &gt; HTTP</em>.</li>
+    <li>✔️ Activar el servicio <strong>HTTP (On)</strong>.</li>
+    <li>✏️ Opcional: editar el contenido de la página web que se mostrará.</li>
+  </ol>
+
+  <h2>4️⃣ Configurar el servicio DNS</h2>
+  <ol>
+    <li>🔎 En el servidor → pestaña <em>Services &gt; DNS</em>.</li>
+    <li>✔️ Activar el servicio <strong>DNS (On)</strong>.</li>
+    <li>📑 En la tabla de configuración:
+      <ul>
+        <li>✏️ <strong>Name:</strong> escribir el dominio (ejemplo: <code>www.mipagina.com</code>)</li>
+        <li>💻 <strong>Address:</strong> colocar la IP del servidor web</li>
+        <li>➕ Hacer clic en <strong>Add</strong></li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2>5️⃣ Configurar las PCs</h2>
+  <ol>
+    <li>🖱️ Seleccionar cada PC → <em>Desktop &gt; IP Configuration</em>.</li>
+    <li>🌍 Elegir <strong>DHCP</strong> o asignar IP manualmente.</li>
+    <li>📡 En el campo <strong>DNS Server</strong>, colocar la dirección IP del servidor.</li>
+  </ol>
+
+  <h2>6️⃣ Probar la configuración</h2>
+  <ol>
+    <li>💻 En la PC → <em>Desktop &gt; Web Browser</em>.</li>
+    <li>⌨️ Escribir el dominio configurado (ejemplo: <code>www.mipagina.com</code>).</li>
+    <li>👀 Verificar que se cargue la página del servidor web.</li>
+  </ol>
+
+  <h2>📊 Parámetros clave</h2>
+  <table>
+    <tr>
+      <th>⚙️ Servicio</th>
+      <th>📖 Función</th>
+    </tr>
+    <tr>
+      <td>HTTP</td>
+      <td>Permite que el servidor aloje una página web.</td>
+    </tr>
+    <tr>
+      <td>DNS</td>
+      <td>Traduce nombres de dominio (ejemplo: <code>www.mipagina.com</code>) a direcciones IP.</td>
+    </tr>
+    <tr>
+      <td>DNS Server (en PCs)</td>
+      <td>Indica a qué servidor preguntar por los nombres de dominio.</td>
+    </tr>
+  </table>
+
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Configurar Servidor HTTP, DNS y E-mail en Cisco Packet Tracer</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 28px; background:#f9f9f9; color:#222; line-height:1.5; }
+    h1 { color:#1f456e; }
+    h2 { color:#2c6b8f; margin-top:18px; }
+    p { margin:8px 0; }
+    ol { margin-left:18px; }
+    li { margin:6px 0; }
+    .note { background:#fff8c6; padding:10px; border-radius:6px; margin-top:12px; }
+    .box { background:#fff; border:1px solid #ddd; padding:12px; border-radius:6px; }
+    code { background:#eee; padding:2px 6px; border-radius:4px; }
+    table { border-collapse: collapse; margin-top:12px; }
+    th, td { border:1px solid #ccc; padding:6px 10px; text-align:left; }
+    th { background:#e9f2f8; }
+  </style>
+</head>
+<body>
+
+  <h1>🌐 Configuración de Servidor HTTP, DNS y E-mail</h1>
+
+  <div class="box">
+    <h2>📋 Resumen</h2>
+    <p>Este ejercicio integra tres servicios en un mismo servidor: <strong>HTTP</strong> para páginas web, <strong>DNS</strong> para resolución de nombres de dominio y <strong>E-mail</strong> para correo electrónico.</p>
+  </div>
+
+  <h2>1️⃣ Agregar dispositivos</h2>
+  <ol>
+    <li>💻 Abrir Cisco Packet Tracer.</li>
+    <li>🖥️ Arrastrar un <strong>Server</strong> (con HTTP, DNS y E-mail), varias <strong>PCs</strong> y un <strong>Switch</strong>.</li>
+    <li>🔗 Conectar con <em>cables de cobre directo</em>.</li>
+  </ol>
+
+  <h2>2️⃣ Configurar el servidor</h2>
+  <ol>
+    <li>⚙️ Seleccionar el <strong>Server</strong>.</li>
+    <li>🌐 En <em>Desktop &gt; IP Configuration</em>, asignar:
+      <ul>
+        <li>Dirección IP fija</li>
+        <li>Máscara de subred</li>
+        <li>Gateway</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2>3️⃣ Servicio Web (HTTP)</h2>
+  <ol>
+    <li>🌍 En <em>Services &gt; HTTP</em>.</li>
+    <li>✔️ Activar el servicio <strong>HTTP (On)</strong>.</li>
+    <li>✏️ Opcional: editar el contenido de la página web.</li>
+  </ol>
+
+  <h2>4️⃣ Servicio DNS</h2>
+  <ol>
+    <li>🔎 En <em>Services &gt; DNS</em>.</li>
+    <li>✔️ Activar el servicio <strong>DNS (On)</strong>.</li>
+    <li>📑 En la tabla:
+      <ul>
+        <li><strong>Name:</strong> dominio (ejemplo: <code>www.mipagina.com</code>)</li>
+        <li><strong>Address:</strong> la IP del servidor web</li>
+        <li>➕ Hacer clic en <strong>Add</strong></li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2>5️⃣ Servicio de E-mail</h2>
+  <ol>
+    <li>📧 En <em>Services &gt; EMAIL</em>.</li>
+    <li>✔️ Activar el servicio de correo.</li>
+    <li>👥 Crear cuentas:
+      <ul>
+        <li><strong>User:</strong> nombre del usuario (ejemplo: alumno1)</li>
+        <li><strong>Password:</strong> clave del usuario</li>
+        <li><strong>Domain:</strong> dominio de correo (ejemplo: <code>mired.com</code>)</li>
+        <li>➕ Hacer clic en <strong>Add</strong></li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2>6️⃣ Configurar las PCs</h2>
+  <ol>
+    <li>🖱️ En cada PC → <em>Desktop &gt; IP Configuration</em>.</li>
+    <li>🌍 Asignar IP manual o usar DHCP.</li>
+    <li>📡 En el campo <strong>DNS Server</strong>, colocar la IP del servidor.</li>
+  </ol>
+
+  <h2>7️⃣ Configuración de correo en las PCs</h2>
+  <ol>
+    <li>📧 En la PC → <em>Desktop &gt; Email</em>.</li>
+    <li>Completar:
+      <ul>
+        <li><strong>Account Name:</strong> usuario (ej: alumno1)</li>
+        <li><strong>Email Address:</strong> cuenta (ej: alumno1@mired.com)</li>
+        <li><strong>Incoming Mail Server (POP3):</strong> IP del servidor</li>
+        <li><strong>Outgoing Mail Server (SMTP):</strong> IP del servidor</li>
+        <li><strong>Password:</strong> contraseña del usuario</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2>8️⃣ Prueba de los servicios</h2>
+  <ol>
+    <li>🌍 En el navegador de la PC, escribir el dominio (ej: <code>www.mipagina.com</code>) → debe cargar la página web.</li>
+    <li>📧 En la aplicación de correo, enviar un mail desde <code>alumno1@mired.com</code> a <code>alumno2@mired.com</code>.</li>
+    <li>👀 Revisar la bandeja de entrada en la PC del segundo usuario.</li>
+  </ol>
+
+  <h2>📊 Parámetros clave de los servicios</h2>
+  <table>
+    <tr>
+      <th>⚙️ Servicio</th>
+      <th>📖 Función</th>
+    </tr>
+    <tr>
+      <td>HTTP</td>
+      <td>Publica páginas web.</td>
+    </tr>
+    <tr>
+      <td>DNS</td>
+      <td>Traduce nombres de dominio a direcciones IP.</td>
+    </tr>
+    <tr>
+      <td>E-mail (SMTP/POP3)</td>
+      <td>Permite enviar y recibir mensajes de correo electrónico.</td>
+    </tr>
+  </table>
+
 </body>
 
 </html>
