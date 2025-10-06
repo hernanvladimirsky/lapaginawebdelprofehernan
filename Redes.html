@@ -126,6 +126,7 @@
       <a href="#tp4">TP 4</a>
       <a href="#tp5">TP 5</a>
       <a href="#tp6">TP 6</a>
+      <a href="#tp7">TP 7</a>
 
      
     </div>  
@@ -4925,6 +4926,105 @@ El formato de la trama define cómo se organiza la información para que la comu
   <td>Verificación de errores (CRC)</td>
 </tr>
 </table>
+
+<section id="congestion"> 
+  <a id="tp7"></a>
+  <h1>Concepto de Congestión</h1>
+  <p>La <strong>congestión</strong> en redes se produce cuando la cantidad de datos que se intenta transmitir supera la capacidad que tienen los dispositivos o los enlaces para procesarlos. Esto genera una <strong>acumulación de paquetes</strong>, causando <strong>retrasos</strong>, <strong>pérdidas de información</strong> y disminución del <strong>rendimiento de la red</strong>.</p>
+
+  <p>Cuando ocurre congestión, los routers y switches se saturan porque sus <em>buffers</em> se llenan más rápido de lo que pueden vaciarse. Los paquetes nuevos que llegan pueden ser descartados.</p>
+
+  <h3>Causas principales</h3>
+  <ul>
+    <li>Exceso de tráfico simultáneo en un mismo enlace.</li>
+    <li>Ancho de banda insuficiente.</li>
+    <li>Falta de mecanismos de control de flujo.</li>
+    <li>Errores en la configuración o ausencia de políticas de Calidad de Servicio (QoS).</li>
+    <li>Equipos con procesamiento limitado.</li>
+  </ul>
+
+  <h3>Consecuencias</h3>
+  <ul>
+    <li>Retrasos en la entrega de los datos.</li>
+    <li>Pérdida de paquetes y retransmisiones innecesarias.</li>
+    <li>Disminución de la velocidad efectiva de la red.</li>
+    <li>Posible caída de servicios sensibles al tiempo como voz o video.</li>
+  </ul>
+
+  <h3>Soluciones comunes</h3>
+  <ul>
+    <li>Implementar priorización de tráfico mediante QoS.</li>
+    <li>Aumentar el ancho de banda o la capacidad de los enlaces.</li>
+    <li>Utilizar buffers adaptativos.</li>
+    <li>Aplicar protocolos de control de congestión como TCP.</li>
+  </ul>
+</section>
+
+<section id="congestion-indicators">
+  <h2>Indicadores de Congestión en Redes Frame Relay</h2>
+  <p>En redes <strong>Frame Relay</strong>, se utilizan varios indicadores para controlar y notificar la congestión en la red:</p>
+
+  <ul>
+    <li><strong>FECN (Forward Explicit Congestion Notification):</strong> notifica al receptor que existe congestión en la ruta de envío directo de los datos.</li>
+    <li><strong>BECN (Backward Explicit Congestion Notification):</strong> advierte al emisor que hay congestión en el sentido de retorno, indicando que debe reducir la tasa de envío.</li>
+    <li><strong>DE (Discard Eligibility):</strong> marca tramas que pueden ser descartadas si la red se congestiona; normalmente se aplica a tramas de menor prioridad.</li>
+    <li><strong>CIR (Committed Information Rate):</strong> tasa promedio garantizada de transmisión; indica la cantidad de datos que un usuario puede enviar sin riesgo de que sean descartados.</li>
+  </ul>
+
+  <div class="note">
+    <p>Ejemplo: Si la red detecta congestión, puede marcar <strong>FECN</strong> hacia el receptor y <strong>BECN</strong> hacia el emisor. Si se supera el <strong>CIR</strong>, las tramas con <strong>DE</strong> pueden eliminarse para aliviar la red.</p>
+  </div>
+
+  <section id="pvc">
+    <h2>Concepto de Circuito Virtual Permanente (PVC)</h2>
+    <p>Un <strong>circuito virtual permanente (PVC)</strong> es una conexión lógica establecida de manera fija entre dos puntos de una red. Se mantiene activa constantemente, sin necesidad de establecerla o finalizarla cada vez que se transmite información.</p>
+  
+    <h3>Características principales</h3>
+    <ul>
+      <li>Conexión permanente entre dos dispositivos.</li>
+      <li>Ruta fija y predefinida en la red.</li>
+      <li>No requiere negociación para cada transmisión.</li>
+      <li>Ideal para enlaces dedicados entre sucursales o sitios fijos.</li>
+    </ul>
+  
+    <h3>Ventajas</h3>
+    <ul>
+      <li>Alta disponibilidad.</li>
+      <li>Configuración sencilla y estable.</li>
+      <li>Comunicaciones continuas sin interrupciones.</li>
+    </ul>
+  
+    <h3>Desventajas</h3>
+    <ul>
+      <li>Costo elevado por uso constante del enlace.</li>
+      <li>Poca flexibilidad frente a cambios de topología.</li>
+      <li>En la actualidad se usa menos, siendo reemplazado por VPN o MPLS.</li>
+    </ul>
+  
+    <div class="note">
+      <p>Ejemplo: Una empresa que necesita comunicación constante entre dos oficinas puede usar un PVC para garantizar disponibilidad continua.</p>
+    </div>
+  </section>
+
+  <section id="pvc-abreviado">
+    <h2>PVC (Permanent Virtual Circuit)</h2>
+    <p>Un <strong>PVC</strong> es un <em>circuito virtual permanente</em> que mantiene una conexión lógica constante entre dos puntos de la red, sin necesidad de establecer o finalizar la comunicación cada vez.</p>
+  
+    <ul>
+      <li><strong>Ventajas:</strong> Alta disponibilidad, comunicación continua, configuración sencilla.</li>
+      <li><strong>Desventajas:</strong> Costo elevado, poca flexibilidad, reemplazado por tecnologías más modernas como VPN o MPLS.</li>
+    </ul>
+  
+    <div class="note">
+      <p>Ejemplo: Una sucursal corporativa usa un PVC para garantizar comunicación constante con la sede central.</p>
+    </div>
+  </section>
+  
+  
+</section>
+
+
+
 
   
 
