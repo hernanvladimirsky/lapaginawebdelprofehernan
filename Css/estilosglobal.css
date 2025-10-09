@@ -376,4 +376,26 @@ td {
     max-width: 640px;
 }
 
+/* C++ */ 
+
+#logoCmasmas {
+    height: 100%;
+    width: 20%;
+    max-width: 700px;
+    min-width: 100px;
+    margin-top: 2.5%;
+
+}
+
+
+.linksCmasmas {
+    list-style: none;
+    display: inline;
+    margin-left: 1%;
+}
+
+#tituloCmasmas {
+    margin: auto;
+    font-size: 70px;
+}
 
