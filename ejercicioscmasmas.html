@@ -89,25 +89,6 @@
       </ol>
     </div>
   
-    <h2>🧩 Estructura sugerida del código</h2>
-    <pre><code>#include &lt;iostream&gt;
-  using namespace std;
-  
-  int main() {
-      string nombre;
-      int edad;
-  
-      cout &lt;&lt; "Ingrese su nombre: ";
-      cin &gt;&gt; nombre;
-  
-      cout &lt;&lt; "Ingrese su edad: ";
-      cin &gt;&gt; edad;
-  
-      cout &lt;&lt; "Hola " &lt;&lt; nombre &lt;&lt; ", tenes " &lt;&lt; edad &lt;&lt; " años." &lt;&lt; endl;
-  
-      return 0;
-  }
-    </code></pre>
   
     <h2>🔍 Explicación del programa</h2>
     <ul>
@@ -127,6 +108,59 @@
   Hola Ana, tenes 17 años.
       </pre>
     </div>
+
+    <h1>💻 Ejercicio 3 -  <code>if</code></h1>
+
+    <p>El condicional <strong>if</strong> permite ejecutar un bloque de código solo si una condición se cumple (es verdadera).  
+    Si no se cumple, el bloque se salta.</p>
+  
+    <h2>🧠 Instrucciones</h2>
+    <div class="actividad">
+      <ol>
+        <li>Escribí un programa que pida al usuario un número entero.</li>
+        <li>Si el número es mayor o igual a 18, debe mostrar <strong>"Sos mayor de edad"</strong>.</li>
+        <li>Si el número es menor que 18, debe mostrar <strong>"Sos menor de edad"</strong>.</li>
+      </ol>
+    </div>
+  
+    
+    </code></pre>
+  
+    <h2>🔍 Explicación del código</h2>
+    <ul>
+      <li><code>if (edad &gt;= 18)</code> → Comprueba si la edad ingresada es 18 o más.</li>
+      <li>Si la condición es verdadera, muestra el mensaje de “mayor de edad”.</li>
+      <li>Si no, ejecuta el bloque del <code>else</code> y muestra “menor de edad”.</li>
+      <li>Los operadores de comparación más usados son:
+        <ul>
+          <li><code>&gt;</code> → mayor que</li>
+          <li><code>&lt;</code> → menor que</li>
+          <li><code>&gt;=</code> → mayor o igual que</li>
+          <li><code>&lt;=</code> → menor o igual que</li>
+          <li><code>==</code> → igual a</li>
+          <li><code>!=</code> → distinto de</li>
+        </ul>
+      </li>
+    </ul>
+  
+    <h2>✅ Ejemplo de ejecución</h2>
+    <div class="respuesta">
+      <p><strong>Entrada y salida:</strong></p>
+      <pre>
+  Ingrese su edad: 20
+  Sos mayor de edad.
+      </pre>
+      <pre>
+  Ingrese su edad: 15
+  Sos menor de edad.
+      </pre>
+    </div>
+  
+    <footer>
+      Actividad práctica – Estructura condicional <code>if</code> en C++.  
+      Ideal para principiantes y ejercicios de introducción a la lógica.
+    </footer>
+  </body>
 
 
   </main>
