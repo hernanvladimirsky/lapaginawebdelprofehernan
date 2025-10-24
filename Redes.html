@@ -127,7 +127,7 @@
       <a href="#tp5">TP 5</a>
       <a href="#tp6">TP 6</a>
       <a href="#tp7">TP 7</a>
-
+      <a href="#tp8">TP 8</a>
      
     </div>  
   </nav>
@@ -4976,7 +4976,7 @@ El formato de la trama define cómo se organiza la información para que la comu
   </div>
 
   <section id="pvc">
-    <h2>Concepto de Circuito Virtual Permanente (PVC)</h2>
+    <h2>Circuito Virtual Permanente (PVC)</h2>
     <p>Un <strong>circuito virtual permanente (PVC)</strong> es una conexión lógica establecida de manera fija entre dos puntos de una red. Se mantiene activa constantemente, sin necesidad de establecerla o finalizarla cada vez que se transmite información.</p>
   
     <h3>Características principales</h3>
@@ -5004,29 +5004,71 @@ El formato de la trama define cómo se organiza la información para que la comu
     <div class="note">
       <p>Ejemplo: Una empresa que necesita comunicación constante entre dos oficinas puede usar un PVC para garantizar disponibilidad continua.</p>
     </div>
-  </section>
-
-  <section id="pvc-abreviado">
-    <h2>PVC (Permanent Virtual Circuit)</h2>
-    <p>Un <strong>PVC</strong> es un <em>circuito virtual permanente</em> que mantiene una conexión lógica constante entre dos puntos de la red, sin necesidad de establecer o finalizar la comunicación cada vez.</p>
-  
-    <ul>
-      <li><strong>Ventajas:</strong> Alta disponibilidad, comunicación continua, configuración sencilla.</li>
-      <li><strong>Desventajas:</strong> Costo elevado, poca flexibilidad, reemplazado por tecnologías más modernas como VPN o MPLS.</li>
-    </ul>
-  
-    <div class="note">
-      <p>Ejemplo: Una sucursal corporativa usa un PVC para garantizar comunicación constante con la sede central.</p>
-    </div>
-  </section>
-  
+  </section>  
   
 </section>
 
-
-
-
+<a id="tp8"></a>
+<div class="container">
+  <h1>MPLS (Multi-Protocol Label Switching)</h1>
+  <p>MPLS es una tecnología avanzada de encaminamiento que <strong>mejora la eficiencia y el rendimiento</strong> de las redes. Se utiliza principalmente en empresas grandes, proveedores de servicios y organizaciones que requieren alta disponibilidad y rendimiento garantizado para sus servicios críticos.</p>
+  <p>En lugar de que los routers procesen completamente la dirección IP de cada paquete, MPLS asigna a cada paquete una <strong>etiqueta (label)</strong>. Esta etiqueta indica cómo debe ser encaminado el paquete a través de la red, funcionando como un <em>cartel de autopista</em> que guía al paquete por la ruta más rápida o prioritaria.</p>
+  <ul>
+  <li><strong>Mayor velocidad:</strong> los routers solo leen la etiqueta, evitando analizar todo el paquete.</li>
+  <li><strong>Priorización del tráfico:</strong> se puede dar prioridad a la voz, video o datos críticos.</li>
+  <li><strong>Servicios convergentes:</strong> permite integrar voz, datos y video en la misma red sin pérdida de calidad.</li>
+  <li><strong>Reducción de congestión:</strong> optimiza el flujo de tráfico y evita saturaciones en la red.</li>
+  </ul>
+  <p><em>“Multi-Protocol” indica que MPLS es compatible con múltiples protocolos de red, incluyendo IPv4, IPv6, Ethernet y Frame Relay.</em></p>
+ 
+  <h2>Redes de servicios convergentes (voz, datos y video)</h2>
+  <p>Estas redes permiten que diferentes tipos de información viajen juntos por la misma infraestructura, pero con distintos niveles de prioridad, asegurando que los servicios críticos funcionen correctamente.</p>
+  <ul>
+  <li><strong>Voz:</strong> llamadas telefónicas, VoIP y comunicaciones en tiempo real que necesitan baja latencia.</li>
+  <li><strong>Datos:</strong> correo electrónico, navegación web, aplicaciones empresariales y descargas.</li>
+  <li><strong>Video:</strong> videoconferencias, streaming, televisión por Internet y contenido multimedia.</li>
+  </ul>
+  <p>Con MPLS y la QoS, los servicios que requieren <strong>baja latencia</strong> y alta prioridad, como la voz y el video, tienen un rendimiento estable y sin interrupciones, mientras que otros datos menos urgentes se transmiten de manera eficiente.</p>
   
+  <h2>Redes Full Malla</h2>
+  <p>Una <strong>red full malla</strong> es una topología donde <strong>cada nodo está conectado directamente con todos los demás nodos</strong>. Esto asegura:</p>
+  <ul>
+  <li><strong>Alta disponibilidad:</strong> si un enlace falla, siempre hay rutas alternativas para mantener la comunicación.</li>
+  <li><strong>Redundancia:</strong> evita interrupciones y garantiza continuidad del servicio.</li>
+  <li><strong>Rendimiento óptimo:</strong> permite que los datos viajen por el camino más corto y rápido.</li>
+  <li><strong>Escalabilidad:</strong> aunque puede ser costosa, se puede implementar en partes críticas de la red para asegurar servicios prioritarios.</li>
+  </ul>
+ 
+  <h2>Calidad de Servicio (QoS)</h2>
+  <p><strong>QoS</strong> es un conjunto de técnicas que permite controlar, priorizar y gestionar el tráfico en la red. Su objetivo es garantizar que los servicios críticos tengan un desempeño óptimo, evitando retrasos y pérdidas de información.</p>
+  <ul>
+  <li><strong>Tráfico crítico:</strong> voz y video en tiempo real, que requieren mínima latencia.</li>
+  <li><strong>Tráfico secundario:</strong> datos como correos electrónicos, descargas o navegación web, que pueden tolerar retrasos.</li>
+  <li><strong>Control de congestión:</strong> la QoS asegura que los paquetes más importantes no se vean afectados por la saturación de la red.</li>
+  </ul>
+  <p>Se basa en el análisis de los <strong>datagramas IP en capa 3</strong> y en la asignación de diferentes niveles de prioridad según el tipo de tráfico.</p>
+  
+  <h2>Clases de Servicio</h2>
+  <p>Para organizar el tráfico y garantizar la eficiencia, se establecen distintas clases de servicio:</p>
+  <ul>
+  <li><strong>Real Time (Tiempo real):</strong> tráfico con requisitos estrictos de latencia y jitter, como VoIP y videoconferencias.</li>
+  <li><strong>Assured Forwarding (Reenvío asegurado):</strong> tráfico importante pero tolerante a pequeños retrasos, como aplicaciones empresariales críticas.</li>
+  <li><strong>Best Effort (Mejor esfuerzo):</strong> tráfico sin prioridad, como descargas y correo electrónico, que se envía solo si hay disponibilidad de recursos.</li>
+  </ul>
+  
+  <h2>Parámetros de Performance</h2>
+  <p>Para evaluar la eficiencia y calidad de una red se utilizan varios parámetros:</p>
+  <ul>
+  <li><strong>Latencia:</strong> tiempo que tarda un paquete en viajar de un punto a otro; esencial para servicios en tiempo real.</li>
+  <li><strong>Pérdida de paquetes:</strong> porcentaje de paquetes que no llegan a su destino, afectando la calidad de las comunicaciones.</li>
+  <li><strong>Ancho de banda:</strong> cantidad máxima de datos que pueden transmitirse simultáneamente.</li>
+  <li><strong>Jitter:</strong> variación en la llegada de paquetes; muy importante para mantener la calidad de voz y video.</li>
+  <li><strong>Disponibilidad:</strong> tiempo durante el cual la red se mantiene operativa sin interrupciones.</li>
+  </ul>
+  <p>Estos parámetros permiten a los administradores de red optimizar el tráfico, planificar la capacidad y garantizar que los servicios críticos funcionen correctamente.</p>
+  </div>
+
+
 
   <script>
     const hamburger = document.getElementById('hamburger');
