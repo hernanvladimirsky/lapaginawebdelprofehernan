@@ -1125,6 +1125,40 @@ show running-config
     </tr>
   </table>
 
+  <h1>🛠️ Actividad: Red con 4 Servidores HTTP, 1 DHCP y 1 DNS</h1>
+
+  <h2>Objetivo</h2>
+  <p>Configurar una red en Cisco Packet Tracer donde las PC clientes puedan acceder a los 4 servidores web mediante <strong>nombre de dominio</strong> usando <strong>DHCP</strong> y <strong>DNS</strong> automáticamente.</p>
+  
+  <h2>Requisitos</h2>
+  <ul>
+    <li><span class="icon">🌐</span><span class="device">4 Servidores HTTP</span> (cada uno con una página distinta)</li>
+    <li><span class="icon">🖥️</span><span class="device">1 Servidor DNS</span></li>
+    <li><span class="icon">📡</span><span class="device">1 Servidor DHCP</span></li>
+    <li><span class="icon">💻</span><span class="device">4 PC clientes</span></li>
+    <li><span class="icon">🔌</span><span class="device">Switch</span></li>
+  </ul>
+  
+  <h2>Instrucciones</h2>
+  <ol>
+    <li><span class="icon">🔧</span>Colocar los dispositivos en el área de trabajo y conectarlos con <strong>cable directo</strong>.</li>
+    <li><span class="icon">📡</span>Configurar el <strong>Servidor DHCP</strong> para asignar IP, máscara, gateway y DNS automáticamente.</li>
+    <li><span class="icon">🖥️</span>Configurar el <strong>Servidor DNS</strong> con los 4 registros:
+      <ul>
+        <li>🌐 www.servidor1.com → IP HTTP 1</li>
+        <li>🌐 www.servidor2.com → IP HTTP 2</li>
+        <li>🌐 www.servidor3.com → IP HTTP 3</li>
+        <li>🌐 www.servidor4.com → IP HTTP 4</li>
+      </ul>
+    </li>
+    <li><span class="icon">🌐</span>Configurar cada <strong>Servidor HTTP</strong> con su página web en Services → HTTP → index.html.</li>
+    <li><span class="icon">💻</span>Configurar las <strong>PC clientes</strong> en modo DHCP y verificar que reciben IP, Gateway y DNS automáticamente.</li>
+    <li><span class="icon">🌐</span>Probar en cada PC que se pueda abrir cada servidor por <strong>nombre de dominio</strong> en el navegador.</li>
+  </ol>
+  
+  <h2>Resultado esperado</h2>
+  <p>Todas las PC deben poder acceder a los 4 servidores web correctamente usando los nombres de dominio. Ejemplo: www.servidor1.com, www.servidor2.com, www.servidor3.com, www.servidor4.com</p>
+
 </body>
 
 </html>
