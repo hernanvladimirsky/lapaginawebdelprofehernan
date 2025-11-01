@@ -1159,9 +1159,73 @@ show running-config
   <h2>Resultado esperado</h2>
   <p>Todas las PC deben poder acceder a los 4 servidores web correctamente usando los nombres de dominio. Ejemplo: www.servidor1.com, www.servidor2.com, www.servidor3.com, www.servidor4.com</p>
 
-</body>
+  <h1>🌐 Actividad: Red con múltiples servidores en Cisco Packet Tracer</h1>
 
-</html>
+<p><strong>Objetivo:</strong> Configurar una red donde 3 PCs puedan acceder a servicios web, correo electrónico y resolución de nombres mediante múltiples servidores.</p>
+
+<h2>📡 1️⃣ Dispositivos requeridos</h2>
+<ul>
+    <li>3 PCs</li>
+    <li>1 Switch</li>
+    <li>2 Servidores HTTP</li>
+    <li>2 Servidores DNS</li>
+    <li>2 Servidores DHCP</li>
+    <li>2 Servidores Email</li>
+</ul>
+
+<h2>🔌 2️⃣ Conexiones</h2>
+<ul>
+    <li>Conectar todas las PCs y servidores al Switch con cables Ethernet (Copper Straight-Through).</li>
+</ul>
+
+<h2>⚙️ 3️⃣ Configuración de DHCP</h2>
+<p>Configurar ambos servidores DHCP:</p>
+<ul>
+    <li><strong>Rango:</strong> 192.168.1.100 – 192.168.1.150</li>
+    <li><strong>Gateway:</strong> 192.168.1.1</li>
+    <li><strong>DNS primario:</strong> 192.168.1.20</li>
+    <li><strong>DNS secundario:</strong> 192.168.1.30</li>
+</ul>
+
+<h2>🌍 4️⃣ Configuración de Servidores DNS</h2>
+<p>Cargar los siguientes nombres:</p>
+
+<ul>
+    <li><strong>Servidor DNS 1:</strong><br>www.sitio1.com → 192.168.1.40</li>
+    <li><strong>Servidor DNS 2:</strong><br>www.sitio2.com → 192.168.1.50</li>
+</ul>
+
+<h2>🖥️ 5️⃣ Configuración de Servidores HTTP</h2>
+<ul>
+    <li>HTTP1: IP → 192.168.1.40, HTTP activado</li>
+    <li>HTTP2: IP → 192.168.1.50, HTTP activado</li>
+</ul>
+
+<h2>📨 6️⃣ Configuración de Servidores de Email</h2>
+<p>Configurar Mail Service y crear usuarios de prueba:</p>
+<ul>
+    <li>Email1: 192.168.1.60 → usuario: alumno1@sitio1.com</li>
+    <li>Email2: 192.168.1.70 → usuario: alumno2@sitio2.com</li>
+</ul>
+
+<h2>🧑‍💻 7️⃣ Configuración de PCs</h2>
+<ul>
+    <li>Obtener IP por DHCP</li>
+    <li>Probar navegación a:
+        <ul>
+            <li>http://www.sitio1.com</li>
+            <li>http://www.sitio2.com</li>
+        </ul>
+    </li>
+    <li>Probar envío de correo desde Email Client</li>
+</ul>
+
+<h2>✅ 8️⃣ Comprobación final</h2>
+<ul>
+    <li>Las PCs deben poder navegar en ambos sitios web</li>
+    <li>Las PCs deben poder enviar y recibir correos entre dominio 1 y 2</li>
+    <li>Debe resolverse correctamente cada dominio DNS</li>
+</ul>
 
 </main>
 
