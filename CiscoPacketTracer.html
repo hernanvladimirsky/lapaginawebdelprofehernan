@@ -2,98 +2,98 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cisco Packet Tracer</title>
-    <link rel="stylesheet" href="Css/estilosglobal.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            padding: 20px;
-            -webkit-user-select: none;
-            /* Chrome/Safari */
-            -moz-user-select: none;
-            /* Firefox */
-            -ms-user-select: none;
-            /* IE10+/Edge */
-            user-select: none;
-            /* Estándar */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cisco Packet Tracer</title>
+  <link rel="stylesheet" href="Css/estilosglobal.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+      -webkit-user-select: none;
+      /* Chrome/Safari */
+      -moz-user-select: none;
+      /* Firefox */
+      -ms-user-select: none;
+      /* IE10+/Edge */
+      user-select: none;
+      /* Estándar */
+    }
 
-        h1 {
-            color: #2c3e50;
-        }
+    h1 {
+      color: #2c3e50;
+    }
 
-        table {
-            border-collapse: collapse;
-            width: 60%;
-            margin-bottom: 20px;
-        }
+    table {
+      border-collapse: collapse;
+      width: 60%;
+      margin-bottom: 20px;
+    }
 
-        table,
-        th,
-        td {
-            border: 1px solid #999;
-        }
+    table,
+    th,
+    td {
+      border: 1px solid #999;
+    }
 
-        th,
-        td {
-            padding: 10px;
-            text-align: left;
-        }
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+    }
 
-        .section {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+    .section {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-        .TituloMargen {
-            margin-top: 3%;
-        }
+    .TituloMargen {
+      margin-top: 3%;
+    }
 
-        pre {
-            background-color: #2d2d2d;
-            color: #f1f1f1;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
+    pre {
+      background-color: #2d2d2d;
+      color: #f1f1f1;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
 
-        .comando {
-            margin-top: 15px;
-            padding: 10px;
-            background-color: #eef;
-            border-left: 4px solid #3366cc;
-        }
+    .comando {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #eef;
+      border-left: 4px solid #3366cc;
+    }
 
-        code {
-            background-color: #ddd;
-            padding: 2px 4px;
-            border-radius: 3px;
-            font-weight: bold;
-        }
+    code {
+      background-color: #ddd;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-weight: bold;
+    }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
 
-        th,
-        td {
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
 
-        th {
-            background-color: #ddd;
-        }
+    th {
+      background-color: #ddd;
+    }
 
-        a {
+    a {
       color: blue;
       text-decoration: none;
     }
@@ -102,324 +102,574 @@
       color: red;
       text-decoration: underline;
     }
-    </style>
+  </style>
 
-    <script>
-        document.addEventListener('contextmenu', event => event.preventDefault()); // Bloquea clic derecho
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault()); // Bloquea clic derecho
 
-        document.addEventListener('keydown', function (e) {
-            if ((e.ctrlKey && e.key === 'c') ||
-                (e.ctrlKey && e.key === 'v') ||
-                (e.ctrlKey && e.key === 'x') ||
-                (e.ctrlKey && e.key === 'u') ||
-                (e.key === 'F12')) {
-                e.preventDefault(); // Bloquea Ctrl+C, Ctrl+V, Ctrl+X, Ctrl+U, F12
-            }
-        });
-    </script>
+    document.addEventListener('keydown', function (e) {
+      if ((e.ctrlKey && e.key === 'c') ||
+        (e.ctrlKey && e.key === 'v') ||
+        (e.ctrlKey && e.key === 'x') ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.key === 'F12')) {
+        e.preventDefault(); // Bloquea Ctrl+C, Ctrl+V, Ctrl+X, Ctrl+U, F12
+      }
+    });
+  </script>
 
 </head>
 
 <body>
-    <header>
-        <a id="ancla"></a>
-        <h1 id="titulologo"> Ejercicios Cisco Packet Tracer</h1>
-        <img src="Imagenes/Hardware y Software/Blue and Green Modern Technology Logo.png" alt="logo" title="logo"
-            id="logo">
+  <header>
+    <a id="ancla"></a>
+    <h1 id="titulologo"> Ejercicios Cisco Packet Tracer</h1>
+    <img src="Imagenes/Hardware y Software/Blue and Green Modern Technology Logo.png" alt="logo" title="logo" id="logo">
 
-    </header>
-    <nav>
-        <ul>
-            <li class="links"> <a href="index.html">Ir al Inicio</a></li>
-            <li class="links"> <a href="Redes.html">Ir a hacia atras</a></li>
-        </ul>
-    </nav>
+  </header>
+  <nav>
+    <ul>
+      <li class="links"> <a href="index.html">Ir al Inicio</a></li>
+      <li class="links"> <a href="Redes.html">Ir a hacia atras</a></li>
+    </ul>
+  </nav>
 
-    <main>
-
-
-        <h1 class="TituloMargen">Ejercicio Básico en Cisco Packet Tracer - Clase C</h1> <!--Clase C con interfaz-->
-
-        <div class="section">
-            <h2>🎯 Objetivo</h2>
-            <p>Configurar una red simple con dos computadoras conectadas a un switch, asignar direcciones IP y comprobar
-                la conectividad usando el comando <code>ping</code>.</p>
-        </div>
-
-        <div class="section">
-            <h2>🧰 Materiales necesarios</h2>
-            <ul>
-                <li>2 Computadoras (PC)</li>
-                <li>1 Switch (por ejemplo, Cisco 2960)</li>
-                <li>2 Cables de red directos (Copper Straight-Through)</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>🌐 Dirección IP</h2>
-            <table>
-                <tr>
-                    <th>Dispositivo</th>
-                    <th>IP Address</th>
-                    <th>Subnet Mask</th>
-                </tr>
-                <tr>
-                    <td>PC1</td>
-                    <td>192.168.1.10</td>
-                    <td>255.255.255.0</td>
-                </tr>
-                <tr>
-                    <td>PC2</td>
-                    <td>192.168.1.11</td>
-                    <td>255.255.255.0</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="section">
-            <h2>🔧 Pasos de configuración</h2>
-            <ol>
-                <li>Agregar 2 PCs y un switch al área de trabajo.</li>
-                <li>Conectar cada PC a un puerto del switch usando cables directos.</li>
-                <li>En cada PC, ir a <strong>Desktop &gt; IP Configuration</strong> y asignar las direcciones IP
-                    correspondientes.</li>
-            </ol>
-        </div>
-
-        <div class="section">
-            <h2>🧪 Prueba de conectividad</h2>
-            <p>Desde la consola de PC1 (Desktop > Command Prompt), ejecutar:</p>
-            <pre>ping 192.168.1.11</pre>
-            <p>Se deben recibir respuestas exitosas ("Reply from...").</p>
-        </div>
-
-        <div class="section">
-            <h2>✅ Resultado esperado</h2>
-            <p>Las dos PCs deben comunicarse correctamente, demostrando una conexión funcional en una red local básica.
-            </p>
-        </div>
-
-        <h1 class="TituloMargen">Ejercicio Básico en Cisco Packet Tracer - Clase B</h1> <!--Clase B con interfaz-->
-
-        <div class="section">
-            <h2>🎯 Objetivo</h2>
-            <p>Conectar dos computadoras usando un switch, asignando direcciones IP de <strong>Clase B</strong>, y
-                verificar la conectividad mediante el comando <code>ping</code>.</p>
-        </div>
-
-        <div class="section">
-            <h2>🧰 Materiales necesarios</h2>
-            <ul>
-                <li>2 computadoras (PC)</li>
-                <li>1 switch (modelo 2960)</li>
-                <li>2 cables de red directos (copper straight-through)</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>🌐 Direccionamiento IP</h2>
-            <table>
-                <tr>
-                    <th>Dispositivo</th>
-                    <th>IP Address</th>
-                    <th>Subnet Mask</th>
-                </tr>
-                <tr>
-                    <td>PC1</td>
-                    <td>172.16.1.10</td>
-                    <td>255.255.0.0</td>
-                </tr>
-                <tr>
-                    <td>PC2</td>
-                    <td>172.16.1.11</td>
-                    <td>255.255.0.0</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="section">
-            <h2>🔧 Pasos de configuración</h2>
-            <ol>
-                <li>Arrastra las dos PCs y el switch al área de trabajo.</li>
-                <li>Conecta PC1 al puerto FastEthernet0/1 del switch.</li>
-                <li>Conecta PC2 al puerto FastEthernet0/2 del switch.</li>
-                <li>En cada PC, accede a <strong>Desktop &gt; IP Configuration</strong> y asigna la IP correspondiente.
-                </li>
-                <li>No es necesario configurar un gateway ya que están en la misma red.</li>
-            </ol>
-        </div>
-
-        <div class="section">
-            <h2>🧪 Prueba de conectividad</h2>
-            <p>Desde la consola de PC1 (Desktop > Command Prompt), ejecuta:</p>
-            <pre>ping 172.16.1.11</pre>
-            <p>Deberías obtener respuestas exitosas.</p>
-        </div>
-
-        <div class="section">
-            <h2>✅ Resultado esperado</h2>
-            <p>Las dos PCs deben comunicarse correctamente. El ejercicio demuestra cómo trabajar con direcciones IP de
-                <strong>Clase B</strong> en una red simple.
-            </p>
-        </div>
+  <main>
 
 
+    <h1 class="TituloMargen">Ejercicio Básico en Cisco Packet Tracer - Clase C</h1> <!--Clase C con interfaz-->
 
-        <h1 class="TituloMargen">Ejercicio Básico en Cisco Packet Tracer - Clase A</h1> <!--Clase A con interfaz-->
+    <div class="section">
+      <h2>🎯 Objetivo</h2>
+      <p>Configurar una red simple con dos computadoras conectadas a un switch, asignar direcciones IP y comprobar
+        la conectividad usando el comando <code>ping</code>.</p>
+    </div>
 
-        <div class="section">
-            <h2>🎯 Objetivo</h2>
-            <p>Configurar una red simple con dos computadoras conectadas a un switch, asignar direcciones IP de
-                <strong>Clase A</strong> y comprobar la conectividad usando el comando <code>ping</code>.
-            </p>
-        </div>
+    <div class="section">
+      <h2>🧰 Materiales necesarios</h2>
+      <ul>
+        <li>2 Computadoras (PC)</li>
+        <li>1 Switch (por ejemplo, Cisco 2960)</li>
+        <li>2 Cables de red directos (Copper Straight-Through)</li>
+      </ul>
+    </div>
 
-        <div class="section">
-            <h2>🧰 Materiales necesarios</h2>
-            <ul>
-                <li>2 Computadoras (PC)</li>
-                <li>1 Switch (por ejemplo, Cisco 2960)</li>
-                <li>2 Cables de red directos (Copper Straight-Through)</li>
-            </ul>
-        </div>
+    <div class="section">
+      <h2>🌐 Dirección IP</h2>
+      <table>
+        <tr>
+          <th>Dispositivo</th>
+          <th>IP Address</th>
+          <th>Subnet Mask</th>
+        </tr>
+        <tr>
+          <td>PC1</td>
+          <td>192.168.1.10</td>
+          <td>255.255.255.0</td>
+        </tr>
+        <tr>
+          <td>PC2</td>
+          <td>192.168.1.11</td>
+          <td>255.255.255.0</td>
+        </tr>
+      </table>
+    </div>
 
-        <div class="section">
-            <h2>🌐 Dirección IP</h2>
-            <table>
-                <tr>
-                    <th>Dispositivo</th>
-                    <th>IP Address</th>
-                    <th>Subnet Mask</th>
-                </tr>
-                <tr>
-                    <td>PC1</td>
-                    <td>10.0.0.10</td>
-                    <td>255.0.0.0</td>
-                </tr>
-                <tr>
-                    <td>PC2</td>
-                    <td>10.0.0.11</td>
-                    <td>255.0.0.0</td>
-                </tr>
-            </table>
-        </div>
+    <div class="section">
+      <h2>🔧 Pasos de configuración</h2>
+      <ol>
+        <li>Agregar 2 PCs y un switch al área de trabajo.</li>
+        <li>Conectar cada PC a un puerto del switch usando cables directos.</li>
+        <li>En cada PC, ir a <strong>Desktop &gt; IP Configuration</strong> y asignar las direcciones IP
+          correspondientes.</li>
+      </ol>
+    </div>
 
-        <div class="section">
-            <h2>🔧 Pasos de configuración</h2>
-            <ol>
-                <li>Agregar 2 PCs y un switch al área de trabajo.</li>
-                <li>Conectar cada PC a un puerto del switch usando cables directos.</li>
-                <li>En cada PC, ir a <strong>Desktop &gt; IP Configuration</strong> y asignar las direcciones IP
-                    correspondientes.</li>
-            </ol>
-        </div>
+    <div class="section">
+      <h2>🧪 Prueba de conectividad</h2>
+      <p>Desde la consola de PC1 (Desktop > Command Prompt), ejecutar:</p>
+      <pre>ping 192.168.1.11</pre>
+      <p>Se deben recibir respuestas exitosas ("Reply from...").</p>
+    </div>
 
-        <div class="section">
-            <h2>🧪 Prueba de conectividad</h2>
-            <p>Desde la consola de PC1 (Desktop > Command Prompt), ejecutar:</p>
-            <pre>ping 10.0.0.11</pre>
-            <p>Se deben recibir respuestas exitosas ("Reply from...").</p>
-        </div>
+    <div class="section">
+      <h2>✅ Resultado esperado</h2>
+      <p>Las dos PCs deben comunicarse correctamente, demostrando una conexión funcional en una red local básica.
+      </p>
+    </div>
 
-        <div class="section">
-            <h2>✅ Resultado esperado</h2>
-            <p>Las dos PCs deben comunicarse correctamente, demostrando una conexión funcional en una red local con
-                direcciones IP de <strong>Clase A</strong>.</p>
-        </div>
+    <h1 class="TituloMargen">Ejercicio Básico en Cisco Packet Tracer - Clase B</h1> <!--Clase B con interfaz-->
+
+    <div class="section">
+      <h2>🎯 Objetivo</h2>
+      <p>Conectar dos computadoras usando un switch, asignando direcciones IP de <strong>Clase B</strong>, y
+        verificar la conectividad mediante el comando <code>ping</code>.</p>
+    </div>
+
+    <div class="section">
+      <h2>🧰 Materiales necesarios</h2>
+      <ul>
+        <li>2 computadoras (PC)</li>
+        <li>1 switch (modelo 2960)</li>
+        <li>2 cables de red directos (copper straight-through)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🌐 Direccionamiento IP</h2>
+      <table>
+        <tr>
+          <th>Dispositivo</th>
+          <th>IP Address</th>
+          <th>Subnet Mask</th>
+        </tr>
+        <tr>
+          <td>PC1</td>
+          <td>172.16.1.10</td>
+          <td>255.255.0.0</td>
+        </tr>
+        <tr>
+          <td>PC2</td>
+          <td>172.16.1.11</td>
+          <td>255.255.0.0</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>🔧 Pasos de configuración</h2>
+      <ol>
+        <li>Arrastra las dos PCs y el switch al área de trabajo.</li>
+        <li>Conecta PC1 al puerto FastEthernet0/1 del switch.</li>
+        <li>Conecta PC2 al puerto FastEthernet0/2 del switch.</li>
+        <li>En cada PC, accede a <strong>Desktop &gt; IP Configuration</strong> y asigna la IP correspondiente.
+        </li>
+        <li>No es necesario configurar un gateway ya que están en la misma red.</li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <h2>🧪 Prueba de conectividad</h2>
+      <p>Desde la consola de PC1 (Desktop > Command Prompt), ejecuta:</p>
+      <pre>ping 172.16.1.11</pre>
+      <p>Deberías obtener respuestas exitosas.</p>
+    </div>
+
+    <div class="section">
+      <h2>✅ Resultado esperado</h2>
+      <p>Las dos PCs deben comunicarse correctamente. El ejercicio demuestra cómo trabajar con direcciones IP de
+        <strong>Clase B</strong> en una red simple.
+      </p>
+    </div>
 
 
 
-        <h1 class="TituloMargen">Ejercicio: DHCP Clase C en Cisco Packet Tracer (Sin CLI)</h1>
-        <!--Clase C con DHCP y con interfaz-->
+    <h1 class="TituloMargen">Ejercicio Básico en Cisco Packet Tracer - Clase A</h1> <!--Clase A con interfaz-->
 
-        <div class="section">
-            <h2>🎯 Objetivo</h2>
-            <p>Configurar una red local donde un router asigne direcciones IP automáticamente (DHCP) a dos PCs mediante
-                interfaz gráfica.</p>
-        </div>
+    <div class="section">
+      <h2>🎯 Objetivo</h2>
+      <p>Configurar una red simple con dos computadoras conectadas a un switch, asignar direcciones IP de
+        <strong>Clase A</strong> y comprobar la conectividad usando el comando <code>ping</code>.
+      </p>
+    </div>
 
-        <div class="section">
-            <h2>🧰 Materiales necesarios</h2>
-            <ul>
-                <li>2 Computadoras (PC)</li>
-                <li>1 Switch (por ejemplo, Cisco 2960)</li>
-                <li>1 Router Wireless (por ejemplo, Home Router)</li>
-                <li>3 Cables de red directos (Copper Straight-Through)</li>
-            </ul>
-        </div>
+    <div class="section">
+      <h2>🧰 Materiales necesarios</h2>
+      <ul>
+        <li>2 Computadoras (PC)</li>
+        <li>1 Switch (por ejemplo, Cisco 2960)</li>
+        <li>2 Cables de red directos (Copper Straight-Through)</li>
+      </ul>
+    </div>
 
-        <div class="section">
-            <h2>🔧 Pasos de configuración (modo gráfico)</h2>
-            <ol>
-                <li>Arrastrar las 2 PCs, el switch y el router al área de trabajo.</li>
-                <li>Conectar:
-                    <ul>
-                        <li>PC1 a Switch (Fa0/1)</li>
-                        <li>PC2 a Switch (Fa0/2)</li>
-                        <li>Router al Switch (GigabitEthernet0/0 a Fa0/24, por ejemplo)</li>
-                    </ul>
-                </li>
-                <li>Haz clic en el Router > pestaña <strong>Config</strong> > <strong>GigabitEthernet0/0</strong>:
-                    <ul>
-                        <li>Encender el puerto: marcar <strong>On</strong></li>
-                        <li>IP Address: <code>192.168.1.1</code></li>
-                        <li>Subnet Mask: <code>255.255.255.0</code></li>
-                    </ul>
-                </li>
-                <li>En el Router > ir a la pestaña <strong>GUI</strong>:
-                    <ul>
-                        <li>Pool Name: <code>RED_LOCAL</code></li>
-                        <li>Default Gateway: <code>192.168.1.1</code></li>
-                        <li>Start IP Address: <code>192.168.1.100</code></li>
-                        <li>Subnet Mask: <code>255.255.255.0</code></li>
-                        <li>Maximum Number of Users: <code>50</code></li>
-                        <li>Haz clic en <strong>Add</strong></li>
-                    </ul>
-                </li>
-                <li>En cada PC:
-                    <ul>
-                        <li>Desktop > IP Configuration > seleccionar <strong>DHCP</strong></li>
-                        <li>Verifica que reciba IP automática (ej: <code>192.168.1.100</code>)</li>
-                    </ul>
-                </li>
-            </ol>
-        </div>
+    <div class="section">
+      <h2>🌐 Dirección IP</h2>
+      <table>
+        <tr>
+          <th>Dispositivo</th>
+          <th>IP Address</th>
+          <th>Subnet Mask</th>
+        </tr>
+        <tr>
+          <td>PC1</td>
+          <td>10.0.0.10</td>
+          <td>255.0.0.0</td>
+        </tr>
+        <tr>
+          <td>PC2</td>
+          <td>10.0.0.11</td>
+          <td>255.0.0.0</td>
+        </tr>
+      </table>
+    </div>
 
-        <div class="section">
-            <h2>🧪 Prueba de conectividad</h2>
-            <p>Desde PC1 (Command Prompt), ejecutar:</p>
-            <pre>ping 192.168.1.101</pre>
-            <p>(o la IP que reciba PC2 por DHCP)</p>
-        </div>
+    <div class="section">
+      <h2>🔧 Pasos de configuración</h2>
+      <ol>
+        <li>Agregar 2 PCs y un switch al área de trabajo.</li>
+        <li>Conectar cada PC a un puerto del switch usando cables directos.</li>
+        <li>En cada PC, ir a <strong>Desktop &gt; IP Configuration</strong> y asignar las direcciones IP
+          correspondientes.</li>
+      </ol>
+    </div>
 
-        <div class="section">
-            <h2>✅ Resultado esperado</h2>
-            <p>Ambas PCs deben recibir direcciones IP automáticamente y comunicarse exitosamente a través del switch y
-                el router usando DHCP.</p>
-        </div>
+    <div class="section">
+      <h2>🧪 Prueba de conectividad</h2>
+      <p>Desde la consola de PC1 (Desktop > Command Prompt), ejecutar:</p>
+      <pre>ping 10.0.0.11</pre>
+      <p>Se deben recibir respuestas exitosas ("Reply from...").</p>
+    </div>
 
-        <h1 class="TituloMargen">Red de Clase C con 3 PCs Usando CLI - Cisco Packet Tracer</h1>
+    <div class="section">
+      <h2>✅ Resultado esperado</h2>
+      <p>Las dos PCs deben comunicarse correctamente, demostrando una conexión funcional en una red local con
+        direcciones IP de <strong>Clase A</strong>.</p>
+    </div>
 
-        <h2>Especificaciones</h2>
-        <ul>
-            <li>Red: 192.168.1.0/24</li>
-            <li>Gateway: 192.168.1.1</li>
-            <li>PC1: 192.168.1.2</li>
-            <li>PC2: 192.168.1.3</li>
-            <li>PC3: 192.168.1.4</li>
-            <li>Máscara: 255.255.255.0</li>
-        </ul>
+    <h1>🌐 Actividad: Crear una red de clase C con 3 subredes</h1> <!-- Subredes --> 
 
-        <h2>Paso 1: Topología</h2>
-        <p>Conecta:</p>
-        <ul>
-            <li>3 PCs a un switch usando cables directos.</li>
-            <li>El switch al router en <strong>GigabitEthernet0/0</strong>.</li>
-        </ul>
+    <h2>🎯 1️⃣ Objetivo</h2>
+    <p>Diseñar y configurar una red de <strong>Clase C (192.168.1.0/24)</strong>, dividiéndola en <strong>3
+        subredes</strong> utilizando la <strong>interfaz gráfica</strong> de Cisco Packet Tracer (sin usar la consola
+      CLI).</p>
 
-        <h2>Paso 2: Configuración del Router (CLI)</h2>
+    <h2>🧮 2️⃣ Cálculo de subredes</h2>
+    <p><strong>Dirección base:</strong> 192.168.1.0 /24</p>
+    <p>Queremos 3 subredes → tomamos 2 bits del host → <strong>/26</strong></p>
+    <p>Cada subred tendrá <strong>64 direcciones (62 útiles)</strong>.</p>
 
-        <pre>
+    <table>
+      <tr>
+        <th>Subred</th>
+        <th>Rango IP</th>
+        <th>Broadcast</th>
+        <th>Máscara</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>192.168.1.0 – 192.168.1.63</td>
+        <td>192.168.1.63</td>
+        <td>255.255.255.192</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>192.168.1.64 – 192.168.1.127</td>
+        <td>192.168.1.127</td>
+        <td>255.255.255.192</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>192.168.1.128 – 192.168.1.191</td>
+        <td>192.168.1.191</td>
+        <td>255.255.255.192</td>
+      </tr>
+    </table>
+
+    <h2>🧰 3️⃣ Dispositivos a usar</h2>
+    <ul>
+      <li>1 Router</li>
+      <li>3 Switches</li>
+      <li>6 PCs (2 por subred)</li>
+    </ul>
+
+    <h2>🔗 4️⃣ Conexiones</h2>
+    <ul>
+      <li>Cada subred se conecta a un switch.</li>
+      <li>Cada switch conecta sus 2 PCs.</li>
+      <li>Cada switch se conecta a un puerto distinto del router.</li>
+    </ul>
+
+    <div class="nota">
+      💡 Recordá que el orden y la conexión física se realizan arrastrando los dispositivos y conectándolos con las
+      líneas de enlace.
+    </div>
+
+    <h2>⚙️ 5️⃣ Configuración de direcciones IP</h2>
+
+    <h3>🖥️ PCs</h3>
+    <ol>
+      <li>Clic en la PC → pestaña <strong>Desktop → IP Configuration</strong>.</li>
+      <li>Asignar las IP según la tabla:</li>
+    </ol>
+
+    <table>
+      <tr>
+        <th>Subred</th>
+        <th>PC1</th>
+        <th>PC2</th>
+        <th>Gateway</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>192.168.1.10</td>
+        <td>192.168.1.11</td>
+        <td>192.168.1.1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>192.168.1.70</td>
+        <td>192.168.1.71</td>
+        <td>192.168.1.65</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>192.168.1.130</td>
+        <td>192.168.1.131</td>
+        <td>192.168.1.129</td>
+      </tr>
+    </table>
+
+    <h3>🧭 Router</h3>
+    <ol>
+      <li>Clic en el router → pestaña <strong>Config → Interfaces</strong>.</li>
+      <li>Activar tres interfaces con las siguientes IP:</li>
+    </ol>
+
+    <table>
+      <tr>
+        <th>Interfaz</th>
+        <th>Dirección IP</th>
+        <th>Máscara</th>
+      </tr>
+      <tr>
+        <td>Fa0/0</td>
+        <td>192.168.1.1</td>
+        <td>255.255.255.192</td>
+      </tr>
+      <tr>
+        <td>Fa0/1</td>
+        <td>192.168.1.65</td>
+        <td>255.255.255.192</td>
+      </tr>
+      <tr>
+        <td>Fa1/0</td>
+        <td>192.168.1.129</td>
+        <td>255.255.255.192</td>
+      </tr>
+    </table>
+
+    <p>Asegurate de que cada interfaz esté <strong>encendida (ON)</strong>.</p>
+
+    <h2>🧪 6️⃣ Prueba de conectividad</h2>
+    <ol>
+      <li>En cualquier PC abrir <strong>Command Prompt</strong>.</li>
+      <li>Escribir:</li>
+    </ol>
+
+    <pre>
+ping 192.168.1.70
+ping 192.168.1.130
+</pre>
+
+<h1>🌐 Actividad: Crear una red de Clase B con 3 subredes</h1>
+
+<h2>🎯 1️⃣ Objetivo</h2>
+<p>Diseñar y configurar una red de <strong>Clase B (172.16.0.0/16)</strong>, dividiéndola en <strong>3 subredes</strong> utilizando la <strong>interfaz gráfica</strong> de Cisco Packet Tracer (sin CLI).</p>
+
+<h2>🧮 2️⃣ Cálculo de subredes</h2>
+<p><strong>Dirección base:</strong> 172.16.0.0 /16</p>
+<p>Queremos 3 subredes → tomamos 2 bits → <strong>/18</strong></p>
+<p>Cada subred tiene <strong>16 384 direcciones (16 382 útiles)</strong>.</p>
+
+<table>
+<tr><th>Subred</th><th>Rango IP</th><th>Broadcast</th><th>Máscara</th></tr>
+<tr><td>1</td><td>172.16.0.0 – 172.16.63.255</td><td>172.16.63.255</td><td>255.255.192.0</td></tr>
+<tr><td>2</td><td>172.16.64.0 – 172.16.127.255</td><td>172.16.127.255</td><td>255.255.192.0</td></tr>
+<tr><td>3</td><td>172.16.128.0 – 172.16.191.255</td><td>172.16.191.255</td><td>255.255.192.0</td></tr>
+</table>
+
+<h2>🧰 3️⃣ Dispositivos</h2>
+<ul>
+  <li>1 Router</li>
+  <li>3 Switches</li>
+  <li>6 PCs (2 por subred)</li>
+</ul>
+
+<h2>🔗 4️⃣ Conexiones</h2>
+<ul>
+  <li>Cada subred conecta un switch a un puerto del router.</li>
+  <li>Cada switch conecta sus 2 PCs.</li>
+</ul>
+
+<h2>⚙️ 5️⃣ Configuración</h2>
+
+<h3>🖥️ PCs</h3>
+<p>Asignar IPs de ejemplo según su subred:</p>
+<table>
+<tr><th>Subred</th><th>PC1</th><th>PC2</th><th>Gateway</th></tr>
+<tr><td>1</td><td>172.16.0.10</td><td>172.16.0.11</td><td>172.16.0.1</td></tr>
+<tr><td>2</td><td>172.16.64.10</td><td>172.16.64.11</td><td>172.16.64.1</td></tr>
+<tr><td>3</td><td>172.16.128.10</td><td>172.16.128.11</td><td>172.16.128.1</td></tr>
+</table>
+
+<h3>🧭 Router</h3>
+<p>Configurar tres interfaces (ejemplo):</p>
+<table>
+<tr><th>Interfaz</th><th>Dirección IP</th><th>Máscara</th></tr>
+<tr><td>Fa0/0</td><td>172.16.0.1</td><td>255.255.192.0</td></tr>
+<tr><td>Fa0/1</td><td>172.16.64.1</td><td>255.255.192.0</td></tr>
+<tr><td>Fa1/0</td><td>172.16.128.1</td><td>255.255.192.0</td></tr>
+</table>
+
+<p>🟢 Recordá encender cada interfaz.</p>
+
+<h2>🧪 6️⃣ Prueba</h2>
+<pre>
+ping 172.16.64.10
+ping 172.16.128.10
+</pre>
+
+<hr>
+
+<h1>🌐 Actividad: Crear una red de Clase A con 3 subredes</h1>
+
+<h2>🎯 1️⃣ Objetivo</h2>
+<p>Diseñar y configurar una red de <strong>Clase A (10.0.0.0/8)</strong>, dividiéndola en <strong>3 subredes</strong> usando la interfaz de Cisco Packet Tracer.</p>
+
+<h2>🧮 2️⃣ Cálculo de subredes</h2>
+<p><strong>Dirección base:</strong> 10.0.0.0 /8</p>
+<p>Queremos 3 subredes → tomamos 2 bits → <strong>/10</strong></p>
+<p>Cada subred tiene <strong>4 194 304 direcciones (4 194 302 útiles)</strong>.</p>
+
+<table>
+<tr><th>Subred</th><th>Rango IP</th><th>Broadcast</th><th>Máscara</th></tr>
+<tr><td>1</td><td>10.0.0.0 – 10.63.255.255</td><td>10.63.255.255</td><td>255.192.0.0</td></tr>
+<tr><td>2</td><td>10.64.0.0 – 10.127.255.255</td><td>10.127.255.255</td><td>255.192.0.0</td></tr>
+<tr><td>3</td><td>10.128.0.0 – 10.191.255.255</td><td>10.191.255.255</td><td>255.192.0.0</td></tr>
+</table>
+
+<h2>🧰 3️⃣ Dispositivos</h2>
+<ul>
+  <li>1 Router</li>
+  <li>3 Switches</li>
+  <li>6 PCs</li>
+</ul>
+
+<h2>🔗 4️⃣ Conexiones</h2>
+<ul>
+  <li>Cada subred tiene su switch y dos PCs.</li>
+  <li>El router se conecta a cada switch mediante diferentes interfaces.</li>
+</ul>
+
+<h2>⚙️ 5️⃣ Configuración</h2>
+
+<h3>🖥️ PCs</h3>
+<p>Asignar IPs de ejemplo:</p>
+<table>
+<tr><th>Subred</th><th>PC1</th><th>PC2</th><th>Gateway</th></tr>
+<tr><td>1</td><td>10.0.0.10</td><td>10.0.0.11</td><td>10.0.0.1</td></tr>
+<tr><td>2</td><td>10.64.0.10</td><td>10.64.0.11</td><td>10.64.0.1</td></tr>
+<tr><td>3</td><td>10.128.0.10</td><td>10.128.0.11</td><td>10.128.0.1</td></tr>
+</table>
+
+<h3>🧭 Router</h3>
+<p>Configurar tres interfaces (ejemplo):</p>
+<table>
+<tr><th>Interfaz</th><th>Dirección IP</th><th>Máscara</th></tr>
+<tr><td>Fa0/0</td><td>10.0.0.1</td><td>255.192.0.0</td></tr>
+<tr><td>Fa0/1</td><td>10.64.0.1</td><td>255.192.0.0</td></tr>
+<tr><td>Fa1/0</td><td>10.128.0.1</td><td>255.192.0.0</td></tr>
+</table>
+
+<h2>🧪 6️⃣ Prueba</h2>
+<pre>
+ping 10.64.0.10
+ping 10.128.0.10
+</pre>
+
+
+
+    <h1 class="TituloMargen">Ejercicio: DHCP Clase C en Cisco Packet Tracer (Sin CLI)</h1>
+    <!--Clase C con DHCP y con interfaz-->
+
+    <div class="section">
+      <h2>🎯 Objetivo</h2>
+      <p>Configurar una red local donde un router asigne direcciones IP automáticamente (DHCP) a dos PCs mediante
+        interfaz gráfica.</p>
+    </div>
+
+    <div class="section">
+      <h2>🧰 Materiales necesarios</h2>
+      <ul>
+        <li>2 Computadoras (PC)</li>
+        <li>1 Switch (por ejemplo, Cisco 2960)</li>
+        <li>1 Router Wireless (por ejemplo, Home Router)</li>
+        <li>3 Cables de red directos (Copper Straight-Through)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🔧 Pasos de configuración (modo gráfico)</h2>
+      <ol>
+        <li>Arrastrar las 2 PCs, el switch y el router al área de trabajo.</li>
+        <li>Conectar:
+          <ul>
+            <li>PC1 a Switch (Fa0/1)</li>
+            <li>PC2 a Switch (Fa0/2)</li>
+            <li>Router al Switch (GigabitEthernet0/0 a Fa0/24, por ejemplo)</li>
+          </ul>
+        </li>
+        <li>Haz clic en el Router > pestaña <strong>Config</strong> > <strong>GigabitEthernet0/0</strong>:
+          <ul>
+            <li>Encender el puerto: marcar <strong>On</strong></li>
+            <li>IP Address: <code>192.168.1.1</code></li>
+            <li>Subnet Mask: <code>255.255.255.0</code></li>
+          </ul>
+        </li>
+        <li>En el Router > ir a la pestaña <strong>GUI</strong>:
+          <ul>
+            <li>Pool Name: <code>RED_LOCAL</code></li>
+            <li>Default Gateway: <code>192.168.1.1</code></li>
+            <li>Start IP Address: <code>192.168.1.100</code></li>
+            <li>Subnet Mask: <code>255.255.255.0</code></li>
+            <li>Maximum Number of Users: <code>50</code></li>
+            <li>Haz clic en <strong>Add</strong></li>
+          </ul>
+        </li>
+        <li>En cada PC:
+          <ul>
+            <li>Desktop > IP Configuration > seleccionar <strong>DHCP</strong></li>
+            <li>Verifica que reciba IP automática (ej: <code>192.168.1.100</code>)</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <h2>🧪 Prueba de conectividad</h2>
+      <p>Desde PC1 (Command Prompt), ejecutar:</p>
+      <pre>ping 192.168.1.101</pre>
+      <p>(o la IP que reciba PC2 por DHCP)</p>
+    </div>
+
+    <div class="section">
+      <h2>✅ Resultado esperado</h2>
+      <p>Ambas PCs deben recibir direcciones IP automáticamente y comunicarse exitosamente a través del switch y
+        el router usando DHCP.</p>
+    </div>
+
+    <h1 class="TituloMargen">Red de Clase C con 3 PCs Usando CLI - Cisco Packet Tracer</h1>
+
+    <h2>Especificaciones</h2>
+    <ul>
+      <li>Red: 192.168.1.0/24</li>
+      <li>Gateway: 192.168.1.1</li>
+      <li>PC1: 192.168.1.2</li>
+      <li>PC2: 192.168.1.3</li>
+      <li>PC3: 192.168.1.4</li>
+      <li>Máscara: 255.255.255.0</li>
+    </ul>
+
+    <h2>Paso 1: Topología</h2>
+    <p>Conecta:</p>
+    <ul>
+      <li>3 PCs a un switch usando cables directos.</li>
+      <li>El switch al router en <strong>GigabitEthernet0/0</strong>.</li>
+    </ul>
+
+    <h2>Paso 2: Configuración del Router (CLI)</h2>
+
+    <pre>
 enable
 configure terminal
 interface gigabitEthernet 0/0
@@ -429,9 +679,9 @@ exit
 exit
 </pre>
 
-        <h3>Explicación de Comandos para Configurar un Router Cisco</h3>
+    <h3>Explicación de Comandos para Configurar un Router Cisco</h3>
 
-        <pre>
+    <pre>
 enable
 configure terminal
 interface gigabitEthernet 0/0
@@ -441,91 +691,91 @@ exit
 exit
 </pre>
 
-        <div class="comando">
-            <code>enable</code><br>
-            Cambia al <strong>modo privilegiado</strong> del router, que permite acceder a comandos de configuración
-            avanzados.
-        </div>
+    <div class="comando">
+      <code>enable</code><br>
+      Cambia al <strong>modo privilegiado</strong> del router, que permite acceder a comandos de configuración
+      avanzados.
+    </div>
 
-        <div class="comando">
-            <code>configure terminal</code><br>
-            Entra al <strong>modo de configuración global</strong> desde el cual se puede configurar interfaces, rutas,
-            etc.
-        </div>
+    <div class="comando">
+      <code>configure terminal</code><br>
+      Entra al <strong>modo de configuración global</strong> desde el cual se puede configurar interfaces, rutas,
+      etc.
+    </div>
 
-        <div class="comando">
-            <code>interface gigabitEthernet 0/0</code><br>
-            Accede a la <strong>configuración de la interfaz de red GigabitEthernet 0/0</strong>, la que usaremos para
-            conectar el router a la LAN.
-        </div>
+    <div class="comando">
+      <code>interface gigabitEthernet 0/0</code><br>
+      Accede a la <strong>configuración de la interfaz de red GigabitEthernet 0/0</strong>, la que usaremos para
+      conectar el router a la LAN.
+    </div>
 
-        <div class="comando">
-            <code>ip address 192.168.1.1 255.255.255.0</code><br>
-            Asigna una dirección IP y máscara a la interfaz seleccionada. Esta IP será la <strong>puerta de
-                enlace</strong> para los dispositivos de la red.
-        </div>
+    <div class="comando">
+      <code>ip address 192.168.1.1 255.255.255.0</code><br>
+      Asigna una dirección IP y máscara a la interfaz seleccionada. Esta IP será la <strong>puerta de
+        enlace</strong> para los dispositivos de la red.
+    </div>
 
-        <div class="comando">
-            <code>no shutdown</code><br>
-            Activa la interfaz. Por defecto, las interfaces están deshabilitadas (apagadas). Este comando la
-            <strong>enciende</strong>.
-        </div>
+    <div class="comando">
+      <code>no shutdown</code><br>
+      Activa la interfaz. Por defecto, las interfaces están deshabilitadas (apagadas). Este comando la
+      <strong>enciende</strong>.
+    </div>
 
-        <div class="comando">
-            <code>exit</code><br>
-            Sale de la configuración de la interfaz y vuelve al modo de configuración global.
-        </div>
+    <div class="comando">
+      <code>exit</code><br>
+      Sale de la configuración de la interfaz y vuelve al modo de configuración global.
+    </div>
 
-        <div class="comando">
-            <code>exit</code><br>
-            Sale del modo de configuración global y vuelve al modo privilegiado.
-        </div>
+    <div class="comando">
+      <code>exit</code><br>
+      Sale del modo de configuración global y vuelve al modo privilegiado.
+    </div>
 
-        <h2>Paso 3: Configuración de las PCs</h2>
-        <p>Desde la terminal (Command Prompt) de cada PC:</p>
+    <h2>Paso 3: Configuración de las PCs</h2>
+    <p>Desde la terminal (Command Prompt) de cada PC:</p>
 
-        <h3>PC1:</h3>
-        <pre>ip 192.168.1.2 255.255.255.0 192.168.1.1</pre>
+    <h3>PC1:</h3>
+    <pre>ip 192.168.1.2 255.255.255.0 192.168.1.1</pre>
 
-        <h3>PC2:</h3>
-        <pre>ip 192.168.1.3 255.255.255.0 192.168.1.1</pre>
+    <h3>PC2:</h3>
+    <pre>ip 192.168.1.3 255.255.255.0 192.168.1.1</pre>
 
-        <h3>PC3:</h3>
-        <pre>ip 192.168.1.4 255.255.255.0 192.168.1.1</pre>
+    <h3>PC3:</h3>
+    <pre>ip 192.168.1.4 255.255.255.0 192.168.1.1</pre>
 
-        <h3>Explicación del comando <code>ip</code>:</h3>
-        <ul>
-            <li>Primer campo: dirección IP del host.</li>
-            <li>Segundo campo: máscara de subred.</li>
-            <li>Tercer campo: puerta de enlace (IP del router).</li>
-        </ul>
+    <h3>Explicación del comando <code>ip</code>:</h3>
+    <ul>
+      <li>Primer campo: dirección IP del host.</li>
+      <li>Segundo campo: máscara de subred.</li>
+      <li>Tercer campo: puerta de enlace (IP del router).</li>
+    </ul>
 
-        <h2>Paso 4: Verificar conectividad</h2>
-        <p>Desde cualquier PC, escribe:</p>
-        <pre>ping 192.168.1.1</pre>
-        <p>O prueba entre PCs, por ejemplo:</p>
-        <pre>ping 192.168.1.3</pre>
+    <h2>Paso 4: Verificar conectividad</h2>
+    <p>Desde cualquier PC, escribe:</p>
+    <pre>ping 192.168.1.1</pre>
+    <p>O prueba entre PCs, por ejemplo:</p>
+    <pre>ping 192.168.1.3</pre>
 
-        <h1 class="TituloMargen">Red Clase C con DHCP - Cisco Packet Tracer (CLI)</h1> <!-- Clase C con dhcp y cli-->
+    <h1 class="TituloMargen">Red Clase C con DHCP - Cisco Packet Tracer (CLI)</h1> <!-- Clase C con dhcp y cli-->
 
-        <h2>Topología</h2>
-        <ul>
-            <li>1 Router (Router0)</li>
-            <li>1 Switch (Switch0)</li>
-            <li>3 PCs (PC0, PC1, PC2)</li>
-        </ul>
+    <h2>Topología</h2>
+    <ul>
+      <li>1 Router (Router0)</li>
+      <li>1 Switch (Switch0)</li>
+      <li>3 PCs (PC0, PC1, PC2)</li>
+    </ul>
 
-        <h2>Esquema de Red</h2>
-        <ul>
-            <li>Red: 192.168.10.0/24</li>
-            <li>Gateway: 192.168.10.1</li>
-            <li>Rango DHCP: 192.168.10.100 - 192.168.10.150</li>
-            <li>Máscara: 255.255.255.0</li>
-            <li>DNS: 8.8.8.8</li>
-        </ul>
+    <h2>Esquema de Red</h2>
+    <ul>
+      <li>Red: 192.168.10.0/24</li>
+      <li>Gateway: 192.168.10.1</li>
+      <li>Rango DHCP: 192.168.10.100 - 192.168.10.150</li>
+      <li>Máscara: 255.255.255.0</li>
+      <li>DNS: 8.8.8.8</li>
+    </ul>
 
-        <h2>Configuración CLI del Router</h2>
-        <pre>
+    <h2>Configuración CLI del Router</h2>
+    <pre>
 enable
 configure terminal
 
@@ -550,688 +800,849 @@ show running-config
 
 </pre>
 
-        <h2>Configuración de las PCs</h2>
-        <p>En cada PC:</p>
-        <ul>
-            <li>Ir a <strong>Desktop &gt; IP Configuration</strong></li>
-            <li>Seleccionar la opción <strong>DHCP</strong></li>
-        </ul>
+    <h2>Configuración de las PCs</h2>
+    <p>En cada PC:</p>
+    <ul>
+      <li>Ir a <strong>Desktop &gt; IP Configuration</strong></li>
+      <li>Seleccionar la opción <strong>DHCP</strong></li>
+    </ul>
 
-        <h2>Explicación de Comandos</h2>
-        <table>
-            <tr>
-                <th>Comando</th>
-                <th>Explicación</th>
-            </tr>
-            <tr>
-                <td><code>enable</code></td>
-                <td>Entra al modo privilegiado del router</td>
-            </tr>
-            <tr>
-                <td><code>configure terminal</code></td>
-                <td>Modo de configuración global</td>
-            </tr>
-            <tr>
-                <td><code>interface gigabitEthernet 0/0</code></td>
-                <td>Configura la interfaz LAN del router</td>
-            </tr>
-            <tr>
-                <td><code>ip address 192.168.10.1 255.255.255.0</code></td>
-                <td>Asigna IP a la interfaz</td>
-            </tr>
-            <tr>
-                <td><code>no shutdown</code></td>
-                <td>Activa la interfaz</td>
-            </tr>
-            <tr>
-                <td><code>ip dhcp excluded-address 192.168.10.1 192.168.10.99</code></td>
-                <td>Evita que esas IPs se asignen por DHCP</td>
-            </tr>
-            <tr>
-                <td><code>ip dhcp pool RED_LOCAL</code></td>
-                <td>Crea un pool DHCP llamado RED_LOCAL</td>
-            </tr>
-            <tr>
-                <td><code>network 192.168.10.0 255.255.255.0</code></td>
-                <td>Especifica la red para el pool</td>
-            </tr>
-            <tr>
-                <td><code>default-router 192.168.10.1</code></td>
-                <td>Indica la puerta de enlace para los clientes DHCP</td>
-            </tr>
-            <tr>
-                <td><code>dns-server 8.8.8.8</code></td>
-                <td>Indica el servidor DNS para los clientes</td>
-            </tr>
-            <tr>
-                <td><code>exit / end</code></td>
-                <td>Sale de los modos de configuración</td>
-            </tr>
-            <tr>
-                <td><code>show ip dhcp binding</code></td>
-                <td>Muestra qué dispositivos han recibido direcciones IP y cuál es su IP asignada.</td>
-            </tr>
-            <tr>
-                <td><code>show running-config</code></td>
-                <td>Muestra la configuración activa del router, incluyendo el DHCP.</td>
-            </tr>
-        </table>
+    <h2>Explicación de Comandos</h2>
+    <table>
+      <tr>
+        <th>Comando</th>
+        <th>Explicación</th>
+      </tr>
+      <tr>
+        <td><code>enable</code></td>
+        <td>Entra al modo privilegiado del router</td>
+      </tr>
+      <tr>
+        <td><code>configure terminal</code></td>
+        <td>Modo de configuración global</td>
+      </tr>
+      <tr>
+        <td><code>interface gigabitEthernet 0/0</code></td>
+        <td>Configura la interfaz LAN del router</td>
+      </tr>
+      <tr>
+        <td><code>ip address 192.168.10.1 255.255.255.0</code></td>
+        <td>Asigna IP a la interfaz</td>
+      </tr>
+      <tr>
+        <td><code>no shutdown</code></td>
+        <td>Activa la interfaz</td>
+      </tr>
+      <tr>
+        <td><code>ip dhcp excluded-address 192.168.10.1 192.168.10.99</code></td>
+        <td>Evita que esas IPs se asignen por DHCP</td>
+      </tr>
+      <tr>
+        <td><code>ip dhcp pool RED_LOCAL</code></td>
+        <td>Crea un pool DHCP llamado RED_LOCAL</td>
+      </tr>
+      <tr>
+        <td><code>network 192.168.10.0 255.255.255.0</code></td>
+        <td>Especifica la red para el pool</td>
+      </tr>
+      <tr>
+        <td><code>default-router 192.168.10.1</code></td>
+        <td>Indica la puerta de enlace para los clientes DHCP</td>
+      </tr>
+      <tr>
+        <td><code>dns-server 8.8.8.8</code></td>
+        <td>Indica el servidor DNS para los clientes</td>
+      </tr>
+      <tr>
+        <td><code>exit / end</code></td>
+        <td>Sale de los modos de configuración</td>
+      </tr>
+      <tr>
+        <td><code>show ip dhcp binding</code></td>
+        <td>Muestra qué dispositivos han recibido direcciones IP y cuál es su IP asignada.</td>
+      </tr>
+      <tr>
+        <td><code>show running-config</code></td>
+        <td>Muestra la configuración activa del router, incluyendo el DHCP.</td>
+      </tr>
+    </table>
 
-        <h1 class="TituloMargen">Red Clase B con DHCP - Cisco Packet Tracer (CLI)</h1> <!--Clase B con dhcp y cli -->
+    <h1 class="TituloMargen">Red Clase B con DHCP - Cisco Packet Tracer (CLI)</h1> <!--Clase B con dhcp y cli -->
 
-        <h2>Topología</h2>
-        <ul>
-            <li>1 Router (Router0)</li>
-            <li>1 Switch (Switch0)</li>
-            <li>3 PCs (PC0, PC1, PC2)</li>
-        </ul>
+    <h2>Topología</h2>
+    <ul>
+      <li>1 Router (Router0)</li>
+      <li>1 Switch (Switch0)</li>
+      <li>3 PCs (PC0, PC1, PC2)</li>
+    </ul>
 
-        <h2>Datos de la Red (Clase B)</h2>
-        <ul>
-            <li><strong>Red:</strong> 172.16.0.0/16</li>
-            <li><strong>Gateway:</strong> 172.16.0.1</li>
-            <li><strong>Rango DHCP:</strong> 172.16.0.100 - 172.16.0.150</li>
-            <li><strong>Máscara:</strong> 255.255.0.0</li>
-            <li><strong>DNS:</strong> 8.8.8.8</li>
-        </ul>
+    <h2>Datos de la Red (Clase B)</h2>
+    <ul>
+      <li><strong>Red:</strong> 172.16.0.0/16</li>
+      <li><strong>Gateway:</strong> 172.16.0.1</li>
+      <li><strong>Rango DHCP:</strong> 172.16.0.100 - 172.16.0.150</li>
+      <li><strong>Máscara:</strong> 255.255.0.0</li>
+      <li><strong>DNS:</strong> 8.8.8.8</li>
+    </ul>
 
-        <h1 class="TituloMargen">Red Clase A con DHCP - Cisco Packet Tracer (CLI)</h1> <!--Clase A con dhcp y cli -->
+    <h1 class="TituloMargen">Red Clase A con DHCP - Cisco Packet Tracer (CLI)</h1> <!--Clase A con dhcp y cli -->
 
-        <h2>Topología</h2>
-        <ul>
-            <li>1 Router (Router0)</li>
-            <li>1 Switch (Switch0)</li>
-            <li>3 PCs (PC0, PC1, PC2)</li>
-        </ul>
+    <h2>Topología</h2>
+    <ul>
+      <li>1 Router (Router0)</li>
+      <li>1 Switch (Switch0)</li>
+      <li>3 PCs (PC0, PC1, PC2)</li>
+    </ul>
 
-        <h2>Datos de la Red (Clase A)</h2>
-        <ul>
-            <li><strong>Red:</strong> 10.0.0.0/8</li>
-            <li><strong>Gateway:</strong> 10.0.0.1</li>
-            <li><strong>Rango DHCP:</strong> 10.0.0.100 - 10.0.0.150</li>
-            <li><strong>Máscara:</strong> 255.0.0.0</li>
-            <li><strong>DNS:</strong> 8.8.8.8</li>
-        </ul>
+    <h2>Datos de la Red (Clase A)</h2>
+    <ul>
+      <li><strong>Red:</strong> 10.0.0.0/8</li>
+      <li><strong>Gateway:</strong> 10.0.0.1</li>
+      <li><strong>Rango DHCP:</strong> 10.0.0.100 - 10.0.0.150</li>
+      <li><strong>Máscara:</strong> 255.0.0.0</li>
+      <li><strong>DNS:</strong> 8.8.8.8</li>
+    </ul>
 
-        Luego de finalizar realizar la siguiente actividad en carpeta <br> <br>
-        <h2>Actividad 1 - DHCP con CLI </h2>
-        <a href="Documentos/Documentos redes/Actividad 1 - DHCP_CLI_Cisco_Packet_Tracer.pdf"
-            download="" target="_blank">Haz Click aqui para descargar la actividad</a> <br><br>
+    Luego de finalizar realizar la siguiente actividad en carpeta <br> <br>
+    <h2>Actividad 1 - DHCP con CLI </h2>
+    <a href="Documentos/Documentos redes/Actividad 1 - DHCP_CLI_Cisco_Packet_Tracer.pdf" download="" target="_blank">Haz
+      Click aqui para descargar la actividad</a> <br><br>
 
-            
 
-            <h2>🌐 Ejercicio WAN con RIP (GUI) con 2 routers - Cisco Packet Tracer</h2>
 
-            <h2>🎯 Objetivo</h2>
-            <p>Conectar dos redes LAN mediante una red WAN usando <strong>RIP</strong> como protocolo de enrutamiento dinámico, sin usar comandos CLI.</p>
-          
-            <h2>🖥️ Topología sugerida</h2>
-            <pre>
+    <h2>🌐 Ejercicio WAN con RIP (GUI) con 2 routers - Cisco Packet Tracer</h2>
+
+    <h2>🎯 Objetivo</h2>
+    <p>Conectar dos redes LAN mediante una red WAN usando <strong>RIP</strong> como protocolo de enrutamiento dinámico,
+      sin usar comandos CLI.</p>
+
+    <h2>🖥️ Topología sugerida</h2>
+    <pre>
             [PC0] -- [Switch0] -- [Router0] === [Router1] -- [Switch1] -- [PC1]
             </pre>
-          
-            <h2>🧰 Dispositivos</h2>
-            <ul>
-              <li>2 PCs (PC0, PC1)</li>
-              <li>2 Switches</li>
-              <li>2 Routers</li>
-              <li>Cables: cobre directo (LAN) y serial (WAN)</li>
-            </ul>
-          
-            <h2>📄 Direcciones IP</h2>
-            <table>
-              <tr>
-                <th>Dispositivo</th>
-                <th>Interfaz</th>
-                <th>IP</th>
-                <th>Máscara</th>
-              </tr>
-              <tr><td>PC0</td><td>FastEthernet</td><td>192.168.1.10</td><td>255.255.255.0</td></tr>
-              <tr><td>Router0</td><td>G0/0</td><td>192.168.1.1</td><td>255.255.255.0</td></tr>
-              <tr><td>Router0</td><td>S0/0/0</td><td>10.10.10.1</td><td>255.255.255.252</td></tr>
-              <tr><td>Router1</td><td>S0/0/0</td><td>10.10.10.2</td><td>255.255.255.252</td></tr>
-              <tr><td>Router1</td><td>G0/0</td><td>192.168.2.1</td><td>255.255.255.0</td></tr>
-              <tr><td>PC1</td><td>FastEthernet</td><td>192.168.2.10</td><td>255.255.255.0</td></tr>
-            </table>
-          
-            <h2>🛠️ Pasos</h2>
-          
-            <h3>1. Conectar los dispositivos</h3>
-            <ul>
-              <li>PC0 a Switch0, Switch0 a Router0 (G0/0)</li>
-              <li>PC1 a Switch1, Switch1 a Router1 (G0/0)</li>
-              <li>Router0 S0/0/0 a Router1 S0/0/0 con cable serial (marcar <strong>Clock Rate</strong> en extremo DCE)</li>
-            </ul>
-          
-            <h3>2. Configurar IP en PCs</h3>
-            <p><strong>PC0:</strong> IP: <code>192.168.1.10</code> - Gateway: <code>192.168.1.1</code></p>
-            <p><strong>PC1:</strong> IP: <code>192.168.2.10</code> - Gateway: <code>192.168.2.1</code></p>
-          
-            <h3>3. Configurar Router0 (Config Tab)</h3>
-            <ul>
-              <li><strong>G0/0:</strong> IP: <code>192.168.1.1</code> - Máscara: <code>255.255.255.0</code></li>
-              <li><strong>S0/0/0:</strong> IP: <code>10.10.10.1</code> - Máscara: <code>255.255.255.252</code> - Clock Rate si DCE</li>
-              <li><strong>RIP:</strong> Activar y agregar redes: <code>192.168.1.0</code>, <code>10.10.10.0</code></li>
-            </ul>
-          
-            <h3>4. Configurar Router1 (Config Tab)</h3>
-            <ul>
-              <li><strong>G0/0:</strong> IP: <code>192.168.2.1</code> - Máscara: <code>255.255.255.0</code></li>
-              <li><strong>S0/0/0:</strong> IP: <code>10.10.10.2</code> - Máscara: <code>255.255.255.252</code></li>
-              <li><strong>RIP:</strong> Activar y agregar redes: <code>192.168.2.0</code>, <code>10.10.10.0</code></li>
-            </ul>
-          
-            <h2>🧪 Verificación</h2>
-            <p>Desde PC0 → Command Prompt → <code>ping 192.168.2.10</code></p>
-            <p>Desde PC1 → Command Prompt → <code>ping 192.168.1.10</code></p>
 
-            <hr>
+    <h2>🧰 Dispositivos</h2>
+    <ul>
+      <li>2 PCs (PC0, PC1)</li>
+      <li>2 Switches</li>
+      <li>2 Routers</li>
+      <li>Cables: cobre directo (LAN) y serial (WAN)</li>
+    </ul>
 
-            <h1>¿Para qué sirve <code>clock rate 64000</code> en Cisco?</h1>
+    <h2>📄 Direcciones IP</h2>
+    <table>
+      <tr>
+        <th>Dispositivo</th>
+        <th>Interfaz</th>
+        <th>IP</th>
+        <th>Máscara</th>
+      </tr>
+      <tr>
+        <td>PC0</td>
+        <td>FastEthernet</td>
+        <td>192.168.1.10</td>
+        <td>255.255.255.0</td>
+      </tr>
+      <tr>
+        <td>Router0</td>
+        <td>G0/0</td>
+        <td>192.168.1.1</td>
+        <td>255.255.255.0</td>
+      </tr>
+      <tr>
+        <td>Router0</td>
+        <td>S0/0/0</td>
+        <td>10.10.10.1</td>
+        <td>255.255.255.252</td>
+      </tr>
+      <tr>
+        <td>Router1</td>
+        <td>S0/0/0</td>
+        <td>10.10.10.2</td>
+        <td>255.255.255.252</td>
+      </tr>
+      <tr>
+        <td>Router1</td>
+        <td>G0/0</td>
+        <td>192.168.2.1</td>
+        <td>255.255.255.0</td>
+      </tr>
+      <tr>
+        <td>PC1</td>
+        <td>FastEthernet</td>
+        <td>192.168.2.10</td>
+        <td>255.255.255.0</td>
+      </tr>
+    </table>
 
-            <p>El comando <code>clock rate 64000</code> se usa para establecer la velocidad de transmisión en una interfaz serial de un router Cisco cuando éste actúa como <strong>DCE</strong> (Data Communication Equipment).</p>
+    <h2>🛠️ Pasos</h2>
 
-            <h2>¿Por qué es necesario?</h2>
-            <ul>
-                <li>Define la <strong>frecuencia del reloj</strong> para la sincronización de datos en una conexión serial.</li>
-                <li>Solo se configura en el extremo <strong>DCE</strong>.</li>
-                <li>Permite que el otro extremo (<strong>DTE</strong>) se sincronice correctamente para la transmisión.</li>
-            </ul>
+    <h3>1. Conectar los dispositivos</h3>
+    <ul>
+      <li>PC0 a Switch0, Switch0 a Router0 (G0/0)</li>
+      <li>PC1 a Switch1, Switch1 a Router1 (G0/0)</li>
+      <li>Router0 S0/0/0 a Router1 S0/0/0 con cable serial (marcar <strong>Clock Rate</strong> en extremo DCE)</li>
+    </ul>
 
-            <h2>Ejemplo de uso</h2>
-            <pre>Router(config-if)# clock rate 64000</pre>
+    <h3>2. Configurar IP en PCs</h3>
+    <p><strong>PC0:</strong> IP: <code>192.168.1.10</code> - Gateway: <code>192.168.1.1</code></p>
+    <p><strong>PC1:</strong> IP: <code>192.168.2.10</code> - Gateway: <code>192.168.2.1</code></p>
 
-            <h2>¿Se pueden usar otras frecuencias?</h2>
-            <p>Sí, hay múltiples velocidades disponibles según la necesidad de la red o simulación.</p>
+    <h3>3. Configurar Router0 (Config Tab)</h3>
+    <ul>
+      <li><strong>G0/0:</strong> IP: <code>192.168.1.1</code> - Máscara: <code>255.255.255.0</code></li>
+      <li><strong>S0/0/0:</strong> IP: <code>10.10.10.1</code> - Máscara: <code>255.255.255.252</code> - Clock Rate si
+        DCE</li>
+      <li><strong>RIP:</strong> Activar y agregar redes: <code>192.168.1.0</code>, <code>10.10.10.0</code></li>
+    </ul>
 
-            <h1>📊 ¿Para qué sirve cada velocidad del comando <code>clock rate</code>?</h1>
+    <h3>4. Configurar Router1 (Config Tab)</h3>
+    <ul>
+      <li><strong>G0/0:</strong> IP: <code>192.168.2.1</code> - Máscara: <code>255.255.255.0</code></li>
+      <li><strong>S0/0/0:</strong> IP: <code>10.10.10.2</code> - Máscara: <code>255.255.255.252</code></li>
+      <li><strong>RIP:</strong> Activar y agregar redes: <code>192.168.2.0</code>, <code>10.10.10.0</code></li>
+    </ul>
 
-  <p>Estas velocidades permiten simular distintos tipos de enlaces seriales en redes WAN o laboratorios de Cisco Packet Tracer. Se definen en bits por segundo (bps).</p>
+    <h2>🧪 Verificación</h2>
+    <p>Desde PC0 → Command Prompt → <code>ping 192.168.2.10</code></p>
+    <p>Desde PC1 → Command Prompt → <code>ping 192.168.1.10</code></p>
 
-            <table>
-                <tr>
-                <th>Clock Rate</th>
-                <th>Velocidad</th>
-                <th>Usos comunes y simulación</th>
-                </tr>
-                <tr><td><code>1200</code></td><td>1.2 kbps</td><td>Simulación de enlaces muy lentos (históricos o de pruebas).</td></tr>
-                <tr><td><code>2400</code></td><td>2.4 kbps</td><td>Transmisiones antiguas o equipos legados.</td></tr>
-                <tr><td><code>4800</code></td><td>4.8 kbps</td><td>Poco frecuente, enlaces de baja capacidad.</td></tr>
-                <tr><td><code>9600</code></td><td>9.6 kbps</td><td>Enlaces seriales de equipos antiguos o telemetría básica.</td></tr>
-                <tr><td><code>19200</code></td><td>19.2 kbps</td><td>Velocidad típica en módems antiguos.</td></tr>
-                <tr><td><code>38400</code></td><td>38.4 kbps</td><td>Simulación de conexiones con restricciones medianas.</td></tr>
-                <tr><td><code>56000</code></td><td>56 kbps</td><td>Equivalente a un canal de voz digital (DS0).</td></tr>
-                <tr><td><code>64000</code></td><td>64 kbps</td><td>Estándar de enlaces WAN básicos, muy usado en simulaciones.</td></tr>
-                <tr><td><code>128000</code></td><td>128 kbps</td><td>Simula enlaces tipo ISDN de dos canales (BRI).</td></tr>
-                <tr><td><code>256000</code></td><td>256 kbps</td><td>Más ancho de banda para enlaces más rápidos.</td></tr>
-                <tr><td><code>512000</code></td><td>512 kbps</td><td>Enlaces corporativos o pruebas de mayor velocidad.</td></tr>
-                <tr><td><code>1544000</code></td><td>1.544 Mbps</td><td>Enlace T1 completo (velocidad estándar en EE. UU.).</td></tr>
-                <tr><td><code>2000000</code></td><td>2 Mbps</td><td>Velocidad cercana a E1 (usada en Europa y Latinoamérica).</td></tr>
-            </table>
+    <hr>
 
-            <h2>¿Cómo saber si soy DCE?</h2>
-            <p>En Cisco Packet Tracer, el router que tiene un pequeño rótulo con “DCE” en el cable serial es el que debe tener el <code>clock rate</code>.</p>
+    <h1>¿Para qué sirve <code>clock rate 64000</code> en Cisco?</h1>
 
-            <h2>Comando de ayuda (en router real)</h2>
-            <pre>Router(config-if)# clock rate ?</pre>
+    <p>El comando <code>clock rate 64000</code> se usa para establecer la velocidad de transmisión en una interfaz
+      serial de un router Cisco cuando éste actúa como <strong>DCE</strong> (Data Communication Equipment).</p>
 
-            <p>Este comando te muestra todos los valores posibles que podés usar como velocidad.</p>
+    <h2>¿Por qué es necesario?</h2>
+    <ul>
+      <li>Define la <strong>frecuencia del reloj</strong> para la sincronización de datos en una conexión serial.</li>
+      <li>Solo se configura en el extremo <strong>DCE</strong>.</li>
+      <li>Permite que el otro extremo (<strong>DTE</strong>) se sincronice correctamente para la transmisión.</li>
+    </ul>
 
-            <h2>🌐 Ejercicio WAN con RIP (GUI) con 3 routers</h2>
+    <h2>Ejemplo de uso</h2>
+    <pre>Router(config-if)# clock rate 64000</pre>
 
-            <h2>🎯 Objetivo</h2>
-            <p>Conectar tres redes LAN mediante una red WAN usando <strong>RIP</strong> como protocolo de enrutamiento dinámico, sin usar comandos CLI.</p>
-          
-            <h2>🧰 Dispositivos</h2>
-            <ul>
-              <li>3 PCs (PC0, PC1, PC2)</li>
-              <li>2 Switches</li>
-              <li>3 Routers</li>
-              <li>Cables: cobre directo (LAN) y serial (WAN)</li>
-            </ul>
+    <h2>¿Se pueden usar otras frecuencias?</h2>
+    <p>Sí, hay múltiples velocidades disponibles según la necesidad de la red o simulación.</p>
+
+    <h1>📊 ¿Para qué sirve cada velocidad del comando <code>clock rate</code>?</h1>
+
+    <p>Estas velocidades permiten simular distintos tipos de enlaces seriales en redes WAN o laboratorios de Cisco
+      Packet Tracer. Se definen en bits por segundo (bps).</p>
+
+    <table>
+      <tr>
+        <th>Clock Rate</th>
+        <th>Velocidad</th>
+        <th>Usos comunes y simulación</th>
+      </tr>
+      <tr>
+        <td><code>1200</code></td>
+        <td>1.2 kbps</td>
+        <td>Simulación de enlaces muy lentos (históricos o de pruebas).</td>
+      </tr>
+      <tr>
+        <td><code>2400</code></td>
+        <td>2.4 kbps</td>
+        <td>Transmisiones antiguas o equipos legados.</td>
+      </tr>
+      <tr>
+        <td><code>4800</code></td>
+        <td>4.8 kbps</td>
+        <td>Poco frecuente, enlaces de baja capacidad.</td>
+      </tr>
+      <tr>
+        <td><code>9600</code></td>
+        <td>9.6 kbps</td>
+        <td>Enlaces seriales de equipos antiguos o telemetría básica.</td>
+      </tr>
+      <tr>
+        <td><code>19200</code></td>
+        <td>19.2 kbps</td>
+        <td>Velocidad típica en módems antiguos.</td>
+      </tr>
+      <tr>
+        <td><code>38400</code></td>
+        <td>38.4 kbps</td>
+        <td>Simulación de conexiones con restricciones medianas.</td>
+      </tr>
+      <tr>
+        <td><code>56000</code></td>
+        <td>56 kbps</td>
+        <td>Equivalente a un canal de voz digital (DS0).</td>
+      </tr>
+      <tr>
+        <td><code>64000</code></td>
+        <td>64 kbps</td>
+        <td>Estándar de enlaces WAN básicos, muy usado en simulaciones.</td>
+      </tr>
+      <tr>
+        <td><code>128000</code></td>
+        <td>128 kbps</td>
+        <td>Simula enlaces tipo ISDN de dos canales (BRI).</td>
+      </tr>
+      <tr>
+        <td><code>256000</code></td>
+        <td>256 kbps</td>
+        <td>Más ancho de banda para enlaces más rápidos.</td>
+      </tr>
+      <tr>
+        <td><code>512000</code></td>
+        <td>512 kbps</td>
+        <td>Enlaces corporativos o pruebas de mayor velocidad.</td>
+      </tr>
+      <tr>
+        <td><code>1544000</code></td>
+        <td>1.544 Mbps</td>
+        <td>Enlace T1 completo (velocidad estándar en EE. UU.).</td>
+      </tr>
+      <tr>
+        <td><code>2000000</code></td>
+        <td>2 Mbps</td>
+        <td>Velocidad cercana a E1 (usada en Europa y Latinoamérica).</td>
+      </tr>
+    </table>
+
+    <h2>¿Cómo saber si soy DCE?</h2>
+    <p>En Cisco Packet Tracer, el router que tiene un pequeño rótulo con “DCE” en el cable serial es el que debe tener
+      el <code>clock rate</code>.</p>
+
+    <h2>Comando de ayuda (en router real)</h2>
+    <pre>Router(config-if)# clock rate ?</pre>
+
+    <p>Este comando te muestra todos los valores posibles que podés usar como velocidad.</p>
+
+    <h2>🌐 Ejercicio WAN con RIP (GUI) con 3 routers</h2>
+
+    <h2>🎯 Objetivo</h2>
+    <p>Conectar tres redes LAN mediante una red WAN usando <strong>RIP</strong> como protocolo de enrutamiento dinámico,
+      sin usar comandos CLI.</p>
+
+    <h2>🧰 Dispositivos</h2>
+    <ul>
+      <li>3 PCs (PC0, PC1, PC2)</li>
+      <li>2 Switches</li>
+      <li>3 Routers</li>
+      <li>Cables: cobre directo (LAN) y serial (WAN)</li>
+    </ul>
 
 
-            <h2>🌐 Ejercicio WAN con enrutamiento estático (GUI) con 2 routers</h2>
+    <h2>🌐 Ejercicio WAN con enrutamiento estático (GUI) con 2 routers</h2>
 
-            <h2>🎯 Objetivo</h2>
-            <p>Conectar dos redes LAN mediante una red WAN mediante enrutamiento estático, sin usar comandos CLI.</p>
-          
-            <h2>🧰 Dispositivos</h2>
-            <ul>
-              <li>2 PCs (PC0, PC1)</li>
-              <li>2 Switches</li>
-              <li>2 Routers</li>
-              <li>Cables: cobre directo (LAN) y serial (WAN)</li>
-            </ul>
+    <h2>🎯 Objetivo</h2>
+    <p>Conectar dos redes LAN mediante una red WAN mediante enrutamiento estático, sin usar comandos CLI.</p>
 
-            <h2>🌐 Ejercicio WAN con enrutamiento estático (GUI) con 3 routers</h2>
+    <h2>🧰 Dispositivos</h2>
+    <ul>
+      <li>2 PCs (PC0, PC1)</li>
+      <li>2 Switches</li>
+      <li>2 Routers</li>
+      <li>Cables: cobre directo (LAN) y serial (WAN)</li>
+    </ul>
 
-            <h2>🎯 Objetivo</h2>
-            <p>Conectar tres redes LAN mediante una red WAN mediante enrutamiento estático, sin usar comandos CLI.</p>
-          
-            <h2>🧰 Dispositivos</h2>
-            <ul>
-              <li>3 PCs (PC0, PC1, PC2)</li>
-              <li>2 Switches</li>
-              <li>3 Routers</li>
-              <li>Cables: cobre directo (LAN) y serial (WAN)</li>
-            </ul>
+    <h2>🌐 Ejercicio WAN con enrutamiento estático (GUI) con 3 routers</h2>
 
- <h1>Configurar un servidor HTTP</h1>
+    <h2>🎯 Objetivo</h2>
+    <p>Conectar tres redes LAN mediante una red WAN mediante enrutamiento estático, sin usar comandos CLI.</p>
 
-  <h2>1. Agregar los dispositivos</h2>
-  <ol>
-    <li>Abrir Cisco Packet Tracer.</li>
-    <li>Desde <em>End Devices</em> arrastrar un <strong>Server</strong> y al menos una <strong>PC</strong> al área de trabajo.</li>
-    <li>Agregar un <strong>Switch</strong> y conectar los dispositivos con cable de cobre (cable directo).</li>
-  </ol>
+    <h2>🧰 Dispositivos</h2>
+    <ul>
+      <li>3 PCs (PC0, PC1, PC2)</li>
+      <li>2 Switches</li>
+      <li>3 Routers</li>
+      <li>Cables: cobre directo (LAN) y serial (WAN)</li>
+    </ul>
 
-  <h2>2. Configurar direcciones IP</h2>
-  <ol>
-    <li>Seleccionar la PC → <em>Desktop &gt; IP Configuration</em> y asignar: dirección IP, máscara de subred y gateway (si corresponde).</li>
-    <li>Seleccionar el Server → <em>Desktop &gt; IP Configuration</em> y asignar: dirección IP, máscara de subred y gateway.</li>
-  </ol>
+    <h1>Configurar un servidor HTTP</h1>
 
-  <h2>3. Activar el servicio HTTP</h2>
-  <ol>
-    <li>Seleccionar el Server → pestaña <em>Services</em>.</li>
-    <li>Elegir <strong>HTTP</strong> en la lista de servicios.</li>
-    <li>Activar el servicio (activar el interruptor <em>On</em>).</li>
-    <li>Opcional: editar la página web que servirá el servidor desde el área de edición del servicio.</li>
-  </ol>
+    <h2>1. Agregar los dispositivos</h2>
+    <ol>
+      <li>Abrir Cisco Packet Tracer.</li>
+      <li>Desde <em>End Devices</em> arrastrar un <strong>Server</strong> y al menos una <strong>PC</strong> al área de
+        trabajo.</li>
+      <li>Agregar un <strong>Switch</strong> y conectar los dispositivos con cable de cobre (cable directo).</li>
+    </ol>
 
-  <h2>4. Probar desde la PC</h2>
-  <ol>
-    <li>En la PC → <em>Desktop &gt; Web Browser</em>.</li>
-    <li>Ingresar la dirección IP del servidor en la barra de direcciones.</li>
-    <li>Verificar que la página del servidor se cargue correctamente.</li>
-  </ol>
+    <h2>2. Configurar direcciones IP</h2>
+    <ol>
+      <li>Seleccionar la PC → <em>Desktop &gt; IP Configuration</em> y asignar: dirección IP, máscara de subred y
+        gateway (si corresponde).</li>
+      <li>Seleccionar el Server → <em>Desktop &gt; IP Configuration</em> y asignar: dirección IP, máscara de subred y
+        gateway.</li>
+    </ol>
 
-  <h1>📡 Configurar un servidor DHCP</h1>
+    <h2>3. Activar el servicio HTTP</h2>
+    <ol>
+      <li>Seleccionar el Server → pestaña <em>Services</em>.</li>
+      <li>Elegir <strong>HTTP</strong> en la lista de servicios.</li>
+      <li>Activar el servicio (activar el interruptor <em>On</em>).</li>
+      <li>Opcional: editar la página web que servirá el servidor desde el área de edición del servicio.</li>
+    </ol>
 
-  <h2>1️⃣ Agregar los dispositivos</h2>
-  <ol>
-    <li>💻 Abrir Cisco Packet Tracer.</li>
-    <li>🖥️ Arrastrar un <strong>Server</strong>, varias <strong>PCs</strong> y un <strong>Switch</strong>.</li>
-    <li>🔗 Conectar todos con <em>cables de cobre directo</em>.</li>
-  </ol>
+    <h2>4. Probar desde la PC</h2>
+    <ol>
+      <li>En la PC → <em>Desktop &gt; Web Browser</em>.</li>
+      <li>Ingresar la dirección IP del servidor en la barra de direcciones.</li>
+      <li>Verificar que la página del servidor se cargue correctamente.</li>
+    </ol>
 
-  <h2>2️⃣ Configurar el servidor</h2>
-  <ol>
-    <li>⚙️ Seleccionar el <strong>Server</strong>.</li>
-    <li>🌐 En <em>Desktop &gt; IP Configuration</em>, asignar:
-      <ul>
-        <li>Dirección IP fija</li>
-        <li>Máscara de subred</li>
-        <li>Gateway</li>
-      </ul>
-    </li>
-    <li>📑 Ir a <em>Services &gt; DHCP</em>:
-      <ul>
-        <li>✔️ Activar el servicio DHCP (On)</li>
-        <li>➡️ Configurar el <strong>Default Gateway</strong></li>
-        <li>🟢 Definir la <strong>Start IP Address</strong></li>
-        <li>📐 Definir la <strong>Subnet Mask</strong></li>
-        <li>👥 Indicar <strong>Maximum Number of Users</strong></li>
-        <li>💾 Hacer clic en <strong>Save</strong></li>
-      </ul>
-    </li>
-  </ol>
+    <h1>📡 Configurar un servidor DHCP</h1>
 
-  <h2>3️⃣ Configurar las PCs</h2>
-  <ol>
-    <li>🖱️ Seleccionar una PC.</li>
-    <li>🌍 En <em>Desktop &gt; IP Configuration</em>, elegir la opción <strong>DHCP</strong>.</li>
-    <li>📡 La PC debería recibir automáticamente una dirección IP dentro del rango configurado.</li>
-  </ol>
+    <h2>1️⃣ Agregar los dispositivos</h2>
+    <ol>
+      <li>💻 Abrir Cisco Packet Tracer.</li>
+      <li>🖥️ Arrastrar un <strong>Server</strong>, varias <strong>PCs</strong> y un <strong>Switch</strong>.</li>
+      <li>🔗 Conectar todos con <em>cables de cobre directo</em>.</li>
+    </ol>
 
-  <h2>4️⃣ Verificar</h2>
-  <ol>
-    <li>⚡ Usar el comando <code>ping</code> para comprobar conectividad con el servidor.</li>
-    <li>👀 Revisar que cada PC reciba una dirección IP diferente.</li>
-  </ol>
-
-  <h2>📊 Parámetros básicos del DHCP</h2>
-  <table>
-    <tr>
-      <th>⚙️ Parámetro</th>
-      <th>📖 Descripción</th>
-    </tr>
-    <tr>
-      <td>Start IP Address</td>
-      <td>Primera dirección que se entregará a los clientes.</td>
-    </tr>
-    <tr>
-      <td>Subnet Mask</td>
-      <td>Máscara de subred usada en la red.</td>
-    </tr>
-    <tr>
-      <td>Default Gateway</td>
-      <td>Puerta de enlace predeterminada para salir de la red.</td>
-    </tr>
-    <tr>
-      <td>Maximum Number of Users</td>
-      <td>Cantidad de direcciones IP que el servidor puede asignar.</td>
-    </tr>
-  </table>
-
-  <h1>🌐 Configurar un Servidor DNS y Web</h1>
-
-  <div class="box">
-    <h2>📋 Resumen</h2>
-    <p>Con esta configuración, las PCs podrán acceder a páginas web usando nombres de dominio en lugar de direcciones IP.</p>
-  </div>
-
-  <h2>1️⃣ Agregar dispositivos</h2>
-  <ol>
-    <li>💻 Abrir Cisco Packet Tracer.</li>
-    <li>🖥️ Arrastrar un <strong>Server</strong> (funcionará como DNS + Web), una o más <strong>PCs</strong> y un <strong>Switch</strong>.</li>
-    <li>🔗 Conectar todos con cables de cobre directo.</li>
-  </ol>
-
-  <h2>2️⃣ Configurar el servidor</h2>
-  <ol>
-    <li>⚙️ Seleccionar el <strong>Server</strong>.</li>
-    <li>🌐 En <em>Desktop &gt; IP Configuration</em>, asignar:
-      <ul>
-        <li>Dirección IP fija</li>
-        <li>Máscara de subred</li>
-        <li>Gateway</li>
-      </ul>
-    </li>
-  </ol>
-
-  <h2>3️⃣ Activar el servicio Web (HTTP)</h2>
-  <ol>
-    <li>🌍 En el servidor → pestaña <em>Services &gt; HTTP</em>.</li>
-    <li>✔️ Activar el servicio <strong>HTTP (On)</strong>.</li>
-    <li>✏️ Opcional: editar el contenido de la página web que se mostrará.</li>
-  </ol>
-
-  <h2>4️⃣ Configurar el servicio DNS</h2>
-  <ol>
-    <li>🔎 En el servidor → pestaña <em>Services &gt; DNS</em>.</li>
-    <li>✔️ Activar el servicio <strong>DNS (On)</strong>.</li>
-    <li>📑 En la tabla de configuración:
-      <ul>
-        <li>✏️ <strong>Name:</strong> escribir el dominio (ejemplo: <code>www.mipagina.com</code>)</li>
-        <li>💻 <strong>Address:</strong> colocar la IP del servidor web</li>
-        <li>➕ Hacer clic en <strong>Add</strong></li>
-      </ul>
-    </li>
-  </ol>
-
-  <h2>5️⃣ Configurar las PCs</h2>
-  <ol>
-    <li>🖱️ Seleccionar cada PC → <em>Desktop &gt; IP Configuration</em>.</li>
-    <li>🌍 Elegir <strong>DHCP</strong> o asignar IP manualmente.</li>
-    <li>📡 En el campo <strong>DNS Server</strong>, colocar la dirección IP del servidor.</li>
-  </ol>
-
-  <h2>6️⃣ Probar la configuración</h2>
-  <ol>
-    <li>💻 En la PC → <em>Desktop &gt; Web Browser</em>.</li>
-    <li>⌨️ Escribir el dominio configurado (ejemplo: <code>www.mipagina.com</code>).</li>
-    <li>👀 Verificar que se cargue la página del servidor web.</li>
-  </ol>
-
-  <h2>📊 Parámetros clave</h2>
-  <table>
-    <tr>
-      <th>⚙️ Servicio</th>
-      <th>📖 Función</th>
-    </tr>
-    <tr>
-      <td>HTTP</td>
-      <td>Permite que el servidor aloje una página web.</td>
-    </tr>
-    <tr>
-      <td>DNS</td>
-      <td>Traduce nombres de dominio (ejemplo: <code>www.mipagina.com</code>) a direcciones IP.</td>
-    </tr>
-    <tr>
-      <td>DNS Server (en PCs)</td>
-      <td>Indica a qué servidor preguntar por los nombres de dominio.</td>
-    </tr>
-  </table>
-
-  <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <title>Configurar Servidor HTTP, DNS y E-mail en Cisco Packet Tracer</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 28px; background:#f9f9f9; color:#222; line-height:1.5; }
-    h1 { color:#1f456e; }
-    h2 { color:#2c6b8f; margin-top:18px; }
-    p { margin:8px 0; }
-    ol { margin-left:18px; }
-    li { margin:6px 0; }
-    .note { background:#fff8c6; padding:10px; border-radius:6px; margin-top:12px; }
-    .box { background:#fff; border:1px solid #ddd; padding:12px; border-radius:6px; }
-    code { background:#eee; padding:2px 6px; border-radius:4px; }
-    table { border-collapse: collapse; margin-top:12px; }
-    th, td { border:1px solid #ccc; padding:6px 10px; text-align:left; }
-    th { background:#e9f2f8; }
-  </style>
-</head>
-<body>
-
-  <h1>🌐 Configuración de Servidor HTTP, DNS y E-mail</h1>
-
-  <div class="box">
-    <h2>📋 Resumen</h2>
-    <p>Este ejercicio integra tres servicios en un mismo servidor: <strong>HTTP</strong> para páginas web, <strong>DNS</strong> para resolución de nombres de dominio y <strong>E-mail</strong> para correo electrónico.</p>
-  </div>
-
-  <h2>1️⃣ Agregar dispositivos</h2>
-  <ol>
-    <li>💻 Abrir Cisco Packet Tracer.</li>
-    <li>🖥️ Arrastrar un <strong>Server</strong> (con HTTP, DNS y E-mail), varias <strong>PCs</strong> y un <strong>Switch</strong>.</li>
-    <li>🔗 Conectar con <em>cables de cobre directo</em>.</li>
-  </ol>
-
-  <h2>2️⃣ Configurar el servidor</h2>
-  <ol>
-    <li>⚙️ Seleccionar el <strong>Server</strong>.</li>
-    <li>🌐 En <em>Desktop &gt; IP Configuration</em>, asignar:
-      <ul>
-        <li>Dirección IP fija</li>
-        <li>Máscara de subred</li>
-        <li>Gateway</li>
-      </ul>
-    </li>
-  </ol>
-
-  <h2>3️⃣ Servicio Web (HTTP)</h2>
-  <ol>
-    <li>🌍 En <em>Services &gt; HTTP</em>.</li>
-    <li>✔️ Activar el servicio <strong>HTTP (On)</strong>.</li>
-    <li>✏️ Opcional: editar el contenido de la página web.</li>
-  </ol>
-
-  <h2>4️⃣ Servicio DNS</h2>
-  <ol>
-    <li>🔎 En <em>Services &gt; DNS</em>.</li>
-    <li>✔️ Activar el servicio <strong>DNS (On)</strong>.</li>
-    <li>📑 En la tabla:
-      <ul>
-        <li><strong>Name:</strong> dominio (ejemplo: <code>www.mipagina.com</code>)</li>
-        <li><strong>Address:</strong> la IP del servidor web</li>
-        <li>➕ Hacer clic en <strong>Add</strong></li>
-      </ul>
-    </li>
-  </ol>
-
-  <h2>5️⃣ Servicio de E-mail</h2>
-  <ol>
-    <li>📧 En <em>Services &gt; EMAIL</em>.</li>
-    <li>✔️ Activar el servicio de correo.</li>
-    <li>👥 Crear cuentas:
-      <ul>
-        <li><strong>User:</strong> nombre del usuario (ejemplo: alumno1)</li>
-        <li><strong>Password:</strong> clave del usuario</li>
-        <li><strong>Domain:</strong> dominio de correo (ejemplo: <code>mired.com</code>)</li>
-        <li>➕ Hacer clic en <strong>Add</strong></li>
-      </ul>
-    </li>
-  </ol>
-
-  <h2>6️⃣ Configurar las PCs</h2>
-  <ol>
-    <li>🖱️ En cada PC → <em>Desktop &gt; IP Configuration</em>.</li>
-    <li>🌍 Asignar IP manual o usar DHCP.</li>
-    <li>📡 En el campo <strong>DNS Server</strong>, colocar la IP del servidor.</li>
-  </ol>
-
-  <h2>7️⃣ Configuración de correo en las PCs</h2>
-  <ol>
-    <li>📧 En la PC → <em>Desktop &gt; Email</em>.</li>
-    <li>Completar:
-      <ul>
-        <li><strong>Account Name:</strong> usuario (ej: alumno1)</li>
-        <li><strong>Email Address:</strong> cuenta (ej: alumno1@mired.com)</li>
-        <li><strong>Incoming Mail Server (POP3):</strong> IP del servidor</li>
-        <li><strong>Outgoing Mail Server (SMTP):</strong> IP del servidor</li>
-        <li><strong>Password:</strong> contraseña del usuario</li>
-      </ul>
-    </li>
-  </ol>
-
-  <h2>8️⃣ Prueba de los servicios</h2>
-  <ol>
-    <li>🌍 En el navegador de la PC, escribir el dominio (ej: <code>www.mipagina.com</code>) → debe cargar la página web.</li>
-    <li>📧 En la aplicación de correo, enviar un mail desde <code>alumno1@mired.com</code> a <code>alumno2@mired.com</code>.</li>
-    <li>👀 Revisar la bandeja de entrada en la PC del segundo usuario.</li>
-  </ol>
-
-  <h2>📊 Parámetros clave de los servicios</h2>
-  <table>
-    <tr>
-      <th>⚙️ Servicio</th>
-      <th>📖 Función</th>
-    </tr>
-    <tr>
-      <td>HTTP</td>
-      <td>Publica páginas web.</td>
-    </tr>
-    <tr>
-      <td>DNS</td>
-      <td>Traduce nombres de dominio a direcciones IP.</td>
-    </tr>
-    <tr>
-      <td>E-mail (SMTP/POP3)</td>
-      <td>Permite enviar y recibir mensajes de correo electrónico.</td>
-    </tr>
-  </table>
-
-  <h1>🛠️ Actividad: Red con 4 Servidores HTTP, 1 DHCP y 1 DNS</h1>
-
-  <h2>Objetivo</h2>
-  <p>Configurar una red en Cisco Packet Tracer donde las PC clientes puedan acceder a los 4 servidores web mediante <strong>nombre de dominio</strong> usando <strong>DHCP</strong> y <strong>DNS</strong> automáticamente.</p>
-  
-  <h2>Requisitos</h2>
-  <ul>
-    <li><span class="icon">🌐</span><span class="device">4 Servidores HTTP</span> (cada uno con una página distinta)</li>
-    <li><span class="icon">🖥️</span><span class="device">1 Servidor DNS</span></li>
-    <li><span class="icon">📡</span><span class="device">1 Servidor DHCP</span></li>
-    <li><span class="icon">💻</span><span class="device">4 PC clientes</span></li>
-    <li><span class="icon">🔌</span><span class="device">Switch</span></li>
-  </ul>
-  
-  <h2>Instrucciones</h2>
-  <ol>
-    <li><span class="icon">🔧</span>Colocar los dispositivos en el área de trabajo y conectarlos con <strong>cable directo</strong>.</li>
-    <li><span class="icon">📡</span>Configurar el <strong>Servidor DHCP</strong> para asignar IP, máscara, gateway y DNS automáticamente.</li>
-    <li><span class="icon">🖥️</span>Configurar el <strong>Servidor DNS</strong> con los 4 registros:
-      <ul>
-        <li>🌐 www.servidor1.com → IP HTTP 1</li>
-        <li>🌐 www.servidor2.com → IP HTTP 2</li>
-        <li>🌐 www.servidor3.com → IP HTTP 3</li>
-        <li>🌐 www.servidor4.com → IP HTTP 4</li>
-      </ul>
-    </li>
-    <li><span class="icon">🌐</span>Configurar cada <strong>Servidor HTTP</strong> con su página web en Services → HTTP → index.html.</li>
-    <li><span class="icon">💻</span>Configurar las <strong>PC clientes</strong> en modo DHCP y verificar que reciben IP, Gateway y DNS automáticamente.</li>
-    <li><span class="icon">🌐</span>Probar en cada PC que se pueda abrir cada servidor por <strong>nombre de dominio</strong> en el navegador.</li>
-  </ol>
-  
-  <h2>Resultado esperado</h2>
-  <p>Todas las PC deben poder acceder a los 4 servidores web correctamente usando los nombres de dominio. Ejemplo: www.servidor1.com, www.servidor2.com, www.servidor3.com, www.servidor4.com</p>
-
-  <h1>🌐 Actividad: Red con múltiples servidores en Cisco Packet Tracer</h1>
-
-<p><strong>Objetivo:</strong> Configurar una red donde 3 PCs puedan acceder a servicios web, correo electrónico y resolución de nombres mediante múltiples servidores.</p>
-
-<h2>📡 1️⃣ Dispositivos requeridos</h2>
-<ul>
-    <li>3 PCs</li>
-    <li>2 Switch</li>
-    <li>2 Servidores HTTP</li>
-    <li>2 Servidores DNS</li>
-    <li>2 Servidores DHCP</li>
-    <li>2 Servidores Email</li>
-</ul>
-
-<h2>🔌 2️⃣ Conexiones</h2>
-<ul>
-    <li>Conectar todas las PCs y servidores al Switch con cables Ethernet (Copper Straight-Through).</li>
-</ul>
-
-<h2>⚙️ 3️⃣ Configuración de DHCP</h2>
-<p>Configurar ambos servidores DHCP:</p>
-<ul>
-    <li><strong>Rango:</strong> 192.168.1.100 – 192.168.1.150</li>
-    <li><strong>Gateway:</strong> 192.168.1.1</li>
-    <li><strong>DNS primario:</strong> 192.168.1.20</li>
-    <li><strong>DNS secundario:</strong> 192.168.1.30</li>
-</ul>
-
-<h2>🌍 4️⃣ Configuración de Servidores DNS</h2>
-<p>Cargar los siguientes nombres:</p>
-
-<ul>
-    <li><strong>Servidor DNS 1:</strong><br>www.sitio1.com → 192.168.1.40</li>
-    <li><strong>Servidor DNS 2:</strong><br>www.sitio2.com → 192.168.1.50</li>
-</ul>
-
-<h2>🖥️ 5️⃣ Configuración de Servidores HTTP</h2>
-<ul>
-    <li>HTTP1: IP → 192.168.1.40, HTTP activado</li>
-    <li>HTTP2: IP → 192.168.1.50, HTTP activado</li>
-</ul>
-
-<h2>📨 6️⃣ Configuración de Servidores de Email</h2>
-<p>Configurar Mail Service y crear usuarios de prueba:</p>
-<ul>
-    <li>Email1: 192.168.1.60 → usuario: alumno1@sitio1.com</li>
-    <li>Email2: 192.168.1.70 → usuario: alumno2@sitio2.com</li>
-</ul>
-
-<h2>🧑‍💻 7️⃣ Configuración de PCs</h2>
-<ul>
-    <li>Obtener IP por DHCP</li>
-    <li>Probar navegación a:
+    <h2>2️⃣ Configurar el servidor</h2>
+    <ol>
+      <li>⚙️ Seleccionar el <strong>Server</strong>.</li>
+      <li>🌐 En <em>Desktop &gt; IP Configuration</em>, asignar:
         <ul>
+          <li>Dirección IP fija</li>
+          <li>Máscara de subred</li>
+          <li>Gateway</li>
+        </ul>
+      </li>
+      <li>📑 Ir a <em>Services &gt; DHCP</em>:
+        <ul>
+          <li>✔️ Activar el servicio DHCP (On)</li>
+          <li>➡️ Configurar el <strong>Default Gateway</strong></li>
+          <li>🟢 Definir la <strong>Start IP Address</strong></li>
+          <li>📐 Definir la <strong>Subnet Mask</strong></li>
+          <li>👥 Indicar <strong>Maximum Number of Users</strong></li>
+          <li>💾 Hacer clic en <strong>Save</strong></li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>3️⃣ Configurar las PCs</h2>
+    <ol>
+      <li>🖱️ Seleccionar una PC.</li>
+      <li>🌍 En <em>Desktop &gt; IP Configuration</em>, elegir la opción <strong>DHCP</strong>.</li>
+      <li>📡 La PC debería recibir automáticamente una dirección IP dentro del rango configurado.</li>
+    </ol>
+
+    <h2>4️⃣ Verificar</h2>
+    <ol>
+      <li>⚡ Usar el comando <code>ping</code> para comprobar conectividad con el servidor.</li>
+      <li>👀 Revisar que cada PC reciba una dirección IP diferente.</li>
+    </ol>
+
+    <h2>📊 Parámetros básicos del DHCP</h2>
+    <table>
+      <tr>
+        <th>⚙️ Parámetro</th>
+        <th>📖 Descripción</th>
+      </tr>
+      <tr>
+        <td>Start IP Address</td>
+        <td>Primera dirección que se entregará a los clientes.</td>
+      </tr>
+      <tr>
+        <td>Subnet Mask</td>
+        <td>Máscara de subred usada en la red.</td>
+      </tr>
+      <tr>
+        <td>Default Gateway</td>
+        <td>Puerta de enlace predeterminada para salir de la red.</td>
+      </tr>
+      <tr>
+        <td>Maximum Number of Users</td>
+        <td>Cantidad de direcciones IP que el servidor puede asignar.</td>
+      </tr>
+    </table>
+
+    <h1>🌐 Configurar un Servidor DNS y Web</h1>
+
+    <div class="box">
+      <h2>📋 Resumen</h2>
+      <p>Con esta configuración, las PCs podrán acceder a páginas web usando nombres de dominio en lugar de direcciones
+        IP.</p>
+    </div>
+
+    <h2>1️⃣ Agregar dispositivos</h2>
+    <ol>
+      <li>💻 Abrir Cisco Packet Tracer.</li>
+      <li>🖥️ Arrastrar un <strong>Server</strong> (funcionará como DNS + Web), una o más <strong>PCs</strong> y un
+        <strong>Switch</strong>.</li>
+      <li>🔗 Conectar todos con cables de cobre directo.</li>
+    </ol>
+
+    <h2>2️⃣ Configurar el servidor</h2>
+    <ol>
+      <li>⚙️ Seleccionar el <strong>Server</strong>.</li>
+      <li>🌐 En <em>Desktop &gt; IP Configuration</em>, asignar:
+        <ul>
+          <li>Dirección IP fija</li>
+          <li>Máscara de subred</li>
+          <li>Gateway</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>3️⃣ Activar el servicio Web (HTTP)</h2>
+    <ol>
+      <li>🌍 En el servidor → pestaña <em>Services &gt; HTTP</em>.</li>
+      <li>✔️ Activar el servicio <strong>HTTP (On)</strong>.</li>
+      <li>✏️ Opcional: editar el contenido de la página web que se mostrará.</li>
+    </ol>
+
+    <h2>4️⃣ Configurar el servicio DNS</h2>
+    <ol>
+      <li>🔎 En el servidor → pestaña <em>Services &gt; DNS</em>.</li>
+      <li>✔️ Activar el servicio <strong>DNS (On)</strong>.</li>
+      <li>📑 En la tabla de configuración:
+        <ul>
+          <li>✏️ <strong>Name:</strong> escribir el dominio (ejemplo: <code>www.mipagina.com</code>)</li>
+          <li>💻 <strong>Address:</strong> colocar la IP del servidor web</li>
+          <li>➕ Hacer clic en <strong>Add</strong></li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>5️⃣ Configurar las PCs</h2>
+    <ol>
+      <li>🖱️ Seleccionar cada PC → <em>Desktop &gt; IP Configuration</em>.</li>
+      <li>🌍 Elegir <strong>DHCP</strong> o asignar IP manualmente.</li>
+      <li>📡 En el campo <strong>DNS Server</strong>, colocar la dirección IP del servidor.</li>
+    </ol>
+
+    <h2>6️⃣ Probar la configuración</h2>
+    <ol>
+      <li>💻 En la PC → <em>Desktop &gt; Web Browser</em>.</li>
+      <li>⌨️ Escribir el dominio configurado (ejemplo: <code>www.mipagina.com</code>).</li>
+      <li>👀 Verificar que se cargue la página del servidor web.</li>
+    </ol>
+
+    <h2>📊 Parámetros clave</h2>
+    <table>
+      <tr>
+        <th>⚙️ Servicio</th>
+        <th>📖 Función</th>
+      </tr>
+      <tr>
+        <td>HTTP</td>
+        <td>Permite que el servidor aloje una página web.</td>
+      </tr>
+      <tr>
+        <td>DNS</td>
+        <td>Traduce nombres de dominio (ejemplo: <code>www.mipagina.com</code>) a direcciones IP.</td>
+      </tr>
+      <tr>
+        <td>DNS Server (en PCs)</td>
+        <td>Indica a qué servidor preguntar por los nombres de dominio.</td>
+      </tr>
+    </table>
+
+    <!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+      <meta charset="utf-8" />
+      <title>Configurar Servidor HTTP, DNS y E-mail en Cisco Packet Tracer</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 28px;
+          background: #f9f9f9;
+          color: #222;
+          line-height: 1.5;
+        }
+
+        h1 {
+          color: #1f456e;
+        }
+
+        h2 {
+          color: #2c6b8f;
+          margin-top: 18px;
+        }
+
+        p {
+          margin: 8px 0;
+        }
+
+        ol {
+          margin-left: 18px;
+        }
+
+        li {
+          margin: 6px 0;
+        }
+
+        .note {
+          background: #fff8c6;
+          padding: 10px;
+          border-radius: 6px;
+          margin-top: 12px;
+        }
+
+        .box {
+          background: #fff;
+          border: 1px solid #ddd;
+          padding: 12px;
+          border-radius: 6px;
+        }
+
+        code {
+          background: #eee;
+          padding: 2px 6px;
+          border-radius: 4px;
+        }
+
+        table {
+          border-collapse: collapse;
+          margin-top: 12px;
+        }
+
+        th,
+        td {
+          border: 1px solid #ccc;
+          padding: 6px 10px;
+          text-align: left;
+        }
+
+        th {
+          background: #e9f2f8;
+        }
+      </style>
+    </head>
+
+    <body>
+
+      <h1>🌐 Configuración de Servidor HTTP, DNS y E-mail</h1>
+
+      <div class="box">
+        <h2>📋 Resumen</h2>
+        <p>Este ejercicio integra tres servicios en un mismo servidor: <strong>HTTP</strong> para páginas web,
+          <strong>DNS</strong> para resolución de nombres de dominio y <strong>E-mail</strong> para correo electrónico.
+        </p>
+      </div>
+
+      <h2>1️⃣ Agregar dispositivos</h2>
+      <ol>
+        <li>💻 Abrir Cisco Packet Tracer.</li>
+        <li>🖥️ Arrastrar un <strong>Server</strong> (con HTTP, DNS y E-mail), varias <strong>PCs</strong> y un
+          <strong>Switch</strong>.</li>
+        <li>🔗 Conectar con <em>cables de cobre directo</em>.</li>
+      </ol>
+
+      <h2>2️⃣ Configurar el servidor</h2>
+      <ol>
+        <li>⚙️ Seleccionar el <strong>Server</strong>.</li>
+        <li>🌐 En <em>Desktop &gt; IP Configuration</em>, asignar:
+          <ul>
+            <li>Dirección IP fija</li>
+            <li>Máscara de subred</li>
+            <li>Gateway</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h2>3️⃣ Servicio Web (HTTP)</h2>
+      <ol>
+        <li>🌍 En <em>Services &gt; HTTP</em>.</li>
+        <li>✔️ Activar el servicio <strong>HTTP (On)</strong>.</li>
+        <li>✏️ Opcional: editar el contenido de la página web.</li>
+      </ol>
+
+      <h2>4️⃣ Servicio DNS</h2>
+      <ol>
+        <li>🔎 En <em>Services &gt; DNS</em>.</li>
+        <li>✔️ Activar el servicio <strong>DNS (On)</strong>.</li>
+        <li>📑 En la tabla:
+          <ul>
+            <li><strong>Name:</strong> dominio (ejemplo: <code>www.mipagina.com</code>)</li>
+            <li><strong>Address:</strong> la IP del servidor web</li>
+            <li>➕ Hacer clic en <strong>Add</strong></li>
+          </ul>
+        </li>
+      </ol>
+
+      <h2>5️⃣ Servicio de E-mail</h2>
+      <ol>
+        <li>📧 En <em>Services &gt; EMAIL</em>.</li>
+        <li>✔️ Activar el servicio de correo.</li>
+        <li>👥 Crear cuentas:
+          <ul>
+            <li><strong>User:</strong> nombre del usuario (ejemplo: alumno1)</li>
+            <li><strong>Password:</strong> clave del usuario</li>
+            <li><strong>Domain:</strong> dominio de correo (ejemplo: <code>mired.com</code>)</li>
+            <li>➕ Hacer clic en <strong>Add</strong></li>
+          </ul>
+        </li>
+      </ol>
+
+      <h2>6️⃣ Configurar las PCs</h2>
+      <ol>
+        <li>🖱️ En cada PC → <em>Desktop &gt; IP Configuration</em>.</li>
+        <li>🌍 Asignar IP manual o usar DHCP.</li>
+        <li>📡 En el campo <strong>DNS Server</strong>, colocar la IP del servidor.</li>
+      </ol>
+
+      <h2>7️⃣ Configuración de correo en las PCs</h2>
+      <ol>
+        <li>📧 En la PC → <em>Desktop &gt; Email</em>.</li>
+        <li>Completar:
+          <ul>
+            <li><strong>Account Name:</strong> usuario (ej: alumno1)</li>
+            <li><strong>Email Address:</strong> cuenta (ej: alumno1@mired.com)</li>
+            <li><strong>Incoming Mail Server (POP3):</strong> IP del servidor</li>
+            <li><strong>Outgoing Mail Server (SMTP):</strong> IP del servidor</li>
+            <li><strong>Password:</strong> contraseña del usuario</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h2>8️⃣ Prueba de los servicios</h2>
+      <ol>
+        <li>🌍 En el navegador de la PC, escribir el dominio (ej: <code>www.mipagina.com</code>) → debe cargar la página
+          web.</li>
+        <li>📧 En la aplicación de correo, enviar un mail desde <code>alumno1@mired.com</code> a
+          <code>alumno2@mired.com</code>.</li>
+        <li>👀 Revisar la bandeja de entrada en la PC del segundo usuario.</li>
+      </ol>
+
+      <h2>📊 Parámetros clave de los servicios</h2>
+      <table>
+        <tr>
+          <th>⚙️ Servicio</th>
+          <th>📖 Función</th>
+        </tr>
+        <tr>
+          <td>HTTP</td>
+          <td>Publica páginas web.</td>
+        </tr>
+        <tr>
+          <td>DNS</td>
+          <td>Traduce nombres de dominio a direcciones IP.</td>
+        </tr>
+        <tr>
+          <td>E-mail (SMTP/POP3)</td>
+          <td>Permite enviar y recibir mensajes de correo electrónico.</td>
+        </tr>
+      </table>
+
+      <h1>🛠️ Actividad: Red con 4 Servidores HTTP, 1 DHCP y 1 DNS</h1>
+
+      <h2>Objetivo</h2>
+      <p>Configurar una red en Cisco Packet Tracer donde las PC clientes puedan acceder a los 4 servidores web mediante
+        <strong>nombre de dominio</strong> usando <strong>DHCP</strong> y <strong>DNS</strong> automáticamente.</p>
+
+      <h2>Requisitos</h2>
+      <ul>
+        <li><span class="icon">🌐</span><span class="device">4 Servidores HTTP</span> (cada uno con una página distinta)
+        </li>
+        <li><span class="icon">🖥️</span><span class="device">1 Servidor DNS</span></li>
+        <li><span class="icon">📡</span><span class="device">1 Servidor DHCP</span></li>
+        <li><span class="icon">💻</span><span class="device">4 PC clientes</span></li>
+        <li><span class="icon">🔌</span><span class="device">Switch</span></li>
+      </ul>
+
+      <h2>Instrucciones</h2>
+      <ol>
+        <li><span class="icon">🔧</span>Colocar los dispositivos en el área de trabajo y conectarlos con <strong>cable
+            directo</strong>.</li>
+        <li><span class="icon">📡</span>Configurar el <strong>Servidor DHCP</strong> para asignar IP, máscara, gateway y
+          DNS automáticamente.</li>
+        <li><span class="icon">🖥️</span>Configurar el <strong>Servidor DNS</strong> con los 4 registros:
+          <ul>
+            <li>🌐 www.servidor1.com → IP HTTP 1</li>
+            <li>🌐 www.servidor2.com → IP HTTP 2</li>
+            <li>🌐 www.servidor3.com → IP HTTP 3</li>
+            <li>🌐 www.servidor4.com → IP HTTP 4</li>
+          </ul>
+        </li>
+        <li><span class="icon">🌐</span>Configurar cada <strong>Servidor HTTP</strong> con su página web en Services →
+          HTTP → index.html.</li>
+        <li><span class="icon">💻</span>Configurar las <strong>PC clientes</strong> en modo DHCP y verificar que reciben
+          IP, Gateway y DNS automáticamente.</li>
+        <li><span class="icon">🌐</span>Probar en cada PC que se pueda abrir cada servidor por <strong>nombre de
+            dominio</strong> en el navegador.</li>
+      </ol>
+
+      <h2>Resultado esperado</h2>
+      <p>Todas las PC deben poder acceder a los 4 servidores web correctamente usando los nombres de dominio. Ejemplo:
+        www.servidor1.com, www.servidor2.com, www.servidor3.com, www.servidor4.com</p>
+
+      <h1>🌐 Actividad: Red con servidores de respaldo</h1>
+
+      <p><strong>Objetivo:</strong> Configurar una red donde 3 PCs puedan acceder a servicios web, correo electrónico y
+        resolución de nombres mediante múltiples servidores.</p>
+
+      <h2>📡 1️⃣ Dispositivos requeridos</h2>
+      <ul>
+        <li>3 PCs</li>
+        <li>2 Switch</li>
+        <li>2 Servidores HTTP</li>
+        <li>2 Servidores DNS</li>
+        <li>2 Servidores DHCP</li>
+        <li>2 Servidores Email</li>
+      </ul>
+
+      <h2>🔌 2️⃣ Conexiones</h2>
+      <ul>
+        <li>Conectar todas las PCs y servidores al Switch con cables Ethernet (Copper Straight-Through).</li>
+      </ul>
+
+      <h2>⚙️ 3️⃣ Configuración de DHCP</h2>
+      <p>Configurar ambos servidores DHCP:</p>
+      <ul>
+        <li><strong>Rango:</strong> 192.168.1.100 – 192.168.1.150</li>
+        <li><strong>Gateway:</strong> 192.168.1.1</li>
+        <li><strong>DNS primario:</strong> 192.168.1.20</li>
+        <li><strong>DNS secundario:</strong> 192.168.1.30</li>
+      </ul>
+
+      <h2>🌍 4️⃣ Configuración de Servidores DNS</h2>
+      <p>Cargar los siguientes nombres:</p>
+
+      <ul>
+        <li><strong>Servidor DNS 1:</strong><br>www.sitio1.com → 192.168.1.40</li>
+        <li><strong>Servidor DNS 2:</strong><br>www.sitio2.com → 192.168.1.50</li>
+      </ul>
+
+      <h2>🖥️ 5️⃣ Configuración de Servidores HTTP</h2>
+      <ul>
+        <li>HTTP1: IP → 192.168.1.40, HTTP activado</li>
+        <li>HTTP2: IP → 192.168.1.50, HTTP activado</li>
+      </ul>
+
+      <h2>📨 6️⃣ Configuración de Servidores de Email</h2>
+      <p>Configurar Mail Service y crear usuarios de prueba:</p>
+      <ul>
+        <li>Email1: 192.168.1.60 → usuario: alumno1@sitio1.com</li>
+        <li>Email2: 192.168.1.70 → usuario: alumno2@sitio2.com</li>
+      </ul>
+
+      <h2>🧑‍💻 7️⃣ Configuración de PCs</h2>
+      <ul>
+        <li>Obtener IP por DHCP</li>
+        <li>Probar navegación a:
+          <ul>
             <li>http://www.sitio1.com</li>
             <li>http://www.sitio2.com</li>
-        </ul>
-    </li>
-    <li>Probar envío de correo desde Email Client</li>
-</ul>
+          </ul>
+        </li>
+        <li>Probar envío de correo desde Email Client</li>
+      </ul>
 
-<h2>✅ 8️⃣ Comprobación final</h2>
-<ul>
-    <li>Las PCs deben poder navegar en ambos sitios web</li>
-    <li>Las PCs deben poder enviar y recibir correos entre dominio 1 y 2</li>
-    <li>Debe resolverse correctamente cada dominio DNS</li>
-</ul>
+      <h2>✅ 8️⃣ Comprobación final</h2>
+      <ul>
+        <li>Las PCs deben poder navegar en ambos sitios web</li>
+        <li>Las PCs deben poder enviar y recibir correos entre dominio 1 y 2</li>
+        <li>Debe resolverse correctamente cada dominio DNS</li>
+      </ul>
 
-</main>
+  </main>
 
-<footer> <a href="#ancla">Ir hacia arriba</a>
+  <footer> <a href="#ancla">Ir hacia arriba</a>
     <p id="parrafofooter_index" style="color: black;"> Hernan Joel Vladimirsky <span>&copy;Copyright</span> </p>
-</footer>
+  </footer>
 
 </body>
 
