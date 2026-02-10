@@ -399,3 +399,24 @@ td {
     font-size: 70px;
 }
 
+/* Arduino */ 
+
+.linksArduino {
+    list-style: none;
+    display: inline;
+    margin-left: 1%;
+}
+
+#tituloArduino {
+    margin: auto;
+    font-size: 70px;
+}
+
+#logoArduino {
+    height: 100%;
+    width: 20%;
+    max-width: 700px;
+    min-width: 100px;
+    margin-top: 2.5%;
+
+}
