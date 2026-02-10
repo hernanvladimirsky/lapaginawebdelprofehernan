@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Arduino</title>
+    <link rel="stylesheet" href="Css/estilosglobal.css">
+    <style>
+        body{font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:30px auto;color:#222;line-height:1.6;padding:0 20px}
+        header{border-bottom:4px solid #0366d6;padding-bottom:10px;margin-bottom:20px}
+        h1{margin:0;color:#0366d6}
+        section{margin-bottom:18px}
+        ul{margin:8px 0 8px 20px}
+        .card{background:#f7f9fc;border:1px solid #e3e8ef;padding:14px;border-radius:8px}
+        footer{font-size:0.9rem;color:#666;margin-top:24px;border-top:1px dashed #ddd;padding-top:12px; background-color: #0366d6; text-align: center; padding-bottom: 15px;}
+        @media (max-width:600px){body{margin:16px;padding:0 12px}}
+        </style>
+</head>
+<body>
+    <header>
+        <a id="ancla"></a>
+        <h1 style="color: black;" id="tituloArduino"> Ejercicios Arduino </h1>
+        <img src="Imagenes/Arduino/arduino_logo.webp" alt="logo" title="logoArduino" id="logoArduino">
+       
+    </header>
+    
+    <nav>
+        <ul>
+            <li class="linksArduino"> <a href="index.html">Ir al Inicio</a></li>
+            <li class="linksArduino"> <a href="Arduino.html">Ir hacia atras</a></li>            
+        </ul>
+    </nav>
+    <div style="clear: both;"></div>
+    <main>
+       
+        <!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto Semáforo con Arduino</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; background-color: #f5f5f5; color: #222; }
+h1, h2, h3 { color: #d32f2f; }
+code, pre { background-color: #eee; padding: 10px; border-radius: 8px; display: block; }
+table { border-collapse: collapse; margin: 20px 0; }
+td, th { border: 1px solid #999; padding: 8px; text-align: left; }
+ul { margin-left: 20px; }
+</style>
+</head>
+<body>
+
+<h1>🚦 Ejercicio 1 - Proyecto: Semáforo con Arduino</h1>
+
+<h2>🎯 Objetivo</h2>
+<p>Controlar tres luces (roja, amarilla y verde) que simulen el funcionamiento de un semáforo real.</p>
+
+<h2>🧩 Materiales necesarios</h2>
+<ul>
+<li>1 placa <b>Arduino UNO</b></li>
+<li>3 <b>LEDs</b> (rojo, amarillo, verde)</li>
+<li>3 <b>resistencias</b> de 220 Ω</li>
+<li><b>Cables</b> de conexión</li>
+<li>1 <b>Protoboard</b></li>
+</ul>
+
+<h2>⚙️ Conexiones</h2>
+<table>
+<tr><th>LED</th><th>Pin digital de Arduino</th></tr>
+<tr><td>Rojo</td><td>13</td></tr>
+<tr><td>Amarillo</td><td>12</td></tr>
+<tr><td>Verde</td><td>11</td></tr>
+</table>
+
+<p>Cada LED se conecta así:</p>
+<ul>
+<li>Ánodo (+) → Pin digital (13, 12, 11 según el color)</li>
+<li>Cátodo (–) → A una resistencia de 220 Ω → GND</li>
+</ul>
+
+<h2>💻 Parte del Código del semáforo</h2>
+<pre><code>
+// Semáforo simple con Arduino
+int ledRojo = 13;
+
+void setup() {
+  pinMode(ledRojo, OUTPUT);
+}
+
+void loop() {
+  // Luz verde encendida (pasa)
+  digitalWrite(ledVerde, HIGH);
+  delay(5000);  // 5 segundos
+  digitalWrite(ledVerde, LOW);
+}
+</code></pre>
+
+</body>
+</html>
+            
+
+    </main>
+
+    <!--Detengo flotado -->
+    <div style="clear: both;"> </div> 
+    <footer id="parrafofooter_index">
+        <p> Hernan Joel Vladimirsky <span>&copy;Copyright</span> </p>
+    </footer> 
+
+    
+</body>
+</html>
