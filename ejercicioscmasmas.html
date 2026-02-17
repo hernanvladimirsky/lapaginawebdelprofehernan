@@ -22,6 +22,12 @@
     <h1>Ejercicios C++</h1>
   </header>
 
+  <nav>
+    <ul>
+        <li class="linksExcel"> <a href="cmasmas.html">Ir hacia atras</a></li>
+    </ul>
+</nav>
+
   <main>
     <h2>Ejercicio 1 - Preguntas</h2> <!--Ejercicio 1-->
     <p>Contestar en carpeta las siguientes preguntas:</p>
@@ -109,11 +115,13 @@
       </pre>
     </div>
 
-    <h1>💻 Ejercicio 3 -  <code>if</code></h1>
+    <h1>📘 Sentencia - IF</h1>
 
     <p>El condicional <strong>if</strong> permite ejecutar un bloque de código solo si una condición se cumple (es verdadera).  
-    Si no se cumple, el bloque se salta.</p>
-  
+    Si no se cumple, el bloque se salta.</p> <br>
+
+    <h2>Ejercicio Modelo</h2> 
+
     <h2>🧠 Instrucciones</h2>
     <div class="actividad">
       <ol>
@@ -142,6 +150,29 @@
         </ul>
       </li>
     </ul>
+
+  <h2>👨‍💻 Código</h2>
+
+  <pre><code>
+  #include &lt;iostream&gt;
+  using namespace std;
+  
+  int main() {
+      int edad;
+  
+      cout &lt;&lt; "Ingrese su edad: ";
+      cin &gt;&gt; edad;
+  
+      if (edad &gt;= 18) {
+          cout &lt;&lt; "Sos mayor de edad";
+      } else {
+          cout &lt;&lt; "Sos menor de edad";
+      }
+  
+      return 0;
+  }
+  </code></pre>
+
   
     <h2>✅ Ejemplo de ejecución</h2>
     <div class="respuesta">
@@ -155,13 +186,164 @@
   Sos menor de edad.
       </pre>
     </div>
-  
-    <footer>
-      Actividad práctica – Estructura condicional <code>if</code> en C++.  
-      Ideal para principiantes y ejercicios de introducción a la lógica.
-    </footer>
-  </body>
 
+    <h1>💻 Ejercicios <code>IF</code></h1>
+    <ol>
+      <li>
+          <h3>Número en rango doble</h3>
+          <p>
+              Realizar un programa que pida un número entero e indique en qué rango se encuentra:
+              entre 1 y 50, entre 51 y 100 o mayor a 100.
+          </p>
+          <p><strong>Condiciones que deben utilizar:</strong></p>
+          <ul>
+              <li>num &gt;= 1 && num &lt;= 50</li>
+              <li>num &gt;= 51 && num &lt;= 100</li>
+              <li>num &gt; 100</li>
+          </ul>
+      </li>
+
+      <li>
+          <h3>Sistema de notas completo</h3>
+          <p>
+              Realizar un programa que pida una nota (entre 0 y 10). 
+              Validar que la nota sea correcta. 
+              Luego clasificarla como Excelente, Muy bien, Regular o Desaprobado.
+          </p>
+          <p><strong>Condiciones que deben utilizar:</strong></p>
+          <ul>
+              <li>nota &lt; 0 || nota &gt; 10</li>
+              <li>nota &gt;= 9</li>
+              <li>nota &gt;= 7 && nota &lt;= 8</li>
+              <li>nota &gt;= 4 && nota &lt;= 6</li>
+              <li>nota &lt; 4</li>
+          </ul>
+      </li>
+
+      <li>
+          <h3>Mayor y menor de tres números</h3>
+          <p>
+              Realizar un programa que pida tres números enteros distintos 
+              e indique cuál es el mayor y cuál es el menor.
+          </p>
+          <p><strong>Condiciones que deben utilizar:</strong></p>
+          <ul>
+              <li>a &gt; b && a &gt; c</li>
+              <li>b &gt; a && b &gt; c</li>
+              <li>c &gt; a && c &gt; b</li>
+              <li>Repetir comparaciones usando &lt; para el menor</li>
+          </ul>
+      </li>
+
+      <li>
+          <h3>Par y múltiplo de 5</h3>
+          <p>
+              Realizar un programa que pida un número entero e indique si es:
+              par y múltiplo de 5, solamente par, solamente múltiplo de 5 
+              o si no cumple ninguna condición.
+          </p>
+          <p><strong>Condiciones que deben utilizar:</strong></p>
+          <ul>
+              <li>num % 2 == 0 && num % 5 == 0</li>
+              <li>num % 2 == 0</li>
+              <li>num % 5 == 0</li>
+          </ul>
+      </li>
+
+      <li>
+          <h3>Calculadora básica con validación</h3>
+          <p>
+              Realizar un programa que pida dos números y una operación matemática 
+              (+, -, *, /). Mostrar el resultado correspondiente y validar 
+              que no se pueda dividir por cero.
+          </p>
+          <p><strong>Condiciones que deben utilizar:</strong></p>
+          <ul>
+              <li>op == '+'</li>
+              <li>op == '-'</li>
+              <li>op == '*'</li>
+              <li>op == '/' && num2 != 0</li>
+              <li>op == '/' && num2 == 0</li>
+          </ul>
+      </li>
+
+      <li>
+          <h3>Año bisiesto</h3>
+          <p>
+              Realizar un programa que pida un año e indique si es bisiesto 
+              teniendo en cuenta la regla completa.
+          </p>
+          <p><strong>Condición que deben utilizar:</strong></p>
+          <ul>
+              <li>(anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0)</li>
+          </ul>
+      </li>
+
+      <li>
+          <h3>Descuento según edad</h3>
+          <p>
+              Realizar un programa que pida la edad de una persona, valide 
+              que no sea negativa y muestre el descuento correspondiente 
+              según el rango de edad.
+          </p>
+          <p><strong>Condiciones que deben utilizar:</strong></p>
+          <ul>
+              <li>edad &lt; 0</li>
+              <li>edad &lt; 12</li>
+              <li>edad &gt;= 12 && edad &lt;= 17</li>
+              <li>edad &gt;= 18 && edad &lt;= 59</li>
+              <li>edad &gt;= 60</li>
+          </ul>
+      </li>
+
+      <li>
+          <h3>Clasificación de triángulos</h3>
+          <p>
+              Realizar un programa que pida los tres lados de un triángulo. 
+              Validar que pueda formarse y luego clasificarlo.
+          </p>
+          <p><strong>Condiciones que deben utilizar:</strong></p>
+          <ul>
+              <li>a + b &gt; c && a + c &gt; b && b + c &gt; a</li>
+              <li>a == b && b == c</li>
+              <li>a == b || a == c || b == c</li>
+          </ul>
+      </li>
+
+      <li>
+          <h3>Clasificación del horario</h3>
+          <p>
+              Realizar un programa que pida una hora (entre 0 y 23), 
+              valide que sea correcta e indique si corresponde a 
+              madrugada, mañana, tarde o noche.
+          </p>
+          <p><strong>Condiciones que deben utilizar:</strong></p>
+          <ul>
+              <li>hora &lt; 0 || hora &gt; 23</li>
+              <li>hora &gt;= 0 && hora &lt;= 5</li>
+              <li>hora &gt;= 6 && hora &lt;= 11</li>
+              <li>hora &gt;= 12 && hora &lt;= 19</li>
+              <li>hora &gt;= 20 && hora &lt;= 23</li>
+          </ul>
+      </li>
+
+      <li>
+          <h3>Sueldo con aumento</h3>
+          <p>
+              Realizar un programa que pida el sueldo de un empleado, 
+              valide que no sea negativo y calcule el nuevo sueldo 
+              aplicando el aumento correspondiente.
+          </p>
+          <p><strong>Condiciones que deben utilizar:</strong></p>
+          <ul>
+              <li>sueldo &lt; 0</li>
+              <li>sueldo &lt; 500000</li>
+              <li>sueldo &gt;= 500000 && sueldo &lt;= 1000000</li>
+              <li>sueldo &gt; 1000000</li>
+          </ul>
+      </li>
+
+  </ol>
 
   </main>
 

@@ -168,8 +168,35 @@ cin &gt;&gt; nombre;         // Espera que el usuario escriba algo y lo guarda e
   
       return 0;
   }
-            
+</code></pre>
 
+  <h2>🔹 Else If 🔹</h2>
+  <pre><code>
+    #include &lt;iostream&gt;
+    using namespace std;
+    
+    int main() {
+        int nota;
+        cout &lt;&lt; "Ingrese la nota (1-10): ";
+        cin &gt;&gt; nota;
+    
+        if (nota &lt; 1 || nota &gt; 10) { 
+            cout &lt;&lt; "Nota invalida"; //Si se cumple la condicion ejecuta esta sentencia
+        } 
+        else if (nota &gt;= 7) {
+            cout &lt;&lt; "Tiene TEA"; //Si se cumple la condicion ejecuta esta sentencia
+        } 
+        else if (nota &gt;= 4) { 
+            cout &lt;&lt; "Tiene TEP"; //Si se cumple la condicion ejecuta esta sentencia
+        } 
+        else {
+            cout &lt;&lt; "Tiene TED"; //Si NO se cumplen las condiciones anteriores, ejecuta esta sentencia
+        }
+    
+        return 0;
+    }
+    </code></pre>
+    
     </main>
 
     <!--Detengo flotado -->
