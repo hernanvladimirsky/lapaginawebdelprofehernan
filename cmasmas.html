@@ -149,6 +149,156 @@ int main() {
 cin &gt;&gt; nombre;         // Espera que el usuario escriba algo y lo guarda en la variable 'nombre'
   </code></pre>
 
+  <h2>1. Operadores de Comparación</h2>
+  <p>Se utilizan para comparar valores dentro de estructuras como <code>if</code>, <code>while</code> y <code>for</code>.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Operador</th>
+        <th>Significado</th>
+        <th>Ejemplo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>&gt;</code></td>
+        <td>Mayor que</td>
+        <td><code>a &gt; b</code></td>
+      </tr>
+      <tr>
+        <td><code>&lt;</code></td>
+        <td>Menor que</td>
+        <td><code>a &lt; b</code></td>
+      </tr>
+      <tr>
+        <td><code>&gt;=</code></td>
+        <td>Mayor o igual que</td>
+        <td><code>a &gt;= b</code></td>
+      </tr>
+      <tr>
+        <td><code>&lt;=</code></td>
+        <td>Menor o igual que</td>
+        <td><code>a &lt;= b</code></td>
+      </tr>
+      <tr>
+        <td><code>==</code></td>
+        <td>Igual a</td>
+        <td><code>a == b</code></td>
+      </tr>
+      <tr>
+        <td><code>!=</code></td>
+        <td>Distinto de</td>
+        <td><code>a != b</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Ejemplo con comparación</h3>
+
+  <pre><code>
+int edad = 20;
+
+if (edad &gt;= 18) {
+    cout &lt;&lt; "Es mayor de edad";
+}
+  </code></pre>
+
+
+  <h2>2. Operadores Lógicos</h2>
+  <p>Permiten combinar varias condiciones en una sola expresión.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Operador</th>
+        <th>Nombre</th>
+        <th>Significado</th>
+        <th>Ejemplo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>&amp;&amp;</code></td>
+        <td>AND (Y)</td>
+        <td>Verdadero si ambas condiciones se cumplen</td>
+        <td><code>a &gt; 0 &amp;&amp; b &gt; 0</code></td>
+      </tr>
+      <tr>
+        <td><code>||</code></td>
+        <td>OR (O)</td>
+        <td>Verdadero si al menos una condición se cumple</td>
+        <td><code>a &gt; 0 || b &gt; 0</code></td>
+      </tr>
+      <tr>
+        <td><code>!</code></td>
+        <td>NOT (NO)</td>
+        <td>Invierte el valor lógico</td>
+        <td><code>!(a &gt; b)</code></td>
+      </tr>
+    </tbody>
+  </table> <br>
+
+  <h3>Ejemplo con AND</h3>
+
+  <pre><code>
+int edad = 30;
+
+if (edad &gt;= 18 &amp;&amp; edad &lt;= 65) {
+    cout &lt;&lt; "Edad dentro del rango laboral";
+}
+  </code></pre>
+
+  <h3>Ejemplo con OR</h3>
+
+  <pre><code>
+int nota = 4;
+int asistencia = 85;
+
+if (nota &gt;= 6 || asistencia &gt;= 80) {
+    cout &lt;&lt; "Puede rendir el examen final";
+}
+  </code></pre>
+
+  <h3>Ejemplo con NOT</h3>
+
+  <pre><code>
+int edad = 16;
+
+if (!(edad &gt;= 18)) {
+    cout &lt;&lt; "No es mayor de edad";
+}
+  </code></pre>
+
+
+  <h2>3. Uso de cin y cout</h2>
+
+  <p><strong>cout &lt;&lt;</strong> se utiliza para mostrar información en pantalla.</p>
+  <p><strong>cin &gt;&gt;</strong> se utiliza para ingresar datos desde el teclado.</p>
+
+  <h3>Ejemplo completo</h3>
+
+  <pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+
+    int numero;
+
+    cout &lt;&lt; "Ingrese un numero: ";
+    cin &gt;&gt; numero;
+
+    if (numero &gt; 0) {
+        cout &lt;&lt; "El numero es positivo";
+    } else {
+        cout &lt;&lt; "El numero es negativo o cero";
+    }
+
+    return 0;
+}
+  </code></pre>
+
   <h2>📘 IF - Estructura</h2>
     <pre><code>#include &lt;iostream&gt;
   using namespace std;
