@@ -203,29 +203,57 @@
     <h3>Redes punto a punto</h3>
     <p>
         Permiten la conexión en línea directa entre terminales y computadoras.
-        La <b>ventaja</b> de este tipo de conexión se encuentra en la alta velocidad de transmisión y la seguridad
-        que presenta
-        al no existir conexión con otros usuarios. Su <b>desventaja</b> sería el precio muy elevado de este tipo de
-        red.
+        <b>Ventajas</b>: Alto rendimiento y seguridad (banda dedicada), fácil configuración, menor latencia. <br>
+        <b>Desventajas</b>: Alto costo por nodo, baja escalabilidad (difícil añadir nuevos puntos). 
+
     </p>
     <h3>Redes multipunto</h3>
     <p>
         Permite la unión de varios terminales a su correspondiente computadora compartiendo una única línea de
-        transmisión. La <b>ventaja</b> consiste en el abaratamiento de su costo, aunque pierde velocidad y
-        seguridad.
+        transmisión. 
         Este tipo de redes requiere amplificadores y difusores de señal o de multiplexores que permiten compartir
         líneas
         dedicadas. <br>
+        <b>Ventajas:</b>Rentable (una antena central para muchos clientes), escalabilidad alta y rápida para añadir nodos, gestión centralizada. <br>
+        <b>Desventajas:</b>Menor ancho de banda por usuario (compartido), si falla la central, toda la red cae, mayor riesgo de interferencias.
     </p>
-    <img src="Imagenes/Redes/transmision-punto a punto y multipunto.jpg" alt=" style=" max-width: 400px;"> <br>
+    <img src="Imagenes/Redes/transmision-punto a punto y multipunto.jpg" style="max-width: 400px";> <br>
 
     <h3>Redes compartidas</h3>
     <p>
-        Son aquellas a las que se une un gran número de usuarios, compartiendo todas las necesidades de transmisión
-        e
-        incluso con transmisiones de otras naturalezas. Las redes más usuales son las de conmutación de paquetes y
-        las
-        de conmutación de circuitos.
+      Las redes compartidas permiten a múltiples usuarios o dispositivos acceder simultáneamente a recursos como internet, 
+      archivos o periféricos, optimizando costos y facilitando la colaboración. Sus principales ventajas incluyen ahorro económico y
+      mayor eficiencia, 
+      mientras que sus desventajas destacan la menor velocidad al saturarse y mayores riesgos de seguridad.
+
+    <h2>Características principales</h2>
+    <ul>
+        <li>Todos los dispositivos utilizan un mismo canal de comunicación.</li>
+        <li>Los recursos, como internet o impresoras, se comparten entre los usuarios.</li>
+        <li>Se pueden generar colisiones si dos dispositivos intentan enviar datos al mismo tiempo.</li>
+        <li>Son fáciles de implementar y económicas, pero menos eficientes que redes con topologías dedicadas.</li>
+    </ul>
+
+    <h2>Ejemplos de redes compartidas</h2>
+    <div class="example">
+        <strong>Red Ethernet clásica (coaxial):</strong> Todos los computadores conectados al mismo cable comparten el ancho de banda disponible.
+    </div>
+    <div class="example">
+        <strong>Red Wi-Fi doméstica:</strong> Todos los dispositivos conectados a un mismo router comparten la conexión a internet.
+    </div>
+
+    <h2>Ventajas</h2>
+    <ul>
+        <li>Fácil de configurar.</li>
+        <li>Bajo costo de instalación.</li>
+        <li>Permite compartir recursos rápidamente.</li>
+    </ul>
+
+    <h2>Desventajas</h2>
+    <ul>
+        <li>El rendimiento disminuye a medida que se conectan más dispositivos.</li>
+        <li>Mayor riesgo de colisiones y congestión en la red.</li>
+    </ul>
     </p> <br>
     <img src="Imagenes/Redes/redes compartidas.webp" alt=""> <br>
 
@@ -237,33 +265,161 @@
         compone de
         la información, el identificador del destino y algunos caracteres de control).
     </p>
-    <h3>Redes de conmutación de circuitos</h3>
-    Son redes en las que los centros de conmutación establecen un circuito
-    dedicado entre dos estaciones que se comunican.
-    <p>
-    <h3> Redes digitales de servicios integrados(RDSI)</h3>
-    Se basan en desarrollos tecnológicos de conmutación y
-    transmisión digital. La RDSI es una red totalmente digital de uso general capaz de integrar una gran gama de
-    servicios como son la voz, datos, imagen y texto. La RDSI requiere de la instalación de centrales digitales.
-    </p>
+    <h1>Redes de Conmutación de Paquetes</h1>
+    <p>Las <strong>redes de conmutación de paquetes</strong> son un tipo de red en la que los datos se dividen en pequeños bloques llamados <strong>paquetes</strong> 
+      antes de ser enviados. 
+      Cada paquete puede tomar una ruta independiente hasta llegar al destino, donde se reensamblan en el mensaje original.</p>
+
+    <h2>Características principales</h2>
+    <ul>
+        <li>Los datos se fragmentan en paquetes para transmitirlos.</li>
+        <li>Cada paquete contiene información de destino y control.</li>
+        <li>Los paquetes pueden tomar diferentes rutas según la disponibilidad de la red.</li>
+        <li>Optimiza el uso del ancho de banda y mejora la eficiencia.</li>
+    </ul>
+
+    <h2>Ejemplos de redes de conmutación de paquetes</h2>
+    <div class="example">
+        <strong>Internet:</strong> Los correos electrónicos, mensajes y páginas web se envían en paquetes que viajan por diferentes rutas hasta llegar a su destino.
+    </div>
+    <div class="example">
+        <strong>Redes corporativas basadas en IP:</strong> La información entre sucursales se envía en paquetes a través de routers y switches de red.
+    </div>
+
+    <h2>Ventajas</h2>
+    <ul>
+        <li>Uso eficiente del ancho de banda.</li>
+        <li>Mayor confiabilidad: si un paquete se pierde, solo se reenvía ese paquete.</li>
+        <li>Flexibilidad en la transmisión: los paquetes pueden adaptarse a diferentes rutas.</li>
+    </ul>
+
+    <h2>Desventajas</h2>
+    <ul>
+        <li>Los paquetes pueden llegar fuera de orden y deben reensamblarse.</li>
+        <li>Pequeños retrasos pueden ocurrir si la red está congestionada.</li>
+        <li>Mayor complejidad en comparación con redes de conmutación de circuitos.</li>
+    </ul>
+
+    <h1>Redes Digitales de Servicios Integrados (RDSI)</h1>
+    <p>Las <strong>Redes Digitales de Servicios Integrados (RDSI)</strong>, conocidas en inglés como <strong>ISDN</strong> (Integrated Services Digital Network), son redes que permiten transmitir simultáneamente voz, datos y otros servicios sobre la misma línea digital, usando una señalización estandarizada.</p>
+
+    <h2>Características principales</h2>
+    <ul>
+        <li>Transmisión digital de voz y datos en la misma línea.</li>
+        <li>Alta calidad de comunicación gracias a la digitalización de la señal.</li>
+        <li>Permite conexión de múltiples dispositivos usando un solo acceso.</li>
+        <li>Soporta servicios de datos, video y fax además de la telefonía.</li>
+    </ul>
+
+    <h2>Tipos de canales en RDSI</h2>
+    <ul>
+        <li><strong>Canal B (Bearer):</strong> Transmite voz o datos, velocidad típica de 64 kbps.</li>
+        <li><strong>Canal D (Delta o señalización):</strong> Transmite información de control y señalización, velocidad típica de 16 o 64 kbps.</li>
+    </ul>
+
+    <h2>Ejemplos de uso</h2>
+    <div class="example">
+        <strong>Teleconferencias:</strong> Permite transmitir audio y datos simultáneamente en la misma línea digital.
+    </div>
+    <div class="example">
+        <strong>Acceso a internet en oficinas:</strong> Usando líneas RDSI se puede tener conexión de datos más estable que las líneas analógicas tradicionales.
+    </div>
+
+    <h2>Ventajas</h2>
+    <ul>
+        <li>Transmisión digital confiable y de alta calidad.</li>
+        <li>Se pueden combinar múltiples servicios en una misma línea.</li>
+        <li>Permite mayor velocidad que las líneas telefónicas analógicas tradicionales.</li>
+    </ul>
+
+    <h2>Desventajas</h2>
+    <ul>
+        <li>Costos más altos que la telefonía analógica tradicional.</li>
+        <li>Requiere equipamiento compatible con RDSI.</li>
+        <li>En la práctica, ha sido reemplazada en muchos casos por redes DSL y fibra óptica.</li>
+    </ul>
+    
+
+  
     <br><br>
 
     <img src="Imagenes/Redes/redes de conmutacion de paquetes.gif" alt="" style="max-width: 400px;"> <br>
 
     Las redes según los <strong>servicios</strong> que satisfacen a los usuarios se clasifican en:
 
-    <h3>Redes para servicios básicos de transmisión</h3>
-    <p>
-        Se caracterizan por dar servicio sin alterar la información que transmiten. De este tipo son las redes
-        dedicadas, la red telefónica y las redes de conmutación de circuitos.
-    </p>
-    <h3>Redes para servicios de valor añadido</h3>
-    <p>
-        Son aquellas que además de realizar la transmisión de información, actúan sobre ella de algún modo.
-        Pertenecen a
-        este tipo de red: las redes que gestionan mensajería, transferencia electrónica de fondos, acceso a grandes
-        bases de datos, etc.
-    </p>
+    <h1>Redes para Servicios Básicos de Transmisión</h1>
+    <p>Las <strong>redes para servicios básicos de transmisión</strong> son aquellas diseñadas para transportar información de manera confiable entre dos puntos, utilizando canales dedicados o compartidos. Estos servicios están orientados a transmisión de voz, datos o video en su forma más simple, con calidad garantizada.</p>
+
+    <h2>Características principales</h2>
+    <ul>
+        <li>Transmisión confiable de información básica como voz y datos simples.</li>
+        <li>Uso de canales dedicados o conmutados para asegurar la comunicación.</li>
+        <li>Bajo nivel de complejidad en comparación con redes integradas o de servicios múltiples.</li>
+        <li>Generalmente soporta protocolos sencillos y transmisión continua.</li>
+    </ul>
+
+    <h2>Ejemplos de redes para servicios básicos</h2>
+    <div class="example">
+        <strong>Líneas telefónicas analógicas:</strong> Permiten transmitir voz y, con modems, datos a baja velocidad.
+    </div>
+    <div class="example">
+        <strong>Redes RDSI básicas:</strong> Transmiten voz y datos digitales sobre líneas digitales con canales B y D.
+    </div>
+    <div class="example">
+        <strong>Servicios de transmisión punto a punto:</strong> Conexiones dedicadas entre dos oficinas para comunicación directa de datos o voz.
+    </div>
+
+    <h2>Ventajas</h2>
+    <ul>
+        <li>Confiabilidad en la transmisión.</li>
+        <li>Simples de implementar y mantener.</li>
+        <li>Bajo costo en comparación con redes de servicios integrados o complejos.</li>
+    </ul>
+
+    <h2>Desventajas</h2>
+    <ul>
+        <li>Capacidad limitada para transmitir grandes volúmenes de datos.</li>
+        <li>Menor flexibilidad frente a redes modernas de datos y multimedia.</li>
+        <li>No soporta múltiples servicios simultáneamente de manera eficiente.</li>
+    </ul>
+    
+    <h1>Redes de Valor Añadido</h1>
+    <p>Las <strong>Redes de Valor Añadido (RVA)</strong> son aquellas que, además de ofrecer los servicios básicos de transmisión de voz 
+      o datos, proporcionan servicios adicionales que mejoran la comunicación, la eficiencia y la funcionalidad para los usuarios. 
+      Estos servicios pueden incluir correo electrónico, transferencia de archivos, videoconferencia, acceso remoto seguro, entre otros.</p>
+
+    <h2>Características principales</h2>
+    <ul>
+        <li>Ofrecen servicios adicionales a la transmisión básica de datos o voz.</li>
+        <li>Mejoran la eficiencia y productividad de los usuarios.</li>
+        <li>Permiten integración de múltiples servicios en una misma red.</li>
+        <li>Suelen requerir protocolos más avanzados y equipamiento especializado.</li>
+    </ul>
+
+    <h2>Ejemplos de Redes de Valor Añadido</h2>
+    <div class="example">
+        <strong>Redes corporativas con correo y mensajería interna:</strong> Permiten comunicación interna y compartición de archivos dentro de una empresa.
+    </div>
+    <div class="example">
+        <strong>Servicios de videoconferencia y teletrabajo:</strong> Aumentan la funcionalidad de la red básica de datos y voz.
+    </div>
+    <div class="example">
+        <strong>Servicios bancarios en línea:</strong> Redes que integran transacciones seguras, consultas y transferencias digitales.
+    </div>
+
+    <h2>Ventajas</h2>
+    <ul>
+        <li>Mayor eficiencia y productividad.</li>
+        <li>Permite ofrecer servicios innovadores y personalizados.</li>
+        <li>Integración de múltiples servicios en la misma infraestructura.</li>
+    </ul>
+
+    <h2>Desventajas</h2>
+    <ul>
+        <li>Mayor complejidad en la configuración y mantenimiento.</li>
+        <li>Costos más elevados que las redes básicas.</li>
+        <li>Dependencia de equipos y software especializado.</li>
+    </ul>
 
 
     <p>Las redes según la <strong>propiedad</strong> a la que pertenezcan pueden ser: <br>
