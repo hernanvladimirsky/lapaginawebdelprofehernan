@@ -333,6 +333,7 @@
         </p>
 
         <br>
+
         <!--Formula SI condicional-->
 
         <h2>Formula SI condicional</h2>
@@ -347,6 +348,71 @@
         <p>=SI(<span><strong>CONDICION</strong></span>; <span class="verdadero">VERDADERO</span>;SI(<span><strong>CONDICION</strong></span>;<span class="verdadero">VERDADERO</span>; <span class="falso">FALSO</span>))</p>
         <h3>Anidada</h3>
         <p>=SI(<span><strong>CONDICION</strong></span>;<span class="verdadero">VERDADERO</span>;SI(<span><strong>CONDICION</strong></span>; <span class="verdadero">VERDADERO</span>);SI(<span><strong>CONDICION</strong></span>; <span class="verdadero">VERDADERO</span>; <span class="falso">FALSO</span>))</p>
+        
+        <!--Funciones de busqueda y referencia-->       
+        <h2>BUSCAR</h2>
+        <p>
+        Sintaxis: <br>
+        =BUSCAR(<span><strong>VALOR BUSCADO</strong></span>;VECTOR DE COMPARACION; VECTOR DE RESULTADO) <br><br>
+
+        VALOR BUSCADO: Es el dato a partir del cual necesito buscar, se busca por codigo ya que los datos deben estar ordenados. <br>
+        VECTOR DE COMPARACION: Es el rango de datos en donde la formula va a averiguar el valor buscado, hasta encontrar una coincidencia exacta. <br>
+        VECTOR DE RESULTADO: : Es el rango de datos a seleccionar para que me muestre o devuelva el resultado. <br>
+        </p>
+
+        <h2>BUSCARV</h2>
+        <p>            
+        Sintaxis: <br>
+        =BUSCARV(<span><strong>VALOR BUSCADO</strong>; MATRIZ TABLA; INDICADOR DE COLUMNAS; RANGO) <br><br>
+
+        VALOR BUSCADO: Es el dato a partir del cual necesito buscar. <br>
+        MATRIZ TABLA: Es la tabla en donde se encuentran mis datos y se va a averiguar el valor buscado, hasta encontrar una coincidencia. <br>
+        INDICADOR DE COLUMNAS: Es el nro de columna del resultado que necesito averiguar. <br>
+        RANGO: se refiere a si queremos que sea por verdadero en coincidencia aproximada o falso para coincidencia exacta. <br>
+        </p>
+
+        <h2>BUSCARH</h2>
+        <p>
+        Sintaxis: <br>
+        =BUSCARH(<span><strong>VALOR BUSCADO</strong>; MATRIZ TABLA; INDICADOR DE COLUMNAS; RANGO) <br><br>
+            
+        VALOR BUSCADO: Es el dato a partir del cual necesito buscar. <br>
+        MATRIZ A BUSCAR EN: Es la tabla en donde se encuentran mis datos y se va a averiguar el valor buscado, hasta encontrar una coincidencia. <br>
+        INDICADOR DE FILAS: Es el nro de la fila del resultado que necesito averiguar. <br>
+        ORDENADO: se refiere a si queremos que sea por verdadero en coincidencia aproximada o falso para coincidencia exacta. <br>
+        </p>
+
+        <h2>BUSCARX</h2>
+        <p>            
+        Sintaxis: <br>
+        =BUSCARX(<span><strong>VALOR BUSCADO</strong>; MATRIZ BUSCADA; MATRIZ DEVUELTA) <br> <br>
+
+        VALOR BUSCADO: Es el dato a partir del cual necesito buscar. <br>
+        MATRIZ BUSCADA: Es el rango en donde se va a averiguar el valor buscado, buscando una coincidencia. <br>
+        MATRIZ DEVUELTA: Es el rango de datos a seleccionar para que me muestre o devuelva el resultado deseado. <br>
+        </p>
+
+        <!--Operadores condicionales y logicos-->
+        <h2>Y</h2>
+        <p>
+            Solo da VERDADERO si todas las condiciones son verdaderas.
+        </p>
+
+        <h2>O</h2>
+        <p>
+            Da VERDADERO si al menos una condición se cumple.
+        </p>
+
+        <h2>XO</h2>
+        <p>
+            Da VERDADERO si solo una condición es verdadera. <br>
+            Da FALSO si: <br>
+            <ul>
+                <li>ninguna se cumple</li>
+                <li>o se cumplen las dos</li>
+            </ul>
+        </p>
+
 
         <!--Moda-->
         <h2>Moda</h2>
@@ -355,7 +421,7 @@
 
         <hr>
         <!--Macro-->
-        <h2>Macro</h2>
+        <h1>Macro</h1>
         <p>Una macro es un conjunto de acciones o instrucciones grabadas que se ejecutan automáticamente para automatizar tareas repetitivas 
             en aplicaciones de software, como Excel, con un solo clic o comando. Permiten agilizar procesos, reducir errores manuales y 
             ahorrar tiempo al realizar acciones complejas de manera secuencial.</p>
