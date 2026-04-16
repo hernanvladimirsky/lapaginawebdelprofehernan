@@ -1,95 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C++</title>
-    <link rel="stylesheet" href="Css/estilosglobal.css">
-    <style>
-        body{font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:30px auto;color:#222;line-height:1.6;padding:0 20px}
-        header{border-bottom:4px solid #0366d6;padding-bottom:10px;margin-bottom:20px}
-        h1{margin:0;color:#0366d6}
-        section{margin-bottom:18px}
-        ul{margin:8px 0 8px 20px}
-        .card{background:#f7f9fc;border:1px solid #e3e8ef;padding:14px;border-radius:8px}
-        footer{font-size:0.9rem;color:#666;margin-top:24px;border-top:1px dashed #ddd;padding-top:12px; background-color: #0366d6; text-align: center; padding-bottom: 15px;}
-        @media (max-width:600px){body{margin:16px;padding:0 12px}}
-        </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C++</title>
+  <link rel="stylesheet" href="Css/estilosglobal.css">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 900px;
+      margin: 30px auto;
+      color: #222;
+      line-height: 1.6;
+      padding: 0 20px
+    }
+
+    header {
+      border-bottom: 4px solid #0366d6;
+      padding-bottom: 10px;
+      margin-bottom: 20px
+    }
+
+    h1 {
+      margin: 0;
+      color: #0366d6
+    }
+
+    section {
+      margin-bottom: 18px
+    }
+
+    ul {
+      margin: 8px 0 8px 20px
+    }
+
+    .card {
+      background: #f7f9fc;
+      border: 1px solid #e3e8ef;
+      padding: 14px;
+      border-radius: 8px
+    }
+
+    footer {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 24px;
+      border-top: 1px dashed #ddd;
+      padding-top: 12px;
+      background-color: #0366d6;
+      text-align: center;
+      padding-bottom: 15px;
+    }
+
+    @media (max-width:600px) {
+      body {
+        margin: 16px;
+        padding: 0 12px
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <a id="ancla"></a>
-        <h1 style="color: black;" id="tituloCmasmas"> C++ </h1>
-        <img src="Imagenes/C++/ISO_C++_Logo.svg.png" alt="logo" title="logoC++" id="logoCmasmas">
-       
-    </header>
-    
-    <nav>
-        <ul>
-            <li class="linksCmasmas"> <a href="index.html">Ir al Inicio</a></li>
-            <li class="linksCmasmas"> <a href="ejercicioscmasmas.html">Ir a Ejercicios</a></li>            
-        </ul>
-    </nav>
-    <div style="clear: both;"></div>
-    <main>
-        <section class="card">
-            <h2>Breve historia</h2>
-            <p>El lenguaje <strong>C++</strong> fue creado por <strong>Bjarne Stroustrup</strong> a comienzos de la década de <strong>1980</strong> en los laboratorios <strong>Bell Labs</strong> (Estados Unidos). Stroustrup buscaba un lenguaje que combinara la <em>eficiencia y el control de C</em> con las características de <strong>programación orientada a objetos</strong> que ofrecían otros lenguajes de la época, como Simula.</p>
-            
-            
-            <p>En un principio, C++ se llamó <strong>“C with Classes”</strong> (C con clases), ya que era una extensión del lenguaje C que añadía la posibilidad de definir <strong>clases, objetos, herencia y encapsulamiento</strong>.</p>
-            
-            
-            <p>En <strong>1983</strong>, el lenguaje adoptó el nombre <strong>C++</strong>, haciendo referencia al operador de incremento (<code>++</code>) del propio lenguaje, que simboliza una <em>versión mejorada de C</em>.</p>
-            
-            
-            <p>Durante los años siguientes, C++ se consolidó como uno de los lenguajes más usados en la industria del software gracias a su <strong>velocidad, portabilidad y flexibilidad</strong>. Fue normalizado por primera vez por <strong>ISO</strong> en <strong>1998 (C++98)</strong>, con revisiones importantes posteriores:</p>
-            
-            
-            <ul>
-            <li><strong>C++03</strong> (2003): correcciones menores.</li>
-            <li><strong>C++11</strong> (2011): nuevas características como <code>auto</code>, <code>nullptr</code> y lambdas.</li>
-            <li><strong>C++14, C++17, C++20 y C++23</strong>: incorporan mejoras de rendimiento y características modernas.</li>
-            </ul>
-            
-            
-            <p>Hoy, C++ sigue siendo uno de los lenguajes más utilizados en el desarrollo de <strong>sistemas operativos, videojuegos, motores gráficos, software científico e inteligencia artificial</strong>.</p>
-            </section>
+  <header>
+    <a id="ancla"></a>
+    <h1 style="color: black;" id="tituloCmasmas"> C++ </h1>
+    <img src="Imagenes/C++/ISO_C++_Logo.svg.png" alt="logo" title="logoC++" id="logoCmasmas">
 
-            <h1>🧩 Estructura básica de un programa en C++</h1>
+  </header>
 
-  <p>Un programa en C++ tiene una estructura general que se puede dividir en varias partes fundamentales:</p>
+  <nav>
+    <ul>
+      <li class="linksCmasmas"> <a href="index.html">Ir al Inicio</a></li>
+      <li class="linksCmasmas"> <a href="ejercicioscmasmas.html">Ir a Ejercicios</a></li>
+    </ul>
+  </nav>
+  <div style="clear: both;"></div>
+  <main>
+    <section class="card">
+      <h2>Breve historia</h2>
+      <p>El lenguaje <strong>C++</strong> fue creado por <strong>Bjarne Stroustrup</strong> a comienzos de la década de
+        <strong>1980</strong> en los laboratorios <strong>Bell Labs</strong> (Estados Unidos). Stroustrup buscaba un
+        lenguaje que combinara la <em>eficiencia y el control de C</em> con las características de <strong>programación
+          orientada a objetos</strong> que ofrecían otros lenguajes de la época, como Simula.</p>
 
-  <table>
-    <tr>
-      <th>Parte</th>
-      <th>Descripción</th>
-    </tr>
-    <tr>
-      <td><strong>1. Directivas de preprocesador</strong></td>
-      <td>Indican al compilador que incluya librerías necesarias, como <code>&lt;iostream&gt;</code> para entrada y salida de datos.</td>
-    </tr>
-    <tr>
-      <td><strong>2. Función principal (<code>main()</code>)</strong></td>
-      <td>Es el punto de inicio del programa. Todo programa C++ debe tener una función <code>main()</code>.</td>
-    </tr>
-    <tr>
-      <td><strong>3. Declaración de variables</strong></td>
-      <td>Espacio donde se definen variables que almacenarán datos.</td>
-    </tr>
-    <tr>
-      <td><strong>4. Instrucciones o sentencias</strong></td>
-      <td>Son las órdenes que el programa ejecutará, como mostrar mensajes o leer datos.</td>
-    </tr>
-    <tr>
-      <td><strong>5. Retorno de valor</strong></td>
-      <td>La función <code>main()</code> devuelve un valor al sistema operativo (normalmente <code>return 0;</code>).</td>
-    </tr>
-  </table>
 
-  <h2>📘 Ejemplo de estructura básica (comentado)</h2>
+      <p>En un principio, C++ se llamó <strong>“C with Classes”</strong> (C con clases), ya que era una extensión del
+        lenguaje C que añadía la posibilidad de definir <strong>clases, objetos, herencia y encapsulamiento</strong>.
+      </p>
 
-  <pre><code>// Ejemplo básico de programa en C++
+
+      <p>En <strong>1983</strong>, el lenguaje adoptó el nombre <strong>C++</strong>, haciendo referencia al operador de
+        incremento (<code>++</code>) del propio lenguaje, que simboliza una <em>versión mejorada de C</em>.</p>
+
+
+      <p>Durante los años siguientes, C++ se consolidó como uno de los lenguajes más usados en la industria del software
+        gracias a su <strong>velocidad, portabilidad y flexibilidad</strong>. Fue normalizado por primera vez por
+        <strong>ISO</strong> en <strong>1998 (C++98)</strong>, con revisiones importantes posteriores:</p>
+
+
+      <ul>
+        <li><strong>C++03</strong> (2003): correcciones menores.</li>
+        <li><strong>C++11</strong> (2011): nuevas características como <code>auto</code>, <code>nullptr</code> y
+          lambdas.</li>
+        <li><strong>C++14, C++17, C++20 y C++23</strong>: incorporan mejoras de rendimiento y características modernas.
+        </li>
+      </ul>
+
+
+      <p>Hoy, C++ sigue siendo uno de los lenguajes más utilizados en el desarrollo de <strong>sistemas operativos,
+          videojuegos, motores gráficos, software científico e inteligencia artificial</strong>.</p>
+    </section>
+
+    <h1>🧩 Estructura básica de un programa en C++</h1>
+
+    <p>Un programa en C++ tiene una estructura general que se puede dividir en varias partes fundamentales:</p>
+
+    <table>
+      <tr>
+        <th>Parte</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><strong>1. Directivas de preprocesador</strong></td>
+        <td>Indican al compilador que incluya librerías necesarias, como <code>&lt;iostream&gt;</code> para entrada y
+          salida de datos.</td>
+      </tr>
+      <tr>
+        <td><strong>2. Función principal (<code>main()</code>)</strong></td>
+        <td>Es el punto de inicio del programa. Todo programa C++ debe tener una función <code>main()</code>.</td>
+      </tr>
+      <tr>
+        <td><strong>3. Declaración de variables</strong></td>
+        <td>Espacio donde se definen variables que almacenarán datos.</td>
+      </tr>
+      <tr>
+        <td><strong>4. Instrucciones o sentencias</strong></td>
+        <td>Son las órdenes que el programa ejecutará, como mostrar mensajes o leer datos.</td>
+      </tr>
+      <tr>
+        <td><strong>5. Retorno de valor</strong></td>
+        <td>La función <code>main()</code> devuelve un valor al sistema operativo (normalmente <code>return 0;</code>).
+        </td>
+      </tr>
+    </table>
+
+    <h2>📘 Ejemplo de estructura básica (comentado)</h2>
+
+    <pre><code>// Ejemplo básico de programa en C++
 // Autor: [Tu nombre]
 // Descripción: muestra un mensaje por pantalla
 
@@ -116,87 +175,95 @@ int main() {
 }
   </code></pre>
 
-  <h2>🧠 Explicación paso a paso</h2>
+    <h2>🧠 Explicación paso a paso</h2>
 
-  <ul>
-    <li><strong>#include &lt;iostream&gt;</strong>: Incluye la biblioteca estándar de entrada/salida (Input/Output Stream).</li>
-    <li><strong>using namespace std;</strong>: Permite omitir el prefijo <code>std::</code> en los objetos estándar (<code>cout</code>, <code>cin</code>, <code>string</code>).</li>
-    <li><strong>int main()</strong>: Es la función principal. Todo programa en C++ comienza su ejecución desde aquí.</li>
-    <li><strong>Declaraciones y sentencias:</strong> Dentro de <code>{ }</code> se escribe el código que se ejecutará. Cada instrucción termina con punto y coma <code>;</code>.</li>
-    <li><strong>return 0;</strong>: Indica que el programa terminó correctamente.</li>
-  </ul>
+    <ul>
+      <li><strong>#include &lt;iostream&gt;</strong>: Incluye la biblioteca estándar de entrada/salida (Input/Output
+        Stream).</li>
+      <li><strong>using namespace std;</strong>: Permite omitir el prefijo <code>std::</code> en los objetos estándar
+        (<code>cout</code>, <code>cin</code>, <code>string</code>).</li>
+      <li><strong>int main()</strong>: Es la función principal. Todo programa en C++ comienza su ejecución desde aquí.
+      </li>
+      <li><strong>Declaraciones y sentencias:</strong> Dentro de <code>{ }</code> se escribe el código que se ejecutará.
+        Cada instrucción termina con punto y coma <code>;</code>.</li>
+      <li><strong>return 0;</strong>: Indica que el programa terminó correctamente.</li>
+    </ul>
 
-  <h2>💬 Explicación de <code>cout</code>, <code>cin</code>, <code>&lt;&lt;</code> y <code>&gt;&gt;</code></h2>
+    <h2>💬 Explicación de <code>cout</code>, <code>cin</code>, <code>&lt;&lt;</code> y <code>&gt;&gt;</code></h2>
 
-  <p>En C++, la comunicación con el usuario se realiza mediante <strong>entrada</strong> y <strong>salida de datos</strong>:</p>
+    <p>En C++, la comunicación con el usuario se realiza mediante <strong>entrada</strong> y <strong>salida de
+        datos</strong>:</p>
 
-  <ul>
-    <li><mark>cout</mark> → Significa <em>“character output”</em> (salida de caracteres).  
-      Se usa para mostrar información en pantalla.</li>
-    <li><mark>cin</mark> → Significa <em>“character input”</em> (entrada de caracteres).  
-      Se usa para leer datos que el usuario ingresa desde el teclado.</li>
-  </ul>
+    <ul>
+      <li><mark>cout</mark> → Significa <em>“character output”</em> (salida de caracteres).
+        Se usa para mostrar información en pantalla.</li>
+      <li><mark>cin</mark> → Significa <em>“character input”</em> (entrada de caracteres).
+        Se usa para leer datos que el usuario ingresa desde el teclado.</li>
+    </ul>
 
-  <p>Los operadores especiales que acompañan a <code>cout</code> y <code>cin</code> son:</p>
+    <p>Los operadores especiales que acompañan a <code>cout</code> y <code>cin</code> son:</p>
 
-  <ul>
-    <li><mark>&lt;&lt;</mark> → Operador de inserción. Envía información hacia la salida estándar (<code>cout</code>).</li>
-    <li><mark>&gt;&gt;</mark> → Operador de extracción. Obtiene información desde la entrada estándar (<code>cin</code>).</li>
-  </ul>
+    <ul>
+      <li><mark>&lt;&lt;</mark> → Operador de inserción. Envía información hacia la salida estándar (<code>cout</code>).
+      </li>
+      <li><mark>&gt;&gt;</mark> → Operador de extracción. Obtiene información desde la entrada estándar
+        (<code>cin</code>).</li>
+    </ul>
 
-  <p><strong>Ejemplo:</strong></p>
-  <pre><code>cout &lt;&lt; "Hola mundo";   // Muestra el texto en pantalla
+    <p><strong>Ejemplo:</strong></p>
+    <pre><code>cout &lt;&lt; "Hola mundo";   // Muestra el texto en pantalla
 cin &gt;&gt; nombre;         // Espera que el usuario escriba algo y lo guarda en la variable 'nombre'
   </code></pre>
 
-  <h2>1. Operadores de Comparación</h2>
-  <p>Se utilizan para comparar valores dentro de estructuras como <code>if</code>, <code>while</code> y <code>for</code>.</p>
+    <h2>1. Operadores de Comparación</h2>
+    <p>Se utilizan para comparar valores dentro de estructuras como <code>if</code>, <code>while</code> y
+      <code>for</code>.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Operador</th>
-        <th>Significado</th>
-        <th>Ejemplo</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>&gt;</code></td>
-        <td>Mayor que</td>
-        <td><code>a &gt; b</code></td>
-      </tr>
-      <tr>
-        <td><code>&lt;</code></td>
-        <td>Menor que</td>
-        <td><code>a &lt; b</code></td>
-      </tr>
-      <tr>
-        <td><code>&gt;=</code></td>
-        <td>Mayor o igual que</td>
-        <td><code>a &gt;= b</code></td>
-      </tr>
-      <tr>
-        <td><code>&lt;=</code></td>
-        <td>Menor o igual que</td>
-        <td><code>a &lt;= b</code></td>
-      </tr>
-      <tr>
-        <td><code>==</code></td>
-        <td>Igual a</td>
-        <td><code>a == b</code></td>
-      </tr>
-      <tr>
-        <td><code>!=</code></td>
-        <td>Distinto de</td>
-        <td><code>a != b</code></td>
-      </tr>
-    </tbody>
-  </table>
+    <table>
+      <thead>
+        <tr>
+          <th>Operador</th>
+          <th>Significado</th>
+          <th>Ejemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>&gt;</code></td>
+          <td>Mayor que</td>
+          <td><code>a &gt; b</code></td>
+        </tr>
+        <tr>
+          <td><code>&lt;</code></td>
+          <td>Menor que</td>
+          <td><code>a &lt; b</code></td>
+        </tr>
+        <tr>
+          <td><code>&gt;=</code></td>
+          <td>Mayor o igual que</td>
+          <td><code>a &gt;= b</code></td>
+        </tr>
+        <tr>
+          <td><code>&lt;=</code></td>
+          <td>Menor o igual que</td>
+          <td><code>a &lt;= b</code></td>
+        </tr>
+        <tr>
+          <td><code>==</code></td>
+          <td>Igual a</td>
+          <td><code>a == b</code></td>
+        </tr>
+        <tr>
+          <td><code>!=</code></td>
+          <td>Distinto de</td>
+          <td><code>a != b</code></td>
+        </tr>
+      </tbody>
+    </table>
 
-  <h3>Ejemplo con comparación</h3>
+    <h3>Ejemplo con comparación</h3>
 
-  <pre><code>
+    <pre><code>
 int edad = 20;
 
 if (edad &gt;= 18) {
@@ -205,43 +272,43 @@ if (edad &gt;= 18) {
   </code></pre>
 
 
-  <h2>2. Operadores Lógicos</h2>
-  <p>Permiten combinar varias condiciones en una sola expresión.</p>
+    <h2>2. Operadores Lógicos</h2>
+    <p>Permiten combinar varias condiciones en una sola expresión.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Operador</th>
-        <th>Nombre</th>
-        <th>Significado</th>
-        <th>Ejemplo</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>&amp;&amp;</code></td>
-        <td>AND (Y)</td>
-        <td>Verdadero si ambas condiciones se cumplen</td>
-        <td><code>a &gt; 0 &amp;&amp; b &gt; 0</code></td>
-      </tr>
-      <tr>
-        <td><code>||</code></td>
-        <td>OR (O)</td>
-        <td>Verdadero si al menos una condición se cumple</td>
-        <td><code>a &gt; 0 || b &gt; 0</code></td>
-      </tr>
-      <tr>
-        <td><code>!</code></td>
-        <td>NOT (NO)</td>
-        <td>Invierte el valor lógico</td>
-        <td><code>!(a &gt; b)</code></td>
-      </tr>
-    </tbody>
-  </table> <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Operador</th>
+          <th>Nombre</th>
+          <th>Significado</th>
+          <th>Ejemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>&amp;&amp;</code></td>
+          <td>AND (Y)</td>
+          <td>Verdadero si ambas condiciones se cumplen</td>
+          <td><code>a &gt; 0 &amp;&amp; b &gt; 0</code></td>
+        </tr>
+        <tr>
+          <td><code>||</code></td>
+          <td>OR (O)</td>
+          <td>Verdadero si al menos una condición se cumple</td>
+          <td><code>a &gt; 0 || b &gt; 0</code></td>
+        </tr>
+        <tr>
+          <td><code>!</code></td>
+          <td>NOT (NO)</td>
+          <td>Invierte el valor lógico</td>
+          <td><code>!(a &gt; b)</code></td>
+        </tr>
+      </tbody>
+    </table> <br>
 
-  <h3>Ejemplo con AND</h3>
+    <h3>Ejemplo con AND</h3>
 
-  <pre><code>
+    <pre><code>
 int edad = 30;
 
 if (edad &gt;= 18 &amp;&amp; edad &lt;= 65) {
@@ -249,9 +316,9 @@ if (edad &gt;= 18 &amp;&amp; edad &lt;= 65) {
 }
   </code></pre>
 
-  <h3>Ejemplo con OR</h3>
+    <h3>Ejemplo con OR</h3>
 
-  <pre><code>
+    <pre><code>
 int nota = 4;
 int asistencia = 85;
 
@@ -260,9 +327,9 @@ if (nota &gt;= 6 || asistencia &gt;= 80) {
 }
   </code></pre>
 
-  <h3>Ejemplo con NOT</h3>
+    <h3>Ejemplo con NOT</h3>
 
-  <pre><code>
+    <pre><code>
 int edad = 16;
 
 if (!(edad &gt;= 18)) {
@@ -271,14 +338,14 @@ if (!(edad &gt;= 18)) {
   </code></pre>
 
 
-  <h2>3. Uso de cin y cout</h2>
+    <h2>3. Uso de cin y cout</h2>
 
-  <p><strong>cout &lt;&lt;</strong> se utiliza para mostrar información en pantalla.</p>
-  <p><strong>cin &gt;&gt;</strong> se utiliza para ingresar datos desde el teclado.</p>
+    <p><strong>cout &lt;&lt;</strong> se utiliza para mostrar información en pantalla.</p>
+    <p><strong>cin &gt;&gt;</strong> se utiliza para ingresar datos desde el teclado.</p>
 
-  <h3>Ejemplo completo</h3>
+    <h3>Ejemplo completo</h3>
 
-  <pre><code>
+    <pre><code>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -299,7 +366,7 @@ int main() {
 }
   </code></pre>
 
-  <h2>📘 IF - Estructura</h2>
+    <h2>📘 IF - Estructura</h2>
     <pre><code>#include &lt;iostream&gt;
   using namespace std;
   
@@ -320,8 +387,8 @@ int main() {
   }
 </code></pre>
 
-  <h2>🔹 Else If 🔹</h2>
-  <pre><code>
+    <h2>🔹 Else If 🔹</h2>
+    <pre><code>
     #include &lt;iostream&gt;
     using namespace std;
     
@@ -346,15 +413,115 @@ int main() {
         return 0;
     }
     </code></pre>
-    
-    </main>
 
-    <!--Detengo flotado -->
-    <div style="clear: both;"> </div> 
-    <footer id="parrafofooter_index">
-        <p> Hernan Joel Vladimirsky <span>&copy;Copyright</span> </p>
-    </footer> 
+    <h2 style="color: #2E86C1;">🔄 WHILE </h2>
+  
+  <p>
+  El ciclo <b>while</b> es una estructura repetitiva que se ejecuta mientras una condición sea verdadera.
+  Primero evalúa la condición y, si se cumple, ejecuta el bloque de código.
+  Este proceso se repite hasta que la condición deja de cumplirse.
+  </p>
+  
+  <pre>
+  #include &lt;iostream&gt;
+  using namespace std;
+  
+  int main() {
+      int i = 1; // Variable contador que inicia en 1
+  
+      // El while se ejecuta mientras i sea menor o igual a 5
+      while (i &lt;= 5) {
+          cout &lt;&lt; "Es la iteracion: " &lt;&lt; i &lt;&lt; endl; // Muestra el valor de i
+          i++; // Incrementa i en 1 para evitar un bucle infinito
+      }
+  
+      return 0; // Fin del programa
+  }
+  </pre>
 
+    <h2 style="color: #2E86C1;">⏳ DO WHILE </h2>
     
+</h2>
+
+<p>
+El ciclo <b>do while</b> es una estructura repetitiva que ejecuta el bloque de código al menos una vez,
+y luego evalúa la condición. Si la condición es verdadera, el ciclo se repite.
+Este proceso continúa hasta que la condición deja de cumplirse.
+</p>
+
+<pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int i = 1; // Variable contador que inicia en 1
+
+    do {
+        cout &lt;&lt; "Es la iteracion: " &lt;&lt; i &lt;&lt; endl;
+        i++; // Incrementa i
+    } while (i &lt;= 5);
+
+    return 0;
+}
+</pre>
+
+<h2 style="color: black;">⚙️ FOR </h2>
+
+<p>
+El ciclo <b>for</b> es una estructura repetitiva que se utiliza cuando se conoce la cantidad de veces que se quiere repetir un bloque de código.
+Tiene tres partes: inicialización, condición y actualización. El ciclo se ejecuta mientras la condición sea verdadera.
+</p>
+
+<pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+  
+  // Inicialización, condición y aumento en una sola línea
+  for (int i = 1; i &lt;= 5; i++) {
+      cout &lt;&lt; "Es la iteracion: " &lt;&lt; i &lt;&lt; endl;
+  }
+
+  return 0;
+}
+</pre>
+
+<h2 style="color: black;">🔁 WHILE</h2>
+<p>
+Usalo cuando <b>no sabés cuántas veces</b> se va a repetir.<br>
+Primero evalúa la condición y puede no ejecutarse nunca.
+</p>
+
+<h2 style="color: blue;">⏳ DO WHILE</h2>
+<p>
+Usalo cuando querés que el código <b>se ejecute al menos una vez</b>.<br>
+Primero ejecuta y después evalúa la condición.
+</p>
+
+<h2 style="color: black;">⚙️ FOR</h2>
+<p>
+Usalo cuando <b>sabés cuántas veces</b> se va a repetir.<br>
+Tiene inicialización, condición y aumento en una sola línea.
+</p>
+
+<h3>Resumen</h3>
+<ul>
+    <li><b>for</b> → contado</li>
+    <li><b>while</b> → depende</li>
+    <li><b>do while</b> → mínimo una vez</li>
+</ul>
+
+
+  </main>
+
+  <!--Detengo flotado -->
+  <div style="clear: both;"> </div>
+  <footer id="parrafofooter_index">
+    <p> Hernan Joel Vladimirsky <span>&copy;Copyright</span> </p>
+  </footer>
+
+
 </body>
+
 </html>
