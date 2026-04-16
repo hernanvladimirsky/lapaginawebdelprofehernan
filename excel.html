@@ -350,7 +350,8 @@
         <p>=SI(<span><strong>CONDICION</strong></span>;<span class="verdadero">VERDADERO</span>;SI(<span><strong>CONDICION</strong></span>; <span class="verdadero">VERDADERO</span>);SI(<span><strong>CONDICION</strong></span>; <span class="verdadero">VERDADERO</span>; <span class="falso">FALSO</span>))</p>
         
         <!--Funciones de busqueda y referencia-->       
-        <h2>BUSCAR</h2>
+        <h2>BUSCAR</h2> <!--BUSCAR-->
+        <p>Busca un valor en un rango y devuelve un resultado relacionado en otra posición.</p>
         <p>
         Sintaxis: <br>
         =BUSCAR(<span><strong>VALOR BUSCADO</strong></span>;VECTOR DE COMPARACION; VECTOR DE RESULTADO) <br><br>
@@ -360,7 +361,8 @@
         VECTOR DE RESULTADO: : Es el rango de datos a seleccionar para que me muestre o devuelva el resultado. <br>
         </p>
 
-        <h2>BUSCARV</h2>
+        <h2>BUSCARV</h2> <!--BUSCARV-->
+        <p>Busca un valor en la primera columna de una tabla y devuelve un dato de la misma fila.</p>
         <p>            
         Sintaxis: <br>
         =BUSCARV(<span><strong>VALOR BUSCADO</strong>; MATRIZ TABLA; INDICADOR DE COLUMNAS; RANGO) <br><br>
@@ -371,7 +373,8 @@
         RANGO: se refiere a si queremos que sea por verdadero en coincidencia aproximada o falso para coincidencia exacta. <br>
         </p>
 
-        <h2>BUSCARH</h2>
+        <h2>BUSCARH</h2> <!--BUSCARH-->
+        <p>Busca un valor en la primera fila de una tabla y devuelve un dato de la misma columna.</p>
         <p>
         Sintaxis: <br>
         =BUSCARH(<span><strong>VALOR BUSCADO</strong>; MATRIZ TABLA; INDICADOR DE COLUMNAS; RANGO) <br><br>
@@ -382,7 +385,9 @@
         ORDENADO: se refiere a si queremos que sea por verdadero en coincidencia aproximada o falso para coincidencia exacta. <br>
         </p>
 
-        <h2>BUSCARX</h2>
+        <h2>BUSCARX</h2> <!--BUSCARX-->
+        <p>Busca un valor en una columna o fila y devuelve el dato correspondiente desde otro rango. Puede buscar de arriba hacia abajo (en columnas) 
+            o de izquierda a derecha (en filas), lo que la hace más flexible que BUSCARV y BUSCARH.</p>
         <p>            
         Sintaxis: <br>
         =BUSCARX(<span><strong>VALOR BUSCADO</strong>; MATRIZ BUSCADA; MATRIZ DEVUELTA) <br> <br>
@@ -414,10 +419,82 @@
         </p>
 
 
-        <!--Moda-->
-        <h2>Moda</h2>
-        <p>La función MODA calcula el valor que aparece con mayor frecuencia en un conjunto de datos. <br><br>
-            =MODA(Rango de celdas)</p>
+        <!-- IZQUIERDA -->
+        <h2>IZQUIERDA</h2>
+        <p>Extrae una cantidad de caracteres desde el inicio (izquierda) de un texto.</p>
+        <p><b>Sintaxis:</b> =IZQUIERDA(texto, núm_de_caracteres)</p>
+        <p><b>Ejemplo de uso:</b> En una empresa, obtener el código de sucursal desde "BSAS-00123"<br>
+        =IZQUIERDA(A1,4) → BSAS</p>
+
+        <!-- DERECHA -->
+        <h2>DERECHA</h2>
+        <p>Extrae caracteres desde el final (derecha) de un texto.</p>
+        <p><b>Sintaxis:</b> =DERECHA(texto, núm_de_caracteres)</p>
+        <p><b>Ejemplo de uso:</b> Obtener el número de cliente desde "CLI-4589"<br>
+        =DERECHA(A1,4) → 4589</p>
+
+        <!-- EXTRAE -->
+        <h2>EXTRAE</h2>
+        <p>Extrae caracteres desde una posición específica dentro del texto.</p>
+        <p><b>Sintaxis:</b> =EXTRAE(texto, posición_inicial, núm_de_caracteres)</p>
+        <p><b>Ejemplo de uso:</b> Obtener el sector de un código como "EMP-VENTAS-23"<br>
+        =EXTRAE(A1,5,6) → VENTAS</p>
+
+        <!-- LARGO -->
+        <h2>LARGO</h2>
+        <p>Cuenta la cantidad total de caracteres de un texto (incluye espacios).</p>
+        <p><b>Sintaxis:</b> =LARGO(texto)</p>
+        <p><b>Ejemplo de uso:</b> Verificar que los códigos de empleados tengan exactamente 6 caracteres<br>
+        =LARGO(A1) → 6</p>
+
+        <!-- ENCONTRAR -->
+        <h2>ENCONTRAR</h2>
+        <p>Busca un texto dentro de otro y devuelve la posición (distingue mayúsculas y minúsculas).</p>
+        <p><b>Sintaxis:</b> =ENCONTRAR(texto_buscado, dentro_del_texto)</p>
+        <p><b>Ejemplo de uso:</b> Ubicar el guion en códigos de productos como "PROD-5678"<br>
+        =ENCONTRAR("-",A1)</p>
+
+        <!-- HALLAR -->
+        <h2>HALLAR</h2>
+        <p>Busca un texto dentro de otro y devuelve la posición (no distingue mayúsculas y minúsculas).</p>
+        <p><b>Sintaxis:</b> =HALLAR(texto_buscado, dentro_del_texto)</p>
+        <p><b>Ejemplo de uso:</b> Detectar la palabra "oferta" en una descripción<br>
+        =HALLAR("oferta",A1) → 13</p>
+
+        <!-- CONCATENAR / CONCAT -->
+        <h2>CONCATENAR / CONCAT</h2>
+        <p>Une varios textos en uno solo.</p>
+        <p><b>Sintaxis:</b> =CONCATENAR(texto1, texto2, ...) o =CONCAT(texto1, texto2, ...)</p>
+        <p><b>Ejemplo de uso:</b> Generar un identificador de empleado<br>
+        =CONCATENAR(A1,"-",B1) → Juan-102</p>
+
+        <!-- MAYUSC -->
+        <h2>MAYUSC</h2>
+        <p>Convierte todo el texto a mayúsculas.</p>
+        <p><b>Sintaxis:</b> =MAYUSC(texto)</p>
+        <p><b>Ejemplo de uso:</b> Estandarizar nombres de clientes<br>
+        =MAYUSC(A1) → JUAN PEREZ</p>
+
+        <!-- MINUSC -->
+        <h2>MINUSC</h2>
+        <p>Convierte todo el texto a minúsculas.</p>
+        <p><b>Sintaxis:</b> =MINUSC(texto)</p>
+        <p><b>Ejemplo de uso:</b> Normalizar correos electrónicos<br>
+        =MINUSC(A1) → juan.perez@mail.com</p>
+
+        <!-- NOMPROPIO -->
+        <h2>NOMPROPIO</h2>
+        <p>Convierte la primera letra de cada palabra en mayúscula.</p>
+        <p><b>Sintaxis:</b> =NOMPROPIO(texto)</p>
+        <p><b>Ejemplo de uso:</b> Corregir nombres de empleados<br>
+        =NOMPROPIO(A1) → Juan Perez</p>
+
+        <!-- ESPACIOS -->
+        <h2>ESPACIOS</h2>
+        <p>Elimina espacios innecesarios dentro de un texto.</p>
+        <p><b>Sintaxis:</b> =ESPACIOS(texto)</p>
+        <p><b>Ejemplo de uso:</b> Limpiar datos con espacios de más<br>
+        =ESPACIOS(A1) → hola mundo</p>
 
         <hr>
         <!--Macro-->
@@ -425,6 +502,7 @@
         <p>Una macro es un conjunto de acciones o instrucciones grabadas que se ejecutan automáticamente para automatizar tareas repetitivas 
             en aplicaciones de software, como Excel, con un solo clic o comando. Permiten agilizar procesos, reducir errores manuales y 
             ahorrar tiempo al realizar acciones complejas de manera secuencial.</p>
+       
         <hr>
 
         <h1>¿Contar o sumar?</h1>
