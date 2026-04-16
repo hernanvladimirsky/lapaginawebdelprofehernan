@@ -59,6 +59,20 @@
         padding: 0 12px
       }
     }
+
+    table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #dddddd;
+        }
   </style>
 </head>
 
@@ -214,6 +228,91 @@ int main() {
     <pre><code>cout &lt;&lt; "Hola mundo";   // Muestra el texto en pantalla
 cin &gt;&gt; nombre;         // Espera que el usuario escriba algo y lo guarda en la variable 'nombre'
   </code></pre>
+
+  <h2>Tipos de Variables en C++</h2>
+
+<table>
+    <tr>
+        <th>Tipo</th>
+        <th>Qué guarda</th>
+        <th>Ejemplo de valor</th>
+        <th>Ejemplo en código</th>
+        <th>Tamaño aprox.</th>
+        <th>Observaciones</th>
+    </tr>
+    <tr>
+        <td>int</td>
+        <td>Números enteros</td>
+        <td>10, -5</td>
+        <td>int edad = 18;</td>
+        <td>4 bytes</td>
+        <td>Muy usado</td>
+    </tr>
+    <tr>
+        <td>float</td>
+        <td>Decimales (menos precisión)</td>
+        <td>1.75</td>
+        <td>float altura = 1.75;</td>
+        <td>4 bytes</td>
+        <td>Menos preciso que double</td>
+    </tr>
+    <tr>
+        <td>double</td>
+        <td>Decimales (más precisión)</td>
+        <td>1.755555</td>
+        <td>double precio = 99.99;</td>
+        <td>8 bytes</td>
+        <td>Más exacto</td>
+    </tr>
+    <tr>
+        <td>char</td>
+        <td>Un solo carácter</td>
+        <td>'A'</td>
+        <td>char letra = 'A';</td>
+        <td>1 byte</td>
+        <td>Comillas simples</td>
+    </tr>
+    <tr>
+        <td>string</td>
+        <td>Texto (palabras/frases)</td>
+        <td>"Hola"</td>
+        <td>string nombre = "Juan";</td>
+        <td>Variable</td>
+        <td>Comillas dobles</td>
+    </tr>
+    <tr>
+        <td>bool</td>
+        <td>Verdadero o falso</td>
+        <td>true / false</td>
+        <td>bool activo = true;</td>
+        <td>1 byte</td>
+        <td>Solo 2 valores</td>
+    </tr>
+    <tr>
+        <td>short</td>
+        <td>Enteros pequeños</td>
+        <td>100</td>
+        <td>short num = 100;</td>
+        <td>2 bytes</td>
+        <td>Menor rango que int</td>
+    </tr>
+    <tr>
+        <td>long</td>
+        <td>Enteros grandes</td>
+        <td>1000000</td>
+        <td>long num = 1000000;</td>
+        <td>4 u 8 bytes</td>
+        <td>Mayor rango que int</td>
+    </tr>
+    <tr>
+        <td>long long</td>
+        <td>Enteros muy grandes</td>
+        <td>9999999999</td>
+        <td>long long num = 9999999999;</td>
+        <td>8 bytes</td>
+        <td>Para números grandes</td>
+    </tr>
+</table>
 
     <h2>1. Operadores de Comparación</h2>
     <p>Se utilizan para comparar valores dentro de estructuras como <code>if</code>, <code>while</code> y
