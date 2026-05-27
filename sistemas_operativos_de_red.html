@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sistemas Operativos</title>
+  <link rel="stylesheet" href="Css/estilosglobal.css">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --color-text: #333;
+      --accent: #0077ff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+      color: var(--color-text);
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 24px;
+      background: var(--bg);
+      border-bottom: 1px solid #ddd;
+      position: relative;
+      z-index: 100;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: var(--accent);
+      width: 50%;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      background: none;
+      border: 0;
+      color: var(--color-text);
+      cursor: pointer;
+    }
+
+    /* Menu */
+    .menu {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .menu a {
+      color: var(--color-text);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background 0.2s ease;
+    }
+
+    .menu a:hover {
+      background: rgba(0, 119, 255, 0.1);
+      color: var(--accent);
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) { /* 768*/
+      .hamburger { display: block; }
+
+      .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: 10px;
+        right: 10px;
+        background: var(--bg);
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        animation: fadeIn 0.3s ease forwards;
+      }
+
+      .menu.menu--open {
+        display: flex;
+      }
+    }
+
+    /* Animación */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    body {
+                font-family: Arial, sans-serif;
+                font-size: 11pt;
+                line-height: 1.6;
+                color: #2d3748;
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f7fafc;
+            }
+    
+            .container {
+                background-color: #ffffff;
+                padding: 40px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            }
+    
+            .header-banner {
+                background-color: #1a365d;
+                color: #ffffff;
+                padding: 30px;
+                border-radius: 6px;
+                margin-bottom: 30px;
+            }
+    
+            .header-banner h1 {
+                margin: 0;
+                font-size: 22pt;
+                font-weight: bold;
+            }
+    
+            .header-banner p {
+                margin: 8px 0 0 0;
+                font-size: 11pt;
+                color: #90cdf4;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+    
+            h2 {
+                font-size: 16pt;
+                color: #2b6cb0;
+                border-left: 5px solid #2b6cb0;
+                padding-left: 12px;
+                margin-top: 35px;
+                margin-bottom: 15px;
+            }
+    
+            h3 {
+                font-size: 13pt;
+                color: #2d3748;
+                margin-top: 25px;
+                margin-bottom: 10px;
+            }
+    
+            p {
+                margin-top: 0;
+                margin-bottom: 16px;
+                text-align: justify;
+            }
+    
+            ul, ol {
+                margin-top: 0;
+                margin-bottom: 20px;
+                padding-left: 25px;
+            }
+    
+            li {
+                margin-bottom: 8px;
+            }
+    
+            .diagram-container {
+                background-color: #edf2f7;
+                border-left: 4px solid #4a5568;
+                padding: 15px;
+                margin: 25px 0;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 10.5pt;
+                white-space: pre;
+                line-height: 1.4;
+                overflow-x: auto;
+            }
+    
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 25px;
+                margin-bottom: 25px;
+                font-size: 11pt;
+            }
+    
+            th {
+                background-color: #2b6cb0;
+                color: #ffffff;
+                font-weight: bold;
+                text-align: left;
+                padding: 12px;
+                border: 1px solid #2b6cb0;
+            }
+    
+            td {
+                padding: 12px;
+                border: 1px solid #e2e8f0;
+                text-align: left;
+                vertical-align: top;
+            }
+    
+            tr:nth-child(even) {
+                background-color: #f7fafc;
+            }
+
+  </style>
+</head>
+<body>
+  <a id="top"></a>
+    <header>
+        <a id="ancla"></a>
+        <h1 id="titulologo">Sistemas operativos</h1>
+        <img src="Imagenes/Laboratorio de sistemas operativos/windows.png" alt="logo" title="logo"
+            id="logo">
+    </header>
+  <nav>
+    <div class="logo">
+        <ul style="font-size: 15px;">
+            <li class="links" style="margin-left: -50px;"> <a href="index.html">Ir a Inicio</a></li> <br> <br>
+            <li class="links" style="margin-left: -50px;"> <a href="EjerciciosSistemasOperativos.html">Ir a Trabajos prácticos</a></li> <br> <br>
+        </ul>
+    </div> 
+   
+    <button class="hamburger" id="hamburger">☰</button>
+    <div class="menu" id="menu">
+      <a href="#tp1">TP 1</a>
+      <a href="#tp2">TP 2</a>
+      <a href="#tp3">TP 3</a>
+      <a href="#tp4">TP 4</a>
+      <a href="#tp5">TP 5</a>
+      <a href="#tp6">TP 6</a>
+      <a href="#tp7">TP 7</a>
+      <a href="#tp8">TP 8</a>     
+    </div>  
+  </nav>
+  <main>
+    
+    <div class="container">
+        <div class="header-banner">
+            <h1>Guía Integral: Planificación y Configuración de una Red Local (LAN)</h1>
+            <p>Documento de Arquitectura e Infraestructura de TI</p>
+        </div>
+
+        <p>La planificación de una red local de forma estructurada garantiza que la infraestructura sea escalable, segura y eficiente. Diseñar sin una estrategia clara suele derivar en cuellos de botella, problemas de direccionamiento o vulnerabilidades críticas en el sistema.</p>
+
+        <h2>1. Identificación de Necesidades de la Red</h2>
+        <p>Antes de adquirir cualquier componente de hardware, se deben analizar en profundidad los requerimientos de la organización mediante tres ejes fundamentales:</p>
+
+        <h3>A. Requerimientos de Usuarios, Dispositivos y Ancho de Banda</h3>
+        <ul>
+            <li><strong>Densidad de Hosts:</strong> Mapear la cantidad actual de dispositivos (PCs, servidores, impresoras, telefonía VoIP) y estimar un crecimiento proyectado a 3 o 5 años (añadiendo un margen de seguridad de entre el 20% y el 50%).</li>
+            <li><strong>Perfiles de Usuario y Ancho de Banda:</strong> Se deben dimensionar según el perfil laboral:
+                <ul>
+                    <li><em>Básico o Administrativo:</em> Consumo bajo (rango estimado entre 2 a 5 Mbps) para tareas ofimáticas tradicionales, correos electrónicos y navegación web.</li>
+                    <li><em>Avanzado o Técnico (Desarrolladores, Diseñadores):</em> Consumo alto. Requieren enlaces de 1 Gbps directos a su puesto para mover repositorios pesados, contenedores o archivos multimedia sin ralentizar la red general.</li>
+                </ul>
+            </li>
+            El ancho de banda es la capacidad máxima de datos que un enlace puede transportar por segundo (representando conceptualmente los "carriles" de la autopista de datos).
+        </ul>
+
+        <h3>B. Requerimientos de Aplicaciones, Tráfico y el Backbone</h3>
+        <ul>
+            <li><strong>Tipos de datos:</strong> Identificar si la red transportará tráfico crítico o en tiempo real, como Voz sobre IP (VoIP), videoconferencias, streaming de video o bases de datos centralizadas.</li>
+            <li><strong>Ancho de banda necesario:</strong>Aplicaciones como la replicación de servidores o el almacenamiento en red (NAS) exigen enlaces de alta velocidad (mínimo 1 Gbps o 10 Gbps en el backbone).</li>
+            <strong>El Backbone (Columna Vertebral):</strong> Es la infraestructura troncal de la red, un enlace de alta velocidad que interconecta los switches centrales, routers y servidores principales. Como todo el tráfico de acceso confluye aquí, el backbone se debe planificar con tecnologías de alta capacidad (mínimo 10 Gbps, idealmente mediante fibra óptica) para evitar cuellos de botella que degraden la experiencia de toda la organización.
+        </ul>
+
+        <h3>C. Restricciones Físicas y Ambientales</h3>
+        <ul>
+            <li><strong>Tipos de datos:</strong> El límite teórico para el cable de cobre de par trenzado (UTP) es de 100 metros. Excederlo genera atenuación y pérdida de paquetes.</li>
+            <li><strong>Interferencias:</strong> Ubicar fuentes de interferencia electromagnética (EMI) como motores industriales o líneas de alta tensión para planificar el blindaje del cableado (STP/FTP) o la distribución óptima de los puntos de acceso Wi-Fi.</li>
+        </ul>
+
+        <h2>2. Planificación y Diseño Arquitectónico</h2>
+        <p>La industria adopta de forma estandarizada el Modelo de Diseño Jerárquico para estructurar la red en tres capas lógicas bien definidas:</p>
+
+        <div class="diagram-container">  [ Capa de Núcleo (Core) ]      &lt;-- Conmutación de alta velocidad (Maneja el Backbone)
+             |
+ [ Capa de Distribución ]       &lt;-- Enrutamiento, políticas de seguridad y VLANs
+             |
+    [ Capa de Acceso ]         &lt;-- Conexión final de los usuarios y dispositivos (1 Gbps)</div>
+
+        <ul>
+            <li><strong>Topología Física:</strong> La arquitectura más eficiente es la Estrella Extendida, donde los dispositivos finales se conectan a switches de acceso periféricos, y estos a su vez se consolidan hacia los switches centrales de la empresa.</li>
+            <img src="Imagenes/Laboratorio de sistemas operativos/estrellaextendida.png" alt="">
+            <li><strong>Redundancia y Alta Disponibilidad:</strong> Diseñar caminos alternativos y duplicar enlaces clave en el backbone (implementando protocolos como STP/RSTP para prevenir bucles de capa 2) asegura que, ante el fallo de un equipo principal, un enlace secundario asuma el tráfico de forma transparente.</li>
+        </ul>
+
+        <h2>3. Configuración y Direccionamiento Lógico</h2>
+        <p>Una vez consolidada la estructura física, se procede a definir la capa de software y la lógica de enrutamiento:</p>
+
+        <h3>A. Segmentación mediante VLANs (Virtual LANs)</h3>
+        <p>Con el fin de mitigar riesgos de seguridad y reducir el tráfico de difusión (broadcast), se debe configurar la red en segmentos virtuales aislados:</p>
+        <ul>
+            <li><strong>VLAN de Administración:</strong> Exclusiva para la gestión segura de switches, routers y Firewalls.</li>
+            <li><strong>VLAN de Empleados / Desarrollo:</strong> Destinada a la operación diaria del personal técnico y administrativo.</li>
+            <li><strong>VLAN de Voz:</strong> Segmento parametrizado con Calidad de Servicio (QoS) y priorizado para telefonía IP.</li>
+            <li><strong>VLAN de Invitados:</strong> Red totalmente aislada de los recursos de la intranet, provista únicamente con salida externa a Internet.</li>
+        </ul>
+
+        <h3>B. Esquema de Direccionamiento IP y DHCP</h3>
+        <ul>
+            <li><strong>Subredes (VLSM):</strong> Utilizar bloques de direccionamiento privado (por ejemplo, el estándar 10.0.0.0/8) y segmentarlo eficientemente mediante Máscara de Subred de Longitud Variable para evitar el desperdicio de IPs.</li>
+            <li><strong>Estrategia de Asignación:</strong> Reservar direccionamiento estático (fijo) para servidores, impresoras e infraestructura crítica. Para los hosts de usuarios, implementar un servidor DHCP jerárquico que gestione de forma automática los rangos (Scopes) y tiempos de concesión (Lease times).</li>
+        </ul>
+
+        <h2>4. Seguridad Perimetral y Control de Acceso</h2>
+        <ul>
+            <li><strong>Firewall:</strong> Se posiciona en la frontera exacta entre la red local (LAN) y la red externa (WAN), administrando políticas estrictas de filtrado e implementando Zonas Desmilitarizadas (DMZ) para los servidores que requieran exposición externa.</li>
+            <li><strong>Seguridad de Acceso (Port Security):</strong> Configurar los switches de la capa de acceso para restringir las conexiones basándose en direcciones MAC autorizadas o mediante el despliegue del estándar de autenticación robusta 802.1X.</li>
+        </ul>
+
+        <h2>Tabla Resumen del Flujo de Trabajo</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Fase del Proyecto</th>
+                    <th>Tarea Principal</th>
+                    <th>Concepto Clave Aplicado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. Relevamiento</strong></td>
+                    <td>Definir puestos de trabajo, densidades de hosts y perfiles técnicos.</td>
+                    <td><strong>Ancho de banda</strong> por usuario dimensionado a 1 Gbps en la capa de acceso.</td>
+                </tr>
+                <tr>
+                    <td><strong>2. Diseño Central</strong></td>
+                    <td>Conectar la infraestructura central y servidores de la organización.</td>
+                    <td><strong>Backbone</strong> redundante y reforzado a 10 Gbps para mitigar cuellos de botella.</td>
+                </tr>
+                <tr>
+                    <td><strong>3. Lógica de Red</strong></td>
+                    <td>Segmentar el tráfico por áreas funcionales y aislar accesos.</td>
+                    <td>Implementación de <strong>VLANs</strong> y direccionamiento IP estructurado con VLSM.</td>
+                </tr>
+                <tr>
+                    <td><strong>4. Seguridad</strong></td>
+                    <td>Salvaguardar la integridad de los datos internos ante amenazas.</td>
+                    <td>Despliegue de <strong>Firewall</strong> perimetral y seguridad de puertos activos.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
+
+</body>
+</html>
+    
+
+  </main>
+  <a href="#top">Ir hacia arriba</a>
+  <br><br>
+  <script>
+    
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+
+    hamburger.addEventListener('click', () => {
+      menu.classList.toggle('menu--open');
+    });
+  </script>
+    
+ 
+</body>
+</html>
