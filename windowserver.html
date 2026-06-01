@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Configuración de Adaptador de Red en VirtualBox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .card {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .tip {
+            background: #e8f5e9;
+            padding: 10px;
+            border-left: 5px solid #4caf50;
+            margin-top: 10px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin-bottom: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #999;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .section {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+      color: blue;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+    </style>
+    <link rel="stylesheet" href="Css/estilosglobal.css">
+</head>
+<header>
+    <a id="ancla"></a>
+    <h1 id="titulologo">Windows Server</h1>
+    <img src="Imagenes/Laboratorio de sistemas operativos/windows.png" alt="logo" title="logo"
+        id="logo">
+
+</header>
+<nav>
+    <ul>
+        <li class="links"> <a href="index.html">Ir al Inicio</a></li>
+        <li class="links"> <a href="EjerciciosSistemasOperativos.html">Ir a Ejercicios Sistemas Operativos</a></li>
+        <li class="links"> <a href="sistemas_operativos_de_red.html">Ir a hacia atras</a></li>
+    </ul>
+</nav>
+<body>
+
+    <h1>🌐 Configuración de Adaptador de Red en VirtualBox</h1>
+
+<div class="card">
+    <h2>🧭 1. Ir a la configuración de red</h2>
+    <ol>
+        <li>Abrir VirtualBox</li>
+        <li>Seleccionar la máquina virtual (sin iniciar)</li>
+        <li>Hacer clic en <b>Configuración</b></li>
+        <li>Ir a la pestaña <b>Red</b></li>
+    </ol>
+</div>
+
+<div class="card">
+    <h2>🔌 2. Elegir el tipo de adaptador</h2>
+
+    <h3>🌍 NAT</h3>
+    <ul>
+        <li>Usa la conexión de tu PC</li>
+        <li>Tiene internet automáticamente</li>
+        <li>No es visible en la red</li>
+    </ul>
+
+    <h3>🖧 Adaptador Puente (Bridge)</h3>
+    <ul>
+        <li>La VM actúa como una PC más</li>
+        <li>Recibe IP del router (DHCP)</li>
+        <li>Puede comunicarse con otras máquinas</li>
+    </ul>
+
+    <h3>🔒 Red Interna</h3>
+    <ul>
+        <li>Solo comunicación entre máquinas virtuales</li>
+        <li>No tiene internet</li>
+    </ul>
+
+    <h3>💻 Solo-Anfitrión (Host-Only)</h3>
+    <ul>
+        <li>Comunicación entre tu PC y la VM</li>
+        <li>Sin internet (por defecto)</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>⚙️ 3. Configurar detalles</h2>
+    <ul>
+        <li><b>Bridge:</b> Elegir placa de red (WiFi o Ethernet)</li>
+        <li><b>Host-Only:</b> DHCP automático o IP manual</li>
+        <li><b>NAT:</b> Generalmente no requiere cambios</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>💻 4. Configuración dentro del sistema operativo</h2>
+
+    <h3>🪟 Windows</h3>
+    <ul>
+        <li>Panel de control → Red</li>
+        <li>Configurar IP automática (DHCP) o manual</li>
+    </ul>
+
+    <h3>🐧 Linux</h3>
+    <ul>
+        <li>Comando: <code>ip a</code></li>
+        <li>Configurar desde Network Manager</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>💡 Tip para prácticas de redes</h2>
+    <div class="tip">
+        Usar 2 adaptadores:
+        <ul>
+            <li>🌍 Adaptador 1: NAT (internet)</li>
+            <li>🔒 Adaptador 2: Host-Only (laboratorio)</li>
+        </ul>
+        Permite hacer prácticas con DHCP, servidores y clientes.
+    </div>
+</div>
+
+<h1>🖥️ Ejercicio 1: Configuración Básica de Windows Server</h1>
+
+<div class="card">
+    <h2>🎯 Objetivo</h2>
+    <p>Configurar parámetros básicos del servidor: nombre, escritorio remoto, red (DHCP y estática) y verificar configuración con comandos.</p>
+</div>
+
+<div class="card">
+    <h2>✏️ 1. Cambiar el nombre del servidor</h2>
+    <div class="paso">
+        <ol>
+            <li>Ir a <b>Inicio</b></li>
+            <li>Click derecho en <b>Este equipo</b> → <b>Propiedades</b></li>
+            <li>Seleccionar <b>Cambiar configuración</b></li>
+            <li>Click en <b>Cambiar</b></li>
+            <li>Ingresar nuevo nombre (Ej: SERVER-01)</li>
+            <li>🔁 Reiniciar el equipo</li>
+        </ol>
+    </div>
+</div>
+
+<div class="card">
+    <h2>🖥️ 2. Activar Escritorio Remoto</h2>
+    <div class="paso">
+        <ol>
+            <li>Ir a <b>Configuración</b></li>
+            <li>Entrar en <b>Sistema</b></li>
+            <li>Seleccionar <b>Escritorio remoto</b></li>
+            <li>Activar la opción</li>
+            <li>Permitir usuarios si es necesario</li>
+        </ol>
+    </div>
+</div>
+
+<div class="card">
+    <h2>🌐 3. Configurar IP por DHCP</h2>
+    <div class="paso">
+        <ol>
+            <li>Ir a <b>Panel de control</b></li>
+            <li>Red e Internet → Centro de redes</li>
+            <li>Cambiarle el nombre por Internet</li>
+            <li>Cambiar configuración del adaptador</li>
+            <li>Click derecho en la red → <b>Propiedades</b></li>
+            <li>Seleccionar <b>Protocolo IPv4</b></li>
+            <li>Elegir:
+                <ul>
+                    <li>✔ Obtener IP automáticamente</li>
+                    <li>✔ Obtener DNS automáticamente</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="card">
+    <h2>📌 4. Configurar IP Estática</h2>
+    <div class="paso">
+        <ol>
+            <li>Cambiarle el nombre por LAN</li>
+            <li>Ir nuevamente a IPv4</li>
+            <li>Seleccionar <b>Usar la siguiente dirección IP</b></li>
+            <li>Completar:
+                <ul>
+                    <li>IP: 192.168.1.10</li>
+                    <li>Máscara: 255.255.255.0</li>
+                    <li>Puerta de enlace: 192.168.1.1</li>
+                    <li>DNS: 8.8.8.8</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="card">
+    <h2>🔍 5. Verificar configuración con ipconfig</h2>
+    <div class="paso">
+        <ol>
+            <li>Abrir <b>CMD</b></li>
+            <li>Ejecutar:</li>
+        </ol>
+        <p><code>ipconfig</code></p>
+        <p>También se puede usar:</p>
+        <p><code>ipconfig /all</code></p>
+    </div>
+</div>
+
+<div class="card">
+    <h2>✅ Resultado esperado</h2>
+    <ul>
+        <li>Servidor con nombre configurado</li>
+        <li>Escritorio remoto habilitado</li>
+        <li>Red funcionando en DHCP</li>
+        <li>Red funcionando con IP estática</li>
+        <li>Verificación correcta con ipconfig</li>
+    </ul>
+</div>
+
+<h1>🏢 Ejercicio 2: Instalación de Active Directory</h1>
+
+<div class="card">
+    <h2>📚 ¿Qué es Active Directory?</h2>
+    <p>
+        Active Directory (AD) es un servicio que permite administrar y centralizar todos los recursos de una red desde un servidor.
+    </p>
+    <p>
+        Funciona como una base de datos donde se almacenan usuarios, computadoras, contraseñas y permisos.
+    </p>
+</div>
+
+<div class="card">
+    <h2>🛠️ ¿Para qué sirve?</h2>
+    <ul>
+        <li>Permite iniciar sesión en cualquier PC con la misma cuenta</li>
+        <li>Centraliza la administración de la red</li>
+        <li>Aplica políticas de seguridad</li>
+        <li>Organiza la red mediante un dominio</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>🏢 Ejemplo de empresa</h2>
+    <p>La empresa tiene dos sucursales:</p>
+    <ul>
+        <li>📍 Ramos Mejía</li>
+        <li>📍 San Justo</li>
+    </ul>
+    <p>Dominio a crear:</p>
+    <p><b>empresa.com</b></p>
+</div>
+
+<div class="card">
+    <h2>🎯 Objetivo</h2>
+    <p>Instalar Active Directory y crear el dominio empresa.com</p>
+</div>
+
+<div class="card">
+    <h2>⚙️ 1. Abrir el Administrador del Servidor</h2>
+    <div class="paso">
+        <ol>
+            <li>Abrir Administrador del servidor</li>
+            <li>Click en Agregar roles y características</li>
+        </ol>
+    </div>
+</div>
+
+<div class="card">
+    <h2>⚙️ 2. Tipo de instalación</h2>
+    <div class="paso">
+        <ol>
+            <li>Seleccionar Instalación basada en características o roles</li>
+            <li>Click en Siguiente</li>
+        </ol>
+    </div>
+</div>
+
+<div class="card">
+    <h2>⚙️ 3. Seleccionar servidor</h2>
+    <div class="paso">
+        <ol>
+            <li>Elegir el servidor</li>
+            <li>Click en Siguiente</li>
+        </ol>
+    </div>
+</div>
+
+<div class="card">
+    <h2>⚙️ 4. Seleccionar rol</h2>
+    <div class="paso">
+        <ol>
+            <li>Activar Servicios de dominio de Active Directory</li>
+            <li>Aceptar agregar características</li>
+            <li>Click en Siguiente</li>
+        </ol>
+    </div>
+</div>
+
+<div class="card">
+    <h2>⚙️ 5. Instalar</h2>
+    <div class="paso">
+        <ol>
+            <li>Click en Instalar</li>
+            <li>Esperar que finalice</li>
+        </ol>
+    </div>
+</div>
+
+<div class="card">
+    <h2>🏗️ 6. Promover a controlador de dominio</h2>
+    <div class="paso">
+        <ol>
+            <li>Click en la bandera amarilla</li>
+            <li>Seleccionar Promover este servidor a controlador de dominio</li>
+            <li>Elegir Agregar un nuevo bosque</li>
+            <li>Ingresar dominio: <b>empresa.com</b></li>
+            <li>Configurar contraseña</li>
+            <li>Continuar con Siguiente hasta instalar</li>
+        </ol>
+    </div>
+</div>
+
+<div class="card">
+    <h2>🔁 7. Reinicio del servidor (CLAVE)</h2>
+    <div class="paso">
+        <ol>
+            <li>El sistema pedirá reiniciar</li>
+            <li>Aceptar reinicio</li>
+            <li>Esperar a que el servidor reinicie</li>
+        </ol>
+        <p><b>Importante:</b> Sin reiniciar, Active Directory no funcionará correctamente.</p>
+    </div>
+</div>
+
+<div class="card">
+    <h2>🔍 8. Verificación</h2>
+    <div class="paso">
+        <ul>
+            <li>Iniciar sesión como: <code>EMPRESA\Administrador</code></li>
+            <li>Verificar funcionamiento del dominio</li>
+        </ul>
+    </div>
+</div>
+
+<div class="card">
+    <h2>✅ Resultado esperado</h2>
+    <ul>
+        <li>Active Directory instalado</li>
+        <li>Dominio empresa.com funcionando</li>
+        <li>Servidor como controlador de dominio</li>
+        <li>Base para organizar sucursales (Ramos Mejía y San Justo)</li>
+    </ul>
+</div>
+
+</body>
+</html>
