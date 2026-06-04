@@ -355,6 +355,101 @@
         </table>
     </div>
 
+   
+    <div class="container" id="tp2">
+      <div class="header-banner">
+        <h1>Módulo de Infraestructura: Equipamiento, Rendimiento y Almacenamiento en Redes</h1>
+      </div>
+      
+      <h2>1. Evaluación de las Necesidades de Equipo y Rendimiento</h2>
+      <p>Antes de comprar servidores o armar las estaciones de trabajo, se debe medir qué recursos van a consumir el software y los usuarios. No se trata de comprar "lo más caro", sino lo adecuado para evitar cuellos de botella (puntos donde la red o los equipos se ralentizan).</p>
+      
+      <h3>¿Qué se evalúa?</h3>
+      <ul>
+          <li><strong>CPU (Procesador):</strong> Determina la velocidad de procesamiento. Crucial para servidores que manejan bases de datos o compilan código.</li>
+          <li><strong>Memoria RAM:</strong> Permite ejecutar múltiples tareas en simultáneo. Si falta RAM, el equipo usará el almacenamiento como "auxiliar" y se volverá extremadamente lento.</li>
+          <li><strong>Capacidad de I/O (Entrada/Salida):</strong> La velocidad con la que los discos y las placas de red leen y escriben datos.</li>
+      </ul>
+      
+      <p><em>La analogía didáctica: Imagina una cocina de un restaurante. El procesador es el chef (qué tan rápido cocina), la RAM es la mesada de trabajo (cuántos platos puede preparar a la vez) y la red/discos son los mozos (qué tan rápido entran los pedidos y salen los platos). Si la mesada es chica (poca RAM), el chef se traba aunque sea el más rápido del mundo.</em></p>
+      
+      <h2>2. Almacenamiento en Disco: Arquitecturas para Redes</h2>
+      <p>En una red local, los datos de la empresa o escuela no pueden estar guardados en la PC de cada usuario; deben centralizarse para que sean accesibles, seguros y eficientes.</p>
+      
+      <h3>Tipos de Discos:</h3>
+      <p>Hoy en día se priorizan los SSD (Discos de Estado Sólido) y NVMe por su altísima velocidad de lectura/escritura en los sistemas operativos y bases de datos, dejando los HDD (Discos Mecánicos) de gran capacidad únicamente para almacenamiento masivo de archivos o copias de seguridad.</p>
+      
+      <h3>Tecnologías de Red:</h3>
+      <ul>
+          <li><strong>NAS (Network Attached Storage):</strong> Es un dispositivo de almacenamiento conectado directamente a la red local (tiene su propia IP). Funciona como una "nube privada" donde los usuarios guardan y comparten archivos a nivel de carpetas.</li>
+          <li><strong>SAN (Storage Area Network):</strong> Una red de alta velocidad e independiente de la LAN (usualmente de fibra óptica) dedicada exclusivamente a conectar servidores con discos rígidos remotos. Para el servidor, esos discos se comportan como si estuvieran metidos adentro de su propio gabinete (almacenamiento a nivel de bloques).</li>
+      </ul>
+      
+      <h2>3. Sistemas de Copia de Seguridad (Backup)</h2>
+      <p>Un administrador de redes tiene una regla de oro: los fierros fallan, los datos se pierden. Planificar los respaldos es vital.</p>
+      
+      <h3>La Estrategia 3-2-1 (Estándar de la industria):</h3>
+      <ul>
+          <li>Tener al menos 3 copias de los datos.</li>
+          <li>En 2 soportes diferentes (ej. los discos del servidor y un NAS externo).</li>
+          <li>1 copia fuera de la empresa (ej. una réplica en la nube o en otra sucursal física por si hay un incendio o robo).</li>
+      </ul>
+      
+      <h3>Tipos de Backup:</h3>
+      <ul>
+          <li><strong>Completo:</strong> Copia absolutamente todo. Tarda mucho tiempo y ocupa mucho espacio, pero es el más fácil de restaurar.</li>
+          <li><strong>Incremental:</strong> Solo copia lo que cambió desde el último backup que se hizo. Es rapidísimo, pero si hay que restaurar, necesitas el último completo y todas las partes incrementales seguidas.</li>
+          <li><strong>Diferencial:</strong> Copia lo que cambió desde el último backup completo. Ocupa más espacio que el incremental, pero es más rápido de restaurar.</li>
+      </ul>
+      
+      <h2>4. Estaciones sin Disco (Diskless Stations / Clientes Ligeros)</h2>
+      <p>Una estación sin disco es una computadora que no tiene disco rígido local (HDD/SSD). Su hardware interno es mínimo (placa madre, procesador, RAM y placa de red).</p>
+      
+      <h3>¿Cómo funcionan? (Arranque por Red - PXE):</h3>
+      <p>Al encenderse, la placa de red envía una solicitud DHCP especial para pedir una dirección IP y la ubicación de un servidor de arranque. El servidor le envía el sistema operativo a través del cable de red y la PC se ejecuta usando su propia RAM y procesador, pero guardando y leyendo todo desde el servidor central.</p>
+      
+      <h3>Ventajas en el entorno educativo/laboral:</h3>
+      <ul>
+          <li><strong>Centralización:</strong> Si hay que instalar un programa o actualizar el sistema, se hace una sola vez en el servidor y automáticamente cambia en las 30 compus del laboratorio.</li>
+          <li><strong>Seguridad:</strong> Los alumnos o usuarios no pueden romper el sistema operativo ni infectarlo con virus de forma permanente, ya que al reiniciar, la PC vuelve a cargar la imagen limpia del servidor.</li>
+          <li><strong>Costo:</strong> Son equipos más económicos y consumen muchísima menos energía.</li>
+      </ul>
+      
+      <h2>5. Cableado: El Soporte Físico de la Red</h2>
+      <p>El cableado estructurado es el mapa de autopistas físicas. Un mal conector o una categoría incorrecta arruinan el rendimiento de los mejores switches del mercado.</p>
+      
+      <h3>Categorías de Cable de Cobre (UTP/FTP):</h3>
+      <ul>
+          <li><strong>Categoría 5e (Cat5e):</strong> Soporta hasta 1 Gbps a distancias de 100 metros. Es el mínimo histórico, ya en desuso para nuevas instalaciones.</li>
+          <li><strong>Categoría 6 (Cat6):</strong> Soporta hasta 1 Gbps a 100 metros, y puede llegar a 10 Gbps si la distancia es menor a 55 metros. Ideal para puestos de trabajo comunes.</li>
+          <li><strong>Categoría 6A (Cat6A):</strong> Soporta hasta 10 Gbps a los 100 metros completos gracias a un mejor aislamiento contra interferencias. Es el estándar actual para conectar switches entre sí o salas de servidores.</li>
+      </ul>
+      
+      <h3>Fibra Óptica:</h3>
+      <p>Se usa cuando la distancia supera los 100 metros o se requiere inmunidad absoluta a las interferencias eléctricas (por ejemplo, para unir dos pabellones o edificios de una escuela).</p>
+      
+      <h2>6. Equipo de Protección del Sistema</h2>
+      <p>Los componentes electrónicos de red son extremadamente sensibles a las variaciones de la red eléctrica comercial (picos de tensión, bajones de energía o cortes de luz).</p>
+      
+      <ul>
+          <li><strong>UPS / SAI (Uninterruptible Power Supply / Sistema de Alimentación Ininterrumpida):</strong> Son baterías inteligentes donde se conectan los equipos críticos (servidores, routers, switches core). Cumplen dos funciones básicas:
+              <ul>
+                  <li><strong>Filtro:</strong> Estabilizan la corriente (limpian los picos de tensión para que no se quemen las fuentes de los servidores).</li>
+                  <li><strong>Autonomía:</strong> Si se corta la luz, la batería mantiene los equipos encendidos. Esto le da tiempo al administrador de redes para apagar los servidores de forma ordenada sin que se corrompan las bases de datos, o mantiene la red activa hasta que arranque un grupo electrógeno.</li>
+              </ul>
+          </li>
+          <li><strong>Puesta a Tierra:</strong> Es fundamental que los racks (armarios donde van los switches) y el cableado blindado estén conectados a una jabalina física de descarga a tierra. Sin esto, la estática o las sobrecargas destruyen los puertos de los equipos.</li>
+      </ul>
+      
+      <h2>"El juego de los desastres"</h2>
+      
+      <h3>¿Qué componente falló si...?</h3>
+      <ul>
+          <li>"Se cortó la luz general de la escuela y el servidor se apagó de golpe, rompiendo los archivos de las notas." <strong>(Faltó o falló la UPS)</strong></li>
+          <li>"Queremos pasar archivos entre dos compus que están a 150 metros en línea recta y los paquetes no llegan." <strong>(Exceso de distancia en Cableado UTP)</strong></li>
+          <li>"Hubo un virus informático (Ransomware) que encriptó todas las computadoras y perdimos el trabajo de 5 años." <strong>(Falló o no existía el Sistema de Copia de Seguridad)</strong></li>
+      </ul>
+
 </body>
 </html>
 
