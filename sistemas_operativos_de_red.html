@@ -371,7 +371,7 @@
           <li><strong>Capacidad de I/O (Entrada/Salida):</strong> La velocidad con la que los discos y las placas de red leen y escriben datos.</li>
       </ul>
       
-      <p><em>La analogía didáctica: Imagina una cocina de un restaurante. El procesador es el chef (qué tan rápido cocina), la RAM es la mesada de trabajo (cuántos platos puede preparar a la vez) y la red/discos son los mozos (qué tan rápido entran los pedidos y salen los platos). Si la mesada es chica (poca RAM), el chef se traba aunque sea el más rápido del mundo.</em></p>
+      <p><em>Imagina una cocina de un restaurante. El procesador es el chef (qué tan rápido cocina), la RAM es la mesada de trabajo (cuántos platos puede preparar a la vez) y la red/discos son los mozos (qué tan rápido entran los pedidos y salen los platos). Si la mesada es chica (poca RAM), el chef se traba aunque sea el más rápido del mundo.</em></p>
       
       <h2>2. Almacenamiento en Disco: Arquitecturas para Redes</h2>
       <p>En una red local, los datos de la empresa o escuela no pueden estar guardados en la PC de cada usuario; deben centralizarse para que sean accesibles, seguros y eficientes.</p>
@@ -449,6 +449,141 @@
           <li>"Queremos pasar archivos entre dos compus que están a 150 metros en línea recta y los paquetes no llegan." <strong>(Exceso de distancia en Cableado UTP)</strong></li>
           <li>"Hubo un virus informático (Ransomware) que encriptó todas las computadoras y perdimos el trabajo de 5 años." <strong>(Falló o no existía el Sistema de Copia de Seguridad)</strong></li>
       </ul>
+
+      
+      <div class="container" id="tp3">
+        <div class="header-banner">
+            <h1>Módulo: Arquitectura de Servidores y Alto Rendimiento</h1>
+        </div>
+
+<h2>1. Identificación de los Requisitos de las Aplicaciones</h2>
+<p>Un servidor no corre el mismo software que una PC común de escritorio. Antes de elegir el hardware, hay que auditar la aplicación o servicio que va a alojar (servidor web, base de datos, servidor de archivos o controlador de dominio) para entender qué componente va a exigir más.</p>
+<ul>
+    <li><strong>Aplicaciones orientadas a cómputo (CPU-Bound):</strong> Servicios que hacen cálculos matemáticos constantes, compresión de archivos o la compilación de código. Exigen procesadores con muchos núcleos y altas frecuencias.</li>
+    <li><strong>Aplicaciones orientadas a memoria (RAM-Bound):</strong> Bases de datos relacionales o servidores de virtualización. Almacenan mapas de datos masivos en la RAM para no perder tiempo buscando en los discos.</li>
+    <li><strong>Aplicaciones orientadas a red o almacenamiento (I/O-Bound):</strong> Un servidor de archivos de la escuela o un servidor de streaming. Su cuello de botella no es el procesador, sino la velocidad de las placas de red y la tasa de lectura de los discos.</li>
+</ul>
+
+<h2>2. Selección de un Servidor: Formatos y Componentes Redundantes</h2>
+<p>Elegir un servidor implica mirar el entorno físico donde va a operar y asegurar que no se apague nunca mediante componentes duplicados (redundantes).</p>
+
+<h3>Formatos de Servidores:</h3>
+<ul>
+    <li><strong>Torre:</strong> Tienen el aspecto de una PC común, pero con hardware de servidor. Ideales para escuelas o PyMEs que no tienen un cuarto de sistemas (Data Center) con aire acondicionado, ya que hacen menos ruido y se refrigeran fácil en un ambiente común.</li>
+    <img src="Imagenes/Laboratorio de sistemas operativos/servidiorestorre.png" alt="">
+    <li><strong>Rack (U - Unidades de Rack):</strong> Son chatos y están diseñados para atornillarse dentro de un armario metálico (Rack). Se miden en "U" (1U, 2U, 4U de altura). Permiten meter muchísima potencia en poco espacio, pero requieren refrigeración forzada por el calor y ruido que generan.</li>
+    <img src="Imagenes/Laboratorio de sistemas operativos/servidioresrack.png" alt="">
+    <li><strong>Blade (Cuchillas):</strong> Son módulos ultra compactos que se deslizan dentro de un chasis que les comparte la energía y los ventiladores. Pensados para grandes centros de cómputo.</li>
+    <img src="Imagenes/Laboratorio de sistemas operativos/servidoresblade.jpg" alt="">
+</ul>
+
+<h3>Componentes Críticos de un Servidor (Diferencias con una PC común):</h3>
+<ul>
+    <li><strong>Fuentes de alimentación redundantes:</strong> Tienen dos o más fuentes de energía intercambiables en caliente (Hot-Swap). Si una se quema, la otra toma el control al instante sin que el servidor se apague. Cada fuente se conecta a una zapatilla térmica o UPS distinta.</li>
+    <li><strong>Memoria ECC (Error Correcting Code):</strong> Tipo de RAM especial para servidores que detecta y corrige automáticamente los errores de bits en la memoria. Evita que el servidor tire un "pantallazo azul" y se cuelgue a mitad de una tarea crítica.</li>
+</ul>
+
+<h2>3. Rendimiento y Cuellos de Botella (Bottlenecks)</h2>
+<p>Un cuello de botella ocurre cuando la velocidad de transferencia de datos disminuye porque un punto de la red no tiene la capacidad suficiente para manejar todo el tráfico que recibe. Imagina una autopista de cinco carriles que se reduce a uno solo: los vehículos (datos) deben hacer fila y avanzar lentamente. Esto provoca congestión, mayor latencia (retrasos) y una conexión a Internet más lenta.</p>
+
+<p>Causas principales</p>
+<ul>
+    <li>Ancho de banda bajo: La conexión que recibes es menor que la capacidad de tus dispositivos.</li>
+    <li>Dispositivos antiguos: Un router o switch antiguo no puede procesar datos al ritmo que lo hace tu proveedor de internet.</li>
+    <li>Cables de red inadecuados: Usar cables viejos o dañados que limitan la velocidad máxima posible.</li>
+    <li>Demasiados usuarios: Muchos dispositivos conectados al mismo tiempo superan la capacidad del router.</li>
+</ul>
+<p>Tipos de cuellos de botella</p>
+<ul>
+<li>Hardware: Sucede en equipos físicos como enrutadores, módems o tarjetas de red que tienen una velocidad máxima muy inferior a la que soporta el resto del sistema.</li>
+<li>Servidor: Ocurre cuando un servidor central recibe más solicitudes de las que puede procesar simultáneamente (por falta de memoria o procesador).</li>
+</ul>
+<p>El rendimiento de un servidor está limitado por el componente más lento de la cadena. Un "cuello de botella" ocurre cuando un recurso llega al 100% de su capacidad y frena a todos los demás, haciendo que el hardware costoso quede ocioso esperando su turno.</p>
+<p><strong>Herramientas de Monitoreo:</strong> Los administradores usan herramientas del sistema operativo (como el Administrador de Tareas o el Monitor de Rendimiento en Windows Server, o comandos como top, htop e iostat en Linux) para revisar gráficos en tiempo real e identificar qué recurso (CPU, RAM, Disco o Red) está saturado.</p>
+
+<h2>4. El Microprocesador de Servidor</h2>
+<p>A diferencia de los procesadores de escritorio (como Intel Core o AMD Ryzen), los procesadores específicos para servidores (como Intel Xeon o AMD EPYC) están diseñados para el trabajo pesado y continuo (24/7/365).</p>
+<h3>Características principales:</h3>
+<ul>
+    <li><strong>Gran cantidad de núcleos (Cores) y subprocesos (Threads):</strong> Pueden tener 32, 64 o más núcleos en un solo chip físico, permitiéndoles procesar miles de peticiones de usuarios en simultáneo.</li>
+    <p>Un proceso es un programa en ejecución que posee sus propios recursos de memoria y espacio de almacenamiento. Un subproceso (o hilo) es una unidad más pequeña dentro de un proceso a la que el procesador le asigna tiempo de ejecución. Ambos permiten dividir las tareas para que el servidor trabaje más rápido y atienda a varios usuarios a la vez.</p>
+    <p>Proceso</p>
+    <ul>
+    <li>Aislamiento: Tiene su propio espacio de memoria y datos independientes.</li>
+    <li>Independencia: Si falla, no afecta directamente a otros programas en ejecución.</li>
+    <li>Ejemplos: Un servidor web (como Apache o Nginx) o una base de datos (como MySQL).</li>
+    </ul>
+    <p>Subproceso</p>
+    <ul>
+    <li>División: Son partes más pequeñas creadas dentro de un mismo proceso.</li>
+    <li>Comparten recursos: Utilizan la misma memoria y archivos del proceso principal.</li>
+    <li>Eficiencia: Permiten realizar varias tareas a la vez sin bloquear el sistema principal.</li>
+    </ul>
+    <p>¿Cómo operan en un procesador de servidor?</p>
+    <p>Los servidores manejan grandes cargas de trabajo y utilizan estas tecnologías para maximizar el rendimiento del hardware:</p>
+    <ul>
+        <li>Multitarea: Los procesadores de servidores modernos tienen muchos "núcleos" físicos.</li>
+        <li>Virtualización de CPU: La tecnología de subprocesamiento múltiple (como Hyper-Threading) hace que un núcleo físico se comporte como dos núcleos virtuales.</li>
+        <li>Gestión del Sistema: El sistema operativo asigna el tiempo del procesador a cada subproceso de forma rápida y continua.</li>
+    </ul>
+    <p>En el contexto de servidores, un ejemplo claro es gestionar conexiones de red. Cuando el proceso principal del servidor web recibe a 100 usuarios al mismo tiempo, crea un subproceso para cada usuario. Así, puede atender a todos de forma simultánea sin colapsar.</p>
+    <li><strong>Memorias Caché gigantescas (L2 y L3):</strong> Tienen mucha más memoria interna de alta velocidad pegada al núcleo para no tener que ir a buscar los datos a la RAM principal de forma tan seguida.</li>
+    <p>La memoria caché en un servidor es un espacio de almacenamiento temporal de alta velocidad. Guarda copias de datos a los que se accede con frecuencia (como imágenes, archivos o páginas web). Su objetivo principal es entregar la información mucho más rápido que si el servidor tuviera que generarla o buscarla desde su origen cada vez que un usuario la solicita.</p>
+    <p>Tipos de caché en un servidor</p>
+    <li>Caché del procesador (Hardware): Memoria ultrarrápida integrada en el procesador (CPU) del servidor que contiene las instrucciones y datos que usa constantemente.</li>
+    <li>Caché de datos/aplicación: Almacena resultados de consultas complejas a bases de datos en la memoria RAM. Así, no tiene que volver a calcular o buscar en discos lentos.</li>
+    <li>Caché web (Reverse Proxy): Almacena páginas web completas o elementos estáticos (CSS, JavaScript, imágenes) para que, cuando un visitante entre, el servidor le entregue la web armada casi al instante.</li>
+    <li><strong>Soporte de múltiples sockets:</strong> La placa madre de un servidor puede tener espacio para instalar dos o cuatro procesadores físicos trabajando juntos.</li>
+</ul>
+
+<h2>5. El Bus del Servidor</h2>
+<p>El bus es la red de autopistas internas de la placa madre que conecta el microprocesador con la memoria RAM, las placas de video y las controladoras de discos.</p>
+<p><strong>PCI Express (PCIe):</strong> Es el estándar de bus de expansión más importante. Funciona mediante "líneas" (lanes) de datos bidireccionales en serie (x1, x4, x8, x16). Los procesadores de servidor ofrecen muchísimas más líneas PCIe que una PC común (por ejemplo, 128 líneas), lo que permite conectar múltiples placas de red de 10 Gbps, controladoras RAID y discos NVMe al mismo tiempo sin que se saturen los canales de comunicación.</p>
+
+<h2>6. El Sistema de Discos y Controladoras RAID</h2>
+<p>En un servidor, los discos no se conectan directo a la placa madre de forma común; pasan por una controladora de discos dedicada (Hardware RAID) que gestiona los datos para dar velocidad y tolerancia a fallos.</p>
+<p><strong>Tecnología RAID (Redundant Array of Independent Disks):</strong> Consiste en combinar varios discos físicos para que el sistema operativo los vea como una sola unidad lógica gigante.</p>
+<ul>
+    <li><strong>RAID 0 (Stripping / Distribución):</strong> Divide los datos equitativamente entre dos o más discos. Es ultra rápido porque lee y escribe en ambos a la vez, pero no tiene tolerancia a fallos. Si un disco muere, se pierde toda la información. (No se usa en servidores críticos).</li>
+    <li><strong>RAID 1 (Mirroring / Espejo):</strong> Duplica exactamente la información en dos discos. Si uno se rompe, el servidor sigue andando con el otro como si nada. La escritura es igual de lenta que en un disco común, pero la lectura es más rápida.</li>
+    <li><strong>RAID 5 (Distribución con Paridad):</strong> Requiere mínimo 3 discos. Distribuye los datos y calcula un bit de información de rescate llamado "paridad" a lo largo de todos los discos. Si uno de los discos se rompe, el sistema sigue funcionando y puede reconstruir los datos perdidos usando la paridad de los discos sanos. Ofrece buen equilibrio entre costo, velocidad y seguridad.</li>
+    <li><strong>RAID 10 (1+0):</strong> Combina el espejo del RAID 1 con la velocidad del RAID 0. Requiere mínimo 4 discos. Es el más seguro y rápido, pero es costoso porque se pierde el 50% de la capacidad total en duplicación.</li>
+</ul>
+
+<h2>7. Sistemas Multiprocesador: Simétricos (SMP) y Asimétricos (AMP)</h2>
+<p>Cuando un servidor necesita más potencia de la que puede dar un solo microprocesador, se usan arquitecturas de múltiples procesadores físicos instalados en la misma placa madre.</p>
+<ul>
+    <li><strong>SMP (Symmetrical Multiprocessing - Multiprocesamiento Simétrico):</strong> Es el sistema actual estándar. Todos los procesadores son idénticos, comparten la misma memoria RAM física y el mismo bus de datos. El sistema operativo distribuye las tareas de forma equitativa y balanceada entre cualquiera de los procesadores disponibles dinámicamente.</li>
+    <li><strong>AMP (Asymmetrical Multiprocessing - Multiprocesamiento Asimétrico):</strong> Los procesadores pueden ser diferentes o tener tareas fijas asignadas de antemano. Por ejemplo, un procesador se encarga exclusivamente de manejar el sistema operativo y el otro procesador maneja únicamente la base de datos o el tráfico de red. Es un modelo antiguo en servidores generales o usado hoy en sistemas embebidos específicos.</li>
+</ul>
+
+<h2>8. Superservidores (Mainframes)</h2>
+<p>Un superservidor o Mainframe no es simplemente un servidor de rack grande; es una arquitectura de computación a gran escala diseñada para procesar miles de millones de transacciones financieras, censos o datos de vuelos en tiempo real con un 99.999% de disponibilidad (es decir, no se apagan ni un minuto en años).</p>
+<p><strong>Características principales:</strong> Tienen capacidades de hardware monstruosas, componentes de respaldo para absolutamente todo, canales de entrada/salida independientes del procesador principal y la capacidad de cambiar partes de hardware rotas (procesadores, RAM, placas) mientras el equipo sigue prendido y procesando datos.</p>
+
+<h2>"El juego de los desastres"</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Falla Reportada en el Servidor</th>
+            <th>Diagnóstico Técnico Correcto</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>"Se rompió un disco rígido del servidor de archivos, pero la escuela siguió cargando las notas normalmente y nadie perdió nada."</td>
+            <td>El servidor estaba configurado con un arreglo de discos con tolerancia a fallos (RAID 1, RAID 5 o RAID 10).</td>
+        </tr>
+        <tr>
+            <td>"El servidor web de las inscripciones se puso lentísimo. Al mirar los gráficos, el comando htop muestra que los 16 núcleos de la CPU están al 3%, pero el porcentaje de uso de la memoria swap (disco como auxilio) está al 100%."</td>
+            <td>Hay un cuello de botella en la Memoria RAM. La aplicación se quedó sin RAM física y el sistema está usando el disco, ralentizando todo.</td>
+        </tr>
+        <tr>
+            <td>"Se quemó la fuente de alimentación interna del servidor web principal de un banco a las 3 de la mañana, pero la página web nunca se cayó."</td>
+            <td>El servidor cuenta con Fuentes de alimentación redundantes y la fuente secundaria mantuvo el equipo encendido.</td>
+        </tr>
+    </tbody>
+</table>
 
 </body>
 </html>

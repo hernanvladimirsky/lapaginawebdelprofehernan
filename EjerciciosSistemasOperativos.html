@@ -113,6 +113,60 @@
         <a href="Documentos/Documentos Sistemas Operativos/TP 2 - Cuestionario_Hardware de Servidores, Almacenamiento y Protección de Datos en Redes.pdf"
             download="Trabajo practico 1 - Cuestionario_Hardware de Servidores, Almacenamiento y Protección de Datos en Redes" target="_blank">Haz Click aqui para descargar el cuestionario</a>
         </p>
+
+    <h2>Cuestionario: Arquitectura de Servidores y Alto Rendimiento</h2>
+
+<ol>
+    <li>
+        <strong>El dilema del software escolar:</strong>
+        <p>La escuela quiere instalar un sistema de gestión de base de datos relacional para las notas de los alumnos y, al mismo tiempo, un software que renderiza y compila los proyectos de programación de los últimos años.</p>
+        <p>Basándote en la <em>Identificación de los Requisitos de las Aplicaciones</em>, explicá qué tipo de recurso (CPU-Bound, RAM-Bound o I/O-Bound) exigirá cada uno de estos dos programas y por qué.</p>
+    </li>
+
+    <li>
+        <strong>Eligiendo el formato físico:</strong>
+        <p>Una pequeña empresa que no cuenta con una sala de servidores dedicada (Data Center) ni aire acondicionado central necesita comprar su primer servidor. El técnico contratado insiste en comprar un servidor en formato <em>Blade</em> o <em>Rack</em>, mientras que el dueño prefiere uno en formato <em>Torre</em>.</p>
+        <p>¿Quién tiene la razón considerando el entorno físico del lugar? Justificá analizando las ventajas y desventajas de los formatos involucrados.</p>
+    </li>
+
+    <li>
+        <strong>El misterio del "Pantallazo Azul" evitado:</strong>
+        <p>Durante una jornada de alta carga de datos, un módulo de memoria RAM de un servidor sufre una alteración en un bit de información (un error físico común provocado por el calor o la estática). Sin embargo, el servidor no se cuelga, no tira pantalla azul y los usuarios ni se enteran del problema.</p>
+        <p>¿Qué componente de hardware específico hizo posible esto y cómo se diferencia de la memoria RAM que usamos en una PC de escritorio común?</p>
+    </li>
+
+    <li>
+        <strong>Diagnóstico de un Cuello de Botella:</strong>
+        <p>El servidor de inscripciones web de la escuela colapsó. Al entrar a la consola de Linux y ejecutar el comando <code>htop</code>, el administrador nota que el uso de la CPU está apenas en el 12%, pero el uso del disco y de la placa de red muestra picos constantes del 100%.</p>
+        <p>Explicá qué significa que ocurra un "cuello de botella" en esta situación y qué herramientas de monitoreo alternativas podrías usar si el servidor corriera Windows Server en lugar de Linux.</p>
+    </li>
+
+    <li>
+        <strong>Servidores vs. Escritorio: La batalla de los procesadores:</strong>
+        <p>Un alumno de la escuela técnica argumenta que no vale la pena gastar en un procesador Intel Xeon o AMD EPYC para el servidor del colegio, ya que en su casa tiene un Intel Core i7 que funciona a una frecuencia de reloj (GHz) más alta y "va más rápido".</p>
+        <p>Desmentí este argumento explicando las tres características principales que hacen que un procesador de servidor sea verdaderamente superior para el trabajo pesado y continuo.</p>
+    </li>
+
+    <li>
+        <strong>La autopista PCIe:</strong>
+        <p>Para modernizar la infraestructura, se decide equipar a un servidor con tres placas de red de 10 Gbps, una controladora RAID dedicada y cuatro discos NVMe de alta velocidad.</p>
+        <p>Explicá qué papel juega el <strong>Bus del Servidor (PCI Express)</strong> para que todos estos componentes puedan comunicarse con el procesador al mismo tiempo sin saturar el sistema.</p>
+    </li>
+
+    <li>
+        <strong>La decisión del Arreglo de Discos (RAID):</strong>
+        <p>Un banco necesita configurar el sistema de almacenamiento para sus transacciones financieras. El presupuesto no es un problema, pero la prioridad absoluta es que el sistema sea el más rápido en lectura/escritura y que tenga la máxima tolerancia a fallos posible (si se rompen discos, los datos deben estar a salvo y el sistema online).</p>
+        <p>Analizando las opciones de la teoría (RAID 0, RAID 1, RAID 5 y RAID 10), ¿cuál de todas estas tecnologías deberías elegir para este escenario crítico y cuál tendrías prohibido usar? Justificá tu respuesta.</p>
+    </li>
+
+    <li>
+        <strong>Cooperación entre Procesadores: SMP vs. AMP:</strong>
+        <p>Una placa madre de alta gama para servidores tiene espacio físico (sockets) para albergar dos microprocesadores trabajando en paralelo.</p>
+        <p>Explicá la diferencia entre configurar este sistema bajo una arquitectura <strong>SMP (Multiprocesamiento Simétrico)</strong> o una <strong>AMP (Multiprocesamiento Asimétrico)</strong>. ¿Cuál de los dos enfoques es el estándar actual en los servidores generales?</p>
+    </li>
+</ol>
+
+
  
     </main>
 
