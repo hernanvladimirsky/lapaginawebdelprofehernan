@@ -441,7 +441,6 @@
           <li><strong>Puesta a Tierra:</strong> Es fundamental que los racks (armarios donde van los switches) y el cableado blindado estén conectados a una jabalina física de descarga a tierra. Sin esto, la estática o las sobrecargas destruyen los puertos de los equipos.</li>
       </ul>
       
-      <h2>"El juego de los desastres"</h2>
       
       <h3>¿Qué componente falló si...?</h3>
       <ul>
@@ -564,7 +563,6 @@
 <p>Un superservidor o Mainframe no es simplemente un servidor de rack grande; es una arquitectura de computación a gran escala diseñada para procesar miles de millones de transacciones financieras, censos o datos de vuelos en tiempo real con un 99.999% de disponibilidad (es decir, no se apagan ni un minuto en años).</p>
 <p><strong>Características principales:</strong> Tienen capacidades de hardware monstruosas, componentes de respaldo para absolutamente todo, canales de entrada/salida independientes del procesador principal y la capacidad de cambiar partes de hardware rotas (procesadores, RAM, placas) mientras el equipo sigue prendido y procesando datos.</p>
 
-<h2>"El juego de los desastres"</h2>
 <table>
     <thead>
         <tr>
@@ -588,6 +586,102 @@
     </tbody>
 </table>
 </div>
+
+<div class="container" id="tp4">
+    <div class="header-banner">
+        <h1>Módulo: Protección de los Datos y Equipos de la Red</h1>
+    </div>
+
+<h2>1. Protección de la Red y sus Datos (Seguridad Perimetral y Física)</h2>
+<p>La protección de una red informática no se limita a instalar un antivirus en cada máquina. Implica un enfoque "en capas" que abarca desde trabar una puerta hasta configurar cómo viaja la información por los cables para mitigar amenazas internas y externas (como intrusiones, hackeos o malware).</p>
+
+<h3>Seguridad Física de los Equipos:</h3>
+<p>Los servidores, los switches centrales (core) y los dispositivos de almacenamiento en red (NAS/SAN) jamás deben estar expuestos en un pasillo o una oficina común. Deben guardarse en un cuarto técnico cerrado bajo llave (Server Room o Data Center). Esto evita robos, sabotajes cotidianos o que alguien conecte un pendrive malicioso directo al servidor. Además, este cuarto requiere un control ambiental estricto (aire acondicionado constante para evitar que se quemen los componentes) y un sistema de extinción de incendios adecuado.</p>
+
+<h3>Seguridad Lógica Perimetral:</h3>
+<ul>
+    <li><strong>Firewall (Cortafuegos):</strong> Es la primera línea de defensa entre internet y nuestra red interna. Examina cada paquete de datos que intenta entrar o salir, bloqueando de forma automática todo el tráfico que no cumpla con las reglas estrictas de puertos y direcciones IP configuradas por el administrador.</li>
+    <li><strong>Segmentación de Redes (VLANs):</strong> Mediante switches administrables, se puede dividir la red física en varias redes lógicas independientes. Por ejemplo, en una escuela se separa por completo la VLAN de Alumnos de la VLAN de Administración. Si un alumno conecta una netbook infectada con un virus a la red de la escuela, el daño queda aislado en su sector y el malware no puede "saltar" hacia los servidores donde se guardan las notas oficiales o los datos administrativos.</li>
+</ul>
+
+<h2>2. Técnicas de Copia de Seguridad y Protección de los Datos</h2>
+<p>El hardware roto se compra de nuevo, pero la información destruida o robada puede significar la quiebra de una empresa o la pérdida de años de trabajo institucional. Las copias de seguridad (backups) son la contramedida definitiva frente a fallas de discos, errores humanos catastróficos o ataques de Ransomware (secuestro de datos).</p>
+
+<h3>La Estrategia de Respaldo 3-2-1 (Estándar de la industria):</h3>
+<ul>
+    <li><strong>3 copias de los datos:</strong> Tener el archivo original con el que se trabaja todos los días y, como mínimo, 2 copias de respaldo adicionales.</li>
+    <li><strong>2 soportes o medios diferentes:</strong> Guardar los respaldos en tecnologías distintas para evitar que un mismo defecto físico rompa todo a la vez (por ejemplo, los datos originales en los discos del servidor y la primera copia en un dispositivo NAS externo).</li>
+    <li><strong>1 copia fuera de la empresa (Off-site):</strong> Mantener una copia físicamente alejada del edificio principal (por ejemplo, una réplica automatizada en la nube o en otra sucursal). Esto garantiza que si el edificio sufre un incendio, una inundación o un robo total, la información de la organización sobreviva en otro lugar.</li>
+</ul>
+
+<h3>Esquemas Técnicos de Backup:</h3>
+<ul>
+    <li>
+        <strong>Backup Completo (Full):</strong> Copia absolutamente el 100% de los datos seleccionados del sistema.
+        <br><em>Ventaja:</em> Es el más fácil y rápido de restaurar, porque todo está en un único archivo.
+        <br><em>Desventaja:</em> Tarda muchísimo tiempo en ejecutarse y consume una cantidad enorme de espacio en disco.
+    </li>
+    <li>
+        <strong>Backup Incremental:</strong> Solo copia los datos que cambiaron o se crearon desde el último backup que se haya hecho (ya sea completo o incremental).
+        <br><em>Ventaja:</em> Es rapidísimo de hacer y ocupa un espacio mínimo.
+        <br><em>Desventaja:</em> Su restauración es la más compleja. Si el servidor falla un jueves, primero hay que restaurar el completo del domingo, y después aplicar en orden cronológico estricto el incremental del lunes, el del martes y el del miércoles. Si un solo archivo intermedio está corrupto, la cadena se rompe.
+    </li>
+    <li>
+        <strong>Backup Diferencial:</strong> Copia únicamente los datos que cambiaron desde el último backup completo.
+        <br><em>Ventaja:</em> Su restauración es mucho más rápida y segura que la del incremental, ya que solo se necesita el último backup completo y el diferencial del día del fallo (máximo dos elementos).
+        <br><em>Desventaja:</em> A medida que pasan los días de la semana, el archivo diferencial se vuelve cada vez más pesado y tarda más tiempo en completarse, ya que acumula de forma redundante todos los cambios que se van sumando desde el domingo.
+    </li>
+</ul>
+
+<h3>El impacto de la rotura</h3>
+<ul>
+    <li><strong>Pérdida de continuidad:</strong> Solo podrás restaurar la información hasta el día anterior al archivo que falta.</li>
+    <li><strong>Datos inservibles:</strong> Todos los backups incrementales posteriores al archivo perdido quedan inutilizables, ya que dependen de él para reconstruir la historia.</li>
+</ul>
+
+<h3>Comparativa en caso de pérdida</h3>
+<ul>
+    <li><strong>En el Incremental (Efecto dominó):</strong> Si haces un backup completo el domingo e incrementales de lunes a viernes, y pierdes el del miércoles, <strong>solo recuperas hasta el martes</strong>. El jueves y el viernes se pierden.</li>
+    <li><strong>En el Diferencial (Independiente):</strong> Si pierdes el diferencial del miércoles, no importa. El del jueves contiene todos los cambios acumulados desde el domingo. <strong>Recuperas todo hasta el jueves</strong> usando solo el completo y el archivo del jueves.</li>
+</ul>
+
+<h3>Cómo proteger tus datos</h3>
+<ul>
+    <li><strong>Verificación automática:</strong> Programa pruebas de consistencia en tu software de backup.</li>
+    <li><strong>Regla 3-2-1:</strong> Guarda 3 copias, en 2 soportes distintos, con 1 fuera de la empresa (nube).</li>
+    <li><strong>Backups completos frecuentes:</strong> Haz un backup completo nuevo cada semana para acortar las cadenas incrementales.</li>
+</ul>
+
+<h2>3. Procedimientos de Copia de Seguridad</h2>
+<p>Hacer un backup de vez en cuando cuando el administrador se acuerda no es un procedimiento seguro. Para que una política de resguardo funcione, debe seguir un protocolo formal:</p>
+<ul>
+    <li><strong>Automatización y Ventanas de Mantenimiento:</strong> Las copias de seguridad deben programarse mediante software específico para que se ejecuten solas. Estas tareas se configuran durante la "ventana de mantenimiento", que son las horas de la madrugada donde no hay usuarios conectados. Esto evita generar cuellos de botella en los discos y la red mientras la gente está trabajando.</li>
+    <li><strong>Pruebas de Restauración Periódicas (Simulacros):</strong> Existe una regla de oro en sistemas: "Un backup no sirve si no se puede restaurar". Es obligatorio realizar simulacros de recuperación de datos en un entorno aislado al menos una vez al mes. Encontrar un archivo de backup corrupto el día que el servidor principal se rompió equivale técnicamente a no haber hecho nunca una copia de seguridad.</li>
+    <li><strong>Políticas de Retención de Datos:</strong> Consiste en definir cuánto tiempo se van a guardar los respaldos históricos antes de borrarlos o sobrescribirlos. Por ejemplo: guardar copias diarias durante 7 días, semanales durante un mes y mensuales durante un año, permitiendo volver el tiempo atrás si se descubre que un archivo se borró por error hace semanas.</li>
+</ul>
+
+<table>
+    <thead>
+        <tr>
+            <th>Escenario de Siniestro en la Red</th>
+            <th>Diagnóstico y Solución Técnico</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>"Un virus Ransomware entró por la PC de la recepción y encriptó los servidores de contabilidad, exigiendo un pago en criptomonedas."</td>
+            <td>Fallo en la segmentación de red (VLANs), lo que permitió que el virus se mueva libremente por toda la LAN. La solución es aislar la PC infectada, formatear los servidores comprometidos y restaurar los datos desde el Backup Off-site (en la nube) que quedó fuera del alcance de la red local.</td>
+        </tr>
+        <tr>
+            <td>"Se rompió el servidor central un miércoles. Al intentar recuperar los datos usando los backups incrementales, descubrimos que el archivo generado el lunes estaba corrupto."</td>
+            <td>La cadena de restauración quedó rota. Error grave en el procedimiento de copias por no realizar simulacros de restauración periódicos y depender de un esquema incremental sin verificar la integridad de los archivos intermedios.</td>
+        </tr>
+        <tr>
+            <td>"Hubo una inundación en el sótano que destruyó el servidor físico y también el dispositivo NAS que estaba atornillado en el mismo armario (Rack) de cables."</td>
+            <td>Violación directa de la regla 3-2-1. Se mantuvieron los soportes de respaldo en la misma ubicación geográfica y física. Es obligatorio contar con un respaldo fuera del sitio (Off-site) para sobrevivir a siniestros edilicios.</td>
+        </tr>
+    </tbody>
+</table>
 
 
 </body>

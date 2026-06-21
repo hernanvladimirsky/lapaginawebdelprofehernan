@@ -397,6 +397,66 @@
         MATRIZ DEVUELTA: Es el rango de datos a seleccionar para que me muestre o devuelva el resultado deseado. <br>
         </p>
 
+        <h2>COINCIDIR</h2> <!--COINCIDIR-->
+        <p>La fórmula <strong>COINCIDIR</strong> busca un elemento específico dentro de un rango de celdas y devuelve su <strong>posición relativa</strong> (un número) dentro de ese rango, en lugar del valor en sí. Es una herramienta fundamental que se utiliza con frecuencia en combinación con la función INDICE.</p>
+
+        <h3>Sintaxis</h3>
+        <p><code>=COINCIDIR(valor_buscado, matriz_buscada, [tipo_de_coincidencia])</code></p>
+
+        <ul>
+        <li><strong>valor_buscado:</strong> Es el dato, texto o número que quieres localizar.</li>
+        <li><strong>matriz_buscada:</strong> Es el rango de celdas donde se realizará la búsqueda.</li>
+        <li><strong>tipo_de_coincidencia:</strong> Un número que indica cómo quieres que Excel busque el valor:
+            <ul>
+            <li><code>0</code>: <strong>Coincidencia exacta</strong> (es el más usado).</li>
+            <li><code>1</code>: Devuelve el valor más grande que es menor o igual al valor buscado (requiere que la lista esté ordenada ascendentemente).</li>
+            <li><code>-1</code>: Devuelve el valor más pequeño que es mayor o igual al valor buscado (requiere orden descendente).</li>
+            </ul>
+        </li>
+        </ul>
+
+    <h2>COINCIDIRX</h2> <!--COINCIDIRX-->
+    
+    <p>La función <strong>COINCIDIRX</strong> (conocida como <code>XMATCH</code> en inglés) busca un valor específico dentro de un rango o matriz y devuelve su <strong>posición numérica exacta</strong> (la posición relativa) dentro de esa lista. Es la versión mejorada de la función <code>COINCIDIR</code> tradicional.</p>
+
+    <h2>Sintaxis básica</h2>
+    <pre><code>=COINCIDIRX(valor_buscado, matriz_buscada, [modo_coincidencia], [modo_busqueda])</code></pre>
+
+    <h2>Argumentos de la función</h2>
+    <ul>
+        <li><span>valor_buscado:</span> El dato que deseas encontrar (un número, texto o comodín).</li>
+        <li><span>matriz_buscada:</span> El rango de celdas donde se realizará la búsqueda.</li>
+        <li><span>modo_coincidencia (Opcional):</span> Define el tipo de coincidencia.
+            <ul>
+                <li><code>0</code> para Coincidencia exacta (el más común).</li>
+                <li><code>-1</code> o <code>1</code> para encontrar el siguiente elemento menor o mayor (solo en listas ordenadas).</li>
+                <li><code>2</code> para habilitar comodines.</li>
+            </ul>
+        </li>
+        <li><span>modo_busqueda (Opcional):</span> Te permite controlar cómo se escanea la lista.
+            <ul>
+                <li><code>1</code> para buscar del primero al último (por defecto).</li>
+                <li><code>-1</code> para buscar del último al primero (invertido).</li>
+            </ul>
+        </li>
+    </ul>
+
+        <h2>ÍNDICE</h2> <!--INDICE-->
+    
+        <p>La función <strong>ÍNDICE</strong> devuelve el valor o la referencia de una celda específica dentro de una tabla o matriz. Funciona como un sistema de coordenadas donde le indicas exactamente la intersección a buscar usando el número de fila y de columna.</p>
+
+        <h2>Sintaxis</h2>
+        
+        <div>
+            =ÍNDICE(matriz; número_fila; [número_columna])
+        </div>
+
+        <ul>
+            <li><strong>matriz:</strong> Es el rango de celdas donde quieres buscar la información.</li>
+            <li><strong>número_fila:</strong> La posición numérica de la fila dentro de ese rango.</li>
+            <li><strong>número_columna:</strong> (Opcional) La posición numérica de la columna. Si tu rango tiene una sola columna, puedes omitirlo.</li>
+        </ul>
+
         <!--Operadores condicionales y logicos-->
         <h2>Y</h2>
         <p> 
