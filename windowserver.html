@@ -108,6 +108,7 @@
 
     <h3>🌍 NAT</h3>
     <ul>
+        <li>Tiene comunicación con la máquina host (computadora fisica)</li>
         <li>Usa la conexión de tu PC</li>
         <li>Tiene internet automáticamente</li>
         <li>No es visible en la red</li>
@@ -115,6 +116,7 @@
 
     <h3>🖧 Adaptador Puente (Bridge)</h3>
     <ul>
+        <li>Tiene comunicación con la máquina host (computadora fisica)</li>
         <li>La VM actúa como una PC más</li>
         <li>Recibe IP del router (DHCP)</li>
         <li>Puede comunicarse con otras máquinas</li>
@@ -269,25 +271,25 @@
 
 <h1>🏢 Ejercicio 2: Instalación de Active Directory</h1>
 
-<div class="card">
-    <h2>📚 ¿Qué es Active Directory?</h2>
-    <p>
-        Active Directory (AD) es un servicio que permite administrar y centralizar todos los recursos de una red desde un servidor.
-    </p>
-    <p>
-        Funciona como una base de datos donde se almacenan usuarios, computadoras, contraseñas y permisos.
-    </p>
-</div>
+<h1>Active Directory en Windows Server</h1>
+    
+    <p><strong>Active Directory (AD)</strong> es el servicio de directorio centralizado de Microsoft diseñado para <strong>Windows Server</strong>. Funciona como una <strong>base de datos segura</strong> que almacena, organiza y gestiona todos los recursos de una red empresarial (usuarios, contraseñas, computadoras e impresoras) y controla quién tiene permiso para acceder a ellos.</p>
 
-<div class="card">
-    <h2>🛠️ ¿Para qué sirve?</h2>
+    <h2>Componentes y Estructura</h2>
     <ul>
-        <li>Permite iniciar sesión en cualquier PC con la misma cuenta</li>
-        <li>Centraliza la administración de la red</li>
-        <li>Aplica políticas de seguridad</li>
-        <li>Organiza la red mediante un dominio</li>
+        <li><strong>AD DS (Active Directory Domain Services):</strong> Servicio principal que almacena los datos y gestiona la comunicación entre usuarios y dominios.</li>
+        <li><strong>Controlador de Dominio (Domain Controller):</strong> Servidor que ejecuta AD DS, autentica usuarios y aplica políticas de seguridad.</li>
+        <li><strong>Objetos:</strong> Elementos individuales dentro de la red (usuarios, equipos, grupos, impresoras).</li>
+        <li><strong>GPOs (Group Policy Objects):</strong> Reglas centralizadas que configuran lo que los usuarios pueden o no hacer en sus equipos.</li>
+        <li><strong>Dominios, Árboles y Bosques:</strong> Jerarquías de organización lógica. El bosque es el contenedor principal de la infraestructura.</li>
     </ul>
-</div>
+
+    <h2>Funciones Principales</h2>
+    <ul>
+        <li><strong>Autenticación:</strong> Comprueba la identidad de los usuarios mediante sus credenciales al iniciar sesión.</li>
+        <li><strong>Autorización:</strong> Dicta a qué recursos, archivos o carpetas compartidas tiene acceso cada persona.</li>
+        <li><strong>Gestión centralizada:</strong> Permite administrar cuentas, cambiar contraseñas y aplicar políticas en toda la red desde un solo lugar.</li>
+    </ul>
 
 <div class="card">
     <h2>🏢 Ejemplo de empresa</h2>
@@ -296,7 +298,7 @@
         <li>📍 Ramos Mejía</li>
         <li>📍 San Justo</li>
     </ul>
-    <p>Dominio a crear:</p>
+    <p>Dominio raiz (bosque) a crear:</p>
     <p><b>empresa.com</b></p>
 </div>
 
