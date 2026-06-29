@@ -161,18 +161,18 @@
 </div>
 
 <div class="card">
-    <h2>💡 Tip para prácticas de redes</h2>
+    <h2>Utilizar</h2>
     <div class="tip">
         Usar 2 adaptadores:
         <ul>
-            <li>🌍 Adaptador 1: NAT (internet)</li>
-            <li>🔒 Adaptador 2: Host-Only (laboratorio)</li>
+            <li>🌍 Adaptador 1: Red Interna</li>
+            <li>🔒 Adaptador 2: Red Interna</li>
         </ul>
-        Permite hacer prácticas con DHCP, servidores y clientes.
+        Ambos en el virtual box deben tener el mismo nombre, y luego en Windows server uno se va a llamar Ethernet y otro Red Interna.
     </div>
 </div>
 
-<h1>🖥️ Ejercicio 1: Configuración Básica de Windows Server</h1>
+<h1>🖥️ Ejercicio 1: Configuración Básica</h1>
 
 <div class="card">
     <h2>🎯 Objetivo</h2>
@@ -235,7 +235,7 @@
             <li>Seleccionar <b>Usar la siguiente dirección IP</b></li>
             <li>Completar:
                 <ul>
-                    <li>IP: 192.168.1.10</li>
+                    <li>IP: 192.168.1.2</li>
                     <li>Máscara: 255.255.255.0</li>
                     <li>Puerta de enlace: 192.168.1.1</li>
                     <li>DNS: 8.8.8.8</li>
@@ -403,6 +403,125 @@
         <li>Base para organizar sucursales (Ramos Mejía y San Justo)</li>
     </ul>
 </div>
+
+    <h1>🖥️ Ejercicio 3: Instalación y Configuración de DHCP</h1>
+
+    <h2>📌 ¿Qué es DHCP?</h2>
+    <p>
+        El <strong>DHCP (Dynamic Host Configuration Protocol)</strong> asigna automáticamente:
+    </p>
+    <ul>
+        <li>Dirección IP</li>
+        <li>Máscara de subred</li>
+        <li>Puerta de enlace</li>
+        <li>DNS</li>
+    </ul>
+    <p>Evita configurar todo manualmente en cada PC 👍</p>
+
+    <h2>⚙️ 1. Instalación del rol DHCP</h2>
+    <ol>
+        <li>Abrir <strong>Administrador del servidor</strong></li>
+        <li>Click en <strong>Agregar roles y características</strong></li>
+        <li>Tipo de instalación:
+            <ul>
+                <li>👉 Instalación basada en características o roles</li>
+            </ul>
+        </li>
+        <li>Seleccionar el servidor</li>
+        <li>Marcar:
+            <ul>
+                <li>✅ Servidor DHCP</li>
+            </ul>
+        </li>
+        <li>Siguiente → Instalar</li>
+    </ol>
+
+    <h2>🔐 2. Autorizar el servidor DHCP</h2>
+    <ul>
+        <li>Ir a la notificación ⚠️ en el Administrador del servidor</li>
+        <li>Click en <strong>Completar configuración de DHCP</strong></li>
+        <li>Autorizar (si hay dominio)</li>
+    </ul>
+    <p>✔️ Esto es necesario para que funcione en red</p>
+
+    <h2>🌐 3. Crear un ámbito (Scope)</h2>
+    <ol>
+        <li>Abrir <strong>Herramientas → DHCP</strong></li>
+        <li>Expandir el servidor</li>
+        <li>Click derecho en <strong>IPv4 → Nuevo ámbito</strong></li>
+    </ol>
+
+    <h3>Configuración típica:</h3>
+    <ul>
+        <li><strong>Nombre:</strong> NombreEscuela-Año por ejemplo Tecnica10-26</li>
+        <li><strong>Rango IP:</strong>
+            <ul>
+                <li>Inicio: 192.168.1.100</li>
+                <li>Fin: 192.168.1.200</li>
+            </ul>
+        </li>
+        <li><strong>Máscara:</strong> 255.255.255.0</li>
+        <li><strong>Excluir IPs:</strong> (ej: router → 192.168.1.1)</li>
+        <li><strong>Duración concesión:</strong> (default está bien)</li>
+    </ul>
+
+    <h2>🚪 4. Configurar opciones del ámbito</h2>
+    <ul>
+        <li><strong>003 Router (Gateway):</strong> 👉 192.168.1.1</li>
+        <li><strong>006 DNS:</strong> 👉 IP del servidor DNS o router</li>
+    </ul>
+
+    <h2>▶️ 5. Activar el ámbito</h2>
+    <ul>
+        <li>Click derecho en el ámbito</li>
+        <li>👉 Activar</li>
+    </ul>
+    <p>✔️ Ya empieza a repartir IPs automáticamente</p>
+
+    <h2>💻 6. Configurar cliente (PC)</h2>
+    <ol>
+        <li>Ir a <strong>Propiedades de red</strong></li>
+        <li>Seleccionar <strong>IPv4</strong></li>
+        <li>Marcar:
+            <ul>
+                <li>✅ Obtener IP automáticamente</li>
+                <li>✅ Obtener DNS automáticamente</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>Comandos en CMD</h3>
+    <pre>
+ipconfig /release
+ipconfig /renew
+    </pre>
+
+    <h2>🧪 7. Verificación</h2>
+    <pre>
+ipconfig
+    </pre>
+    <ul>
+        <li>✔️ IP dentro del rango configurado</li>
+        <li>✔️ Gateway correcto</li>
+        <li>✔️ DNS correcto</li>
+    </ul>
+
+    <h2>⚠️ Problemas comunes</h2>
+    <ul>
+        <li>❌ IP 169.254.x.x → DHCP no responde</li>
+        <li>❌ Ámbito no activado</li>
+        <li>❌ Servidor no autorizado</li>
+        <li>❌ Firewall bloqueando</li>
+        <li>❌ Cable o red mal conectada</li>
+    </ul>
+
+    <h2>📘 Ejemplo completo</h2>
+    <ul>
+        <li>Red: 192.168.1.0/24</li>
+        <li>Servidor DHCP: 192.168.1.10</li>
+        <li>Router: 192.168.1.1</li>
+        <li>Rango DHCP: 192.168.1.100 - 192.168.1.200</li>
+    </ul>
 
 </body>
 </html>
