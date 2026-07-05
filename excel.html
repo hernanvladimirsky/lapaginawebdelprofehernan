@@ -334,6 +334,45 @@
 
         <br>
 
+        <!-- Max si .conjunto -->
+        <h3>MAX.SI.CONJUNTO</h3>
+        <p>La función <code>MAX.SI.CONJUNTO</code> (o <code>MAXIFS</code> en inglés) sirve para buscar y devolver el <strong>valor numérico más alto</strong> dentro de un rango de datos, pero <strong>solo considerando las celdas que cumplen con una o varias condiciones específicas</strong>.</p>
+    
+        <p>La sintaxis básica es la siguiente:</p>
+        <pre><code>=MAX.SI.CONJUNTO(rango_máx, rango_criterios1, criterio1, [rango_criterios2, criterio2], ...)</code></pre>
+    
+        <p>Parámetros de la función:</p>
+        <ul>
+            <li><strong>rango_máx:</strong> Es el rango de celdas del cual quieres extraer el valor máximo (donde están los números).</li>
+            <li><strong>rango_criterios1:</strong> El rango donde se buscará la primera condición.</li>
+            <li><strong>criterio1:</strong> La condición que debe cumplirse (por ejemplo: <code>"&gt;=5000"</code>, <code>"Manzanas"</code>, o una celda de referencia).</li>
+            <li><strong>[rango_criterios2, criterio2]:</strong> (Opcional) Puedes añadir más pares de rangos y criterios adicionales (hasta 126).</li>
+        </ul>
+
+        <br>
+
+        <!-- Min si .conjunto -->
+        <h3>MIN.SI.CONJUNTO</h3>
+        
+        <p>La función <strong>MIN.SI.CONJUNTO</strong> devuelve el valor numérico más pequeño dentro de un rango de datos, pero <strong>solo toma en cuenta</strong> las filas o celdas que cumplen con una o varias condiciones específicas.</p>
+        
+        <p>Su gran ventaja es que permite filtrar datos complejos antes de calcular el mínimo. Por ejemplo: buscar el precio mínimo de un producto (condición 1) que pertenezca a una categoría específica (condición 2).</p>
+
+        <p>Sintaxis básica</p>
+        <div>
+            =MIN.SI.CONJUNTO(rango_mínimo, rango_de_criterios1, criterio1, [rango_de_criterios2, criterio2], ...)
+        </div>
+
+        <p>Componentes de la fórmula</p>
+        <ul>
+            <li><strong>rango_mínimo:</strong> Obligatorio. El rango de celdas del cual se obtendrá el valor mínimo real.</li>
+            <li><strong>rango_de_criterios1:</strong> Obligatorio. El primer conjunto de celdas que se evaluará bajo la condición que elijas.</li>
+            <li><strong>criterio1:</strong> Obligatorio. El requisito exacto (por ejemplo: <code>"&gt;100"</code>, <code>"Rojo"</code>, o <code>"Fruta"</code>) que deben cumplir las celdas del rango anterior.</li>
+            <li><strong>rango_de_criterios2, criterio2, ...</strong> Opcional. Rangos adicionales y sus criterios correspondientes. Puedes agregar hasta 126 pares de criterios adicionales.</li>
+        </ul>
+
+        <br>
+
         <!--Formula SI condicional-->
 
         <h2>Formula SI condicional</h2>
