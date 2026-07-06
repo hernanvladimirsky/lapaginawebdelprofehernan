@@ -247,7 +247,7 @@
     
     <div class="container">
         <div class="header-banner">
-            <h1>Guía Integral: Planificación y Configuración de una Red Local (LAN)</h1>
+            <h1>1- Guía Integral: Planificación y Configuración de una Red Local (LAN)</h1>
             <p>Documento de Arquitectura e Infraestructura de TI</p>
         </div>
 
@@ -358,7 +358,7 @@
    
     <div class="container" id="tp2">
       <div class="header-banner">
-        <h1>Módulo de Infraestructura: Equipamiento, Rendimiento y Almacenamiento en Redes</h1>
+        <h1>2- Módulo de Infraestructura: Equipamiento, Rendimiento y Almacenamiento en Redes</h1>
       </div>
       
       <h2>1. Evaluación de las Necesidades de Equipo y Rendimiento</h2>
@@ -453,7 +453,7 @@
       
 <div class="container" id="tp3">
         <div class="header-banner">
-            <h1>Módulo: Arquitectura de Servidores y Alto Rendimiento</h1>
+            <h1>3- Módulo: Arquitectura de Servidores y Alto Rendimiento</h1>
         </div>
 
 <h2>1. Identificación de los Requisitos de las Aplicaciones</h2>
@@ -589,7 +589,7 @@
 
 <div class="container" id="tp4">
     <div class="header-banner">
-        <h1>Módulo: Protección de los Datos y Equipos de la Red</h1>
+        <h1>4- Módulo: Protección de los Datos y Equipos de la Red</h1>
     </div>
 
 <h2>1. Protección de la Red y sus Datos (Seguridad Perimetral y Física)</h2>
@@ -682,6 +682,222 @@
         </tr>
     </tbody>
 </table>
+
+<div class="container" id="tp5">
+    <div class="header-banner">
+        <h1>5- Módulo: Gestión de Recursos de Hardware, Conectividad y Servicios de Red</h1>
+    </div>
+
+<h2>1. El S.O. ante la Infraestructura y la Energía (Gestión de Energía)</h2>
+<p>Aquí se analiza cómo el sistema operativo interactúa con el entorno físico y eléctrico a través del firmware (BIOS/UEFI) y los servicios del sistema.</p>
+
+<h3>Preparación de la ubicación y Configuración de equipos</h3>
+<p>Configuración del entorno desde el firmware. Gestión de perfiles de energía en el S.O. (<span class="cmd-badge">ACPI: Advanced Configuration and Power Interface</span>). Monitoreo de sensores de temperatura y voltajes desde la consola (comandos como <span class="cmd-badge">lm-sensors</span> en Linux o contadores de rendimiento en Windows).</p>
+
+<h3>Problemas de alimentación, puesta a tierra y SAI</h3>
+<p>Configuración de demonios/servicios de gestión de UPS (por ejemplo, <span class="cmd-badge">NUT - Network UPS Tools</span> en Linux o el servicio de UPS nativo de Windows). Programación de apagados automáticos (<em>graceful shutdown</em>) mediante scripts cuando el S.O. detecta (vía USB/Red) que el SAI entró en modo batería por un corte o falla eléctrica.</p>
+
+<div>
+    <p>Un SAI/UPS (Sistema de Alimentación Ininterrumpida) es una batería de respaldo. Los scripts y demonios de gestión actúan como "puentes" lógicos: leen el puerto USB/Red, detectan que el suministro se cortó y ejecutan un apagado seguro (graceful shutdown) en el sistema operativo antes de que la batería se agote.</p>
+</div>
+
+<h2>Conceptos Clave</h2>
+
+<ul>
+    <li>
+        <strong>SAI (UPS):</strong> Dispositivo que filtra problemas de tensión, evita daños en el hardware y mantiene encendidos los equipos ante un corte de energía.
+    </li>
+    <li>
+        <strong>Problemas de Tierra:</strong> Una instalación sin la correcta puesta a tierra causa que las descargas o ruidos eléctricos no se disipen, pudiendo quemar el SAI o derivar a los equipos conectados.
+    </li>
+    <li>
+        <strong>Demonio/Servicio:</strong> Programa que se ejecuta en segundo plano en el S.O. (sin interfaz gráfica) y monitorea constantemente el estado del SAI (voltaje, carga de batería) mediante USB o red.
+    </li>
+    <li>
+        <strong>Scripts:</strong> Son archivos con líneas de código o comandos (por ejemplo, en Bash en Linux o PowerShell en Windows). El demonio ejecuta el script cuando el SAI entra en "modo batería", el cual cierra procesos, desmonta discos y apaga el equipo de forma ordenada.
+    </li>
+</ul>
+
+<h2>2. Administración de Hardware a bajo nivel (Kernel y Controladores)</h2>
+<p>Cómo el sistema operativo interactúa con los fierros a nivel de kernel y la gestión de recursos de entrada/salida.</p>
+
+<h3>Supresión de conflictos de interrupciones (IRQ) y puertos de E/S</h3>
+<p>Comprensión de cómo el S.O. asigna y gestiona las interrupciones dinámicas (<span class="cmd-badge">MSI/MSI-X</span> en sistemas modernos) y el espacio de direccionamiento de E/S. Diagnóstico de conflictos: inspección de <span class="cmd-badge">/proc/interrupts</span> y <span class="cmd-badge">/proc/ioports</span> en Linux, o el Administrador de Dispositivos (<span class="cmd-badge">devmgmt.msc</span>) en Windows para identificar colisiones de hardware heredado o mal configurado.</p>
+
+<h1>Supresión de Conflictos de IRQ y Puertos de E/S</h1>
+    
+    <p>La supresión o resolución de conflictos de interrupciones (IRQ) y puertos de E/S consiste en identificar qué componentes de hardware compiten por los mismos canales de comunicación. Los sistemas operativos modernos gestionan estas señales de forma dinámica para evitar cuellos de botella y errores del sistema.</p>
+
+    <h2>Conceptos Clave</h2>
+    <ul>
+        <li><strong>IRQ (Interrupt Request - Solicitud de Interrupción):</strong> Es una señal física o paquete de datos que un dispositivo envía al procesador (CPU) cuando requiere atención inmediata para procesar datos (ej. pulsar una tecla, mover el ratón). En el hardware antiguo, cada dispositivo tenía asignada una línea física exclusiva y fija.</li>
+        <li><strong>MSI (Message Signaled Interrupts - Interrupciones Señalizadas por Mensajes):</strong> Es un mecanismo dinámico moderno introducido en PCI donde, en lugar de utilizar líneas físicas dedicadas, el dispositivo envía un mensaje de escritura digital a una dirección de memoria específica para avisar a la CPU.</li>
+        <li><strong>MSI-X:</strong> Es una evolución de MSI que permite a un solo dispositivo generar múltiples mensajes de interrupción independientes. Esto mejora masivamente el rendimiento en procesadores multinúcleo al permitir que diferentes núcleos atiendan distintas colas de un mismo dispositivo (como tarjetas de red avanzadas).</li>
+        <li><strong>Puertos de E/S (Entrada/Salida):</strong> Es un rango de direcciones que la CPU utiliza para leer y escribir directamente en los registros internos de un dispositivo físico. Si dos dispositivos intentan usar el mismo rango de E/S, se produce un conflicto que inutiliza el hardware.</li>
+    </ul>
+
+    <h2>Diagnóstico de Conflictos en Linux</h2>
+    <p>Para visualizar y diagnosticar el estado del hardware y su comunicación con la CPU en distribuciones Linux, puedes utilizar los siguientes comandos:</p>
+    <ul>
+        <li><code>cat /proc/interrupts</code>: Muestra una tabla en tiempo real con todas las interrupciones registradas y el número de veces que cada procesador ha sido interrumpido por cada dispositivo. Encontrar un número alto de interrupciones en un solo procesador podría requerir configurar la SMP IRQ affinity para equilibrar la carga.</li>
+        <li><code>cat /proc/ioports</code>: Revela los rangos de memoria del espacio de E/S que están actualmente reservados y asignados a los controladores de dispositivos instalados. Si detectas superposiciones entre dos controladores diferentes, indica un conflicto directo.</li>
+    </ul>
+
+<h3>Instalación de unidades y controladores de disco</h3>
+<p>Gestión lógica del almacenamiento. Carga de módulos/drivers (ej. <span class="cmd-badge">modprobe</span> para controladoras RAID/AHCI). Particionado lógico (MBR vs. GPT) mediante herramientas de S.O. (<span class="cmd-badge">fdisk</span>, <span class="cmd-badge">parted</span>, <span class="cmd-badge">diskpart</span>), creación de sistemas de archivos (EXT4, NTFS) y montaje automático (<span class="cmd-badge">/etc/fstab</span>).</p>
+
+
+<p>Para preparar y gestionar el almacenamiento, el sistema operativo necesita cargar los controladores de hardware adecuados (módulos), preparar la estructura del disco, asignarle un formato para los datos y establecer reglas de montaje para que el equipo sepa exactamente dónde guardar o leer la información.</p>
+
+    <h2>Controladores y Hardware</h2>
+    <ul>
+        <li><strong>modprobe:</strong> Es un comando de Linux utilizado para cargar o descargar dinámicamente módulos y controladores en el kernel (el núcleo) del sistema operativo sin necesidad de reiniciarlo.</li>
+        <p>El núcleo (o kernel) es el componente central y fundamental de un sistema operativo. Actúa como un puente esencial entre el software (tus aplicaciones) y el hardware de tu equipo. Es el primer programa que se carga al encender la computadora y se encarga de gestionar la memoria, el procesador y los dispositivos.</p>
+        <li><strong>RAID (Redundant Array of Independent Disks):</strong> Es una tecnología de virtualización de almacenamiento que combina múltiples discos físicos en una sola unidad lógica, ya sea para mejorar el rendimiento o para crear copias de seguridad automáticas (tolerancia a fallos).</li>
+        <li><strong>AHCI (Advanced Host Controller Interface):</strong> Es un estándar técnico que permite la comunicación entre la placa base y los dispositivos de almacenamiento SATA. Habilita funciones avanzadas como Hot-plugging (conectar y desconectar discos en caliente) y NCQ (optimización de lectura).</li>
+    </ul>
+
+    <h2>Esquemas de Particionado</h2>
+    <ul>
+        <li><strong>MBR (Master Boot Record):</strong> Es el formato tradicional de particionado de discos. Solo soporta discos de hasta 2 TB y un máximo de 4 particiones primarias.</li>
+        <li><strong>GPT (GUID Partition Table):</strong> Es el estándar moderno. Permite discos de un tamaño inmenso y crear teóricamente hasta 128 particiones primarias sin limitaciones secundarias.</li>
+    </ul>
+
+    <h2>Herramientas de Particionado</h2>
+    <ul>
+        <li><strong>fdisk:</strong> Utilidad clásica de línea de comandos en Linux para crear y manipular tablas de particiones (generalmente discos MBR).</li>
+        <li><strong>parted:</strong> Es un programa avanzado en Linux que sirve para crear, redimensionar y borrar particiones lógicas. Soporta tanto discos MBR como GPT.</li>
+        <li><strong>diskpart:</strong> Herramienta de línea de comandos incluida en los sistemas operativos de Microsoft (Windows) que permite gestionar discos, particiones y volúmenes.</li>
+    </ul>
+
+    <h2>Sistemas de Archivos</h2>
+    <ul>
+        <li><strong>EXT4:</strong> Es el sistema de archivos predeterminado en la mayoría de distribuciones de Linux. Es rápido, robusto y maneja muy bien la fragmentación de datos.</li>
+        <li><strong>NTFS:</strong> Es el sistema de archivos principal utilizado por defecto en entornos Windows. Está optimizado para grandes volúmenes y permite asignar permisos de seguridad a nivel de archivo.</li>
+    </ul>
+
+    <h2>Configuración de Montaje</h2>
+    <ul>
+        <li><strong>/etc/fstab:</strong> Es un archivo de configuración fundamental en Linux que contiene la tabla de sistemas de archivos. En él se especifican qué particiones o discos se deben montar (hacer accesibles en una carpeta del sistema), dónde deben montarse y con qué permisos de manera automática cada vez que se enciende el equipo.</li>
+    </ul>
+
+
+<h3>Instalación de placas de red</h3>
+<p>Detección de la interfaz por el kernel (comandos <span class="cmd-badge">lspci</span>, <span class="cmd-badge">dmesg</span>). Carga de controladores de red y nomenclatura lógica de las interfaces (ej. <span class="cmd-badge">eth0</span>, <span class="cmd-badge">enp3s0</span>).</p>
+
+<h1>Detección de Interfaces de Red por el Kernel</h1>
+    <p>En Linux, el kernel detecta y asigna nombres a tus tarjetas de red para que el sistema pueda utilizarlas. Los comandos <code>lspci</code> y <code>dmesg</code> son herramientas de diagnóstico fundamentales, mientras que <code>eth0</code> y <code>enp3s0</code> son ejemplos de la nomenclatura lógica utilizada para identificar dichos dispositivos.</p>
+    <p>A continuación, se detalla qué es cada concepto:</p>
+
+    <h2>¿Qué es <code>lspci</code>?</h2>
+    <p>El comando <strong><code>lspci</code></strong> (Listar dispositivos PCI) permite examinar la placa base y mostrar información detallada de todos los dispositivos conectados a los buses PCI (como tarjetas de red, tarjetas gráficas, controladoras de disco, puertos USB).</p>
+    <ul>
+        <li><strong>Uso principal:</strong> Para la red, sirve para confirmar que físicamente tu tarjeta de red es reconocida por el hardware.</li>
+        <li><strong>Dato extra:</strong> Es muy útil para identificar el modelo exacto de tu tarjeta y saber qué controlador (módulo) de red está utilizando.</li>
+    </ul>
+
+    <h2>¿Qué es <code>dmesg</code>?</h2>
+    <p>El comando <strong><code>dmesg</code></strong> (Diagnostic Message) sirve para imprimir y controlar los mensajes de diagnóstico emitidos por el kernel durante la fase de arranque y el funcionamiento del sistema.</p>
+    <ul>
+        <li><strong>Uso principal:</strong> Permite ver en tiempo real la detección de hardware y la carga de controladores de red.</li>
+        <li><strong>Dato extra:</strong> Si tu red falla, este comando muestra errores del sistema, problemas de firmware o fallos al inicializar el puerto.</li>
+    </ul>
+
+    <h2>¿Qué es <code>eth0</code>?</h2>
+    <p>Es la <strong>nomenclatura clásica</strong> que utilizaba Linux para nombrar a la primera interfaz de red Ethernet cableada. El sufijo "0" indica que es la primera tarjeta, "eth1" sería la segunda, y así sucesivamente.</p>
+    <ul>
+        <li><strong>Problema:</strong> En servidores o equipos con múltiples tarjetas, el orden de detección no siempre era el mismo, por lo que una tarjeta podía ser <code>eth0</code> en un reinicio y <code>eth1</code> en el siguiente. Por ello, ha sido reemplazado en la mayoría de distribuciones modernas.</li>
+    </ul>
+
+    <h2>¿Qué es <code>enp3s0</code>?</h2>
+    <p>Es la <strong>nomenclatura predecible y moderna</strong> que asigna el sistema <em>systemd</em> de Linux a las interfaces de red. Estos nombres se basan en la ubicación física exacta del hardware dentro de la placa base, evitando que el nombre cambie entre reinicios.</p>
+    <p>Su estructura contiene la siguiente información:</p>
+    <ul>
+        <li><code class="highlight">en</code>: Significa Ethernet (conexión por cable). <em>(Nota: "wl" sería para inalámbrico Wi-Fi).</em></li>
+        <li><code class="highlight">p3</code>: El número de bus PCI donde está conectada la tarjeta.</li>
+        <li><code class="highlight">s0</code>: El número de ranura (slot).</li>
+    </ul>
+
+<h2>3. Conectividad Lógica y Diagnóstico desde el S.O.</h2>
+<p>El cableado ya está puesto; ahora el S.O. debe verificar la integridad de la red y gestionar la pila de protocolos.</p>
+
+<h3>Instalación, verificación y equipos de cableado (Enfoque S.O.)</h3>
+<p>En lugar de usar un tester físico, usamos el S.O. como herramienta de diagnóstico de la capa física y de enlace.</p>
+
+<div class="highlight-box">
+    <ul>
+        <li><strong>Detección de estado del enlace (Link carrier) y velocidad de negociación:</strong> Verificación de tasas de transferencia (Link speed: 10/100/1000 Mbps) con <span class="cmd-badge">ethtool</span> o <span class="cmd-badge">mii-tool</span> en Linux.</li>
+        <li><strong>Diagnóstico de fallas físicas:</strong> Identificación de cables dañados o con ruido mediante contadores de errores de red en el S.O. (tramas caídas, errores CRC, colisiones) usando <span class="cmd-badge">ifconfig</span>, <span class="cmd-badge">ip -s link</span> o el monitor de rendimiento de Windows.</li>
+    </ul>
+</div>
+
+<p>El Sistema Operativo permite diagnosticar la integridad física y lógica de la red sin usar un tester físico. Utiliza comandos y herramientas del sistema para medir el estado del enlace, la velocidad negociada y detectar problemas en el cableado a través de métricas y contadores de errores en tiempo real.</p>
+
+    <h2>Conceptos de Capa Física y Enlace</h2>
+    <ul>
+        <li><strong>Link carrier (Portadora del enlace):</strong> Es la señal eléctrica o luminosa que indica que hay conectividad física entre dos dispositivos (por ejemplo, el puerto de la PC y el switch). Si el cable está cortado, no hay link carrier.</li>
+        <li><strong>Link speed (Velocidad del enlace):</strong> La tasa de transferencia de datos negociada entre los dos extremos de la conexión. En redes cableadas de cobre modernas, suele ser de 10, 100 o 1000 Mbps (Gigabit).</li>
+        <li><strong>Tramas caídas (Dropped packets/frames):</strong> Son tramas de datos que llegan a la tarjeta de red (NIC) pero que el sistema operativo o el hardware descartan antes de procesarlas. Esto ocurre generalmente por buffers de memoria llenos o por ruido eléctrico intenso en el cable.</li>
+        <li><strong>Errores CRC (Cyclic Redundancy Check):</strong> Es un mecanismo de comprobación de integridad que viaja dentro de cada trama de red. Si los datos llegan alterados por ruido o un cable dañado, el cálculo matemático no coincide y se registra un error CRC.</li>
+        <li><strong>Colisiones:</strong> Ocurre cuando dos dispositivos intentan transmitir datos exactamente al mismo tiempo en el mismo segmento de red. Aunque son normales en redes antiguas (hub o half-duplex), en redes cableadas modernas con switches y comunicación full-duplex, una colisión suele indicar un problema de configuración o una falla en el hardware.</li>
+    </ul>
+
+    <h2>Herramientas de Diagnóstico</h2>
+    <ul>
+        <li><strong>ethtool:</strong> Una utilidad avanzada en Linux diseñada para consultar y configurar los ajustes del controlador y del hardware de la tarjeta de red. Permite visualizar la velocidad negociada (Link Speed), si el enlace está activo, los modos de dúplex y acceder a las estadísticas completas de errores (incluyendo errores CRC).</li>
+        <li><strong>mii-tool:</strong> Un comando más antiguo pero aún utilizado en Linux para verificar y configurar el estado de la interfaz MII (Media Independent Interface). Se emplea rápidamente para ver si el enlace está activo y a qué velocidad se ha negociado.</li>
+        <li><strong>ifconfig:</strong> Comando clásico en sistemas UNIX/Linux para configurar y consultar los parámetros de las interfaces de red. Muestra estadísticas básicas sobre paquetes transmitidos, recibidos y errores (incluidos los caídos y CRC). Ha sido declarado obsoleto en favor de la familia ip.</li>
+        <li><strong>ip -s link:</strong> Parte del conjunto de herramientas modernas iproute2 en Linux. Muestra información detallada sobre el estado del enlace y despliega contadores muy precisos de estadísticas de tramas, descartes y errores por interfaz.</li>
+        <li><strong>Monitor de rendimiento de Windows:</strong> Herramienta gráfica incorporada en Windows (accesible ejecutando perfmon) que permite rastrear contadores en tiempo real (como bytes recibidos/enviados, errores de segmento, colisiones o tramas descartadas) para evaluar el rendimiento de la tarjeta de red de forma similar a los contadores de Linux.</li>
+    </ul>
+
+<h2>4. Arquitectura Cliente/Servidor y Entornos Diskless</h2>
+<p>La puesta en marcha operativa de la red de datos del laboratorio.</p>
+
+<h3>Configuración del servidor</h3>
+<p>Instalación de servicios críticos de infraestructura que dan soporte a la red local. Configuración avanzada y lectura de logs de los servicios <strong>DHCP</strong> (asignación de IPs y opciones de booteo de red) y <strong>DNS</strong> (resolución de nombres).</p>
+
+<h3>Configuración de estaciones de trabajo</h3>
+<p>Automatización de la configuración de red, perfiles de usuario centralizados, y políticas de seguridad/permisos a nivel de sistema operativo.</p>
+
+<h3>Estaciones sin disco (Diskless / Thin Clients)</h3>
+<p>El tema estrella de LSO. Configuración de la secuencia de booteo por red (Network Boot):</p>
+
+<ul class="fase-list">
+    <li>
+        <span class="fase-label">PXE</span>
+        <strong>(Firmware):</strong> El cliente pide IP y la ubicación del gestor de arranque a través de la interfaz de red.
+    </li>
+    <li>
+        <span class="fase-label">TFTP</span>
+        <strong>(Servidor):</strong> El S.O. del servidor transfiere el cargador de arranque inicial (ej. <span class="cmd-badge">pxelinux</span> o <span class="cmd-badge">GRUB</span>) de manera liviana.
+    </li>
+    <li>
+        <span class="fase-label">NFS / iSCSI</span>
+        <strong>(S.O.):</strong> El sistema operativo del cliente monta su directorio raíz (<span class="cmd-badge">/</span>) de forma remota a través de la red, corriendo completamente en la memoria RAM del cliente pero leyendo/escribiendo en el almacenamiento del servidor.
+    </li>
+</ul>
+
+<h2>PXE (Preboot eXecution Environment)</h2>
+    <ul>
+        <li><strong>Qué es:</strong> Es un entorno o protocolo integrado directamente en el firmware de la tarjeta de red (NIC) o en la BIOS/UEFI de la placa base.</li>
+        <li><strong>Cómo funciona:</strong> Cuando una computadora sin disco se enciende, la CPU no encuentra un sistema operativo local. El firmware PXE toma el control y realiza una solicitud broadcast (DHCP) en la red local.</li>
+        <li><strong>Su función principal:</strong> Solicitar una dirección IP y, de manera crítica, pedir al servidor DHCP las opciones especiales de booteo (como la opción 66 y 67). Estas opciones le indican al cliente la dirección IP del servidor de almacenamiento y el nombre exacto del archivo ejecutable del cargador de arranque que debe descargar a continuación.</li>
+    </ul>
+
+    <h2>TFTP (Trivial File Transfer Protocol)</h2>
+    <ul>
+        <li><strong>Qué es:</strong> Es un protocolo de transferencia de archivos extremadamente simple, liviano y sin cifrado que funciona sobre el protocolo UDP (puerto 69).</li>
+        <li><strong>Cómo funciona:</strong> Una vez que el cliente PXE recibe la dirección del servidor y el nombre del archivo desde el DHCP, inicia una conexión TFTP hacia el servidor. El servidor TFTP lee el archivo solicitado de su disco local y lo transfiere al cliente.</li>
+        <li><strong>Su función principal:</strong> Transferir el cargador de arranque inicial (como <code>pxelinux.0</code>, <code>undionly.kpxe</code> o un binario de <code>GRUB</code>) y, posteriormente, el archivo del Kernel de Linux (<code>vmlinuz</code>) junto con el sistema de archivos temporal en RAM (<code>initramfs</code>). Su diseño simple es ideal porque el cliente en este punto tiene muy poca lógica de software programada en su firmware y no podría procesar protocolos complejos como FTP, SFTP o HTTP.</li>
+    </ul>
+
+    <h2>NFS (Network File System)</h2>
+    <ul>
+        <li><strong>Qué es:</strong> Es un protocolo de sistemas de archivos distribuidos que permite a una computadora montar directorios remotos a través de la red como si fueran discos locales.</li>
+        <li><strong>Cómo funciona:</strong> Después de que el cliente descarga el Kernel mediante TFTP y lo ejecuta en su memoria RAM, el TFTP deja de actuar. El Kernel toma el control de la tarjeta de red y utiliza el protocolo NFS para conectarse al servidor. El cliente monta la carpeta raíz del sistema operativo (<code>/</code>) que reside físicamente en el servidor de almacenamiento.</li>
+        <li><strong>Su función principal:</strong> Permitir que la estación diskless lea los binarios del sistema operativo (<code>/bin</code>, <code>/sbin</code>, <code>/usr</code>) y escriba datos o logs en tiempo real directamente en el almacenamiento del servidor. Toda la computación ocurre en la memoria RAM y CPU del cliente, pero el disco duro es 100% virtual y se gestiona a través de la red mediante NFS.</li>
+    </ul>
 
 
 </body>
