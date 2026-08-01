@@ -505,24 +505,90 @@
         </p>
 
         <!--Operadores condicionales y logicos-->
-        <h2>Y</h2>
+        <h2>Función Y</h2>
         <p> 
             Su propósito es evaluar múltiples condiciones al mismo tiempo y devolver VERDADERO solo si todas 
             y cada una de las condiciones se cumplen; de lo contrario, devuelve FALSO.
         </p>
 
-        <h2>O</h2>
+        <h2>Función O</h2>
         <p>
             Evalúa múltiples condiciones y devuelve VERDADERO si al menos una de ellas se cumple. 
             Solo devuelve FALSO si todas las condiciones evaluadas son falsas.
         </p>
 
-        <h2>XO</h2>
+        <h2>Función XO</h2>
         <p>
             Devuelve VERDADERO si una condición es verdadera y la otra es falsa. 
             Devuelve FALSO si ambas son verdaderas o si ambas son falsas.
         </p>
 
+        <!--Funcion Si Fecha-->
+        <h2>Funcion Si Fecha</h2>
+        <p>
+        La función SIFECHA sirve para calcular el tiempo exacto que pasa entre dos fechas. Su estructura básica es =SIFECHA(fecha_inicial; fecha_final; unidad). [1, 2, 3]
+        Sintaxis y argumentos. <br> <br>
+        Fecha inicial: El día con el que empieza el cálculo (por ejemplo, una fecha de nacimiento). <br>
+        Fecha final: El día en el que termina el cálculo (puedes usar la función HOY()). <br>
+        Unidad: La letra que indica si quieres el resultado en años, meses o días. Debe ir entre comillas. [1, 2, 3, 4] <br>
+        Tipos de unidades que puedes usar <br>
+        "Y": Muestra los años completos entre las dos fechas. <br>
+        "M": Muestra los meses completos. <br>
+        "D": Muestra el total de días. <br>
+        "YM": Muestra los meses que pasan, sin contar los años. <br>
+        "YD": Muestra los días que pasan, sin contar los años. [1, 2, 3, 4, 5] <br>
+        </p>
+
+        <!--Frac Año-->
+        <h2>Función FRAC.AÑO</h2>
+        <p>           
+        La función FRAC.AÑO calcula el número de años y la porción de año (en decimales) que hay entre dos fechas. Su estructura básica requiere tres elementos principales: fecha_inicio, fecha_fin y base. <br><br>
+
+        Sintaxis de la función <br>
+        =FRAC.AÑO(fecha_inicio; fecha_fin; [base]) [1] <br>
+        Explicación de los datos <br>
+        fecha_inicio: El punto de partida del cálculo (por ejemplo, una fecha de nacimiento o contratación). [1, 2, 3] <br>
+        fecha_fin: La fecha final del periodo (puedes usar funciones como HOY()). [1] <br>
+        base (opcional): El número que define cómo se cuentan los días del año:0 o vacío: Método americano (360 días al año / meses de 30 días). <br>
+        1: Días reales del mes y días reales del año (Real/Real). <br>
+        2: Días reales del mes, año fijo de 360 días. <br>
+        3: Días reales del mes, año fijo de 365 días. <br>
+        4: Método europeo (360 días al año). [1, 2, 3, 4] <br>
+        </p>
+
+        <!--Dias-->
+        <h2>Función Dias</h2>
+        <p>
+        La función DIAS sirve para calcular el número de días que hay entre dos fechas. Su estructura básica es =DIAS(fecha_final, fecha_inicial). [1, 2, 3, 4] <br> <br>
+        Cómo aplicar la fórmula <br>
+        Escribe =DIAS( en la celda donde quieras el resultado. <br>
+        Selecciona o escribe primero la fecha final (la más reciente). <br>
+        Pon una coma (, o ; según tu equipo) y selecciona la fecha inicial (la más antigua). <br>
+        Cierra el paréntesis y presiona Enter. [1, 2, 3, 4] <br>
+        </p>
+
+        <!--Función Dias Lab-->
+        <h2>Función Dias Lab</h2>
+        <p>
+        La función DIAS.LAB sirve para calcular el número de días laborables entre dos fechas, excluyendo los fines de semana (sábados y domingos). Sus argumentos principales son la fecha inicial, la fecha final y un rango opcional de días festivos. [1, 2, 3] <br><br>
+        Sintaxis de la función <br>
+        =DIAS.LAB(fecha_inicial; fecha_final; [vacaciones]) <br>
+        fecha_inicial: El día en que empieza el conteo. <br>
+        fecha_final: El día en que termina el conteo. <br>
+        [vacaciones]: (Opcional) Un rango de celdas con las fechas de los días festivos que no se deben contar. [1, 2, 3, 4, 5] <br>
+        </p>
+
+        <!--Función Dias.Lab.Intl-->
+        <h2>Función Dias.Lab.Intl</h2>
+        <p>
+        La función DIAS.LAB.INTL en Excel sirve para calcular los días laborables entre dos fechas, permitiendo elegir qué días son de descanso y excluir días festivos. Su estructura básica es =DIAS.LAB.INTL(fecha_inicial, fecha_final, [fin_de_semana], [festivos])
+        Sintaxis de la función <br> <br>
+        fecha_inicial: El día en que empieza el conteo. <br>
+        fecha_final: El día en que termina el conteo. <br>
+        [fin_de_semana] (opcional): Número o código de texto que indica qué días no se trabajan. Si se omite, por defecto el descanso es sábado y domingo. <br>
+        [festivos] (opcional): Un rango de celdas con fechas de días no laborables o feriados que deseas descontar. [1, 2] <br>
+
+        </p>
 
         <!-- IZQUIERDA -->
         <h2>IZQUIERDA</h2>
