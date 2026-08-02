@@ -7,6 +7,19 @@
   <title>C++</title>
   <link rel="stylesheet" href="Css/estilosglobal.css">
   <style>
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    pre {
+      background-color: #272822;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       max-width: 900px;
@@ -61,18 +74,21 @@
     }
 
     table {
-            border-collapse: collapse;
-            width: 100%;
-            font-family: Arial, sans-serif;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: center;
-        }
-        th {
-            background-color: #dddddd;
-        }
+      border-collapse: collapse;
+      width: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #dddddd;
+    }
   </style>
 </head>
 
@@ -97,7 +113,8 @@
       <p>El lenguaje <strong>C++</strong> fue creado por <strong>Bjarne Stroustrup</strong> a comienzos de la década de
         <strong>1980</strong> en los laboratorios <strong>Bell Labs</strong> (Estados Unidos). Stroustrup buscaba un
         lenguaje que combinara la <em>eficiencia y el control de C</em> con las características de <strong>programación
-          orientada a objetos</strong> que ofrecían otros lenguajes de la época, como Simula.</p>
+          orientada a objetos</strong> que ofrecían otros lenguajes de la época, como Simula.
+      </p>
 
 
       <p>En un principio, C++ se llamó <strong>“C with Classes”</strong> (C con clases), ya que era una extensión del
@@ -111,7 +128,8 @@
 
       <p>Durante los años siguientes, C++ se consolidó como uno de los lenguajes más usados en la industria del software
         gracias a su <strong>velocidad, portabilidad y flexibilidad</strong>. Fue normalizado por primera vez por
-        <strong>ISO</strong> en <strong>1998 (C++98)</strong>, con revisiones importantes posteriores:</p>
+        <strong>ISO</strong> en <strong>1998 (C++98)</strong>, con revisiones importantes posteriores:
+      </p>
 
 
       <ul>
@@ -229,94 +247,95 @@ int main() {
 cin &gt;&gt; nombre;         // Espera que el usuario escriba algo y lo guarda en la variable 'nombre'
   </code></pre>
 
-  <h2>Tipos de Variables en C++</h2>
+    <h2>Tipos de Variables en C++</h2>
 
-<table>
-    <tr>
+    <table>
+      <tr>
         <th>Tipo</th>
         <th>Qué guarda</th>
         <th>Ejemplo de valor</th>
         <th>Ejemplo en código</th>
         <th>Tamaño aprox.</th>
         <th>Observaciones</th>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
         <td>int</td>
         <td>Números enteros</td>
         <td>10, -5</td>
         <td>int edad = 18;</td>
         <td>4 bytes</td>
         <td>Muy usado</td>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
         <td>float</td>
         <td>Decimales (menos precisión)</td>
         <td>1.75</td>
         <td>float altura = 1.75;</td>
         <td>4 bytes</td>
         <td>Menos preciso que double</td>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
         <td>double</td>
         <td>Decimales (más precisión)</td>
         <td>1.755555</td>
         <td>double precio = 99.99;</td>
         <td>8 bytes</td>
         <td>Más exacto</td>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
         <td>char</td>
         <td>Un solo carácter</td>
         <td>'A'</td>
         <td>char letra = 'A';</td>
         <td>1 byte</td>
         <td>Comillas simples</td>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
         <td>string</td>
         <td>Texto (palabras/frases)</td>
         <td>"Hola"</td>
         <td>string nombre = "Juan";</td>
         <td>Variable</td>
         <td>Comillas dobles</td>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
         <td>bool</td>
         <td>Verdadero o falso</td>
         <td>true / false</td>
         <td>bool activo = true;</td>
         <td>1 byte</td>
         <td>Solo 2 valores</td>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
         <td>short</td>
         <td>Enteros pequeños</td>
         <td>100</td>
         <td>short num = 100;</td>
         <td>2 bytes</td>
         <td>Menor rango que int</td>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
         <td>long</td>
         <td>Enteros grandes</td>
         <td>1000000</td>
         <td>long num = 1000000;</td>
         <td>4 u 8 bytes</td>
         <td>Mayor rango que int</td>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
         <td>long long</td>
         <td>Enteros muy grandes</td>
         <td>9999999999</td>
         <td>long long num = 9999999999;</td>
         <td>8 bytes</td>
         <td>Para números grandes</td>
-    </tr>
-</table>
+      </tr>
+    </table>
 
     <h2>1. Operadores de Comparación</h2>
     <p>Se utilizan para comparar valores dentro de estructuras como <code>if</code>, <code>while</code> y
-      <code>for</code>.</p>
+      <code>for</code>.
+    </p>
 
     <table>
       <thead>
@@ -514,14 +533,14 @@ int main() {
     </code></pre>
 
     <h2 style="color: #2E86C1;">🔄 WHILE </h2>
-  
-  <p>
-  El ciclo <b>while</b> es una estructura repetitiva que se ejecuta mientras una condición sea verdadera.
-  Primero evalúa la condición y, si se cumple, ejecuta el bloque de código.
-  Este proceso se repite hasta que la condición deja de cumplirse.
-  </p>
-  
-  <pre>
+
+    <p>
+      El ciclo <b>while</b> es una estructura repetitiva que se ejecuta mientras una condición sea verdadera.
+      Primero evalúa la condición y, si se cumple, ejecuta el bloque de código.
+      Este proceso se repite hasta que la condición deja de cumplirse.
+    </p>
+
+    <pre>
   #include &lt;iostream&gt;
   using namespace std;
   
@@ -539,16 +558,16 @@ int main() {
   </pre>
 
     <h2 style="color: #2E86C1;">⏳ DO WHILE </h2>
-    
-</h2>
 
-<p>
-El ciclo <b>do while</b> es una estructura repetitiva que ejecuta el bloque de código al menos una vez,
-y luego evalúa la condición. Si la condición es verdadera, el ciclo se repite.
-Este proceso continúa hasta que la condición deja de cumplirse.
-</p>
+    </h2>
 
-<pre>
+    <p>
+      El ciclo <b>do while</b> es una estructura repetitiva que ejecuta el bloque de código al menos una vez,
+      y luego evalúa la condición. Si la condición es verdadera, el ciclo se repite.
+      Este proceso continúa hasta que la condición deja de cumplirse.
+    </p>
+
+    <pre>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -564,14 +583,16 @@ int main() {
 }
 </pre>
 
-<h2 style="color: black;">⚙️ FOR </h2>
+    <h2 style="color: black;">⚙️ FOR </h2>
 
-<p>
-El ciclo <b>for</b> es una estructura repetitiva que se utiliza cuando se conoce la cantidad de veces que se quiere repetir un bloque de código.
-Tiene tres partes: inicialización, condición y actualización. El ciclo se ejecuta mientras la condición sea verdadera.
-</p>
+    <p>
+      El ciclo <b>for</b> es una estructura repetitiva que se utiliza cuando se conoce la cantidad de veces que se
+      quiere repetir un bloque de código.
+      Tiene tres partes: inicialización, condición y actualización. El ciclo se ejecuta mientras la condición sea
+      verdadera.
+    </p>
 
-<pre>
+    <pre>
 #include &lt;iostream&gt;
 using namespace std;
 
@@ -586,31 +607,130 @@ int main() {
 }
 </pre>
 
-<h2 style="color: black;">🔁 WHILE</h2>
-<p>
-Usalo cuando <b>no sabés cuántas veces</b> se va a repetir.<br>
-Primero evalúa la condición y puede no ejecutarse nunca.
-</p>
+    <h2 style="color: black;">🔁 WHILE</h2>
+    <p>
+      Usalo cuando <b>no sabés cuántas veces</b> se va a repetir.<br>
+      Primero evalúa la condición y puede no ejecutarse nunca.
+    </p>
 
-<h2 style="color: black;">⏳ DO WHILE</h2>
-<p>
-Usalo cuando querés que el código <b>se ejecute al menos una vez</b>.<br>
-Primero ejecuta y después evalúa la condición.
-</p>
+    <h2 style="color: black;">⏳ DO WHILE</h2>
+    <p>
+      Usalo cuando querés que el código <b>se ejecute al menos una vez</b>.<br>
+      Primero ejecuta y después evalúa la condición.
+    </p>
 
-<h2 style="color: black;">⚙️ FOR</h2>
-<p>
-Usalo cuando <b>sabés cuántas veces</b> se va a repetir.<br>
-Tiene inicialización, condición y aumento en una sola línea.
-</p>
+    <h2 style="color: black;">⚙️ FOR</h2>
+    <p>
+      Usalo cuando <b>sabés cuántas veces</b> se va a repetir.<br>
+      Tiene inicialización, condición y aumento en una sola línea.
+    </p>
 
-<h3>Resumen</h3>
-<ul>
-    <li><b>for</b> → contado</li>
-    <li><b>while</b> → depende</li>
-    <li><b>do while</b> → mínimo una vez</li>
-</ul>
+    <h3>Resumen</h3>
+    <ul>
+      <li><b>for</b> → contado</li>
+      <li><b>while</b> → depende</li>
+      <li><b>do while</b> → mínimo una vez</li>
+    </ul>
 
+    <h1>Funciones en C++</h1>
+
+    <div class="section">
+        <h2>Teoría</h2>
+        <p>
+            Una función es un bloque de código que realiza una tarea específica.
+            Se utiliza para organizar el programa, evitar repetir código y facilitar la lectura.
+        </p>
+    
+        <h3>Tipos de funciones</h3>
+        <ul>
+            <li><strong>Funciones void:</strong> No devuelven ningún valor.</li>
+            <li><strong>Funciones con retorno:</strong> Devuelven un valor usando <code>return</code>.</li>
+        </ul>
+    
+        <h3>Estructura de una función</h3>
+        <pre>
+    
+    tipo nombreFuncion(parametros) {
+    // instrucciones
+    return valor; // solo si devuelve algo
+    }
+    </pre>
+    </div>
+    
+    <div class="section">
+        <h2>Función void (sin retorno)</h2>
+        <pre>
+    
+    // Declaración de librería para entrada/salida
+    #include <iostream>
+    using namespace std;
+    
+    // Definición de función void (no devuelve valor)
+    void saludar() {
+    cout << "Hola, bienvenido al programa" << endl; // imprime mensaje
+    }
+    
+    int main() {
+    saludar(); // llamada a la función
+    return 0; // fin del programa
+    }
+    </pre>
+    </div>
+    
+    <div class="section">
+        <h2>Función con retorno (valor)</h2>
+        <pre>
+    
+    #include <iostream>
+    using namespace std;
+    
+    // Función que suma dos números y devuelve el resultado
+    int sumar(int a, int b) {
+    int resultado = a + b; // realiza la suma
+    return resultado; // devuelve el valor
+    }
+    
+    int main() {
+    int x = 5, y = 3;
+    
+    int suma = sumar(x, y); // se guarda el resultado
+    
+    cout &lt;&lt; "La suma es: " &lt;&lt; suma &lt;&lt; endl;
+    
+    return 0;
+    
+    }
+    </pre>
+    </div>
+    
+    <div class="section">
+        <h2>Función con parámetros</h2>
+        <pre>
+    
+    #include <iostream>
+    using namespace std;
+    
+    // Función que muestra un número
+    void mostrarNumero(int num) {
+    cout << "El numero es: " << num << endl;
+    }
+    
+    int main() {
+    mostrarNumero(10); // se envía el valor 10
+    return 0;
+    }
+    </pre>
+    </div>
+    
+    <div class="section">
+        <h2>Resumen</h2>
+        <ul>
+            <li>Las funciones permiten reutilizar código.</li>
+            <li><code>void</code> significa que no devuelve valor.</li>
+            <li>Las funciones con retorno usan <code>return</code>.</li>
+            <li>Se pueden pasar datos mediante parámetros.</li>
+        </ul>
+    </div>
 
   </main>
 
