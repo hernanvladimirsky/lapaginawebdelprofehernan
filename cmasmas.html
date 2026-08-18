@@ -731,6 +731,174 @@ int main() {
         </ul>
     </div>
 
+    <div class="contenedor">
+
+      <h1>Recursividad</h1>
+  
+      <h2>¿Qué es la recursividad?</h2>
+  
+      <p>
+          La <strong>recursividad</strong> es una técnica de programación
+          en la que una función se llama a sí misma para resolver un problema.
+      </p>
+  
+      <div class="concepto">
+          <strong>Idea principal:</strong>
+          una función se llama nuevamente a sí misma hasta llegar
+          a una condición que indica que debe detenerse.
+      </div>
+  
+      <h2>Partes de una función recursiva</h2>
+  
+      <p>
+          Una función recursiva generalmente tiene dos partes fundamentales:
+      </p>
+  
+      <ol>
+          <li>
+              <strong>Caso base:</strong>
+              indica cuándo debe detenerse la función.
+          </li>
+  
+          <li>
+              <strong>Caso recursivo:</strong>
+              es la llamada que hace la función a sí misma.
+          </li>
+      </ol>
+  
+      <h2>Ejemplo: cuenta regresiva</h2>
+  
+      <p>
+          Vamos a crear una función que muestre los números desde el número
+          recibido hasta llegar a cero.
+      </p>
+  
+      <pre><code>#include &lt;iostream&gt;
+  using namespace std;
+  
+  // Función recursiva
+  void cuentaRegresiva(int n) {
+  
+      // CASO BASE
+      // Cuando n llega a 0, la función termina.
+      if (n == 0) {
+          return;
+      }
+  
+      // Mostramos el valor actual de n.
+      cout &lt;&lt; n &lt;&lt; endl;
+  
+      // CASO RECURSIVO
+      // La función se llama nuevamente a sí misma,
+      // pero esta vez con n - 1.
+      cuentaRegresiva(n - 1);
+  }
+  
+  int main() {
+  
+      // Llamamos a la función comenzando desde 5.
+      cuentaRegresiva(5);
+  
+      return 0;
+  }</code></pre>
+  
+      <h2>¿Qué sucede cuando se ejecuta?</h2>
+  
+      <p>
+          Cuando desde el <code>main</code> hacemos:
+      </p>
+  
+      <pre><code>cuentaRegresiva(5);</code></pre>
+  
+      <p>
+          La función comienza a llamarse a sí misma:
+      </p>
+  
+      <pre><code>cuentaRegresiva(5)
+          ↓
+  cuentaRegresiva(4)
+          ↓
+  cuentaRegresiva(3)
+          ↓
+  cuentaRegresiva(2)
+          ↓
+  cuentaRegresiva(1)
+          ↓
+  cuentaRegresiva(0)</code></pre>
+  
+      <p>
+          Cuando llega a <code>cuentaRegresiva(0)</code>, se cumple:
+      </p>
+  
+      <pre><code>if (n == 0) {
+      return;
+  }</code></pre>
+  
+      <p>
+          Por lo tanto, la función deja de llamarse a sí misma.
+      </p>
+  
+      <h2>Resultado</h2>
+  
+      <pre><code>5
+  4
+  3
+  2
+  1</code></pre>
+  
+      <h2>¿Por qué es importante el caso base?</h2>
+  
+      <div class="importante">
+          <strong>Importante:</strong>
+          toda función recursiva debe tener una condición que permita
+          detener las llamadas.
+      </div>
+  
+      <p>
+          Si no existe un caso base, la función se llamaría a sí misma
+          indefinidamente y podría producir un
+          <strong>stack overflow</strong>, es decir, un desbordamiento
+          de la pila de memoria.
+      </p>
+  
+      <h2>Estructura general</h2>
+  
+      <pre><code>tipo funcion(parametro) {
+  
+      // Caso base
+      if (condicion) {
+          return resultado;
+      }
+  
+      // Caso recursivo
+      return funcion(parametro_modificado);
+  }</code></pre>
+  
+      <h2>Ejemplos donde se utiliza</h2>
+  
+      <ul>
+          <li>Factorial de un número.</li>
+          <li>Sucesión de Fibonacci.</li>
+          <li>Recorrido de árboles.</li>
+          <li>Búsquedas.</li>
+          <li>Algoritmos de ordenamiento.</li>
+          <li>Resolución de problemas matemáticos.</li>
+      </ul>
+  
+      <h2>Para recordar</h2>
+  
+      <div class="concepto">
+          <strong>Recursividad = función que se llama a sí misma.</strong>
+          <br><br>
+          Para que funcione correctamente necesitamos:
+          <br>
+          1. Un <strong>caso base</strong> para detenerla.
+          <br>
+          2. Un <strong>caso recursivo</strong> que vuelva a llamar a la función.
+      </div>
+  
+  </div>
+
   </main>
 
   <!--Detengo flotado -->
