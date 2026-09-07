@@ -632,7 +632,7 @@ int main() {
       <li><b>do while</b> → mínimo una vez</li>
     </ul>
 
-    <h1>Funciones en C++</h1>
+    <h1>Funciones</h1>
 
     <div class="section">
         <p>
@@ -898,6 +898,167 @@ int main() {
       </div>
   
   </div>
+
+<br>
+
+<h1>Arreglos en C++</h1>
+
+<h2>¿Qué es un arreglo?</h2>
+
+<p>
+    En C++, un <strong>arreglo</strong> (o <em>array</em>) es una estructura
+    de datos que permite almacenar varios elementos del <strong>mismo tipo</strong>
+    en posiciones consecutivas de memoria.
+</p>
+
+<p>
+    Cada elemento del arreglo se identifica mediante un
+    <strong>índice</strong>, que comienza en <strong>0</strong>.
+</p>
+
+<h2>Ejemplo</h2>
+
+<pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+
+int numeros[5] = {10, 20, 30, 40, 50};
+
+cout &lt;&lt; numeros[0] &lt;&lt; endl; // Imprime 10
+cout &lt;&lt; numeros[2] &lt;&lt; endl; // Imprime 30
+
+return 0;
+
+}</code></pre>
+
+<h2>Explicación</h2>
+
+<p>
+    La siguiente instrucción:
+</p>
+
+<pre><code>int numeros[5];</code></pre>
+
+<p>
+    crea un arreglo llamado <strong>numeros</strong> que puede almacenar
+    <strong>5 números enteros</strong>.
+</p>
+
+<h3>Los índices son:</h3>
+
+<ul>
+    <li><code>numeros[0]</code> → primer elemento.</li>
+    <li><code>numeros[1]</code> → segundo elemento.</li>
+    <li><code>numeros[2]</code> → tercer elemento.</li>
+    <li><code>numeros[3]</code> → cuarto elemento.</li>
+    <li><code>numeros[4]</code> → quinto elemento.</li>
+</ul>
+
+<div class="ejemplo">
+    <strong>Importante:</strong>
+    En C++, los arreglos comienzan en la posición <strong>0</strong>,
+    no en la posición 1.
+</div>
+
+<h2>Modificar un elemento</h2>
+
+<p>
+    También podemos cambiar el valor almacenado en una posición determinada
+    del arreglo.
+</p>
+
+<pre><code>numeros[1] = 25;</code></pre>
+
+<p>
+    En este caso estamos modificando el elemento que se encuentra en la
+    posición <strong>1</strong>.
+</p>
+
+<p>El arreglo ahora contiene:</p>
+
+<div class="salida">
+    10, 25, 30, 40, 50
+</div>
+
+<h2>Recorrer un arreglo con un ciclo</h2>
+
+<p>
+    Una de las formas más utilizadas para trabajar con arreglos es
+    recorrerlos utilizando un ciclo <code>for</code>.
+</p>
+
+<pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+
+int numeros[5] = {10, 20, 30, 40, 50};
+
+for (int i = 0; i &lt; 5; i++) {
+    cout &lt;&lt; numeros[i] &lt;&lt; " ";
+}
+
+return 0;
+
+}</code></pre>
+
+<h3>Salida:</h3>
+
+<div class="salida">
+    10 20 30 40 50
+</div>
+
+<h2>¿Qué está haciendo el for?</h2>
+
+<pre><code>for (int i = 0; i &lt; 5; i++)</code></pre>
+
+<p>
+    La variable <code>i</code> se utiliza como índice para acceder
+    a cada posición del arreglo.
+</p>
+
+<ul>
+    <li>Cuando <code>i = 0</code> → <code>numeros[0]</code></li>
+    <li>Cuando <code>i = 1</code> → <code>numeros[1]</code></li>
+    <li>Cuando <code>i = 2</code> → <code>numeros[2]</code></li>
+    <li>Cuando <code>i = 3</code> → <code>numeros[3]</code></li>
+    <li>Cuando <code>i = 4</code> → <code>numeros[4]</code></li>
+</ul>
+
+<h2>¿Para qué sirven los arreglos?</h2>
+
+<p>
+    Los arreglos se utilizan para almacenar colecciones de datos
+    relacionados.
+</p>
+
+<ul>
+    <li>Las calificaciones de un estudiante.</li>
+    <li>Las temperaturas de una semana.</li>
+    <li>Los números de una serie.</li>
+    <li>Los nombres de varios empleados usando un arreglo de <code>string</code>.</li>
+</ul>
+
+<h2>Resumen</h2>
+
+<p>
+    En resumen, un <strong>arreglo en C++</strong> es una colección de
+    elementos del mismo tipo almacenados de forma contigua y accesibles
+    mediante un índice que comienza en <strong>0</strong>.
+</p>
+
+<div class="ejemplo">
+    <strong>Ejemplo:</strong>
+    <br><br>
+    <code>int numeros[5];</code>
+    <br><br>
+    Este arreglo tiene 5 posiciones:
+    <br><br>
+    <code>0 → 1 → 2 → 3 → 4</code>
+</div>
 
   </main>
 
