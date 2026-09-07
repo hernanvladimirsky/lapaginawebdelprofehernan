@@ -668,12 +668,103 @@
         =ESPACIOS(A1) → hola mundo</p>
 
         <hr>
+        <h1>Filtros</h1> <!--Filtros-->
+        <p>
+            Los filtros en Excel sirven para mostrar únicamente los datos que cumplen con ciertas condiciones, ocultando de forma temporal el resto de la información.
+        </p>
+        <h2>¿Para qué se utilizan?</h2>
+        <p>
+            <ul>
+                <li><strong>Ocultar información innecesaria:</strong> Permiten concentrarse en un grupo específico de datos sin borrar el contenido de la hoja de cálculo.</li>
+                <li><strong>Buscar valores específicos:</strong> Facilitan encontrar filas concretas por texto (como nombres de personas o marcas), números (valores mayores o menores a una cantidad) o fechas.</li>
+                <li><strong>Filtrar por color:</strong> Ayudan a identificar celdas resaltadas de forma manual o mediante formato condicional.</li>
+                <li><strong>Analizar datos rápidamente:</strong> Permiten ver subtotales y resúmenes únicamente de los elementos que están visibles en pantalla.</li>
+            </ul>
+        </p>
+        
+        <h1>Ordenar</h1> <!--Ordenar-->
+    
+        <p>La opción u función <strong>ordenar</strong> en Excel organiza un rango de celdas, filas o columnas siguiendo un criterio específico, como el orden alfabético, numérico o cronológico.</p>
+    
+        <h2>Principales utilidades de la herramienta</h2>
+        <ul>
+            <li><strong>Organiza alfabéticamente:</strong> Acomoda textos de la A a la Z o de la Z a la A.</li>
+            <li><strong>Ordena números:</strong> Distribuye cifras de menor a mayor o de mayor a menor.</li>
+            <li><strong>Ordena fechas y horas:</strong> Clasifica la información de forma cronológica de más antiguo a más reciente (o viceversa).</li>
+            <li><strong>Aplica criterios múltiples:</strong> Permite ordenar por varias columnas al mismo tiempo.</li>
+        </ul>
+    
+        <h2>Formas de aplicarlo</h2>
+        <p>Se puede realizar de dos maneras principales:</p>
+        <ol>
+            <li>Desde la interfaz gráfica mediante el botón <strong>Ordenar</strong> en la pestaña <em>Datos</em>.</li>
+            <li>Mediante la fórmula dinámica en celdas usando <code>=ORDENAR(matriz)</code>.</li>
+        </ol>
+
+        <h1>Proteger hoja</h1> <!--Proteger hoja-->
+        <p>La función <strong>"Proteger hoja"</strong> en Excel sirve para <strong>bloquear y restringir</strong> los cambios que los usuarios pueden hacer en las celdas o elementos de una hoja de cálculo específica.</p>
+
+        <h2>¿Para qué sirve?</h2>
+
+        <ul>
+            <li><strong>Evita modificaciones accidentales:</strong> Impide que se borren o alteren datos importantes o fórmulas clave por error.</li>
+            <li><strong>Controla permisos:</strong> Permite definir exactamente qué acciones se pueden realizar (como seleccionar celdas, ordenar, insertar filas o editar rangos específicos).</li>
+            <li><strong>Oculta fórmulas:</strong> Evita que otros vean las fórmulas en la barra de fórmulas mientras dejan visibles los resultados calculados.</li>
+            <li><strong>Usa contraseña opcional:</strong> Puedes activarla con o sin clave de seguridad para que solo quien la conozca pueda desbloquearla y hacer cambios avanzados.</li>
+        </ul>
+
+        <h1>Relleno rápido</h1> <!--Relleno rapido-->
+    
+        <p>El <strong>relleno rápido</strong> (<em>Flash Fill</em>) en Excel completa una columna de datos automáticamente al detectar un patrón en tus ejemplos, sin necesidad de usar fórmulas.</p>
+    
+        <h2>¿Para qué sirve?</h2>
+        <ul>
+            <li><strong>Unir textos:</strong> Combina nombres y apellidos que están en columnas separadas en una sola celda.</li>
+            <li><strong>Separar textos:</strong> Extrae nombres, apellidos o códigos de una sola celda hacia columnas independientes.</li>
+            <li><strong>Crear formatos:</strong> Genera correos electrónicos, cambia mayúsculas y minúsculas o da formato a números de teléfono basándose en una muestra.</li>
+        </ul>
+    
+        <h2>¿Cómo se usa?</h2>
+        <ol>
+            <li>Escribe el resultado esperado de forma manual en la primera celda vacía junto a tus datos (el ejemplo).</li>
+            <li>Presiona <code>Enter</code> para pasar a la siguiente celda.</li>
+            <li>Usa el atajo de teclado <strong><code>Ctrl + E</code></strong> (o ve a la pestaña <em>Datos</em> y haz clic en <em>Relleno rápido</em>) para que Excel complete el resto de la columna.</li>
+        </ol>
+
+        <h1>Relleno por Series</h1> <!--Relleno rapido por series-->
+        <p>El <strong>relleno por series</strong> se utiliza para generar listas secuenciales automáticas basadas en un valor inicial y un incremento definido, en lugar de adivinar patrones de texto.</p>
+    
+        <h2>¿Qué funciones cumple?</h2>
+        <ul>
+            <li><strong>Series lineales:</strong> Crea secuencias numéricas sumando un valor fijo (ej: 1, 2, 3, 4 o 5, 10, 15, 20).</li>
+            <li><strong>Series geométricas:</strong> Crea progresiones multiplicando por un valor fijo (ej: 2, 4, 8, 16).</li>
+            <li><strong>Cronológicas (Fechas):</strong> Genera calendarios automáticos avanzando por días, días laborables, meses o años (ej: saltar de mes en mes manteniendo el mismo día).</li>
+            <li><strong>Auto-llenado de listas:</strong> Repite o expande listas personalizadas conocidas por Excel (ej: días de la semana o meses del año).</li>
+        </ul>
+    
+        <h2>¿Cómo se usa desde el menú?</h2>
+        <ol>
+            <li>Escribe el primer número o fecha en una celda y selecciónala.</li>
+            <li>En la pestaña <strong>Inicio</strong>, ve al grupo <em>Modificar</em> y haz clic en <strong>Rellenar</strong>.</li>
+            <li>Selecciona la opción <strong>Series...</strong> del menú desplegable.</li>
+            <li>Elige si quieres la serie en <em>Filas</em> o <em>Columnas</em>, define el <strong>Incremento</strong> (de cuánto en cuánto salta) y el <strong>Límite</strong> (dónde se detiene) y presiona <span class="highlight">Aceptar</span>.</li>
+        </ol>
+
+        <h1>Quitar valores duplicados</h1> <!--Quitar valores duplicados-->
+        <p>La herramienta <strong>Quitar duplicados</strong> en Excel elimina de forma permanente las filas repetidas de un rango o tabla basándose en los valores de las columnas que tú elijas.</p>
+
+        <h2>Qué hace exactamente</h2>
+        <ul>
+            <li><strong>Borra registros completos:</strong> Si encuentra dos o más filas con los mismos datos en las columnas seleccionadas, conserva la primera aparición y borra las siguientes por completo.</li>
+            <li><strong>Muestra un resumen:</strong> Al terminar, te avisa mediante una ventana cuántos valores repetidos borró y cuántos datos únicos dejó intactos.</li>
+            <li><strong>Modifica el origen:</strong> Es una acción destructiva para los datos seleccionados; los elementos eliminados no se pueden recuperar a menos que deshagas la acción de inmediato o uses una copia de respaldo.</li>
+        </ul>
+
         <!--Macro-->
         <h1>Macro</h1>
         <p>Una macro es un conjunto de acciones o instrucciones grabadas que se ejecutan automáticamente para automatizar tareas repetitivas 
             en aplicaciones de software, como Excel, con un solo clic o comando. Permiten agilizar procesos, reducir errores manuales y 
             ahorrar tiempo al realizar acciones complejas de manera secuencial.</p>
-       
         <hr>
 
         <h1>¿Contar o sumar?</h1>
