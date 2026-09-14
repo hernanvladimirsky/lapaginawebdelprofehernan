@@ -667,6 +667,162 @@
         <p><b>Ejemplo de uso:</b> Limpiar datos con espacios de más<br>
         =ESPACIOS(A1) → hola mundo</p>
 
+        <h1>La función VF (Valor Futuro)</h1> <!--La función VF (Valor Futuro)-->
+    
+        <p>La función <strong>VF</strong> (o <em>FV</em> en inglés) calcula el valor futuro de una inversión basándose en una tasa de interés constante y pagos periódicos fijos.</p>
+    
+        <h2>Sintaxis de la función</h2>
+        <p>La estructura exacta para escribir la fórmula en tu hoja de cálculo es la siguiente:</p>
+        
+        <div>
+            =VF(tasa; nper; pago; [va]; [tipo])
+        </div>
+
+    <h1>La función PAGO</h1> <!--Pago-->
+    
+    <p>La función <strong>PAGO</strong> calcula la cuota periódica de un préstamo amortizable bajo el sistema francés, asumiendo una tasa de interés fija y pagos de igual valor.</p>
+
+    <h2>Sintaxis de la función</h2>
+    <p>La estructura exacta para escribir la fórmula en tu hoja de cálculo es la siguiente:</p>
+    
+    <div>
+        =PAGO(tasa; nper; va; [vf]; [tipo])
+    </div>
+
+    <ul>
+        <li><strong>tasa:</strong> La tasa de interés del préstamo por período. Si es una tasa anual y pagas por mes, divídela entre 12 (<code>0.12/12</code> para un 12%).</li>
+        <li><strong>nper:</strong> El número total de pagos o meses del préstamo. Por ejemplo, 3 años equivalen a 36 períodos mensuales.</li>
+        <li><strong>va:</strong> El valor actual, es decir, el monto total del préstamo que te otorgan hoy (capital inicial).</li>
+        <li><strong>vf (Opcional):</strong> El valor futuro o saldo en efectivo que deseas lograr después del último pago. Si se omite, Excel asume que es 0 (el préstamo queda liquidado).</li>
+        <li><strong>tipo (Opcional):</strong> Define el vencimiento. Usa <code>0</code> si pagas al final del mes (ordinario) o <code>1</code> si pagas al inicio del mes (anticipado).</li>
+    </ul>
+
+    <h2>Ejemplo práctico paso a paso</h2>
+    <div>
+        <p><strong>Escenario:</strong> Pides un préstamo automotriz o personal de <strong>$10,000</strong> a pagar en <strong>3 años</strong> (36 cuotas mensuales) con una tasa de interés anual fija del <strong>12%</strong>.</p>
+        <p>La fórmula que debes ingresar en tu celda de Excel es:</p>
+        <p><code>=PAGO(0.12/12; 36; 10000)</code></p>
+        <p><em>Nota: El resultado aparecerá en formato de moneda y con signo negativo, indicando que es una salida de dinero para tus finanzas.</em></p>
+    </div>
+    
+        <ul>
+            <li><strong>tasa:</strong> La tasa de interés por período. Si tu tasa es anual (ej. 6%) y los pagos son mensuales, debes dividirla entre 12 (<code>0.06/12</code>).</li>
+            <li><strong>nper:</strong> El número total de períodos o pagos de la inversión.</li>
+            <li><strong>pago:</strong> El monto fijo que se deposita o paga en cada período. Debe ingresarse en <strong>negativo</strong> porque representa una salida de dinero.</li>
+            <li><strong>va (Opcional):</strong> El valor actual o monto inicial con el que arranca la inversión. Si no pones nada, Excel asume que es 0.</li>
+            <li><strong>tipo (Opcional):</strong> Define cuándo vencen los pagos. Usa <code>0</code> si los pagos se hacen al final del período (por defecto) o <code>1</code> si se hacen al inicio.</li>
+        </ul>
+    
+        <h2>Ejemplo práctico paso a paso</h2>
+        <div>
+            <p><strong>Escenario:</strong> Quieres ahorrar <strong>$100 mensuales</strong> durante <strong>10 años</strong> (120 meses totales) en una cuenta que te da un rendimiento anual del <strong>6%</strong>. No tienes un capital inicial.</p>
+            <p>La fórmula que debes escribir en Excel es:</p>
+            <p><code>=VF(0.06/12; 120; -100)</code></p>
+        </div>
+
+    <h1>La Función TASA</h1> <!--Tasa-->
+    <p>Sirve para calcular la <strong>tasa de interés por período</strong> de un préstamo o una inversión.</p>
+
+    <h2>Sintaxis Básica</h2>
+    <div class="formula-box">
+        =TASA(nper, pago, va, [vf], [tipo], [estimar])
+    </div>
+
+    <h2>Argumentos de la Fórmula</h2>
+    <ul>
+        <li>
+            <strong>nper:</strong> 
+            Número total de períodos o pagos.
+        </li>
+        <li>
+            <strong>pago:</strong> 
+            Monto pagado en cada período (se escribe en negativo si es un desembolso de dinero).
+        </li>
+        <li>
+            <strong>va:</strong> 
+            Valor actual o capital inicial del préstamo o inversión.
+        </li>
+        <li>
+            <strong>vf (opcional):</strong> 
+            Valor futuro o saldo final que se desea lograr. Si se omite, Excel asume que es cero.
+        </li>
+        <li>
+            <strong>tipo (opcional):</strong> 
+            Define el vencimiento de los pagos. Usa 0 para final del período o 1 para el principio.
+        </li>
+        <li>
+            <strong>estimar (opcional):</strong> 
+            Tu estimación de la tasa. Si se omite, Excel empieza calculando con 10%.
+        </li>
+    </ul>
+
+    <div class="note">
+        <strong>⚠️ Regla de Oro:</strong> Los signos importan. Las salidas de dinero (pagos o depósitos) van con signo negativo (-), y las entradas de dinero (préstamos recibidos o retiros finales) van con signo positivo (+).
+    </div>
+
+    <h1>Función NPER</h1> <!--NPER-->
+    <p>La función <strong>NPER</strong> calcula el número de periodos necesarios para pagar un préstamo o alcanzar una meta de ahorro, basándose en pagos constantes y una tasa de interés fija.</p>
+
+    <h2>Sintaxis</h2>
+    <pre><code>=NPER(tasa, pago, va, [vf], [tipo])</code></pre>
+
+    <ul>
+        <li><strong>tasa:</strong> El interés del periodo (si es anual y pagas por mes, divídela entre 12).</li>
+        <li><strong>pago:</strong> El monto fijo abonado en cada periodo (va en negativo si es un gasto/pago).</li>
+        <li><strong>va:</strong> Valor actual o el monto total del préstamo/inversión inicial.</li>
+        <li><strong>vf (opcional):</strong> Valor futuro o saldo en efectivo que deseas lograr tras el último pago (si se omite, es 0).</li>
+        <li><strong>tipo (opcional):</strong> Indica el vencimiento del pago. <code>0</code> al final del periodo (predeterminado) o <code>1</code> al inicio.</li>
+    </ul>
+
+    <h2>Ejemplo Práctico</h2>
+    <p>Si pides un préstamo de <strong>$5,000</strong> a una tasa del <strong>12% anual</strong> (1% mensual) y vas a pagar cuotas mensuales de <strong>$200</strong>, la fórmula para saber cuántos meses tardarás en pagarlo es:</p>
+    <pre><code>=NPER(0.01, -200, 5000)</code></pre>
+
+    <h1>Función VA</h1> <!--VA-->
+    <p>La función <strong>VA</strong> (Valor Actual) en Excel calcula el <strong>valor presente de un préstamo o una inversión</strong> a partir de una tasa de interés constante y pagos periódicos.</p>
+
+    <h2>Sintaxis</h2>
+    <div class="formula-box">
+        <code>=VA(tasa, nper, pago, [vf], [tipo])</code>
+    </div>
+
+    <h2>Argumentos principales</h2>
+    <ul>
+        <li><strong>tasa:</strong> Es la tasa de interés por período. (Por ejemplo, si la tasa es anual y los pagos son mensuales, debes dividirla entre 12).</li>
+        <li><strong>nper:</strong> El número total de períodos de pago.</li>
+        <li><strong>pago:</strong> El monto fijo que se paga en cada período. Si no hay pago periódico, se coloca 0 y se debe incluir el argumento <code>[vf]</code>.</li>
+        <li><strong>[vf]:</strong> <em>(Opcional)</em> El valor futuro o saldo en efectivo que se desea lograr después del último pago.</li>
+        <li><strong>[tipo]:</strong> <em>(Opcional)</em> Indica el vencimiento de los pagos. Usa <code>0</code> si vencen al final del período o <code>1</code> si vencen al inicio.</li>
+    </ul>
+
+    <div class="note">
+        <strong>Consejo útil:</strong> Excel interpreta las salidas de dinero como números negativos. Si ingresas el valor del <code>pago</code> o del <code>[vf]</code> con un signo menos (-), el resultado de la función se mostrará como un número positivo.
+    </div>
+
+    <h1>Cómo calcular la TIR</h1> <!--TIR-->
+    
+    <p>Para calcular la Tasa Interna de Retorno (TIR) en una hoja de cálculo, debes usar la siguiente fórmula matemática:</p>
+    
+    <div>
+        <code>=TIR(valores)</code>
+    </div>
+
+    <h2>Pasos para estructurar tus datos y aplicar la función</h2>
+    
+    <ul>
+        <li><span class="highlight">Organiza los datos:</span> Coloca la inversión inicial como un número <strong>negativo</strong> (salida de dinero) en la primera celda.</li>
+        <li><span class="highlight">Anota los flujos:</span> Escribe los ingresos o cobros de los periodos siguientes como números <strong>positivos</strong> en las celdas de abajo.</li>
+        <li><span class="highlight">Aplica la fórmula:</span> Escribe <code>=TIR(</code> en una celda vacía.</li>
+        <li><span class="highlight">Selecciona el rango:</span> Marca todas las celdas desde la inversión inicial hasta el último flujo de caja.</li>
+        <li><span class="highlight">Cierra y calcula:</span> Cierra el paréntesis <code>)</code> y presiona <strong>Enter</strong> para ver el porcentaje de rentabilidad.</li>
+    </ul>
+
+    <div>
+        <p>Nota: Asegúrate de que los flujos de caja ocurran en intervalos regulares (por ejemplo, mensualmente o anualmente).</p>
+    </div>
+
+    
+
         <hr>
         <h1>Filtros</h1> <!--Filtros-->
         <p>
