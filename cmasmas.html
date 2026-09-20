@@ -901,7 +901,7 @@ int main() {
 
 <br>
 
-<h1>Arreglos en C++</h1>
+<h1>Arreglos</h1>
 
 <h2>¿Qué es un arreglo?</h2>
 
@@ -1060,7 +1060,368 @@ return 0;
     <code>0 → 1 → 2 → 3 → 4</code>
 </div>
 
-  </main>
+<h1>Vectores</h1>
+
+<h2>¿Qué es un vector?</h2>
+
+<div class="concepto">
+    <p>
+        Un <strong>vector</strong> es una estructura que permite almacenar
+        varios valores del mismo tipo.
+    </p>
+
+    <p>
+        A diferencia de un arreglo tradicional, el vector puede
+        <strong>aumentar o disminuir su cantidad de elementos</strong>.
+    </p>
+</div>
+
+<h2>1. Crear un vector</h2>
+
+<pre>
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+
+// Creamos un vector de números enteros.
+vector&lt;int&gt; numeros;
+
+return 0;
+
+}
+</pre>
+
+<p>
+    Para utilizar vectores debemos incluir la biblioteca
+    <code>&lt;vector&gt;</code>.
+</p>
+
+<p>
+    <code>vector&lt;int&gt; numeros;</code> crea un vector llamado
+    <code>numeros</code> que almacenará números enteros.
+</p>
+
+
+<h2>2. Agregar elementos con push_back()</h2>
+
+<pre>
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+
+// Creamos un vector vacío.
+vector&lt;int&gt; numeros;
+
+// Agregamos el número 10 al vector.
+numeros.push_back(10);
+
+// Agregamos el número 20 al vector.
+numeros.push_back(20);
+
+// Agregamos el número 30 al vector.
+numeros.push_back(30);
+
+return 0;
+
+}
+</pre>
+
+<p>
+    <code>push_back()</code> sirve para
+    <strong>agregar un elemento al final del vector</strong>.
+</p>
+
+<p>Después de las instrucciones anteriores tenemos:</p>
+
+<pre>
+
+10 20 30
+</pre>
+
+<h2>3. Acceder a los elementos</h2>
+
+<pre>
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+
+vector&lt;int&gt; numeros;
+
+numeros.push_back(10);
+numeros.push_back(20);
+numeros.push_back(30);
+
+// Mostramos el primer elemento.
+cout &lt;&lt; numeros[0] &lt;&lt; endl;
+
+// Mostramos el segundo elemento.
+cout &lt;&lt; numeros[1] &lt;&lt; endl;
+
+// Mostramos el tercer elemento.
+cout &lt;&lt; numeros[2] &lt;&lt; endl;
+
+return 0;
+
+}
+</pre>
+
+<p>
+    Al igual que los arreglos, los índices de los vectores comienzan
+    desde <strong>0</strong>.
+</p>
+
+<pre>
+
+Índice: 0 1 2
+Valor: 10 20 30
+</pre>
+
+<h2>4. Saber cuántos elementos tiene</h2>
+
+<pre>
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+
+vector&lt;int&gt; numeros;
+
+numeros.push_back(10);
+numeros.push_back(20);
+numeros.push_back(30);
+
+// size() devuelve la cantidad de elementos.
+cout &lt;&lt; "Cantidad de elementos: "
+     &lt;&lt; numeros.size();
+
+return 0;
+
+}
+</pre>
+
+<p>
+    <code>size()</code> devuelve la cantidad de elementos que tiene
+    actualmente el vector.
+</p>
+
+
+<h2>5. Recorrer un vector con for</h2>
+
+<pre>
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+
+vector&lt;int&gt; numeros;
+
+numeros.push_back(10);
+numeros.push_back(20);
+numeros.push_back(30);
+numeros.push_back(40);
+numeros.push_back(50);
+
+// Recorremos el vector desde la posición 0
+// hasta la última posición.
+for (int i = 0; i &lt; numeros.size(); i++) {
+
+    // Mostramos el elemento que está
+    // en la posición i.
+    cout &lt;&lt; numeros[i] &lt;&lt; endl;
+}
+
+return 0;
+
+}
+</pre>
+
+<p>
+    La condición:
+</p>
+
+<pre>
+
+i < numeros.size()
+</pre>
+
+<p>
+    permite recorrer todas las posiciones del vector.
+</p>
+
+
+<h2>6. Ingresar datos mediante el teclado</h2>
+
+<pre>
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+
+int cantidad;
+
+// Pedimos al usuario cuántos números quiere ingresar.
+cout &lt;&lt; "¿Cuántos números desea ingresar? ";
+cin &gt;&gt; cantidad;
+
+// Creamos un vector con la cantidad
+// de posiciones indicada por el usuario.
+vector&lt;int&gt; numeros(cantidad);
+
+// Recorremos el vector para cargar los datos.
+for (int i = 0; i &lt; cantidad; i++) {
+
+    cout &lt;&lt; "Ingrese el número "
+         &lt;&lt; i + 1 &lt;&lt; ": ";
+
+    cin &gt;&gt; numeros[i];
+}
+
+// Mostramos los números ingresados.
+cout &lt;&lt; "\nNúmeros ingresados:" &lt;&lt; endl;
+
+for (int i = 0; i &lt; numeros.size(); i++) {
+
+    cout &lt;&lt; numeros[i] &lt;&lt; endl;
+}
+
+return 0;
+
+}
+</pre>
+
+<h2>7. Eliminar el último elemento</h2>
+
+<pre>
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+
+vector&lt;int&gt; numeros;
+
+numeros.push_back(10);
+numeros.push_back(20);
+numeros.push_back(30);
+
+// pop_back() elimina el último elemento.
+numeros.pop_back();
+
+// Ahora el vector contiene:
+// 10 20
+
+for (int i = 0; i &lt; numeros.size(); i++) {
+
+    cout &lt;&lt; numeros[i] &lt;&lt; endl;
+}
+
+return 0;
+
+}
+</pre>
+
+<h2>Resumen de funciones importantes</h2>
+
+<pre>
+
+vector<int> numeros;
+</pre>
+
+<p>Crear un vector de enteros.</p>
+
+<pre>
+
+numeros.push_back(10);
+</pre>
+
+<p>Agregar un elemento al final.</p>
+
+<pre>
+
+numeros.pop_back();
+</pre>
+
+<p>Eliminar el último elemento.</p>
+
+<pre>
+
+numeros.size();
+</pre>
+
+<p>Obtener la cantidad de elementos.</p>
+
+<pre>
+
+numeros[0];
+</pre>
+
+<p>Acceder al elemento que se encuentra en la posición 0.</p>
+
+
+<h2>Ejemplo completo</h2>
+
+<pre>
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+int main() {
+
+// Creamos un vector de números enteros.
+vector&lt;int&gt; numeros;
+
+// Agregamos cinco números.
+numeros.push_back(10);
+numeros.push_back(20);
+numeros.push_back(30);
+numeros.push_back(40);
+numeros.push_back(50);
+
+// Mostramos todos los elementos.
+cout &lt;&lt; "Elementos del vector:" &lt;&lt; endl;
+
+for (int i = 0; i &lt; numeros.size(); i++) {
+
+    // Mostramos el elemento correspondiente
+    // a la posición i.
+    cout &lt;&lt; numeros[i] &lt;&lt; endl;
+}
+
+// Mostramos la cantidad de elementos.
+cout &lt;&lt; "Cantidad de elementos: "
+     &lt;&lt; numeros.size() &lt;&lt; endl;
+
+return 0;
+
+}
+</pre>
+
+</main>
 
   <!--Detengo flotado -->
   <div style="clear: both;"> </div>
