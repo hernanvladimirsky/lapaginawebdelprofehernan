@@ -92,6 +92,12 @@
                     <strong>Ejemplo:</strong> Un archivo <em>.exe</em> descargado de internet infecta la computadora
                     cuando el usuario lo ejecuta.
                 </div>
+                <section>
+                    <ul>
+                        <li><strong>Sality (2003):</strong> Virus polimórfico de archivo que infectaba ejecutables con extensiones <code>.exe</code> y <code>.scr</code> en Windows. Al ejecutar el programa infectado, el virus insertaba su código en otros ejecutables del disco, desactivaba el software antivirus y unía la máquina a una red de bots.</li>
+                        <li><strong>Virut (2006):</strong> Virus de archivo masivo que infectaba archivos <code>.exe</code>, <code>.scr</code> y páginas <code>.html</code>. Se adhería al código del ejecutable para tomar el control cada vez que el usuario abría el programa, descargando componentes maliciosos adicionales.</li>
+                    </ul>
+                </section>
             </li>
 
             <li>
@@ -99,6 +105,12 @@
                 <div class="ejemplo">
                     <strong>Ejemplo:</strong> Un pendrive infectado altera el arranque del sistema al iniciar la computadora.
                 </div>
+                <section>
+                    <ul>
+                        <li><strong>Mebroot (2007):</strong> Un <em>bootkit</em> avanzado que sobrescribía el MBR (<em>Master Boot Record</em>) del disco duro. Se ejecutaba antes de que cargara el propio sistema operativo Windows, lo que le permitía permanecer completamente oculto para los antivirus tradicionales.</li>
+                        <li><strong>TDL4 / Olmarik (2011):</strong> Infectaba el sector de arranque del disco para tomar el control del proceso de inicio del equipo. Al ejecutarse a nivel de MBR, permitía que otros malwares cargaran en memoria de forma indetectable.</li>
+                    </ul>
+                </section>
             </li>
 
             <li>
@@ -106,6 +118,12 @@
                 <div class="ejemplo">
                     <strong>Ejemplo:</strong> Un gusano se copia solo a otras computadoras conectadas a la misma red.
                 </div>
+                <section>
+                    <ul>
+                        <li><strong>Conficker (2008):</strong> Se propagó automáticamente por millones de computadoras en todo el mundo aprovechando una vulnerabilidad en las redes de Windows (puerto SMB). No requería interacción del usuario y podía infectar redes empresariales enteras en cuestión de minutos.</li>
+                        <li><strong>Stuxnet (2010):</strong> Gusano informático de alta complejidad diseñado para propagarse de forma autónoma por redes locales e infectar sistemas de control industrial (SCADA), célebre por haber saboteado las centrifugadoras de enriquecimiento de uranio en Irán.</li>
+                    </ul>
+                </section>
             </li>
 
             <li>
@@ -113,6 +131,12 @@
                 <div class="ejemplo">
                     <strong>Ejemplo:</strong> Un juego “gratis” instala un programa oculto que permite el acceso remoto.
                 </div>
+                <section>
+                    <ul>
+                        <li><strong>Emotet (2014):</strong> Se distribuía mediante correos electrónicos con facturas o documentos adjuntos falsos. Una vez abierto el archivo, instalaba silenciosamente un troyano que robaba datos bancarios y abría puertas traseras para instalar otros malware.</li>
+                        <li><strong>ZeuS / Zbot (2007):</strong> Troyano bancario camuflado en programas descargados de internet o archivos adjuntos. Al ejecutarse, monitoreaba la actividad del navegador para capturar credenciales de acceso a cuentas bancarias mediante <em>keylogging</em> e inyección web.</li>
+                    </ul>
+                </section>
             </li>
 
             <li>
@@ -120,6 +144,12 @@
                 <div class="ejemplo">
                     <strong>Ejemplo:</strong> La computadora muestra un mensaje pidiendo dinero para recuperar los archivos.
                 </div>
+                <section>
+                    <ul>
+                        <li><strong>WannaCry (2017):</strong> Infectó a más de 200,000 computadoras en 150 países en pocas horas. Combinó capacidades de gusano con cifrado de archivos, bloqueando documentos de hospitales, bancos y empresas mientras exigía un pago en Bitcoin.</li>
+                        <li><strong>LockBit (2019–2024):</strong> Uno de los ransomware más destructivos de la década. Opera bajo el modelo de <em>Ransomware-as-a-Service</em> (RaaS), cifrando redes corporativas completas y amenazando con filtrar la información robada si no se paga un rescate.</li>
+                    </ul>
+                </section>
             </li>
 
             <li>
@@ -127,9 +157,16 @@
                 <div class="ejemplo">
                     <strong>Ejemplo:</strong> Un programa registra las teclas presionadas para robar contraseñas.
                 </div>
+                <section>
+                    <ul>
+                        <li><strong>Pegasus (2016):</strong> Spyware avanzado para dispositivos móviles (iOS y Android). Se instala mediante vulnerabilidades sin clic (<em>zero-click</em>) y recopila mensajes, fotos, correos, ubicación GPS y activa de forma remota la cámara y el micrófono.</li>
+                        <li><strong>Predator (2021):</strong> Software de espionaje para teléfonos móviles que permite a los atacantes extraer contraseñas, grabaciones de voz, fotos y registros de chats de aplicaciones cifradas como WhatsApp o Signal sin el conocimiento del usuario.</li>
+                    </ul>
+                </section>
             </li>
         </ul>
         </section>
+        </div>
     
         <section>
             <h2>4. Formas de propagación</h2>
@@ -260,6 +297,12 @@
                     <strong>Ejemplo:</strong> Un especialista en seguridad es contratado por una empresa para
                     analizar su sistema, detectar vulnerabilidades y ayudar a corregirlas antes de que sean explotadas.
                 </div>
+                <section>
+                    <ul>
+                        <li><strong>Dan Kaminsky (2008):</strong> Descubrió una falla crítica fundamental en el sistema de nombres de dominio (DNS) de Internet. En lugar de explotarla, coordinó en secreto con gigantes tecnológicos para desarrollar y desplegar un parche de seguridad global antes de hacer pública la vulnerabilidad.</li>
+                        <li><strong>Charlie Miller y Chris Valasek (2015):</strong> Especialistas en seguridad que demostraron la posibilidad de hackear remotamente un Jeep Cherokee en movimiento (frenos, dirección y aceleración). Reportaron la falla directamente a Fiat Chrysler, lo que permitió retirar e instalar parches en más de 1.4 millones de vehículos antes de que fuera aprovechado por criminales.</li>
+                    </ul>
+                </section>
             </li>
 
             <li>
@@ -268,6 +311,12 @@
                     <strong>Ejemplo:</strong> Un hacker crea una página falsa que imita a un banco para robar
                     contraseñas y acceder a cuentas bancarias sin autorización.
                 </div>
+                <section>
+                    <ul>
+                        <li><strong>Albert Gonzalez (2005–2007):</strong> Lideró uno de los robos de datos financieros más masivos de la historia, infiltrándose en las redes de TJX Companies, BJ's Wholesale Club y Heartland Payment Systems para sustraer más de 170 millones de números de tarjetas de crédito y débito con fines de lucro.</li>
+                        <li><strong>Evgeniy Bogachev (2011–2014):</strong> Creador del troyano bancario Gameover ZeuS y del ransomware CryptoLocker. Encabezó una red cibercriminal global para infectar cientos de miles de computadoras y robar más de 100 millones de dólares de cuentas bancarias de empresas e individuos.</li>
+                    </ul>
+                </section>
             </li>
 
             <li>
@@ -276,6 +325,12 @@
                     <strong>Ejemplo:</strong> Una persona descubre una falla en el sitio web de una empresa,
                     ingresa sin autorización y luego informa el problema al dueño del sistema.
                 </div>
+                <section>
+                    <ul>
+                        <li><strong>Khalil Shreateh (2013):</strong> Investigador de seguridad que descubrió un fallo en Facebook que permitía publicar mensajes en la biografía de cualquier usuario. Tras ser ignorado repetidamente por el equipo de seguridad de la red social por no seguir el canal habitual, ingresó sin autorización y publicó un mensaje en el muro personal del propio Mark Zuckerberg para demostrar la falla.</li>
+                        <li><strong>Marcus Hutchins (2017):</strong> Al analizar el ransomware masivo WannaCry sin contrato ni autorización previa de los sistemas afectados, descubrió un dominio no registrado dentro del código del malware. Al registrar dicho dominio por $10.69 USD, activó un "kill switch" que frenó el brote mundial del ransomware.</li>
+                    </ul>
+                </section>
             </li>
 
             <li>
@@ -284,6 +339,12 @@
                     <strong>Ejemplo:</strong> Un usuario descarga programas de hacking de internet y los utiliza
                     para atacar redes Wi-Fi sin comprender cómo funcionan.
                 </div>
+                <section>
+                    <ul>
+                        <li><strong>Lizard Squad - Ataques a PlayStation Network y Xbox Live (2014):</strong> Grupo de jóvenes que utilizó herramientas prefabricadas de denegación de servicio (DDoS) descargadas de internet para tumbar las plataformas de videojuegos en línea de Sony y Microsoft durante las fiestas navideñas.</li>
+                        <li><strong>Ataque a las escuelas públicas de Miami-Dade (2020):</strong> Estudiante de 16 años que descargó un programa de hacking de fácil acceso en internet para ejecutar repetidos ataques DDoS contra la plataforma de clases virtuales de su distrito escolar, interrumpiendo el sistema educativo a distancia durante la pandemia.</li>
+                    </ul>
+                </section>
             </li>
 
             <li>
@@ -292,10 +353,17 @@
                     <strong>Ejemplo:</strong> Un grupo de hackers modifica la página de un organismo para
                     difundir un mensaje de protesta o concientización.
                 </div>
+                <section>
+                    <ul>
+                        <li><strong>Anonymous - Operación Payback (2010):</strong> Colectivo cibernético que organizó ataques masivos de denegación de servicio (DDoS) contra los sitios web de Visa, MasterCard y PayPal en protesta por el bloqueo financiero impuesto a la organización WikiLeaks tras la publicación de cables diplomáticos.</li>
+                        <li><strong>Syrian Electronic Army (2013):</strong> Grupo de hacktivistas que comprometió las cuentas oficiales de redes sociales y portales de noticias de medios internacionales (como la agencia Associated Press) para publicar mensajes de propaganda y concientización sobre el conflicto en Siria.</li>
+                    </ul>
+                </section>
             </li>
         </ul>
     </section>
 
+    </div>
     <section>
         <h2>4. Métodos utilizados por hackers</h2>
         <ul>
