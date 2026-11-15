@@ -5104,84 +5104,146 @@ El formato de la trama define cómo se organiza la información para que la comu
 
 <section id="congestion"> 
   <a id="tp7"></a>
-  <h1>TP 7 - Concepto de Congestión</h1>
-  <p>La <strong>congestión</strong> en redes se produce cuando la cantidad de datos que se intenta transmitir supera la capacidad que tienen los dispositivos o los enlaces para procesarlos. Esto genera una <strong>acumulación de paquetes</strong>, causando <strong>retrasos</strong>, <strong>pérdidas de información</strong> y disminución del <strong>rendimiento de la red</strong>.</p>
+  <h1>TP 7 - Concepto de congestión en redes informáticas</h1>
+<p>La congestión es una situación que ocurre cuando la cantidad de datos que circula por una red supera la capacidad disponible de los dispositivos o de los enlaces encargados de transportarlos.</p>
+<p>En una red informática, la información se divide en unidades de datos que se transmiten entre distintos dispositivos. Cuando muchos equipos envían información al mismo tiempo, los enlaces y los equipos de comunicación pueden no ser capaces de procesar todos los datos con la rapidez necesaria.</p>
+<h3>Causas de la congestión</h3>
+<ul>
+  <li>Una gran cantidad de dispositivos transmitiendo datos simultáneamente.</li>
+  <li>Un aumento considerable del tráfico de red.</li>
+  <li>Enlaces de comunicación con capacidad insuficiente.</li>
+  <li>Equipos de red que no pueden procesar los datos con la velocidad necesaria.</li>
+  <li>Una utilización excesiva de los recursos de comunicación disponibles.</li>
+</ul>
+<h3>Consecuencias de la congestión</h3>
+<ul>
+  <li><strong>Demoras:</strong> los datos tardan más tiempo en llegar a destino.</li>
+  <li><strong>Pérdida de tramas:</strong> algunas unidades de información pueden descartarse.</li>
+  <li><strong>Disminución del rendimiento:</strong> la red transporta menos información útil durante un período determinado.</li>
+  <li><strong>Problemas de comunicación:</strong> las aplicaciones pueden responder lentamente o experimentar interrupciones.</li>
+</ul>
+<h3>Cómo reducir la congestión</h3>
+<p>Para reducir la congestión es posible aumentar la capacidad de los enlaces, mejorar los equipos de comunicación, administrar el tráfico y aplicar mecanismos que permitan identificar cuándo la red está sobrecargada.</p>
+<p>En determinadas tecnologías de red, como Frame Relay, existen indicadores que permiten informar sobre situaciones de congestión y ayudar a administrar el tráfico.</p>
 
-  <p>Cuando ocurre congestión, los routers y switches se saturan porque sus <em>buffers</em> se llenan más rápido de lo que pueden vaciarse. Los paquetes nuevos que llegan pueden ser descartados.</p>
+<h1>Redes Frame Relay</h1>
+<p>Frame Relay es una tecnología de comunicación de redes de área amplia, conocidas como WAN, que se utilizó para interconectar redes locales ubicadas en diferentes lugares geográficos.</p>
+<p>Por ejemplo, una empresa podía utilizar Frame Relay para conectar su oficina central con sucursales situadas en otras ciudades.</p>
+<p>La información se transmite en unidades llamadas <strong>tramas</strong>. Estas tramas circulan a través de una infraestructura de comunicaciones que permite conectar distintos puntos de la red.</p>
+<p>Frame Relay utiliza circuitos virtuales para establecer caminos lógicos de comunicación entre los extremos conectados. Estos circuitos no representan necesariamente un cable físico exclusivo entre dos dispositivos, sino una conexión lógica dentro de la red del proveedor.</p>
+<p>Una característica importante de Frame Relay es que dispone de mecanismos para señalar situaciones de congestión y permitir que los dispositivos involucrados conozcan el estado del tráfico.</p>
 
-  <h3>Causas principales</h3>
-  <ul>
-    <li>Exceso de tráfico simultáneo en un mismo enlace.</li>
-    <li>Ancho de banda insuficiente.</li>
-    <li>Falta de mecanismos de control de flujo.</li>
-    <li>Errores en la configuración o ausencia de políticas de Calidad de Servicio (QoS).</li>
-    <li>Equipos con procesamiento limitado.</li>
-  </ul>
+<h2>Indicadores de congestión en Frame Relay</h2>
+<p>En una red Frame Relay, la congestión se produce cuando el volumen de información que circula por la red supera la capacidad disponible para transportarla. Para informar sobre estas situaciones y administrar el tráfico, Frame Relay utiliza tres indicadores importantes: <strong>FECN, BECN y DE</strong>.</p>
+<p>Estos indicadores se encuentran en el encabezado de las tramas Frame Relay y cumplen funciones diferentes. FECN y BECN permiten notificar situaciones de congestión, mientras que DE identifica las tramas que tienen mayor posibilidad de ser descartadas cuando los recursos de la red son insuficientes.</p>
 
-  <h3>Consecuencias</h3>
-  <ul>
-    <li>Retrasos en la entrega de los datos.</li>
-    <li>Pérdida de paquetes y retransmisiones innecesarias.</li>
-    <li>Disminución de la velocidad efectiva de la red.</li>
-    <li>Posible caída de servicios sensibles al tiempo como voz o video.</li>
-  </ul>
+<h3>FECN (Forward Explicit Congestion Notification)</h3>
+<p>FECN significa <em>Notificación Explícita de Congestión hacia Adelante</em>.</p>
+<p>Este indicador permite informar al dispositivo receptor que se detectó congestión en el sentido en el que se transmiten los datos.</p>
+<p>Cuando una trama atraviesa una zona congestionada de la red, un dispositivo de la infraestructura Frame Relay puede activar el indicador FECN. La trama continúa hacia su destino llevando esa información.</p>
+<p><strong>Ejemplo:</strong> una computadora de la oficina central envía un archivo a una sucursal. Durante el recorrido, la red detecta congestión. Si se activa FECN en una trama, el dispositivo receptor puede reconocer que existe una situación de congestión en el camino de los datos.</p>
+<p><strong>Importancia:</strong> permite que el extremo receptor conozca la existencia de congestión. La reacción posterior depende de los protocolos y mecanismos de control utilizados por los equipos.</p>
 
-  <h3>Soluciones comunes</h3>
-  <ul>
-    <li>Implementar priorización de tráfico mediante QoS.</li>
-    <li>Aumentar el ancho de banda o la capacidad de los enlaces.</li>
-    <li>Utilizar buffers adaptativos.</li>
-    <li>Aplicar protocolos de control de congestión como TCP.</li>
-  </ul>
-</section>
+<h3>BECN (Backward Explicit Congestion Notification)</h3>
+<p>BECN significa <em>Notificación Explícita de Congestión hacia Atrás</em>.</p>
+<p>Este indicador permite informar sobre la congestión en el sentido contrario al de los datos originales. Para ello, se marca una trama que circula en dirección opuesta a la transmisión afectada.</p>
+<p><strong>Ejemplo:</strong> una computadora de la oficina central envía datos a una sucursal y la red detecta congestión en ese recorrido. Una trama que viaja desde la sucursal hacia la oficina central puede llevar activado BECN, notificando al extremo emisor sobre la congestión.</p>
+<p>El dispositivo que recibe esta notificación puede utilizarla para regular la transmisión, si cuenta con mecanismos que permitan hacerlo.</p>
+<p><strong>Importancia:</strong> ayuda a que el extremo que transmite los datos tome conocimiento de la congestión y pueda reducir o regular el tráfico.</p>
 
-<section id="congestion-indicators">
-  <h2>Indicadores de Congestión en Redes Frame Relay</h2>
-  <p>En redes <strong>Frame Relay</strong>, se utilizan varios indicadores para controlar y notificar la congestión en la red:</p>
+<h3>DE (Discard Eligibility)</h3>
+<p>DE significa <em>Elegibilidad para Descarte</em>.</p>
+<p>Este indicador identifica las tramas que pueden descartarse antes que otras cuando la red necesita administrar sus recursos debido a una congestión.</p>
+<p>Una trama marcada con DE tiene menor prioridad relativa frente a las tramas que no tienen activado ese indicador. Sin embargo, esto no significa que siempre será descartada: depende de las condiciones de la red y de las políticas de administración del proveedor.</p>
+<p><strong>Ejemplo:</strong> una empresa transmite información administrativa y archivos de gran tamaño a través de Frame Relay. Algunas tramas tienen activado DE. Si se produce congestión, la red puede descartar primero esas tramas para intentar conservar otras de mayor prioridad.</p>
+<p><strong>Importancia:</strong> permite identificar el tráfico que puede sacrificarse antes cuando los recursos disponibles no son suficientes.</p>
 
-  <ul>
-    <li><strong>FECN (Forward Explicit Congestion Notification):</strong> notifica al receptor que existe congestión en la ruta de envío directo de los datos.</li>
-    <li><strong>BECN (Backward Explicit Congestion Notification):</strong> advierte al emisor que hay congestión en el sentido de retorno, indicando que debe reducir la tasa de envío.</li>
-    <li><strong>DE (Discard Eligibility):</strong> marca tramas que pueden ser descartadas si la red se congestiona; normalmente se aplica a tramas de menor prioridad.</li>
-    <li><strong>CIR (Committed Information Rate):</strong> tasa promedio garantizada de transmisión; indica la cantidad de datos que un usuario puede enviar sin riesgo de que sean descartados.</li>
-  </ul>
+<h3>Diferencias entre FECN, BECN y DE</h3>
+<table>
+  <thead><tr><th>Indicador</th><th>¿Qué informa o identifica?</th><th>¿Para qué sirve?</th></tr></thead>
+  <tbody>
+    <tr><td><strong>FECN</strong></td><td>Congestión en el sentido de los datos.</td><td>Informa al dispositivo receptor.</td></tr>
+    <tr><td><strong>BECN</strong></td><td>Congestión en el sentido de transmisión afectado, mediante una trama que circula en dirección contraria.</td><td>Permite advertir al extremo emisor.</td></tr>
+    <tr><td><strong>DE</strong></td><td>Tramas elegibles para descarte.</td><td>Ayuda a establecer cuáles pueden descartarse antes durante una congestión.</td></tr>
+  </tbody>
+</table>
+<p>Los tres indicadores contribuyen a la administración del tráfico de una red Frame Relay, pero no realizan la misma tarea.</p>
+<ul>
+  <li><strong>FECN</strong> señala la congestión hacia el extremo receptor de los datos.</li>
+  <li><strong>BECN</strong> permite notificarla al extremo emisor mediante tramas que circulan en sentido contrario.</li>
+  <li><strong>DE</strong> identifica las tramas que pueden descartarse antes si la red necesita liberar recursos.</li>
+</ul>
+<p>Estos indicadores no eliminan por sí solos la congestión. Su función es aportar información o permitir una gestión diferenciada de las tramas para ayudar a manejar situaciones en las que la red está sobrecargada.</p>
 
-  <div class="note">
-    <p>Ejemplo: Si la red detecta congestión, puede marcar <strong>FECN</strong> hacia el receptor y <strong>BECN</strong> hacia el emisor. Si se supera el <strong>CIR</strong>, las tramas con <strong>DE</strong> pueden eliminarse para aliviar la red.</p>
-  </div>
+<h3>Situación práctica</h3>
+<p>Una empresa tiene su oficina central conectada con una sucursal mediante Frame Relay. Durante el horario laboral, aumenta la cantidad de archivos y consultas que se transmiten por la red. Como consecuencia, algunos enlaces de la infraestructura experimentan congestión.</p>
+<ol>
+  <li>Una trama puede llegar a la sucursal con el indicador FECN activado para señalar congestión en el recorrido de los datos.</li>
+  <li>Una trama que viaja en sentido contrario puede llevar BECN para notificar la situación al extremo emisor.</li>
+  <li>Algunas tramas pueden estar marcadas con DE, lo que permite que sean consideradas antes para el descarte si la congestión requiere liberar recursos.</li>
+</ol>
+<p>La conexión lógica entre la oficina central y la sucursal puede continuar configurada, pero las comunicaciones pueden experimentar demoras o pérdida de tramas.</p>
+<p>Por eso, conocer los indicadores FECN, BECN y DE resulta importante para interpretar el funcionamiento de Frame Relay y comprender cómo se administra el tráfico ante una congestión.</p>
 
-  <section id="pvc">
-    <h2>Circuito Virtual Permanente (PVC)</h2>
-    <p>Un <strong>circuito virtual permanente (PVC)</strong> es una conexión lógica establecida de manera fija entre dos puntos de una red. Se mantiene activa constantemente, sin necesidad de establecerla o finalizarla cada vez que se transmite información.</p>
-  
-    <h3>Características principales</h3>
-    <ul>
-      <li>Conexión permanente entre dos dispositivos.</li>
-      <li>Ruta fija y predefinida en la red.</li>
-      <li>No requiere negociación para cada transmisión.</li>
-      <li>Ideal para enlaces dedicados entre sucursales o sitios fijos.</li>
-    </ul>
-  
-    <h3>Ventajas</h3>
-    <ul>
-      <li>Alta disponibilidad.</li>
-      <li>Configuración sencilla y estable.</li>
-      <li>Comunicaciones continuas sin interrupciones.</li>
-    </ul>
-  
-    <h3>Desventajas</h3>
-    <ul>
-      <li>Costo elevado por uso constante del enlace.</li>
-      <li>Poca flexibilidad frente a cambios de topología.</li>
-      <li>En la actualidad se usa menos, siendo reemplazado por VPN o MPLS.</li>
-    </ul>
-  
-    <div class="note">
-      <p>Ejemplo: Una empresa que necesita comunicación constante entre dos oficinas puede usar un PVC para garantizar disponibilidad continua.</p>
-    </div>
-  </section>  
-  
-</section>
+<h2>Circuito Virtual Permanente (PVC)</h2>
+<p>PVC significa <em>Permanent Virtual Circuit</em>, en español, Circuito Virtual Permanente.</p>
+<p>Es una conexión lógica establecida entre dos puntos de una red Frame Relay que se encuentra configurada de manera permanente por el proveedor del servicio.</p>
+<p>El PVC permite que dos dispositivos o redes intercambien información de forma habitual sin tener que establecer una nueva conexión lógica para cada comunicación.</p>
+<p><strong>Ejemplo:</strong> una empresa con una oficina central en Buenos Aires y una sucursal en Mar del Plata puede disponer de un PVC para mantener la comunicación entre ambas redes.</p>
+<p>Aunque el circuito se denomina permanente, esto no significa que exista un cable físico exclusivo entre los extremos. La conexión es lógica y utiliza la infraestructura compartida de la red.</p>
+<h3>Características principales de un PVC</h3>
+<ul>
+  <li><strong>Configuración permanente:</strong> el circuito se define previamente y queda disponible para su utilización.</li>
+  <li><strong>Conexión lógica:</strong> establece una relación de comunicación entre dos puntos sin requerir un enlace físico exclusivo.</li>
+  <li><strong>Uso habitual:</strong> resulta útil para comunicar oficinas, sucursales y redes que necesitan intercambiar datos regularmente.</li>
+  <li><strong>Identificación:</strong> utiliza identificadores que permiten reconocer los circuitos virtuales dentro de la interfaz correspondiente.</li>
+  <li><strong>Dependencia del proveedor:</strong> su configuración y disponibilidad dependen del servicio contratado y de la infraestructura de la red.</li>
+</ul>
+
+<h3>Diferencia entre PVC y SVC</h3>
+<p>SVC significa <em>Switched Virtual Circuit</em>, en español, Circuito Virtual Conmutado.</p>
+<p>La diferencia principal está en la forma de establecer la conexión.</p>
+<table>
+  <thead><tr><th>Característica</th><th>PVC</th><th>SVC</th></tr></thead>
+  <tbody>
+    <tr><td>Establecimiento</td><td>Se configura previamente.</td><td>Se establece cuando se necesita la comunicación.</td></tr>
+    <tr><td>Disponibilidad</td><td>Permanece configurado para su utilización.</td><td>Se crea para una comunicación y se libera cuando deja de ser necesario.</td></tr>
+    <tr><td>Uso habitual</td><td>Comunicaciones frecuentes y permanentes.</td><td>Comunicaciones ocasionales o temporales.</td></tr>
+    <tr><td>Intervención</td><td>Requiere configuración previa del proveedor.</td><td>Requiere un mecanismo de establecimiento y liberación del circuito.</td></tr>
+  </tbody>
+</table>
+<p>En términos generales, los PVC se utilizaron para conexiones frecuentes entre puntos fijos, mientras que los SVC permiten establecer conexiones temporales cuando la tecnología y el servicio los admiten.</p>
+
+<h2>El identificador DLCI</h2>
+<p>DLCI significa <em>Data Link Connection Identifier</em>, es decir, Identificador de Conexión del Enlace de Datos.</p>
+<p>Es un número utilizado en Frame Relay para identificar un circuito virtual dentro de una interfaz determinada.</p>
+<p>Cuando una trama llega a un dispositivo de acceso a Frame Relay, el DLCI permite reconocer a qué circuito virtual corresponde y cómo debe ser encaminada dentro de la red.</p>
+<p>El DLCI no es una dirección IP ni identifica necesariamente un circuito con el mismo número en todos los puntos de la red. Su significado es local a la interfaz correspondiente, según la configuración del servicio.</p>
+<p><strong>Ejemplo:</strong> una empresa tiene configurado un circuito virtual entre su oficina central y una sucursal. El dispositivo de acceso utiliza el DLCI asignado para identificar ese circuito y transportar las tramas correspondientes.</p>
+<p>El DLCI ayuda, por lo tanto, a distinguir los diferentes circuitos virtuales que pueden existir sobre una misma conexión física de acceso.</p>
+
+<h2>Relación entre congestión, indicadores y PVC</h2>
+<p>En una red Frame Relay pueden existir varios circuitos virtuales que comparten los recursos de la infraestructura del proveedor.</p>
+<p>Cuando aumenta el tráfico, la red puede experimentar congestión aunque los circuitos virtuales estén correctamente configurados.</p>
+<p>En esa situación:</p>
+<ul>
+  <li>FECN permite señalar congestión en el sentido de circulación de los datos.</li>
+  <li>BECN permite notificar la congestión mediante tramas que circulan en sentido contrario.</li>
+  <li>DE identifica tramas que pueden descartarse antes cuando es necesario administrar los recursos.</li>
+  <li>El PVC permite mantener configurada la conexión lógica entre los puntos de comunicación.</li>
+</ul>
+<p>Es importante comprender que un PVC no elimina la congestión. Su función es establecer la conexión lógica; los indicadores, por su parte, ayudan a señalar o administrar situaciones relacionadas con el tráfico.</p>
+<h3>Ejemplo práctico</h3>
+<p>Una empresa tiene una oficina central y tres sucursales conectadas mediante Frame Relay. Cada sucursal utiliza un PVC para comunicarse con la oficina central.</p>
+<p>Durante el horario laboral, todos los empleados comienzan a transmitir archivos y consultar sistemas informáticos. El aumento del tráfico genera congestión en la infraestructura del proveedor.</p>
+<p>La red puede marcar determinadas tramas con FECN o BECN para informar sobre la congestión. También puede utilizar DE para identificar tramas que pueden descartarse antes.</p>
+<p>Los circuitos virtuales continúan siendo conexiones lógicas configuradas para comunicar las oficinas, pero el rendimiento de las comunicaciones puede verse afectado por la congestión.</p>
+
+<h2>Síntesis final</h2>
+<p>La congestión aparece cuando la demanda de transmisión supera los recursos disponibles de una red. Puede provocar demoras, pérdida de tramas y disminución del rendimiento.</p>
+<p>Frame Relay utiliza los indicadores FECN y BECN para notificar situaciones de congestión, mientras que DE identifica tramas que pueden descartarse con mayor prioridad durante una sobrecarga.</p>
+<p>Los circuitos virtuales permanentes permiten establecer conexiones lógicas configuradas previamente entre puntos de una red. El identificador DLCI permite reconocer esos circuitos dentro de las interfaces correspondientes.</p>
+<p>Comprender estos conceptos permite interpretar el funcionamiento de una red WAN, reconocer problemas de rendimiento y entender algunos mecanismos utilizados para administrar el tráfico de datos.</p>
 
 <a id="tp8"></a>
 <div class="container">
