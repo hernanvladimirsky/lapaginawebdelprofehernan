@@ -1421,6 +1421,209 @@ return 0;
 }
 </pre>
 
+<h1>Matrices</h1>
+
+<h2>1. ¿Qué es una matriz?</h2>
+
+<p>
+    En C++, una matriz es una estructura de datos que permite
+    almacenar varios valores del mismo tipo, organizados en
+    filas y columnas.
+</p>
+
+<p>
+    Podemos imaginarla como una tabla de Excel,
+    pero dentro de un programa.
+</p>
+
+<h3>Ejemplo de una matriz de 3 filas y 3 columnas</h3>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <td>10</td>
+        <td>20</td>
+        <td>30</td>
+    </tr>
+    <tr>
+        <td>40</td>
+        <td>50</td>
+        <td>60</td>
+    </tr>
+    <tr>
+        <td>70</td>
+        <td>80</td>
+        <td>90</td>
+    </tr>
+</table>
+
+<p>
+    Esta matriz tiene 3 filas, 3 columnas y 9 elementos.
+</p>
+
+<hr>
+
+<h2>2. ¿Cómo se declara una matriz?</h2>
+
+<p>Para declarar una matriz utilizamos la siguiente estructura:</p>
+
+<pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+
+// Declaramos una matriz de 3 filas y 3 columnas
+int numeros[3][3];
+
+return 0;
+}
+</pre>
+
+<h3>Explicación:</h3>
+
+<ul>
+    <li><b>int:</b> indica que vamos a guardar números enteros.</li>
+    <li><b>numeros:</b> es el nombre de la matriz.</li>
+    <li><b>[3]:</b> indica la cantidad de filas.</li>
+    <li><b>[3]:</b> indica la cantidad de columnas.</li>
+</ul>
+
+<hr>
+
+<h2>3. ¿Cómo cargar una matriz?</h2>
+
+<p>
+    Para ingresar valores en una matriz utilizamos dos ciclos
+    <b>for</b>.
+</p>
+
+<p>
+    El primer for recorre las filas y el segundo for recorre
+    las columnas.
+</p>
+
+<pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+
+// Declaramos una matriz de 2 filas y 3 columnas
+int numeros[2][3];
+
+// Recorremos las filas
+for(int f = 0; f < 2; f++) {
+
+    // Recorremos las columnas
+    for(int c = 0; c < 3; c++) {
+
+        // Pedimos al usuario que ingrese un número
+        cout << "Ingrese un numero: ";
+
+        // Guardamos el número en la posición correspondiente
+        numeros[f][c] = 0;
+        cin >> numeros[f][c];
+
+    }
+}
+
+return 0;
+}
+</pre>
+
+<h3>Explicación:</h3>
+
+<ul>
+    <li><b>int f:</b> representa la fila.</li>
+    <li><b>int c:</b> representa la columna.</li>
+    <li><b>f < 2:</b> el ciclo recorre las dos filas.</li>
+    <li><b>c < 3:</b> el ciclo recorre las tres columnas.</li>
+    <li><b>numeros[f][c]:</b> indica la posición donde guardamos el número.</li>
+    <li><b>cin:</b> permite ingresar datos por teclado.</li>
+</ul>
+
+<p>
+    <b>Importante:</b> las posiciones de una matriz comienzan
+    desde el número 0.
+</p>
+
+<hr>
+
+<h2>4. ¿Cómo mostrar los valores de una matriz?</h2>
+
+<p>
+    Para mostrar los valores utilizamos nuevamente dos ciclos for.
+</p>
+
+<pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+
+// Declaramos una matriz de 2 filas y 3 columnas
+int numeros[2][3];
+
+// Cargamos los valores
+for(int f = 0; f < 2; f++) {
+    for(int c = 0; c < 3; c++) {
+
+        cout << "Ingrese un numero: ";
+        cin >> numeros[f][c];
+
+    }
+}
+
+// Mostramos los valores de la matriz
+for(int f = 0; f < 2; f++) {
+
+    // Recorremos las columnas
+    for(int c = 0; c < 3; c++) {
+
+        // Mostramos el contenido de cada posición
+        cout << numeros[f][c] << " ";
+
+    }
+
+    // Al terminar una fila, pasamos a la siguiente línea
+    cout << endl;
+}
+
+return 0;
+}
+</pre>
+
+<h3>Explicación:</h3>
+
+<ul>
+    <li><b>cout:</b> muestra información en pantalla.</li>
+    <li><b>numeros[f][c]:</b> accede al valor almacenado.</li>
+    <li><b>endl:</b> realiza un salto de línea.</li>
+</ul>
+
+<hr>
+
+<h2>5. Diferencia entre vector y matriz</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Vector</th>
+        <th>Matriz</th>
+    </tr>
+    <tr>
+        <td>Una dimensión.</td>
+        <td>Dos dimensiones.</td>
+    </tr>
+    <tr>
+        <td>Una lista de elementos.</td>
+        <td>Filas y columnas.</td>
+    </tr>
+    <tr>
+        <td>int v[5];</td>
+        <td>int m[3][3];</td>
+    </tr>
+</table>
+
 </main>
 
   <!--Detengo flotado -->
